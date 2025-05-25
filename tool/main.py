@@ -56,16 +56,11 @@ for k, component in enumerate(component_contents):
                 start = desc_line.index(":") + 2
                 desc = desc_line[start:].strip()
                 parent_name = name.split("-")[0]
+                if parent_name == "stat":
+                    parent_name = "stats"
                 children = []
-                if parent_name == name:
-                    parent_name = None
-                elif parent_name != name:
+                if parent_name != name:
                     children.append(name)
-                    print(name)
-                for c in components:
-                    if c["label"] == parent_name:
-                        c["children"].append(name)
-
                 components.append(
                     {
                         "label": name,
@@ -76,6 +71,9 @@ for k, component in enumerate(component_contents):
                         # "documentation": component_file[k][],
                     }
                 )
+                for c in components:
+                    if c["label"] == parent_name:
+                        c["children"].append(name)
 
 
 with open("components.json", "w") as file:

@@ -67,12 +67,13 @@ Component Divider(
   }
 
   return DomComponent(
-      tag: 'div',
-      classes: getClasses(),
-      id: id,
-      styles: styles,
-      attributes: attributes,
-      events: events,
-      child: child,
-      children: children);
+    tag: 'div',
+    classes: getClasses(),
+    id: id,
+    styles: styles,
+    attributes: attributes,
+    events: events,
+    child: child,
+    children: children,
+  );
 }

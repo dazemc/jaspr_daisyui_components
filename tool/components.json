@@ -3,8 +3,15 @@
         "label": "stats",
         "detail": "Container of multiple stat items",
         "category": "component",
-        "parent": null,
+        "parent": "stats",
         "children": [
+            "stats",
+            "stat",
+            "stat-title",
+            "stat-value",
+            "stat-desc",
+            "stat-figure",
+            "stat-actions",
             "stats-horizontal",
             "stats-vertical"
         ]
@@ -13,20 +20,16 @@
         "label": "stat",
         "detail": "A block to display stat data about a topic",
         "category": "part",
-        "parent": null,
+        "parent": "stats",
         "children": [
-            "stat-title",
-            "stat-value",
-            "stat-desc",
-            "stat-figure",
-            "stat-actions"
+            "stat"
         ]
     },
     {
         "label": "stat-title",
         "detail": "Title part",
         "category": "part",
-        "parent": "stat",
+        "parent": "stats",
         "children": [
             "stat-title"
         ]
@@ -35,7 +38,7 @@
         "label": "stat-value",
         "detail": "Value part",
         "category": "part",
-        "parent": "stat",
+        "parent": "stats",
         "children": [
             "stat-value"
         ]
@@ -44,7 +47,7 @@
         "label": "stat-desc",
         "detail": "Description part",
         "category": "part",
-        "parent": "stat",
+        "parent": "stats",
         "children": [
             "stat-desc"
         ]
@@ -53,7 +56,7 @@
         "label": "stat-figure",
         "detail": "Figure part for icon, etc",
         "category": "part",
-        "parent": "stat",
+        "parent": "stats",
         "children": [
             "stat-figure"
         ]
@@ -62,7 +65,7 @@
         "label": "stat-actions",
         "detail": "Actions part for button, etc",
         "category": "part",
-        "parent": "stat",
+        "parent": "stats",
         "children": [
             "stat-actions"
         ]
@@ -89,8 +92,9 @@
         "label": "select",
         "detail": "For <select> element",
         "category": "component",
-        "parent": null,
+        "parent": "select",
         "children": [
+            "select",
             "select-ghost",
             "select-neutral",
             "select-primary",
@@ -237,8 +241,9 @@
         "label": "drawer",
         "detail": "The wrapper for sidebar and content",
         "category": "component",
-        "parent": null,
+        "parent": "drawer",
         "children": [
+            "drawer",
             "drawer-toggle",
             "drawer-content",
             "drawer-side",
@@ -305,8 +310,9 @@
         "label": "progress",
         "detail": "For <progress> tag",
         "category": "component",
-        "parent": null,
+        "parent": "progress",
         "children": [
+            "progress",
             "progress-neutral",
             "progress-primary",
             "progress-secondary",
@@ -393,8 +399,9 @@
         "label": "fieldset",
         "detail": "for the fieldset container",
         "category": "component",
-        "parent": null,
+        "parent": "fieldset",
         "children": [
+            "fieldset",
             "fieldset-legend"
         ]
     },
@@ -402,8 +409,10 @@
         "label": "label",
         "detail": "label for inputs",
         "category": "component",
-        "parent": null,
-        "children": []
+        "parent": "label",
+        "children": [
+            "label"
+        ]
     },
     {
         "label": "fieldset-legend",
@@ -418,8 +427,9 @@
         "label": "alert",
         "detail": "Container element",
         "category": "component",
-        "parent": null,
+        "parent": "alert",
         "children": [
+            "alert",
             "alert-outline",
             "alert-dash",
             "alert-soft",
@@ -516,8 +526,9 @@
         "label": "divider",
         "detail": "A divider line between two elements",
         "category": "component",
-        "parent": null,
+        "parent": "divider",
         "children": [
+            "divider",
             "divider-neutral",
             "divider-primary",
             "divider-secondary",
@@ -644,8 +655,9 @@
         "label": "hero",
         "detail": "Hero container",
         "category": "component",
-        "parent": null,
+        "parent": "hero",
         "children": [
+            "hero",
             "hero-content",
             "hero-overlay"
         ]
@@ -672,8 +684,9 @@
         "label": "link",
         "detail": "Adds underline",
         "category": "component",
-        "parent": null,
+        "parent": "link",
         "children": [
+            "link",
             "link-hover",
             "link-neutral",
             "link-primary",
@@ -770,8 +783,9 @@
         "label": "kbd",
         "detail": "Do show a keyboard key or a shortcut key",
         "category": "component",
-        "parent": null,
+        "parent": "kbd",
         "children": [
+            "kbd",
             "kbd-xs",
             "kbd-sm",
             "kbd-md",
@@ -837,8 +851,9 @@
         "label": "loading",
         "detail": "Loading element",
         "category": "component",
-        "parent": null,
+        "parent": "loading",
         "children": [
+            "loading",
             "loading-spinner",
             "loading-dots",
             "loading-ring",
@@ -955,15 +970,18 @@
         "label": "skeleton",
         "detail": "A placeholder div with loading animation",
         "category": "component",
-        "parent": null,
-        "children": []
+        "parent": "skeleton",
+        "children": [
+            "skeleton"
+        ]
     },
     {
         "label": "swap",
         "detail": "Swap container",
         "category": "component",
-        "parent": null,
+        "parent": "swap",
         "children": [
+            "swap",
             "swap-on",
             "swap-off",
             "swap-indeterminate",
@@ -1030,8 +1048,9 @@
         "label": "badge",
         "detail": "Container element",
         "category": "component",
-        "parent": null,
+        "parent": "badge",
         "children": [
+            "badge",
             "badge-outline",
             "badge-dash",
             "badge-soft",
@@ -1208,8 +1227,9 @@
         "label": "radio",
         "detail": "For radio input",
         "category": "component",
-        "parent": null,
+        "parent": "radio",
         "children": [
+            "radio",
             "radio-neutral",
             "radio-primary",
             "radio-secondary",
@@ -1346,8 +1366,9 @@
         "label": "navbar",
         "detail": "Navigation bar",
         "category": "component",
-        "parent": null,
+        "parent": "navbar",
         "children": [
+            "navbar",
             "navbar-start",
             "navbar-center",
             "navbar-end"
@@ -1384,8 +1405,9 @@
         "label": "collapse",
         "detail": "Collapse",
         "category": "component",
-        "parent": null,
+        "parent": "collapse",
         "children": [
+            "collapse",
             "collapse-title",
             "collapse-content",
             "collapse-arrow",
@@ -1452,8 +1474,9 @@
         "label": "textarea",
         "detail": "For <textarea> element",
         "category": "component",
-        "parent": null,
+        "parent": "textarea",
         "children": [
+            "textarea",
             "textarea-ghost",
             "textarea-neutral",
             "textarea-primary",
@@ -1600,8 +1623,9 @@
         "label": "btn",
         "detail": "Button",
         "category": "component",
-        "parent": null,
+        "parent": "btn",
         "children": [
+            "btn",
             "btn-neutral",
             "btn-primary",
             "btn-secondary",
@@ -1848,8 +1872,9 @@
         "label": "chat",
         "detail": "Container for one line of conversation and its data",
         "category": "component",
-        "parent": null,
+        "parent": "chat",
         "children": [
+            "chat",
             "chat-image",
             "chat-header",
             "chat-footer",
@@ -1996,8 +2021,9 @@
         "label": "tabs",
         "detail": "Container of multiple tab items",
         "category": "component",
-        "parent": null,
+        "parent": "tabs",
         "children": [
+            "tabs",
             "tabs-box",
             "tabs-border",
             "tabs-lift",
@@ -2014,8 +2040,9 @@
         "label": "tab",
         "detail": "A single tab button (can be button, link, div, radio input, etc)",
         "category": "part",
-        "parent": null,
+        "parent": "tab",
         "children": [
+            "tab",
             "tab-content",
             "tab-active",
             "tab-disabled"
@@ -2142,8 +2169,9 @@
         "label": "stack",
         "detail": "Puts the children elements on top of each other",
         "category": "component",
-        "parent": null,
+        "parent": "stack",
         "children": [
+            "stack",
             "stack-top",
             "stack-bottom",
             "stack-start",
@@ -2190,8 +2218,9 @@
         "label": "join",
         "detail": "For grouping multiple items",
         "category": "component",
-        "parent": null,
+        "parent": "join",
         "children": [
+            "join",
             "join-item",
             "join-vertical",
             "join-horizontal"
@@ -2228,8 +2257,9 @@
         "label": "range",
         "detail": "For <input type=\"range\"> tag",
         "category": "component",
-        "parent": null,
+        "parent": "range",
         "children": [
+            "range",
             "range-neutral",
             "range-primary",
             "range-secondary",
@@ -2366,8 +2396,9 @@
         "label": "checkbox",
         "detail": "Checkbox",
         "category": "component",
-        "parent": null,
+        "parent": "checkbox",
         "children": [
+            "checkbox",
             "checkbox-primary",
             "checkbox-secondary",
             "checkbox-accent",
@@ -2513,8 +2544,9 @@
         "label": "toast",
         "detail": "Container element that sticks to the corner of page",
         "category": "component",
-        "parent": null,
+        "parent": "toast",
         "children": [
+            "toast",
             "toast-start",
             "toast-center",
             "toast-end",
@@ -2581,8 +2613,9 @@
         "label": "steps",
         "detail": "Container of multiple step nodes",
         "category": "component",
-        "parent": null,
+        "parent": "steps",
         "children": [
+            "steps",
             "steps-vertical",
             "steps-horizontal"
         ]
@@ -2591,8 +2624,9 @@
         "label": "step",
         "detail": "A single step node",
         "category": "part",
-        "parent": null,
+        "parent": "step",
         "children": [
+            "step",
             "step-icon",
             "step-neutral",
             "step-primary",
@@ -2707,8 +2741,10 @@
         "label": "cally",
         "detail": "for Cally web component",
         "category": "component",
-        "parent": null,
-        "children": []
+        "parent": "cally",
+        "children": [
+            "cally"
+        ]
     },
     {
         "label": "pika-single",
@@ -2732,8 +2768,9 @@
         "label": "toggle",
         "detail": "For <input type=\"checkbox\">",
         "category": "component",
-        "parent": null,
+        "parent": "toggle",
         "children": [
+            "toggle",
             "toggle-primary",
             "toggle-secondary",
             "toggle-accent",
@@ -2906,8 +2943,9 @@
         "label": "carousel",
         "detail": "Carousel container",
         "category": "component",
-        "parent": null,
+        "parent": "carousel",
         "children": [
+            "carousel",
             "carousel-item",
             "carousel-start",
             "carousel-center",
@@ -2974,8 +3012,9 @@
         "label": "list",
         "detail": "A vertical flex layout to include list rows",
         "category": "component",
-        "parent": null,
+        "parent": "list",
         "children": [
+            "list",
             "list-row",
             "list-col-wrap",
             "list-col-grow"
@@ -3012,8 +3051,9 @@
         "label": "tooltip",
         "detail": "Container element",
         "category": "component",
-        "parent": null,
+        "parent": "tooltip",
         "children": [
+            "tooltip",
             "tooltip-content",
             "tooltip-top",
             "tooltip-bottom",
@@ -3160,8 +3200,9 @@
         "label": "dock",
         "detail": "Dock",
         "category": "component",
-        "parent": null,
+        "parent": "dock",
         "children": [
+            "dock",
             "dock-label",
             "dock-active",
             "dock-xs",
@@ -3238,8 +3279,9 @@
         "label": "modal",
         "detail": "Modal",
         "category": "component",
-        "parent": null,
+        "parent": "modal",
         "children": [
+            "modal",
             "modal-box",
             "modal-action",
             "modal-backdrop",
@@ -3346,8 +3388,9 @@
         "label": "menu",
         "detail": "For <ul> tag",
         "category": "component",
-        "parent": null,
+        "parent": "menu",
         "children": [
+            "menu",
             "menu-title",
             "menu-dropdown",
             "menu-dropdown-toggle",
@@ -3494,8 +3537,9 @@
         "label": "table",
         "detail": "For <table> tag",
         "category": "component",
-        "parent": null,
+        "parent": "table",
         "children": [
+            "table",
             "table-zebra",
             "table-pin-rows",
             "table-pin-cols",
@@ -3582,8 +3626,9 @@
         "label": "validator",
         "detail": "For input, select, textarea",
         "category": "component",
-        "parent": null,
+        "parent": "validator",
         "children": [
+            "validator",
             "validator-hint"
         ]
     },
@@ -3600,8 +3645,9 @@
         "label": "card",
         "detail": "Card",
         "category": "component",
-        "parent": null,
+        "parent": "card",
         "children": [
+            "card",
             "card-title",
             "card-body",
             "card-actions",
@@ -3727,15 +3773,19 @@
         "label": "breadcrumbs",
         "detail": "Wrapper around a <ul>",
         "category": "component",
-        "parent": null,
-        "children": []
+        "parent": "breadcrumbs",
+        "children": [
+            "breadcrumbs"
+        ]
     },
     {
         "label": "countdown",
         "detail": "Countdown wrapper",
         "category": "component",
-        "parent": null,
-        "children": []
+        "parent": "countdown",
+        "children": [
+            "countdown"
+        ]
     },
     {
         "label": "floating-label",
@@ -3750,8 +3800,9 @@
         "label": "rating",
         "detail": "For a div containing radio inputs",
         "category": "component",
-        "parent": null,
+        "parent": "rating",
         "children": [
+            "rating",
             "rating-half",
             "rating-hidden",
             "rating-xs",
@@ -3828,8 +3879,9 @@
         "label": "avatar",
         "detail": "Avatar",
         "category": "component",
-        "parent": null,
+        "parent": "avatar",
         "children": [
+            "avatar",
             "avatar-group",
             "avatar-online",
             "avatar-offline",
@@ -3876,8 +3928,9 @@
         "label": "mask",
         "detail": "Masks the content with shape",
         "category": "component",
-        "parent": null,
+        "parent": "mask",
         "children": [
+            "mask",
             "mask-squircle",
             "mask-heart",
             "mask-hexagon",
@@ -4054,8 +4107,9 @@
         "label": "dropdown",
         "detail": "Dropdown container",
         "category": "component",
-        "parent": null,
+        "parent": "dropdown",
         "children": [
+            "dropdown",
             "dropdown-content",
             "dropdown-start",
             "dropdown-center",
@@ -4162,8 +4216,9 @@
         "label": "indicator",
         "detail": "Container element",
         "category": "component",
-        "parent": null,
+        "parent": "indicator",
         "children": [
+            "indicator",
             "indicator-item",
             "indicator-start",
             "indicator-center",
@@ -4240,8 +4295,9 @@
         "label": "timeline",
         "detail": "Timeline container",
         "category": "component",
-        "parent": null,
+        "parent": "timeline",
         "children": [
+            "timeline",
             "timeline-start",
             "timeline-middle",
             "timeline-end",
@@ -4328,8 +4384,9 @@
         "label": "input",
         "detail": "For <input type=\"text\"> tag or a wrapper of <input type=\"text\"> tag",
         "category": "component",
-        "parent": null,
+        "parent": "input",
         "children": [
+            "input",
             "input-ghost",
             "input-neutral",
             "input-primary",
@@ -4476,8 +4533,9 @@
         "label": "footer",
         "detail": "Footer",
         "category": "component",
-        "parent": null,
+        "parent": "footer",
         "children": [
+            "footer",
             "footer-title",
             "footer-center",
             "footer-horizontal",
@@ -4542,8 +4600,9 @@
         "label": "status",
         "detail": "Status icon",
         "category": "component",
-        "parent": null,
+        "parent": "status",
         "children": [
+            "status",
             "status-neutral",
             "status-primary",
             "status-secondary",
@@ -4815,8 +4874,9 @@
         "label": "diff",
         "detail": "Container element",
         "category": "component",
-        "parent": null,
+        "parent": "diff",
         "children": [
+            "diff",
             "diff-item-1",
             "diff-item-2",
             "diff-resizer"
@@ -4853,8 +4913,9 @@
         "label": "filter",
         "detail": "For a HTML <form> or a <div> element that includes radio buttons for filtering items",
         "category": "component",
-        "parent": null,
+        "parent": "filter",
         "children": [
+            "filter",
             "filter-reset"
         ]
     },
