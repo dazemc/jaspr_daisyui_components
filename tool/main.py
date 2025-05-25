@@ -74,6 +74,9 @@ for k, component in enumerate(component_contents):
                 for c in components:
                     if c["label"] == parent_name:
                         c["children"].append(name)
+                    if len(c["children"]) > 0:
+                        if c["label"] == c["children"][0]:
+                            c["children"] = []
 
 
 with open("components.json", "w") as file:

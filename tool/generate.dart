@@ -8,7 +8,7 @@ void main() async {
   List<DaisyuiComponent> componentModels = getDaisyuiModels(data);
   Map<String, Map<String, List<DaisyuiComponent>>> mappedModels =
       buildComponentHierarchy(componentModels);
-  // print(mappedModels['btn']!['children']!.first.label);
+  print(mappedModels['btn']!['parent']!.first.children);
   buildComponentList(mappedModels);
 }
 

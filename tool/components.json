@@ -5,7 +5,6 @@
         "category": "component",
         "parent": "stats",
         "children": [
-            "stats",
             "stat",
             "stat-title",
             "stat-value",
@@ -21,72 +20,56 @@
         "detail": "A block to display stat data about a topic",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat"
-        ]
+        "children": []
     },
     {
         "label": "stat-title",
         "detail": "Title part",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat-title"
-        ]
+        "children": []
     },
     {
         "label": "stat-value",
         "detail": "Value part",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat-value"
-        ]
+        "children": []
     },
     {
         "label": "stat-desc",
         "detail": "Description part",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat-desc"
-        ]
+        "children": []
     },
     {
         "label": "stat-figure",
         "detail": "Figure part for icon, etc",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat-figure"
-        ]
+        "children": []
     },
     {
         "label": "stat-actions",
         "detail": "Actions part for button, etc",
         "category": "part",
         "parent": "stats",
-        "children": [
-            "stat-actions"
-        ]
+        "children": []
     },
     {
         "label": "stats-horizontal",
         "detail": "Makes stats horizontal (default)",
         "category": "direction",
         "parent": "stats",
-        "children": [
-            "stats-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "stats-vertical",
         "detail": "Makes stats vertical",
         "category": "direction",
         "parent": "stats",
-        "children": [
-            "stats-vertical"
-        ]
+        "children": []
     },
     {
         "label": "select",
@@ -94,7 +77,6 @@
         "category": "component",
         "parent": "select",
         "children": [
-            "select",
             "select-ghost",
             "select-neutral",
             "select-primary",
@@ -116,126 +98,98 @@
         "detail": "ghost style",
         "category": "style",
         "parent": "select",
-        "children": [
-            "select-ghost"
-        ]
+        "children": []
     },
     {
         "label": "select-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-neutral"
-        ]
+        "children": []
     },
     {
         "label": "select-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-primary"
-        ]
+        "children": []
     },
     {
         "label": "select-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-secondary"
-        ]
+        "children": []
     },
     {
         "label": "select-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-accent"
-        ]
+        "children": []
     },
     {
         "label": "select-info",
         "detail": "info color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-info"
-        ]
+        "children": []
     },
     {
         "label": "select-success",
         "detail": "success color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-success"
-        ]
+        "children": []
     },
     {
         "label": "select-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-warning"
-        ]
+        "children": []
     },
     {
         "label": "select-error",
         "detail": "error color",
         "category": "color",
         "parent": "select",
-        "children": [
-            "select-error"
-        ]
+        "children": []
     },
     {
         "label": "select-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "select",
-        "children": [
-            "select-xs"
-        ]
+        "children": []
     },
     {
         "label": "select-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "select",
-        "children": [
-            "select-sm"
-        ]
+        "children": []
     },
     {
         "label": "select-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "select",
-        "children": [
-            "select-md"
-        ]
+        "children": []
     },
     {
         "label": "select-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "select",
-        "children": [
-            "select-lg"
-        ]
+        "children": []
     },
     {
         "label": "select-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "select",
-        "children": [
-            "select-xl"
-        ]
+        "children": []
     },
     {
         "label": "drawer",
@@ -243,7 +197,6 @@
         "category": "component",
         "parent": "drawer",
         "children": [
-            "drawer",
             "drawer-toggle",
             "drawer-content",
             "drawer-side",
@@ -257,54 +210,42 @@
         "detail": "The hidden checkbox that controls the state of drawer",
         "category": "part",
         "parent": "drawer",
-        "children": [
-            "drawer-toggle"
-        ]
+        "children": []
     },
     {
         "label": "drawer-content",
         "detail": "Content part",
         "category": "part",
         "parent": "drawer",
-        "children": [
-            "drawer-content"
-        ]
+        "children": []
     },
     {
         "label": "drawer-side",
         "detail": "Sidebar part",
         "category": "part",
         "parent": "drawer",
-        "children": [
-            "drawer-side"
-        ]
+        "children": []
     },
     {
         "label": "drawer-overlay",
         "detail": "Label that covers the page when drawer is open",
         "category": "part",
         "parent": "drawer",
-        "children": [
-            "drawer-overlay"
-        ]
+        "children": []
     },
     {
         "label": "drawer-end",
         "detail": "puts drawer to the other side",
         "category": "placement",
         "parent": "drawer",
-        "children": [
-            "drawer-end"
-        ]
+        "children": []
     },
     {
         "label": "drawer-open",
         "detail": "Forces the drawer to be open",
         "category": "modifier",
         "parent": "drawer",
-        "children": [
-            "drawer-open"
-        ]
+        "children": []
     },
     {
         "label": "progress",
@@ -312,7 +253,6 @@
         "category": "component",
         "parent": "progress",
         "children": [
-            "progress",
             "progress-neutral",
             "progress-primary",
             "progress-secondary",
@@ -328,72 +268,56 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-neutral"
-        ]
+        "children": []
     },
     {
         "label": "progress-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-primary"
-        ]
+        "children": []
     },
     {
         "label": "progress-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-secondary"
-        ]
+        "children": []
     },
     {
         "label": "progress-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-accent"
-        ]
+        "children": []
     },
     {
         "label": "progress-info",
         "detail": "info color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-info"
-        ]
+        "children": []
     },
     {
         "label": "progress-success",
         "detail": "success color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-success"
-        ]
+        "children": []
     },
     {
         "label": "progress-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-warning"
-        ]
+        "children": []
     },
     {
         "label": "progress-error",
         "detail": "error color",
         "category": "color",
         "parent": "progress",
-        "children": [
-            "progress-error"
-        ]
+        "children": []
     },
     {
         "label": "fieldset",
@@ -401,7 +325,6 @@
         "category": "component",
         "parent": "fieldset",
         "children": [
-            "fieldset",
             "fieldset-legend"
         ]
     },
@@ -410,18 +333,14 @@
         "detail": "label for inputs",
         "category": "component",
         "parent": "label",
-        "children": [
-            "label"
-        ]
+        "children": []
     },
     {
         "label": "fieldset-legend",
         "detail": "for the title of the fieldset",
         "category": "part",
         "parent": "fieldset",
-        "children": [
-            "fieldset-legend"
-        ]
+        "children": []
     },
     {
         "label": "alert",
@@ -429,7 +348,6 @@
         "category": "component",
         "parent": "alert",
         "children": [
-            "alert",
             "alert-outline",
             "alert-dash",
             "alert-soft",
@@ -446,81 +364,63 @@
         "detail": "outline style",
         "category": "style",
         "parent": "alert",
-        "children": [
-            "alert-outline"
-        ]
+        "children": []
     },
     {
         "label": "alert-dash",
         "detail": "dash outline style",
         "category": "style",
         "parent": "alert",
-        "children": [
-            "alert-dash"
-        ]
+        "children": []
     },
     {
         "label": "alert-soft",
         "detail": "soft style",
         "category": "style",
         "parent": "alert",
-        "children": [
-            "alert-soft"
-        ]
+        "children": []
     },
     {
         "label": "alert-info",
         "detail": "info color",
         "category": "color",
         "parent": "alert",
-        "children": [
-            "alert-info"
-        ]
+        "children": []
     },
     {
         "label": "alert-success",
         "detail": "success color",
         "category": "color",
         "parent": "alert",
-        "children": [
-            "alert-success"
-        ]
+        "children": []
     },
     {
         "label": "alert-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "alert",
-        "children": [
-            "alert-warning"
-        ]
+        "children": []
     },
     {
         "label": "alert-error",
         "detail": "error color",
         "category": "color",
         "parent": "alert",
-        "children": [
-            "alert-error"
-        ]
+        "children": []
     },
     {
         "label": "alert-vertical",
         "detail": "Vertical layout, good for mobile",
         "category": "direction",
         "parent": "alert",
-        "children": [
-            "alert-vertical"
-        ]
+        "children": []
     },
     {
         "label": "alert-horizontal",
         "detail": "Horizontal layout, good for desktop",
         "category": "direction",
         "parent": "alert",
-        "children": [
-            "alert-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "divider",
@@ -528,7 +428,6 @@
         "category": "component",
         "parent": "divider",
         "children": [
-            "divider",
             "divider-neutral",
             "divider-primary",
             "divider-secondary",
@@ -548,108 +447,84 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-neutral"
-        ]
+        "children": []
     },
     {
         "label": "divider-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-primary"
-        ]
+        "children": []
     },
     {
         "label": "divider-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-secondary"
-        ]
+        "children": []
     },
     {
         "label": "divider-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-accent"
-        ]
+        "children": []
     },
     {
         "label": "divider-success",
         "detail": "success color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-success"
-        ]
+        "children": []
     },
     {
         "label": "divider-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-warning"
-        ]
+        "children": []
     },
     {
         "label": "divider-info",
         "detail": "info color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-info"
-        ]
+        "children": []
     },
     {
         "label": "divider-error",
         "detail": "error color",
         "category": "color",
         "parent": "divider",
-        "children": [
-            "divider-error"
-        ]
+        "children": []
     },
     {
         "label": "divider-vertical",
         "detail": "Divide vertical elements (on top of each other)",
         "category": "direction",
         "parent": "divider",
-        "children": [
-            "divider-vertical"
-        ]
+        "children": []
     },
     {
         "label": "divider-horizontal",
         "detail": "Divide horizontal elements (next to each other)",
         "category": "direction",
         "parent": "divider",
-        "children": [
-            "divider-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "divider-start",
         "detail": "Pushes the divider text to the start",
         "category": "placement",
         "parent": "divider",
-        "children": [
-            "divider-start"
-        ]
+        "children": []
     },
     {
         "label": "divider-end",
         "detail": "Pushes the divider text to the end",
         "category": "placement",
         "parent": "divider",
-        "children": [
-            "divider-end"
-        ]
+        "children": []
     },
     {
         "label": "hero",
@@ -657,7 +532,6 @@
         "category": "component",
         "parent": "hero",
         "children": [
-            "hero",
             "hero-content",
             "hero-overlay"
         ]
@@ -667,18 +541,14 @@
         "detail": "content part",
         "category": "part",
         "parent": "hero",
-        "children": [
-            "hero-content"
-        ]
+        "children": []
     },
     {
         "label": "hero-overlay",
         "detail": "Overlay that covers the background image",
         "category": "part",
         "parent": "hero",
-        "children": [
-            "hero-overlay"
-        ]
+        "children": []
     },
     {
         "label": "link",
@@ -686,7 +556,6 @@
         "category": "component",
         "parent": "link",
         "children": [
-            "link",
             "link-hover",
             "link-neutral",
             "link-primary",
@@ -703,81 +572,63 @@
         "detail": "Only shows underline on hover",
         "category": "style",
         "parent": "link",
-        "children": [
-            "link-hover"
-        ]
+        "children": []
     },
     {
         "label": "link-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-neutral"
-        ]
+        "children": []
     },
     {
         "label": "link-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-primary"
-        ]
+        "children": []
     },
     {
         "label": "link-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-secondary"
-        ]
+        "children": []
     },
     {
         "label": "link-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-accent"
-        ]
+        "children": []
     },
     {
         "label": "link-success",
         "detail": "success color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-success"
-        ]
+        "children": []
     },
     {
         "label": "link-info",
         "detail": "info color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-info"
-        ]
+        "children": []
     },
     {
         "label": "link-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-warning"
-        ]
+        "children": []
     },
     {
         "label": "link-error",
         "detail": "error color",
         "category": "color",
         "parent": "link",
-        "children": [
-            "link-error"
-        ]
+        "children": []
     },
     {
         "label": "kbd",
@@ -785,7 +636,6 @@
         "category": "component",
         "parent": "kbd",
         "children": [
-            "kbd",
             "kbd-xs",
             "kbd-sm",
             "kbd-md",
@@ -798,54 +648,42 @@
         "detail": "Extra small size",
         "category": "size",
         "parent": "kbd",
-        "children": [
-            "kbd-xs"
-        ]
+        "children": []
     },
     {
         "label": "kbd-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "kbd",
-        "children": [
-            "kbd-sm"
-        ]
+        "children": []
     },
     {
         "label": "kbd-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "kbd",
-        "children": [
-            "kbd-md"
-        ]
+        "children": []
     },
     {
         "label": "kbd-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "kbd",
-        "children": [
-            "kbd-lg"
-        ]
+        "children": []
     },
     {
         "label": "kbd-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "kbd",
-        "children": [
-            "kbd-xl"
-        ]
+        "children": []
     },
     {
         "label": "mockup-code",
         "detail": "Code terminal mockup",
         "category": "component",
         "parent": "mockup",
-        "children": [
-            "mockup-code"
-        ]
+        "children": []
     },
     {
         "label": "loading",
@@ -853,7 +691,6 @@
         "category": "component",
         "parent": "loading",
         "children": [
-            "loading",
             "loading-spinner",
             "loading-dots",
             "loading-ring",
@@ -872,108 +709,84 @@
         "detail": "spinner animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-spinner"
-        ]
+        "children": []
     },
     {
         "label": "loading-dots",
         "detail": "dots animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-dots"
-        ]
+        "children": []
     },
     {
         "label": "loading-ring",
         "detail": "ring animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-ring"
-        ]
+        "children": []
     },
     {
         "label": "loading-ball",
         "detail": "ball animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-ball"
-        ]
+        "children": []
     },
     {
         "label": "loading-bars",
         "detail": "bars animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-bars"
-        ]
+        "children": []
     },
     {
         "label": "loading-infinity",
         "detail": "infinity animation",
         "category": "style",
         "parent": "loading",
-        "children": [
-            "loading-infinity"
-        ]
+        "children": []
     },
     {
         "label": "loading-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "loading",
-        "children": [
-            "loading-xs"
-        ]
+        "children": []
     },
     {
         "label": "loading-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "loading",
-        "children": [
-            "loading-sm"
-        ]
+        "children": []
     },
     {
         "label": "loading-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "loading",
-        "children": [
-            "loading-md"
-        ]
+        "children": []
     },
     {
         "label": "loading-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "loading",
-        "children": [
-            "loading-lg"
-        ]
+        "children": []
     },
     {
         "label": "loading-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "loading",
-        "children": [
-            "loading-xl"
-        ]
+        "children": []
     },
     {
         "label": "skeleton",
         "detail": "A placeholder div with loading animation",
         "category": "component",
         "parent": "skeleton",
-        "children": [
-            "skeleton"
-        ]
+        "children": []
     },
     {
         "label": "swap",
@@ -981,7 +794,6 @@
         "category": "component",
         "parent": "swap",
         "children": [
-            "swap",
             "swap-on",
             "swap-off",
             "swap-indeterminate",
@@ -995,54 +807,42 @@
         "detail": "The child element that should be visible when checkbox is checked or when swap is active",
         "category": "part",
         "parent": "swap",
-        "children": [
-            "swap-on"
-        ]
+        "children": []
     },
     {
         "label": "swap-off",
         "detail": "The child element that should be visible when checkbox is not checked or when swap is not active",
         "category": "part",
         "parent": "swap",
-        "children": [
-            "swap-off"
-        ]
+        "children": []
     },
     {
         "label": "swap-indeterminate",
         "detail": "The child element that should be visible when checkbox is indeterminate",
         "category": "part",
         "parent": "swap",
-        "children": [
-            "swap-indeterminate"
-        ]
+        "children": []
     },
     {
         "label": "swap-active",
         "detail": "Activates the swap (no need for checkbox)",
         "category": "modifier",
         "parent": "swap",
-        "children": [
-            "swap-active"
-        ]
+        "children": []
     },
     {
         "label": "swap-rotate",
         "detail": "Adds rotate effect to swap",
         "category": "style",
         "parent": "swap",
-        "children": [
-            "swap-rotate"
-        ]
+        "children": []
     },
     {
         "label": "swap-flip",
         "detail": "Adds flip effect to swap",
         "category": "style",
         "parent": "swap",
-        "children": [
-            "swap-flip"
-        ]
+        "children": []
     },
     {
         "label": "badge",
@@ -1050,7 +850,6 @@
         "category": "component",
         "parent": "badge",
         "children": [
-            "badge",
             "badge-outline",
             "badge-dash",
             "badge-soft",
@@ -1075,153 +874,119 @@
         "detail": "outline style",
         "category": "style",
         "parent": "badge",
-        "children": [
-            "badge-outline"
-        ]
+        "children": []
     },
     {
         "label": "badge-dash",
         "detail": "dash outline style",
         "category": "style",
         "parent": "badge",
-        "children": [
-            "badge-dash"
-        ]
+        "children": []
     },
     {
         "label": "badge-soft",
         "detail": "soft style",
         "category": "style",
         "parent": "badge",
-        "children": [
-            "badge-soft"
-        ]
+        "children": []
     },
     {
         "label": "badge-ghost",
         "detail": "ghost style",
         "category": "style",
         "parent": "badge",
-        "children": [
-            "badge-ghost"
-        ]
+        "children": []
     },
     {
         "label": "badge-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-neutral"
-        ]
+        "children": []
     },
     {
         "label": "badge-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-primary"
-        ]
+        "children": []
     },
     {
         "label": "badge-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-secondary"
-        ]
+        "children": []
     },
     {
         "label": "badge-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-accent"
-        ]
+        "children": []
     },
     {
         "label": "badge-info",
         "detail": "info color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-info"
-        ]
+        "children": []
     },
     {
         "label": "badge-success",
         "detail": "success color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-success"
-        ]
+        "children": []
     },
     {
         "label": "badge-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-warning"
-        ]
+        "children": []
     },
     {
         "label": "badge-error",
         "detail": "error color",
         "category": "color",
         "parent": "badge",
-        "children": [
-            "badge-error"
-        ]
+        "children": []
     },
     {
         "label": "badge-xs",
         "detail": "extra small size",
         "category": "size",
         "parent": "badge",
-        "children": [
-            "badge-xs"
-        ]
+        "children": []
     },
     {
         "label": "badge-sm",
         "detail": "small size",
         "category": "size",
         "parent": "badge",
-        "children": [
-            "badge-sm"
-        ]
+        "children": []
     },
     {
         "label": "badge-md",
         "detail": "medium size (default)",
         "category": "size",
         "parent": "badge",
-        "children": [
-            "badge-md"
-        ]
+        "children": []
     },
     {
         "label": "badge-lg",
         "detail": "large size",
         "category": "size",
         "parent": "badge",
-        "children": [
-            "badge-lg"
-        ]
+        "children": []
     },
     {
         "label": "badge-xl",
         "detail": "extra large size",
         "category": "size",
         "parent": "badge",
-        "children": [
-            "badge-xl"
-        ]
+        "children": []
     },
     {
         "label": "radio",
@@ -1229,7 +994,6 @@
         "category": "component",
         "parent": "radio",
         "children": [
-            "radio",
             "radio-neutral",
             "radio-primary",
             "radio-secondary",
@@ -1250,117 +1014,91 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-neutral"
-        ]
+        "children": []
     },
     {
         "label": "radio-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-primary"
-        ]
+        "children": []
     },
     {
         "label": "radio-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-secondary"
-        ]
+        "children": []
     },
     {
         "label": "radio-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-accent"
-        ]
+        "children": []
     },
     {
         "label": "radio-success",
         "detail": "success color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-success"
-        ]
+        "children": []
     },
     {
         "label": "radio-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-warning"
-        ]
+        "children": []
     },
     {
         "label": "radio-info",
         "detail": "info color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-info"
-        ]
+        "children": []
     },
     {
         "label": "radio-error",
         "detail": "error color",
         "category": "color",
         "parent": "radio",
-        "children": [
-            "radio-error"
-        ]
+        "children": []
     },
     {
         "label": "radio-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "radio",
-        "children": [
-            "radio-xs"
-        ]
+        "children": []
     },
     {
         "label": "radio-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "radio",
-        "children": [
-            "radio-sm"
-        ]
+        "children": []
     },
     {
         "label": "radio-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "radio",
-        "children": [
-            "radio-md"
-        ]
+        "children": []
     },
     {
         "label": "radio-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "radio",
-        "children": [
-            "radio-lg"
-        ]
+        "children": []
     },
     {
         "label": "radio-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "radio",
-        "children": [
-            "radio-xl"
-        ]
+        "children": []
     },
     {
         "label": "navbar",
@@ -1368,7 +1106,6 @@
         "category": "component",
         "parent": "navbar",
         "children": [
-            "navbar",
             "navbar-start",
             "navbar-center",
             "navbar-end"
@@ -1379,27 +1116,21 @@
         "detail": "For the div inside navbar, to fill 50% of width",
         "category": "part",
         "parent": "navbar",
-        "children": [
-            "navbar-start"
-        ]
+        "children": []
     },
     {
         "label": "navbar-center",
         "detail": "For the div inside navbar, to be at center horizontally",
         "category": "part",
         "parent": "navbar",
-        "children": [
-            "navbar-center"
-        ]
+        "children": []
     },
     {
         "label": "navbar-end",
         "detail": "For the div inside navbar, to fill second 50% of width",
         "category": "part",
         "parent": "navbar",
-        "children": [
-            "navbar-end"
-        ]
+        "children": []
     },
     {
         "label": "collapse",
@@ -1407,7 +1138,6 @@
         "category": "component",
         "parent": "collapse",
         "children": [
-            "collapse",
             "collapse-title",
             "collapse-content",
             "collapse-arrow",
@@ -1421,54 +1151,42 @@
         "detail": "Title part",
         "category": "part",
         "parent": "collapse",
-        "children": [
-            "collapse-title"
-        ]
+        "children": []
     },
     {
         "label": "collapse-content",
         "detail": "Content part",
         "category": "part",
         "parent": "collapse",
-        "children": [
-            "collapse-content"
-        ]
+        "children": []
     },
     {
         "label": "collapse-arrow",
         "detail": "Adds arrow icon",
         "category": "modifier",
         "parent": "collapse",
-        "children": [
-            "collapse-arrow"
-        ]
+        "children": []
     },
     {
         "label": "collapse-plus",
         "detail": "Adds plus/minus icon",
         "category": "modifier",
         "parent": "collapse",
-        "children": [
-            "collapse-plus"
-        ]
+        "children": []
     },
     {
         "label": "collapse-open",
         "detail": "Force open",
         "category": "modifier",
         "parent": "collapse",
-        "children": [
-            "collapse-open"
-        ]
+        "children": []
     },
     {
         "label": "collapse-close",
         "detail": "Force close",
         "category": "modifier",
         "parent": "collapse",
-        "children": [
-            "collapse-close"
-        ]
+        "children": []
     },
     {
         "label": "textarea",
@@ -1476,7 +1194,6 @@
         "category": "component",
         "parent": "textarea",
         "children": [
-            "textarea",
             "textarea-ghost",
             "textarea-neutral",
             "textarea-primary",
@@ -1498,126 +1215,98 @@
         "detail": "ghost style",
         "category": "style",
         "parent": "textarea",
-        "children": [
-            "textarea-ghost"
-        ]
+        "children": []
     },
     {
         "label": "textarea-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-neutral"
-        ]
+        "children": []
     },
     {
         "label": "textarea-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-primary"
-        ]
+        "children": []
     },
     {
         "label": "textarea-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-secondary"
-        ]
+        "children": []
     },
     {
         "label": "textarea-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-accent"
-        ]
+        "children": []
     },
     {
         "label": "textarea-info",
         "detail": "info color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-info"
-        ]
+        "children": []
     },
     {
         "label": "textarea-success",
         "detail": "success color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-success"
-        ]
+        "children": []
     },
     {
         "label": "textarea-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-warning"
-        ]
+        "children": []
     },
     {
         "label": "textarea-error",
         "detail": "error color",
         "category": "color",
         "parent": "textarea",
-        "children": [
-            "textarea-error"
-        ]
+        "children": []
     },
     {
         "label": "textarea-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "textarea",
-        "children": [
-            "textarea-xs"
-        ]
+        "children": []
     },
     {
         "label": "textarea-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "textarea",
-        "children": [
-            "textarea-sm"
-        ]
+        "children": []
     },
     {
         "label": "textarea-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "textarea",
-        "children": [
-            "textarea-md"
-        ]
+        "children": []
     },
     {
         "label": "textarea-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "textarea",
-        "children": [
-            "textarea-lg"
-        ]
+        "children": []
     },
     {
         "label": "textarea-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "textarea",
-        "children": [
-            "textarea-xl"
-        ]
+        "children": []
     },
     {
         "label": "btn",
@@ -1625,7 +1314,6 @@
         "category": "component",
         "parent": "btn",
         "children": [
-            "btn",
             "btn-neutral",
             "btn-primary",
             "btn-secondary",
@@ -1657,216 +1345,168 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-neutral"
-        ]
+        "children": []
     },
     {
         "label": "btn-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-primary"
-        ]
+        "children": []
     },
     {
         "label": "btn-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-secondary"
-        ]
+        "children": []
     },
     {
         "label": "btn-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-accent"
-        ]
+        "children": []
     },
     {
         "label": "btn-info",
         "detail": "info color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-info"
-        ]
+        "children": []
     },
     {
         "label": "btn-success",
         "detail": "success color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-success"
-        ]
+        "children": []
     },
     {
         "label": "btn-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-warning"
-        ]
+        "children": []
     },
     {
         "label": "btn-error",
         "detail": "error color",
         "category": "color",
         "parent": "btn",
-        "children": [
-            "btn-error"
-        ]
+        "children": []
     },
     {
         "label": "btn-outline",
         "detail": "outline style",
         "category": "style",
         "parent": "btn",
-        "children": [
-            "btn-outline"
-        ]
+        "children": []
     },
     {
         "label": "btn-dash",
         "detail": "dash style",
         "category": "style",
         "parent": "btn",
-        "children": [
-            "btn-dash"
-        ]
+        "children": []
     },
     {
         "label": "btn-soft",
         "detail": "soft style",
         "category": "style",
         "parent": "btn",
-        "children": [
-            "btn-soft"
-        ]
+        "children": []
     },
     {
         "label": "btn-ghost",
         "detail": "ghost style",
         "category": "style",
         "parent": "btn",
-        "children": [
-            "btn-ghost"
-        ]
+        "children": []
     },
     {
         "label": "btn-link",
         "detail": "looks like a link",
         "category": "style",
         "parent": "btn",
-        "children": [
-            "btn-link"
-        ]
+        "children": []
     },
     {
         "label": "btn-active",
         "detail": "looks active",
         "category": "behavior",
         "parent": "btn",
-        "children": [
-            "btn-active"
-        ]
+        "children": []
     },
     {
         "label": "btn-disabled",
         "detail": "looks disabled",
         "category": "behavior",
         "parent": "btn",
-        "children": [
-            "btn-disabled"
-        ]
+        "children": []
     },
     {
         "label": "btn-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "btn",
-        "children": [
-            "btn-xs"
-        ]
+        "children": []
     },
     {
         "label": "btn-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "btn",
-        "children": [
-            "btn-sm"
-        ]
+        "children": []
     },
     {
         "label": "btn-md",
         "detail": "Medium size (default)",
         "category": "size",
         "parent": "btn",
-        "children": [
-            "btn-md"
-        ]
+        "children": []
     },
     {
         "label": "btn-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "btn",
-        "children": [
-            "btn-lg"
-        ]
+        "children": []
     },
     {
         "label": "btn-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "btn",
-        "children": [
-            "btn-xl"
-        ]
+        "children": []
     },
     {
         "label": "btn-wide",
         "detail": "more horizontal padding",
         "category": "modifier",
         "parent": "btn",
-        "children": [
-            "btn-wide"
-        ]
+        "children": []
     },
     {
         "label": "btn-block",
         "detail": "Full width",
         "category": "modifier",
         "parent": "btn",
-        "children": [
-            "btn-block"
-        ]
+        "children": []
     },
     {
         "label": "btn-square",
         "detail": "1:1 ratio",
         "category": "modifier",
         "parent": "btn",
-        "children": [
-            "btn-square"
-        ]
+        "children": []
     },
     {
         "label": "btn-circle",
         "detail": "1:1 ratio with rounded corners",
         "category": "modifier",
         "parent": "btn",
-        "children": [
-            "btn-circle"
-        ]
+        "children": []
     },
     {
         "label": "chat",
@@ -1874,7 +1514,6 @@
         "category": "component",
         "parent": "chat",
         "children": [
-            "chat",
             "chat-image",
             "chat-header",
             "chat-footer",
@@ -1896,126 +1535,98 @@
         "detail": "Author image",
         "category": "part",
         "parent": "chat",
-        "children": [
-            "chat-image"
-        ]
+        "children": []
     },
     {
         "label": "chat-header",
         "detail": "Text above the chat bubble",
         "category": "part",
         "parent": "chat",
-        "children": [
-            "chat-header"
-        ]
+        "children": []
     },
     {
         "label": "chat-footer",
         "detail": "Text below the chat bubble",
         "category": "part",
         "parent": "chat",
-        "children": [
-            "chat-footer"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble",
         "detail": "Chat bubble",
         "category": "part",
         "parent": "chat",
-        "children": [
-            "chat-bubble"
-        ]
+        "children": []
     },
     {
         "label": "chat-start",
         "detail": "Aligns chat to start horizontally (required)",
         "category": "placement",
         "parent": "chat",
-        "children": [
-            "chat-start"
-        ]
+        "children": []
     },
     {
         "label": "chat-end",
         "detail": "Aligns chat to end horizontally (required)",
         "category": "placement",
         "parent": "chat",
-        "children": [
-            "chat-end"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-neutral",
         "detail": "neutral color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-neutral"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-primary",
         "detail": "primary color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-primary"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-secondary",
         "detail": "secondary color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-secondary"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-accent",
         "detail": "accent color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-accent"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-info",
         "detail": "info color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-info"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-success",
         "detail": "success color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-success"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-warning",
         "detail": "warning color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-warning"
-        ]
+        "children": []
     },
     {
         "label": "chat-bubble-error",
         "detail": "error color for chat-bubble",
         "category": "color",
         "parent": "chat",
-        "children": [
-            "chat-bubble-error"
-        ]
+        "children": []
     },
     {
         "label": "tabs",
@@ -2023,7 +1634,6 @@
         "category": "component",
         "parent": "tabs",
         "children": [
-            "tabs",
             "tabs-box",
             "tabs-border",
             "tabs-lift",
@@ -2042,7 +1652,6 @@
         "category": "part",
         "parent": "tab",
         "children": [
-            "tab",
             "tab-content",
             "tab-active",
             "tab-disabled"
@@ -2053,117 +1662,91 @@
         "detail": "Tab content that comes immediately after a tab",
         "category": "part",
         "parent": "tab",
-        "children": [
-            "tab-content"
-        ]
+        "children": []
     },
     {
         "label": "tabs-box",
         "detail": "box style",
         "category": "style",
         "parent": "tabs",
-        "children": [
-            "tabs-box"
-        ]
+        "children": []
     },
     {
         "label": "tabs-border",
         "detail": "bottom border style",
         "category": "style",
         "parent": "tabs",
-        "children": [
-            "tabs-border"
-        ]
+        "children": []
     },
     {
         "label": "tabs-lift",
         "detail": "lift style",
         "category": "style",
         "parent": "tabs",
-        "children": [
-            "tabs-lift"
-        ]
+        "children": []
     },
     {
         "label": "tab-active",
         "detail": "Makes a single tab look active",
         "category": "modifier",
         "parent": "tab",
-        "children": [
-            "tab-active"
-        ]
+        "children": []
     },
     {
         "label": "tab-disabled",
         "detail": "Makes a single tab look disabled",
         "category": "modifier",
         "parent": "tab",
-        "children": [
-            "tab-disabled"
-        ]
+        "children": []
     },
     {
         "label": "tabs-top",
         "detail": "Puts tab buttons on top of the tab-content (default)",
         "category": "placement",
         "parent": "tabs",
-        "children": [
-            "tabs-top"
-        ]
+        "children": []
     },
     {
         "label": "tabs-bottom",
         "detail": "Puts tabs on under the tab-content",
         "category": "placement",
         "parent": "tabs",
-        "children": [
-            "tabs-bottom"
-        ]
+        "children": []
     },
     {
         "label": "tabs-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "tabs",
-        "children": [
-            "tabs-xs"
-        ]
+        "children": []
     },
     {
         "label": "tabs-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "tabs",
-        "children": [
-            "tabs-sm"
-        ]
+        "children": []
     },
     {
         "label": "tabs-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "tabs",
-        "children": [
-            "tabs-md"
-        ]
+        "children": []
     },
     {
         "label": "tabs-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "tabs",
-        "children": [
-            "tabs-lg"
-        ]
+        "children": []
     },
     {
         "label": "tabs-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "tabs",
-        "children": [
-            "tabs-xl"
-        ]
+        "children": []
     },
     {
         "label": "stack",
@@ -2171,7 +1754,6 @@
         "category": "component",
         "parent": "stack",
         "children": [
-            "stack",
             "stack-top",
             "stack-bottom",
             "stack-start",
@@ -2183,36 +1765,28 @@
         "detail": "Aligns the children elements to the top",
         "category": "modifier",
         "parent": "stack",
-        "children": [
-            "stack-top"
-        ]
+        "children": []
     },
     {
         "label": "stack-bottom",
         "detail": "Aligns the children elements to the bottom",
         "category": "modifier",
         "parent": "stack",
-        "children": [
-            "stack-bottom"
-        ]
+        "children": []
     },
     {
         "label": "stack-start",
         "detail": "Aligns the children elements to the start (horizontally)",
         "category": "modifier",
         "parent": "stack",
-        "children": [
-            "stack-start"
-        ]
+        "children": []
     },
     {
         "label": "stack-end",
         "detail": "Aligns the children elements to the end (horizontally)",
         "category": "modifier",
         "parent": "stack",
-        "children": [
-            "stack-end"
-        ]
+        "children": []
     },
     {
         "label": "join",
@@ -2220,7 +1794,6 @@
         "category": "component",
         "parent": "join",
         "children": [
-            "join",
             "join-item",
             "join-vertical",
             "join-horizontal"
@@ -2231,27 +1804,21 @@
         "detail": "Item inside join. Can be a button, input, etc.",
         "category": "component",
         "parent": "join",
-        "children": [
-            "join-item"
-        ]
+        "children": []
     },
     {
         "label": "join-vertical",
         "detail": "Show items vertically",
         "category": "direction",
         "parent": "join",
-        "children": [
-            "join-vertical"
-        ]
+        "children": []
     },
     {
         "label": "join-horizontal",
         "detail": "Show items horizontally",
         "category": "direction",
         "parent": "join",
-        "children": [
-            "join-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "range",
@@ -2259,7 +1826,6 @@
         "category": "component",
         "parent": "range",
         "children": [
-            "range",
             "range-neutral",
             "range-primary",
             "range-secondary",
@@ -2280,117 +1846,91 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-neutral"
-        ]
+        "children": []
     },
     {
         "label": "range-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-primary"
-        ]
+        "children": []
     },
     {
         "label": "range-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-secondary"
-        ]
+        "children": []
     },
     {
         "label": "range-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-accent"
-        ]
+        "children": []
     },
     {
         "label": "range-success",
         "detail": "success color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-success"
-        ]
+        "children": []
     },
     {
         "label": "range-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-warning"
-        ]
+        "children": []
     },
     {
         "label": "range-info",
         "detail": "info color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-info"
-        ]
+        "children": []
     },
     {
         "label": "range-error",
         "detail": "error color",
         "category": "color",
         "parent": "range",
-        "children": [
-            "range-error"
-        ]
+        "children": []
     },
     {
         "label": "range-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "range",
-        "children": [
-            "range-xs"
-        ]
+        "children": []
     },
     {
         "label": "range-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "range",
-        "children": [
-            "range-sm"
-        ]
+        "children": []
     },
     {
         "label": "range-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "range",
-        "children": [
-            "range-md"
-        ]
+        "children": []
     },
     {
         "label": "range-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "range",
-        "children": [
-            "range-lg"
-        ]
+        "children": []
     },
     {
         "label": "range-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "range",
-        "children": [
-            "range-xl"
-        ]
+        "children": []
     },
     {
         "label": "checkbox",
@@ -2398,7 +1938,6 @@
         "category": "component",
         "parent": "checkbox",
         "children": [
-            "checkbox",
             "checkbox-primary",
             "checkbox-secondary",
             "checkbox-accent",
@@ -2419,126 +1958,98 @@
         "detail": "primary color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-primary"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-secondary"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-accent"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-neutral"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-success",
         "detail": "success color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-success"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-warning"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-info",
         "detail": "info color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-info"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-error",
         "detail": "error color",
         "category": "color",
         "parent": "checkbox",
-        "children": [
-            "checkbox-error"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "checkbox",
-        "children": [
-            "checkbox-xs"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "checkbox",
-        "children": [
-            "checkbox-sm"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "checkbox",
-        "children": [
-            "checkbox-md"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "checkbox",
-        "children": [
-            "checkbox-lg"
-        ]
+        "children": []
     },
     {
         "label": "checkbox-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "checkbox",
-        "children": [
-            "checkbox-xl"
-        ]
+        "children": []
     },
     {
         "label": "radial-progress",
         "detail": "Shows a radial progress",
         "category": "component",
         "parent": "radial",
-        "children": [
-            "radial-progress"
-        ]
+        "children": []
     },
     {
         "label": "toast",
@@ -2546,7 +2057,6 @@
         "category": "component",
         "parent": "toast",
         "children": [
-            "toast",
             "toast-start",
             "toast-center",
             "toast-end",
@@ -2560,54 +2070,42 @@
         "detail": "align horizontally to the left",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-start"
-        ]
+        "children": []
     },
     {
         "label": "toast-center",
         "detail": "align horizontally to the center",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-center"
-        ]
+        "children": []
     },
     {
         "label": "toast-end",
         "detail": "align horizontally to the right",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-end"
-        ]
+        "children": []
     },
     {
         "label": "toast-top",
         "detail": "align vertically to top",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-top"
-        ]
+        "children": []
     },
     {
         "label": "toast-middle",
         "detail": "align vertically to middle",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-middle"
-        ]
+        "children": []
     },
     {
         "label": "toast-bottom",
         "detail": "align vertically to bottom",
         "category": "placement",
         "parent": "toast",
-        "children": [
-            "toast-bottom"
-        ]
+        "children": []
     },
     {
         "label": "steps",
@@ -2615,7 +2113,6 @@
         "category": "component",
         "parent": "steps",
         "children": [
-            "steps",
             "steps-vertical",
             "steps-horizontal"
         ]
@@ -2626,7 +2123,6 @@
         "category": "part",
         "parent": "step",
         "children": [
-            "step",
             "step-icon",
             "step-neutral",
             "step-primary",
@@ -2643,126 +2139,98 @@
         "detail": "For custom icon inside step",
         "category": "part",
         "parent": "step",
-        "children": [
-            "step-icon"
-        ]
+        "children": []
     },
     {
         "label": "step-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-neutral"
-        ]
+        "children": []
     },
     {
         "label": "step-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-primary"
-        ]
+        "children": []
     },
     {
         "label": "step-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-secondary"
-        ]
+        "children": []
     },
     {
         "label": "step-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-accent"
-        ]
+        "children": []
     },
     {
         "label": "step-info",
         "detail": "info color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-info"
-        ]
+        "children": []
     },
     {
         "label": "step-success",
         "detail": "success color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-success"
-        ]
+        "children": []
     },
     {
         "label": "step-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-warning"
-        ]
+        "children": []
     },
     {
         "label": "step-error",
         "detail": "error color",
         "category": "color",
         "parent": "step",
-        "children": [
-            "step-error"
-        ]
+        "children": []
     },
     {
         "label": "steps-vertical",
         "detail": "Makes steps vertical (default)",
         "category": "direction",
         "parent": "steps",
-        "children": [
-            "steps-vertical"
-        ]
+        "children": []
     },
     {
         "label": "steps-horizontal",
         "detail": "Makes steps horizontal",
         "category": "direction",
         "parent": "steps",
-        "children": [
-            "steps-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "cally",
         "detail": "for Cally web component",
         "category": "component",
         "parent": "cally",
-        "children": [
-            "cally"
-        ]
+        "children": []
     },
     {
         "label": "pika-single",
         "detail": "for the input field that opens Pikaday calendar",
         "category": "component",
         "parent": "pika",
-        "children": [
-            "pika-single"
-        ]
+        "children": []
     },
     {
         "label": "react-day-picker",
         "detail": "for the DayPicker component",
         "category": "component",
         "parent": "react",
-        "children": [
-            "react-day-picker"
-        ]
+        "children": []
     },
     {
         "label": "toggle",
@@ -2770,7 +2238,6 @@
         "category": "component",
         "parent": "toggle",
         "children": [
-            "toggle",
             "toggle-primary",
             "toggle-secondary",
             "toggle-accent",
@@ -2791,153 +2258,119 @@
         "detail": "primary color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-primary"
-        ]
+        "children": []
     },
     {
         "label": "toggle-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-secondary"
-        ]
+        "children": []
     },
     {
         "label": "toggle-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-accent"
-        ]
+        "children": []
     },
     {
         "label": "toggle-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-neutral"
-        ]
+        "children": []
     },
     {
         "label": "toggle-success",
         "detail": "success color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-success"
-        ]
+        "children": []
     },
     {
         "label": "toggle-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-warning"
-        ]
+        "children": []
     },
     {
         "label": "toggle-info",
         "detail": "info color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-info"
-        ]
+        "children": []
     },
     {
         "label": "toggle-error",
         "detail": "error color",
         "category": "color",
         "parent": "toggle",
-        "children": [
-            "toggle-error"
-        ]
+        "children": []
     },
     {
         "label": "toggle-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "toggle",
-        "children": [
-            "toggle-xs"
-        ]
+        "children": []
     },
     {
         "label": "toggle-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "toggle",
-        "children": [
-            "toggle-sm"
-        ]
+        "children": []
     },
     {
         "label": "toggle-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "toggle",
-        "children": [
-            "toggle-md"
-        ]
+        "children": []
     },
     {
         "label": "toggle-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "toggle",
-        "children": [
-            "toggle-lg"
-        ]
+        "children": []
     },
     {
         "label": "toggle-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "toggle",
-        "children": [
-            "toggle-xl"
-        ]
+        "children": []
     },
     {
         "label": "mockup-phone",
         "detail": "Phone mockup",
         "category": "component",
         "parent": "mockup",
-        "children": [
-            "mockup-phone"
-        ]
+        "children": []
     },
     {
         "label": "mockup-phone-camera",
         "detail": "Camera part",
         "category": "part",
         "parent": "mockup",
-        "children": [
-            "mockup-phone-camera"
-        ]
+        "children": []
     },
     {
         "label": "mockup-phone-display",
         "detail": "Display part",
         "category": "part",
         "parent": "mockup",
-        "children": [
-            "mockup-phone-display"
-        ]
+        "children": []
     },
     {
         "label": "mockup-window",
         "detail": "OS window mockup",
         "category": "component",
         "parent": "mockup",
-        "children": [
-            "mockup-window"
-        ]
+        "children": []
     },
     {
         "label": "carousel",
@@ -2945,7 +2378,6 @@
         "category": "component",
         "parent": "carousel",
         "children": [
-            "carousel",
             "carousel-item",
             "carousel-start",
             "carousel-center",
@@ -2959,54 +2391,42 @@
         "detail": "Carousel item",
         "category": "part",
         "parent": "carousel",
-        "children": [
-            "carousel-item"
-        ]
+        "children": []
     },
     {
         "label": "carousel-start",
         "detail": "Snap elements to start",
         "category": "modifier",
         "parent": "carousel",
-        "children": [
-            "carousel-start"
-        ]
+        "children": []
     },
     {
         "label": "carousel-center",
         "detail": "Snap elements to center",
         "category": "modifier",
         "parent": "carousel",
-        "children": [
-            "carousel-center"
-        ]
+        "children": []
     },
     {
         "label": "carousel-end",
         "detail": "Snap elements to end",
         "category": "modifier",
         "parent": "carousel",
-        "children": [
-            "carousel-end"
-        ]
+        "children": []
     },
     {
         "label": "carousel-horizontal",
         "detail": "Horizontal layout (default)",
         "category": "direction",
         "parent": "carousel",
-        "children": [
-            "carousel-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "carousel-vertical",
         "detail": "Vertical layout",
         "category": "direction",
         "parent": "carousel",
-        "children": [
-            "carousel-vertical"
-        ]
+        "children": []
     },
     {
         "label": "list",
@@ -3014,7 +2434,6 @@
         "category": "component",
         "parent": "list",
         "children": [
-            "list",
             "list-row",
             "list-col-wrap",
             "list-col-grow"
@@ -3025,27 +2444,21 @@
         "detail": "The item inside list. A horizontal grid layout to include data",
         "category": "component",
         "parent": "list",
-        "children": [
-            "list-row"
-        ]
+        "children": []
     },
     {
         "label": "list-col-wrap",
         "detail": "For one of direct children of list-row to push it to the next line",
         "category": "modifier",
         "parent": "list",
-        "children": [
-            "list-col-wrap"
-        ]
+        "children": []
     },
     {
         "label": "list-col-grow",
         "detail": "For one of direct children of list-row to make it fill the remaining space",
         "category": "modifier",
         "parent": "list",
-        "children": [
-            "list-col-grow"
-        ]
+        "children": []
     },
     {
         "label": "tooltip",
@@ -3053,7 +2466,6 @@
         "category": "component",
         "parent": "tooltip",
         "children": [
-            "tooltip",
             "tooltip-content",
             "tooltip-top",
             "tooltip-bottom",
@@ -3075,126 +2487,98 @@
         "detail": "Optional. Setting a div as the content of the tooltip instead of the `data-tip` text",
         "category": "part",
         "parent": "tooltip",
-        "children": [
-            "tooltip-content"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-top",
         "detail": "Put tooltip on top",
         "category": "placement",
         "parent": "tooltip",
-        "children": [
-            "tooltip-top"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-bottom",
         "detail": "Put tooltip on bottom",
         "category": "placement",
         "parent": "tooltip",
-        "children": [
-            "tooltip-bottom"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-left",
         "detail": "Put tooltip on left",
         "category": "placement",
         "parent": "tooltip",
-        "children": [
-            "tooltip-left"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-right",
         "detail": "Put tooltip on right",
         "category": "placement",
         "parent": "tooltip",
-        "children": [
-            "tooltip-right"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-open",
         "detail": "Force open tooltip",
         "category": "modifier",
         "parent": "tooltip",
-        "children": [
-            "tooltip-open"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-neutral"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-primary"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-secondary"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-accent"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-info",
         "detail": "info color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-info"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-success",
         "detail": "success color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-success"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-warning"
-        ]
+        "children": []
     },
     {
         "label": "tooltip-error",
         "detail": "error color",
         "category": "color",
         "parent": "tooltip",
-        "children": [
-            "tooltip-error"
-        ]
+        "children": []
     },
     {
         "label": "dock",
@@ -3202,7 +2586,6 @@
         "category": "component",
         "parent": "dock",
         "children": [
-            "dock",
             "dock-label",
             "dock-active",
             "dock-xs",
@@ -3217,63 +2600,49 @@
         "detail": "Text label for Dock Item",
         "category": "part",
         "parent": "dock",
-        "children": [
-            "dock-label"
-        ]
+        "children": []
     },
     {
         "label": "dock-active",
         "detail": "Makes the Dock Item look active",
         "category": "modifier",
         "parent": "dock",
-        "children": [
-            "dock-active"
-        ]
+        "children": []
     },
     {
         "label": "dock-xs",
         "detail": "Extra Small Dock",
         "category": "size",
         "parent": "dock",
-        "children": [
-            "dock-xs"
-        ]
+        "children": []
     },
     {
         "label": "dock-sm",
         "detail": "Small Dock",
         "category": "size",
         "parent": "dock",
-        "children": [
-            "dock-sm"
-        ]
+        "children": []
     },
     {
         "label": "dock-md",
         "detail": "Medium Dock",
         "category": "size",
         "parent": "dock",
-        "children": [
-            "dock-md"
-        ]
+        "children": []
     },
     {
         "label": "dock-lg",
         "detail": "Large Dock",
         "category": "size",
         "parent": "dock",
-        "children": [
-            "dock-lg"
-        ]
+        "children": []
     },
     {
         "label": "dock-xl",
         "detail": "Extra Large Dock",
         "category": "size",
         "parent": "dock",
-        "children": [
-            "dock-xl"
-        ]
+        "children": []
     },
     {
         "label": "modal",
@@ -3281,7 +2650,6 @@
         "category": "component",
         "parent": "modal",
         "children": [
-            "modal",
             "modal-box",
             "modal-action",
             "modal-backdrop",
@@ -3299,90 +2667,70 @@
         "detail": "The content part",
         "category": "part",
         "parent": "modal",
-        "children": [
-            "modal-box"
-        ]
+        "children": []
     },
     {
         "label": "modal-action",
         "detail": "Actions part (buttons, etc.)",
         "category": "part",
         "parent": "modal",
-        "children": [
-            "modal-action"
-        ]
+        "children": []
     },
     {
         "label": "modal-backdrop",
         "detail": "Label that covers the page when modal is open so we can close the modal by clicking outside",
         "category": "part",
         "parent": "modal",
-        "children": [
-            "modal-backdrop"
-        ]
+        "children": []
     },
     {
         "label": "modal-toggle",
         "detail": "Hidden checkbox that controls the state of modal",
         "category": "part",
         "parent": "modal",
-        "children": [
-            "modal-toggle"
-        ]
+        "children": []
     },
     {
         "label": "modal-open",
         "detail": "Keeps the modal open (you can add this class using JS)",
         "category": "modifier",
         "parent": "modal",
-        "children": [
-            "modal-open"
-        ]
+        "children": []
     },
     {
         "label": "modal-top",
         "detail": "Moves the modal to top",
         "category": "placement",
         "parent": "modal",
-        "children": [
-            "modal-top"
-        ]
+        "children": []
     },
     {
         "label": "modal-middle",
         "detail": "Moves the modal to middle",
         "category": "placement",
         "parent": "modal",
-        "children": [
-            "modal-middle"
-        ]
+        "children": []
     },
     {
         "label": "modal-bottom",
         "detail": "Moves the modal to bottom",
         "category": "placement",
         "parent": "modal",
-        "children": [
-            "modal-bottom"
-        ]
+        "children": []
     },
     {
         "label": "modal-start",
         "detail": "Moves the modal to start horizontally",
         "category": "placement",
         "parent": "modal",
-        "children": [
-            "modal-start"
-        ]
+        "children": []
     },
     {
         "label": "modal-end",
         "detail": "Moves the modal to end horizontally",
         "category": "placement",
         "parent": "modal",
-        "children": [
-            "modal-end"
-        ]
+        "children": []
     },
     {
         "label": "menu",
@@ -3390,7 +2738,6 @@
         "category": "component",
         "parent": "menu",
         "children": [
-            "menu",
             "menu-title",
             "menu-dropdown",
             "menu-dropdown-toggle",
@@ -3412,126 +2759,98 @@
         "detail": "styles a <li> as title",
         "category": "part",
         "parent": "menu",
-        "children": [
-            "menu-title"
-        ]
+        "children": []
     },
     {
         "label": "menu-dropdown",
         "detail": "For the collapsible <ul> if you want to show it using JS",
         "category": "part",
         "parent": "menu",
-        "children": [
-            "menu-dropdown"
-        ]
+        "children": []
     },
     {
         "label": "menu-dropdown-toggle",
         "detail": "For the toggle to show/hide the menu-dropdown using JS",
         "category": "part",
         "parent": "menu",
-        "children": [
-            "menu-dropdown-toggle"
-        ]
+        "children": []
     },
     {
         "label": "menu-disabled",
         "detail": "For disabling a <li>",
         "category": "modifier",
         "parent": "menu",
-        "children": [
-            "menu-disabled"
-        ]
+        "children": []
     },
     {
         "label": "menu-active",
         "detail": "For the element inside <li> to look active",
         "category": "modifier",
         "parent": "menu",
-        "children": [
-            "menu-active"
-        ]
+        "children": []
     },
     {
         "label": "menu-focus",
         "detail": "For the element inside <li> to look focused",
         "category": "modifier",
         "parent": "menu",
-        "children": [
-            "menu-focus"
-        ]
+        "children": []
     },
     {
         "label": "menu-dropdown-show",
         "detail": "Shows the menu-dropdown-toggle and menu-dropdown collapsible submenu using JS",
         "category": "modifier",
         "parent": "menu",
-        "children": [
-            "menu-dropdown-show"
-        ]
+        "children": []
     },
     {
         "label": "menu-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "menu",
-        "children": [
-            "menu-xs"
-        ]
+        "children": []
     },
     {
         "label": "menu-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "menu",
-        "children": [
-            "menu-sm"
-        ]
+        "children": []
     },
     {
         "label": "menu-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "menu",
-        "children": [
-            "menu-md"
-        ]
+        "children": []
     },
     {
         "label": "menu-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "menu",
-        "children": [
-            "menu-lg"
-        ]
+        "children": []
     },
     {
         "label": "menu-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "menu",
-        "children": [
-            "menu-xl"
-        ]
+        "children": []
     },
     {
         "label": "menu-vertical",
         "detail": "Vertical menu (default)",
         "category": "direction",
         "parent": "menu",
-        "children": [
-            "menu-vertical"
-        ]
+        "children": []
     },
     {
         "label": "menu-horizontal",
         "detail": "Horizontal menu",
         "category": "direction",
         "parent": "menu",
-        "children": [
-            "menu-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "table",
@@ -3539,7 +2858,6 @@
         "category": "component",
         "parent": "table",
         "children": [
-            "table",
             "table-zebra",
             "table-pin-rows",
             "table-pin-cols",
@@ -3555,72 +2873,56 @@
         "detail": "For <table> to show zebra stripe rows",
         "category": "modifier",
         "parent": "table",
-        "children": [
-            "table-zebra"
-        ]
+        "children": []
     },
     {
         "label": "table-pin-rows",
         "detail": "For <table> to make all the rows inside <thead> and <tfoot> sticky",
         "category": "modifier",
         "parent": "table",
-        "children": [
-            "table-pin-rows"
-        ]
+        "children": []
     },
     {
         "label": "table-pin-cols",
         "detail": "For <table> to make all the <th> columns sticky",
         "category": "modifier",
         "parent": "table",
-        "children": [
-            "table-pin-cols"
-        ]
+        "children": []
     },
     {
         "label": "table-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "table",
-        "children": [
-            "table-xs"
-        ]
+        "children": []
     },
     {
         "label": "table-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "table",
-        "children": [
-            "table-sm"
-        ]
+        "children": []
     },
     {
         "label": "table-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "table",
-        "children": [
-            "table-md"
-        ]
+        "children": []
     },
     {
         "label": "table-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "table",
-        "children": [
-            "table-lg"
-        ]
+        "children": []
     },
     {
         "label": "table-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "table",
-        "children": [
-            "table-xl"
-        ]
+        "children": []
     },
     {
         "label": "validator",
@@ -3628,7 +2930,6 @@
         "category": "component",
         "parent": "validator",
         "children": [
-            "validator",
             "validator-hint"
         ]
     },
@@ -3637,9 +2938,7 @@
         "detail": "for the hint text that appears after the input if it's invalid",
         "category": "part",
         "parent": "validator",
-        "children": [
-            "validator-hint"
-        ]
+        "children": []
     },
     {
         "label": "card",
@@ -3647,7 +2946,6 @@
         "category": "component",
         "parent": "card",
         "children": [
-            "card",
             "card-title",
             "card-body",
             "card-actions",
@@ -3666,135 +2964,105 @@
         "detail": "Title part",
         "category": "part",
         "parent": "card",
-        "children": [
-            "card-title"
-        ]
+        "children": []
     },
     {
         "label": "card-body",
         "detail": "Body part (content)",
         "category": "part",
         "parent": "card",
-        "children": [
-            "card-body"
-        ]
+        "children": []
     },
     {
         "label": "card-actions",
         "detail": "Actions part (buttons, etc.)",
         "category": "part",
         "parent": "card",
-        "children": [
-            "card-actions"
-        ]
+        "children": []
     },
     {
         "label": "card-border",
         "detail": "Adds border to <card>",
         "category": "style",
         "parent": "card",
-        "children": [
-            "card-border"
-        ]
+        "children": []
     },
     {
         "label": "card-dash",
         "detail": "dash style",
         "category": "style",
         "parent": "card",
-        "children": [
-            "card-dash"
-        ]
+        "children": []
     },
     {
         "label": "card-side",
         "detail": "The image in <figure> will be on to the side",
         "category": "modifier",
         "parent": "card",
-        "children": [
-            "card-side"
-        ]
+        "children": []
     },
     {
         "label": "image-full",
         "detail": "The image in <figure> element will be the background",
         "category": "modifier",
         "parent": "image",
-        "children": [
-            "image-full"
-        ]
+        "children": []
     },
     {
         "label": "card-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "card",
-        "children": [
-            "card-xs"
-        ]
+        "children": []
     },
     {
         "label": "card-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "card",
-        "children": [
-            "card-sm"
-        ]
+        "children": []
     },
     {
         "label": "card-md",
         "detail": "Medium size (default)",
         "category": "size",
         "parent": "card",
-        "children": [
-            "card-md"
-        ]
+        "children": []
     },
     {
         "label": "card-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "card",
-        "children": [
-            "card-lg"
-        ]
+        "children": []
     },
     {
         "label": "card-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "card",
-        "children": [
-            "card-xl"
-        ]
+        "children": []
     },
     {
         "label": "breadcrumbs",
         "detail": "Wrapper around a <ul>",
         "category": "component",
         "parent": "breadcrumbs",
-        "children": [
-            "breadcrumbs"
-        ]
+        "children": []
     },
     {
         "label": "countdown",
         "detail": "Countdown wrapper",
         "category": "component",
         "parent": "countdown",
-        "children": [
-            "countdown"
-        ]
+        "children": []
     },
     {
         "label": "floating-label",
         "detail": "For the parent of an input field (or select) and a span that floats above the input field when the field is focused",
         "category": "component",
         "parent": "floating",
-        "children": [
-            "floating-label"
-        ]
+        "children": []
     },
     {
         "label": "rating",
@@ -3802,7 +3070,6 @@
         "category": "component",
         "parent": "rating",
         "children": [
-            "rating",
             "rating-half",
             "rating-hidden",
             "rating-xs",
@@ -3817,63 +3084,49 @@
         "detail": "To shows half of the shapes. Useful for half star ratings",
         "category": "modifier",
         "parent": "rating",
-        "children": [
-            "rating-half"
-        ]
+        "children": []
     },
     {
         "label": "rating-hidden",
         "detail": "For the first radio to make it hidden so user can clear the rating",
         "category": "modifier",
         "parent": "rating",
-        "children": [
-            "rating-hidden"
-        ]
+        "children": []
     },
     {
         "label": "rating-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "rating",
-        "children": [
-            "rating-xs"
-        ]
+        "children": []
     },
     {
         "label": "rating-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "rating",
-        "children": [
-            "rating-sm"
-        ]
+        "children": []
     },
     {
         "label": "rating-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "rating",
-        "children": [
-            "rating-md"
-        ]
+        "children": []
     },
     {
         "label": "rating-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "rating",
-        "children": [
-            "rating-lg"
-        ]
+        "children": []
     },
     {
         "label": "rating-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "rating",
-        "children": [
-            "rating-xl"
-        ]
+        "children": []
     },
     {
         "label": "avatar",
@@ -3881,7 +3134,6 @@
         "category": "component",
         "parent": "avatar",
         "children": [
-            "avatar",
             "avatar-group",
             "avatar-online",
             "avatar-offline",
@@ -3893,36 +3145,28 @@
         "detail": "Container for multiple avatars",
         "category": "component",
         "parent": "avatar",
-        "children": [
-            "avatar-group"
-        ]
+        "children": []
     },
     {
         "label": "avatar-online",
         "detail": "shows a green dot as online indicator",
         "category": "modifier",
         "parent": "avatar",
-        "children": [
-            "avatar-online"
-        ]
+        "children": []
     },
     {
         "label": "avatar-offline",
         "detail": "shows a gray dot as offline indicator",
         "category": "modifier",
         "parent": "avatar",
-        "children": [
-            "avatar-offline"
-        ]
+        "children": []
     },
     {
         "label": "avatar-placeholder",
         "detail": "To show letters as avatar placeholder",
         "category": "modifier",
         "parent": "avatar",
-        "children": [
-            "avatar-placeholder"
-        ]
+        "children": []
     },
     {
         "label": "mask",
@@ -3930,7 +3174,6 @@
         "category": "component",
         "parent": "mask",
         "children": [
-            "mask",
             "mask-squircle",
             "mask-heart",
             "mask-hexagon",
@@ -3955,153 +3198,119 @@
         "detail": "squircle",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-squircle"
-        ]
+        "children": []
     },
     {
         "label": "mask-heart",
         "detail": "heart",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-heart"
-        ]
+        "children": []
     },
     {
         "label": "mask-hexagon",
         "detail": "hexagon vertical",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-hexagon"
-        ]
+        "children": []
     },
     {
         "label": "mask-hexagon-2",
         "detail": "hexagon horizontal",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-hexagon-2"
-        ]
+        "children": []
     },
     {
         "label": "mask-decagon",
         "detail": "decagon",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-decagon"
-        ]
+        "children": []
     },
     {
         "label": "mask-pentagon",
         "detail": "pentagon",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-pentagon"
-        ]
+        "children": []
     },
     {
         "label": "mask-diamond",
         "detail": "diamond",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-diamond"
-        ]
+        "children": []
     },
     {
         "label": "mask-square",
         "detail": "square",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-square"
-        ]
+        "children": []
     },
     {
         "label": "mask-circle",
         "detail": "circle",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-circle"
-        ]
+        "children": []
     },
     {
         "label": "mask-star",
         "detail": "star",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-star"
-        ]
+        "children": []
     },
     {
         "label": "mask-star-2",
         "detail": "star (bold)",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-star-2"
-        ]
+        "children": []
     },
     {
         "label": "mask-triangle",
         "detail": "triangle pointing top",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-triangle"
-        ]
+        "children": []
     },
     {
         "label": "mask-triangle-2",
         "detail": "triangle pointing down",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-triangle-2"
-        ]
+        "children": []
     },
     {
         "label": "mask-triangle-3",
         "detail": "triangle pointing left",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-triangle-3"
-        ]
+        "children": []
     },
     {
         "label": "mask-triangle-4",
         "detail": "triangle pointing right",
         "category": "style",
         "parent": "mask",
-        "children": [
-            "mask-triangle-4"
-        ]
+        "children": []
     },
     {
         "label": "mask-half-1",
         "detail": "Crops only the first half of mask",
         "category": "modifier",
         "parent": "mask",
-        "children": [
-            "mask-half-1"
-        ]
+        "children": []
     },
     {
         "label": "mask-half-2",
         "detail": "Crops only the second half of mask",
         "category": "modifier",
         "parent": "mask",
-        "children": [
-            "mask-half-2"
-        ]
+        "children": []
     },
     {
         "label": "dropdown",
@@ -4109,7 +3318,6 @@
         "category": "component",
         "parent": "dropdown",
         "children": [
-            "dropdown",
             "dropdown-content",
             "dropdown-start",
             "dropdown-center",
@@ -4127,90 +3335,70 @@
         "detail": "Content part",
         "category": "part",
         "parent": "dropdown",
-        "children": [
-            "dropdown-content"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-start",
         "detail": "Align horizontally to start of button",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-start"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-center",
         "detail": "Align horizontally to center of button",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-center"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-end",
         "detail": "Align horizontally to end of button",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-end"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-top",
         "detail": "Open from top",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-top"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-bottom",
         "detail": "Open from bottom",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-bottom"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-left",
         "detail": "Open from left",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-left"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-right",
         "detail": "Open from right",
         "category": "placement",
         "parent": "dropdown",
-        "children": [
-            "dropdown-right"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-hover",
         "detail": "Opens on hover too",
         "category": "modifier",
         "parent": "dropdown",
-        "children": [
-            "dropdown-hover"
-        ]
+        "children": []
     },
     {
         "label": "dropdown-open",
         "detail": "Force open",
         "category": "modifier",
         "parent": "dropdown",
-        "children": [
-            "dropdown-open"
-        ]
+        "children": []
     },
     {
         "label": "indicator",
@@ -4218,7 +3406,6 @@
         "category": "component",
         "parent": "indicator",
         "children": [
-            "indicator",
             "indicator-item",
             "indicator-start",
             "indicator-center",
@@ -4233,63 +3420,49 @@
         "detail": "will be placed on the corner of sibling",
         "category": "part",
         "parent": "indicator",
-        "children": [
-            "indicator-item"
-        ]
+        "children": []
     },
     {
         "label": "indicator-start",
         "detail": "align horizontally to the start",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-start"
-        ]
+        "children": []
     },
     {
         "label": "indicator-center",
         "detail": "align horizontally to the center",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-center"
-        ]
+        "children": []
     },
     {
         "label": "indicator-end",
         "detail": "align horizontally to the end",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-end"
-        ]
+        "children": []
     },
     {
         "label": "indicator-top",
         "detail": "align vertically to top",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-top"
-        ]
+        "children": []
     },
     {
         "label": "indicator-middle",
         "detail": "align vertically to middle",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-middle"
-        ]
+        "children": []
     },
     {
         "label": "indicator-bottom",
         "detail": "align vertically to bottom",
         "category": "placement",
         "parent": "indicator",
-        "children": [
-            "indicator-bottom"
-        ]
+        "children": []
     },
     {
         "label": "timeline",
@@ -4297,7 +3470,6 @@
         "category": "component",
         "parent": "timeline",
         "children": [
-            "timeline",
             "timeline-start",
             "timeline-middle",
             "timeline-end",
@@ -4313,72 +3485,56 @@
         "detail": "The content inside <li> that will be at the start direction",
         "category": "part",
         "parent": "timeline",
-        "children": [
-            "timeline-start"
-        ]
+        "children": []
     },
     {
         "label": "timeline-middle",
         "detail": "The content inside <li> that will be at the middle",
         "category": "part",
         "parent": "timeline",
-        "children": [
-            "timeline-middle"
-        ]
+        "children": []
     },
     {
         "label": "timeline-end",
         "detail": "The content inside <li> that will be at the end direction",
         "category": "part",
         "parent": "timeline",
-        "children": [
-            "timeline-end"
-        ]
+        "children": []
     },
     {
         "label": "timeline-snap-icon",
         "detail": "snaps the icon to the start instead of middle",
         "category": "modifier",
         "parent": "timeline",
-        "children": [
-            "timeline-snap-icon"
-        ]
+        "children": []
     },
     {
         "label": "timeline-box",
         "detail": "Applies a box style to timeline-start or timeline-end",
         "category": "modifier",
         "parent": "timeline",
-        "children": [
-            "timeline-box"
-        ]
+        "children": []
     },
     {
         "label": "timeline-compact",
         "detail": "forces all items on one side",
         "category": "modifier",
         "parent": "timeline",
-        "children": [
-            "timeline-compact"
-        ]
+        "children": []
     },
     {
         "label": "timeline-horizontal",
         "detail": "horizontal layout (default)",
         "category": "direction",
         "parent": "timeline",
-        "children": [
-            "timeline-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "timeline-vertical",
         "detail": "vertical layout",
         "category": "direction",
         "parent": "timeline",
-        "children": [
-            "timeline-vertical"
-        ]
+        "children": []
     },
     {
         "label": "input",
@@ -4386,7 +3542,6 @@
         "category": "component",
         "parent": "input",
         "children": [
-            "input",
             "input-ghost",
             "input-neutral",
             "input-primary",
@@ -4408,126 +3563,98 @@
         "detail": "ghost style",
         "category": "style",
         "parent": "input",
-        "children": [
-            "input-ghost"
-        ]
+        "children": []
     },
     {
         "label": "input-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-neutral"
-        ]
+        "children": []
     },
     {
         "label": "input-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-primary"
-        ]
+        "children": []
     },
     {
         "label": "input-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-secondary"
-        ]
+        "children": []
     },
     {
         "label": "input-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-accent"
-        ]
+        "children": []
     },
     {
         "label": "input-info",
         "detail": "info color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-info"
-        ]
+        "children": []
     },
     {
         "label": "input-success",
         "detail": "success color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-success"
-        ]
+        "children": []
     },
     {
         "label": "input-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-warning"
-        ]
+        "children": []
     },
     {
         "label": "input-error",
         "detail": "error color",
         "category": "color",
         "parent": "input",
-        "children": [
-            "input-error"
-        ]
+        "children": []
     },
     {
         "label": "input-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "input",
-        "children": [
-            "input-xs"
-        ]
+        "children": []
     },
     {
         "label": "input-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "input",
-        "children": [
-            "input-sm"
-        ]
+        "children": []
     },
     {
         "label": "input-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "input",
-        "children": [
-            "input-md"
-        ]
+        "children": []
     },
     {
         "label": "input-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "input",
-        "children": [
-            "input-lg"
-        ]
+        "children": []
     },
     {
         "label": "input-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "input",
-        "children": [
-            "input-xl"
-        ]
+        "children": []
     },
     {
         "label": "footer",
@@ -4535,7 +3662,6 @@
         "category": "component",
         "parent": "footer",
         "children": [
-            "footer",
             "footer-title",
             "footer-center",
             "footer-horizontal",
@@ -4547,54 +3673,42 @@
         "detail": "Title of a footer column",
         "category": "part",
         "parent": "footer",
-        "children": [
-            "footer-title"
-        ]
+        "children": []
     },
     {
         "label": "footer-center",
         "detail": "Aligns footer content to center",
         "category": "placement",
         "parent": "footer",
-        "children": [
-            "footer-center"
-        ]
+        "children": []
     },
     {
         "label": "footer-horizontal",
         "detail": "Puts footer columns next to each other horizontally",
         "category": "direction",
         "parent": "footer",
-        "children": [
-            "footer-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "footer-vertical",
         "detail": "Puts footer columns under each other vertically",
         "category": "direction",
         "parent": "footer",
-        "children": [
-            "footer-vertical"
-        ]
+        "children": []
     },
     {
         "label": "mockup-browser",
         "detail": "Browser mockup",
         "category": "component",
         "parent": "mockup",
-        "children": [
-            "mockup-browser"
-        ]
+        "children": []
     },
     {
         "label": "mockup-browser-toolbar",
         "detail": "Toolbar part which can include addressbar, etc",
         "category": "part",
         "parent": "mockup",
-        "children": [
-            "mockup-browser-toolbar"
-        ]
+        "children": []
     },
     {
         "label": "status",
@@ -4602,7 +3716,6 @@
         "category": "component",
         "parent": "status",
         "children": [
-            "status",
             "status-neutral",
             "status-primary",
             "status-secondary",
@@ -4623,252 +3736,196 @@
         "detail": "neutral color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-neutral"
-        ]
+        "children": []
     },
     {
         "label": "status-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-primary"
-        ]
+        "children": []
     },
     {
         "label": "status-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-secondary"
-        ]
+        "children": []
     },
     {
         "label": "status-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-accent"
-        ]
+        "children": []
     },
     {
         "label": "status-info",
         "detail": "info color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-info"
-        ]
+        "children": []
     },
     {
         "label": "status-success",
         "detail": "success color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-success"
-        ]
+        "children": []
     },
     {
         "label": "status-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-warning"
-        ]
+        "children": []
     },
     {
         "label": "status-error",
         "detail": "error color",
         "category": "color",
         "parent": "status",
-        "children": [
-            "status-error"
-        ]
+        "children": []
     },
     {
         "label": "status-xs",
         "detail": "extra small size",
         "category": "size",
         "parent": "status",
-        "children": [
-            "status-xs"
-        ]
+        "children": []
     },
     {
         "label": "status-sm",
         "detail": "small size",
         "category": "size",
         "parent": "status",
-        "children": [
-            "status-sm"
-        ]
+        "children": []
     },
     {
         "label": "status-md",
         "detail": "medium size",
         "category": "size",
         "parent": "status",
-        "children": [
-            "status-md"
-        ]
+        "children": []
     },
     {
         "label": "status-lg",
         "detail": "large size",
         "category": "size",
         "parent": "status",
-        "children": [
-            "status-lg"
-        ]
+        "children": []
     },
     {
         "label": "status-xl",
         "detail": "extra large size",
         "category": "size",
         "parent": "status",
-        "children": [
-            "status-xl"
-        ]
+        "children": []
     },
     {
         "label": "file-input",
         "detail": "For <input type=\"file\"> element",
         "category": "component",
         "parent": "file",
-        "children": [
-            "file-input"
-        ]
+        "children": []
     },
     {
         "label": "file-input-ghost",
         "detail": "ghost style",
         "category": "style",
         "parent": "file",
-        "children": [
-            "file-input-ghost"
-        ]
+        "children": []
     },
     {
         "label": "file-input-neutral",
         "detail": "neutral color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-neutral"
-        ]
+        "children": []
     },
     {
         "label": "file-input-primary",
         "detail": "primary color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-primary"
-        ]
+        "children": []
     },
     {
         "label": "file-input-secondary",
         "detail": "secondary color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-secondary"
-        ]
+        "children": []
     },
     {
         "label": "file-input-accent",
         "detail": "accent color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-accent"
-        ]
+        "children": []
     },
     {
         "label": "file-input-info",
         "detail": "info color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-info"
-        ]
+        "children": []
     },
     {
         "label": "file-input-success",
         "detail": "success color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-success"
-        ]
+        "children": []
     },
     {
         "label": "file-input-warning",
         "detail": "warning color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-warning"
-        ]
+        "children": []
     },
     {
         "label": "file-input-error",
         "detail": "error color",
         "category": "color",
         "parent": "file",
-        "children": [
-            "file-input-error"
-        ]
+        "children": []
     },
     {
         "label": "file-input-xs",
         "detail": "Extra small size",
         "category": "size",
         "parent": "file",
-        "children": [
-            "file-input-xs"
-        ]
+        "children": []
     },
     {
         "label": "file-input-sm",
         "detail": "Small size",
         "category": "size",
         "parent": "file",
-        "children": [
-            "file-input-sm"
-        ]
+        "children": []
     },
     {
         "label": "file-input-md",
         "detail": "Medium size",
         "category": "size",
         "parent": "file",
-        "children": [
-            "file-input-md"
-        ]
+        "children": []
     },
     {
         "label": "file-input-lg",
         "detail": "Large size",
         "category": "size",
         "parent": "file",
-        "children": [
-            "file-input-lg"
-        ]
+        "children": []
     },
     {
         "label": "file-input-xl",
         "detail": "Extra large size",
         "category": "size",
         "parent": "file",
-        "children": [
-            "file-input-xl"
-        ]
+        "children": []
     },
     {
         "label": "diff",
@@ -4876,7 +3933,6 @@
         "category": "component",
         "parent": "diff",
         "children": [
-            "diff",
             "diff-item-1",
             "diff-item-2",
             "diff-resizer"
@@ -4887,27 +3943,21 @@
         "detail": "First item",
         "category": "part",
         "parent": "diff",
-        "children": [
-            "diff-item-1"
-        ]
+        "children": []
     },
     {
         "label": "diff-item-2",
         "detail": "Second item",
         "category": "part",
         "parent": "diff",
-        "children": [
-            "diff-item-2"
-        ]
+        "children": []
     },
     {
         "label": "diff-resizer",
         "detail": "The resizer control",
         "category": "part",
         "parent": "diff",
-        "children": [
-            "diff-resizer"
-        ]
+        "children": []
     },
     {
         "label": "filter",
@@ -4915,7 +3965,6 @@
         "category": "component",
         "parent": "filter",
         "children": [
-            "filter",
             "filter-reset"
         ]
     },
@@ -4924,17 +3973,13 @@
         "detail": "An alternative to the reset button if you can't use a HTML form",
         "category": "part",
         "parent": "filter",
-        "children": [
-            "filter-reset"
-        ]
+        "children": []
     },
     {
         "label": "theme-controller",
         "detail": "For a checkbox or radio input that must change the page theme",
         "category": "component",
         "parent": "theme",
-        "children": [
-            "theme-controller"
-        ]
+        "children": []
     }
 ]
