@@ -69,6 +69,7 @@ void buildComponentList(
     DaisyuiComponent parent = v['parent']!.first;
     List<DaisyuiComponent> children = v['children'] ?? [];
     if (children.isNotEmpty) {
+      // TODO: each entry already has a category, I can use that to define enums below.
       String output = """
 import 'package:jaspr/jaspr.dart';
 
