@@ -57,20 +57,30 @@ for k, component in enumerate(component_contents):
                 desc = desc_line[start:].strip()
                 root_name = name.split("-")[0]
                 children = []
+                is_sub = False
                 if locals().get("category", None) == "component":
                     parent_name = name
-                    print(root_name)
                     if root_name in parent_name and len(parent_name) > len(root_name):
                         if components[-1]["parent"] == root_name:
                             parent_name = root_name
-
+                            is_sub = True
+                else:
+                    if components[-1]["is_sub"] == True:
+                        parent_name = components[-1]["label"]
+                        if parent_name == "join-item":
+                            parent_name = "join"
+                    else:
+                        parent_name = components[-1]["parent"]
+                if name == "avatar" or name == "avatar-group":
+                    parent_name = "avatar"
                 components.append(
                     {
                         "label": name,
-                        "detail": desc,
+                        # "detail": desc,
                         "category": locals().get("category", None),
                         "parent": locals().get("parent_name", None),
                         "children": locals().get("children", None),
+                        "is_sub": is_sub,
                         # "documentation": component_file[k][],
                     }
                 )
