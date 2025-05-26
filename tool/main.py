@@ -55,15 +55,14 @@ for k, component in enumerate(component_contents):
             if class_desc_pattern in desc_line:
                 start = desc_line.index(":") + 2
                 desc = desc_line[start:].strip()
-                # parent_name = name.split("-")[0]
-                # if parent_name == "stat":
+                root_name = name.split("-")[0]
                 # parent_name = "stats"
                 children = []
-                # if parent_name != name:
-                # children.append(name)
                 if locals().get("category", None) == "component":
-                    print(name)
                     parent_name = name
+                    if root_name in parent_name and len(parent_name) > len(root_name):
+                        parent_name = root_name
+
                 components.append(
                     {
                         "label": name,
