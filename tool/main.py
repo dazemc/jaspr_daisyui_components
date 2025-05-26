@@ -99,8 +99,28 @@ for c in components:
     name: str = c["label"]
     parent: str = c["parent"]
     category: str = c["category"]
+    children = c["children"]
     isSub: bool = c["is_sub"]
+    if len(children) == 0:
+        c["children"] = None
+    if name == "stat":
+        c["parent"] = "stats"
+        c["children"] = [
+            "stat",
+            "stat-title",
+            "stat-value",
+            "stat-desc",
+            "stat-figure",
+            "stat-actions",
+            "stats-horizontal",
+            "stats-vertical",
+        ]
+    if name == "stats":
+        c["parent"] = None
+        c["children"] = ["stat"]
     if name == parent or isSub or category == "part":
+        if name == parent:
+            c["parent"] = None
         lines = docs.splitlines()
         first_line = None
         for line in lines:
