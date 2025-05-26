@@ -94,37 +94,38 @@ List<DaisyuiComponent> getColor(List<DaisyuiComponent> input) {
   return output;
 }
 
+String? getColorType(DaisyuiComponent input) {
+  List<String> colors = [
+    "neutral",
+    "primary",
+    "secondary",
+    "accent",
+    "info",
+    "success",
+    "warning",
+    "error",
+  ];
+  for (String color in colors) {
+    if (input.label.contains(color)) {
+      return "      $color('${input.label}'),\n";
+    }
+  }
+  return null;
+}
+
 String buildColor(List<DaisyuiComponent> input) {
   String pname = formatName(input.first.label, "Color");
-  String neutral = "";
-  String primary = "";
-  String secondary = "";
-  String accent = "";
-  String info = "";
-  String success = "";
-  String warning = "";
-  String error = "";
+  List<String> colorTypeStrings = [];
   for (DaisyuiComponent c in input) {
-    if (c.label.contains("neutral")) neutral = c.label;
-    if (c.label.contains("primary")) primary = c.label;
-    if (c.label.contains("secondary")) secondary = c.label;
-    if (c.label.contains("accent")) accent = c.label;
-    if (c.label.contains("info")) info = c.label;
-    if (c.label.contains("success")) success = c.label;
-    if (c.label.contains("warning")) warning = c.label;
-    if (c.label.contains("error")) error = c.label;
+    String? colorType = getColorType(c);
+    if (colorType != null) {
+      colorTypeStrings.add(colorType);
+    }
   }
   String s = """
 
     enum $pname {
-      neutral('$neutral'),
-      primary('$primary'),
-      secondary('$secondary'),
-      accent('$accent'),
-      info('$info'),
-      success('$success'),
-      warning('$warning'),
-      error('$error'),
+${colorTypeStrings.join()}
       none('');
 
       final String value;
@@ -134,7 +135,6 @@ String buildColor(List<DaisyuiComponent> input) {
     }
 
   """;
-  print(s);
   return s;
 }
 
