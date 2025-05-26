@@ -108,7 +108,10 @@ for c in components:
                 first_line = line.strip()
                 break
         if first_line == None:
-            print(f"tag not found for {name}")
+            print(
+                f"tag not found for {name}"
+            )  # the react one I'll ignore, swap-indeterminate is the only one with an 'indeterminate' example
+            del c["documentation"]
             continue
         tag = first_line[1 : first_line.find(" ")]
         if not set(tag).issubset(allowed_chars):
