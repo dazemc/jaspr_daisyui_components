@@ -8,8 +8,8 @@ void main() async {
   List<DaisyuiComponent> componentModels = getDaisyuiModels(data);
   Map<String, Map<String, List<DaisyuiComponent>>> mappedModels =
       buildComponentHierarchy(componentModels);
-  print(mappedModels['btn']!['parent']!.first.children);
-  buildComponentList(mappedModels);
+  print(mappedModels['btn']!['parent']!.first.toString());
+  // buildComponentList(mappedModels);
 }
 
 Future<List<Map<String, dynamic>>> readFromJsonFile() async {
@@ -27,12 +27,15 @@ Future<List<Map<String, dynamic>>> readFromJsonFile() async {
 List<DaisyuiComponent> getDaisyuiModels(List<Map<String, dynamic>> data) {
   List<DaisyuiComponent> output = [];
   for (dynamic value in data) {
+    final map = value as Map<String, dynamic>;
     output.add(
       DaisyuiComponent(
-        label: value['label'].toString(),
-        category: value['category'].toString(),
-        parent: value['parent'].toString(),
-        children: value['children'].cast<String>(),
+        label: value['label'],
+        category: value['category'],
+        parent: value['parent'],
+        children:
+            (map['children'] as List<dynamic>?)?.whereType<String>().toList(),
+        isSub: value['is_sub'],
       ),
     );
   }
