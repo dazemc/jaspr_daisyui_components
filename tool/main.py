@@ -92,25 +92,28 @@ for k, component in enumerate(component_contents):
                     if len(c["children"]) > 0:
                         if c["label"] == c["children"][0]:
                             c["children"] = []
-
+allowed_chars = "abcdefghijklmnopqrstuvwxyz123456789-"
 for c in components:
     docs: str = c["documentation"]
+    docs = docs[docs.find("\n") :].lstrip()
     name: str = c["label"]
     parent: str = c["parent"]
-    type: str = c["category"]
+    category: str = c["category"]
     isSub: bool = c["is_sub"]
-    open_bracket = docs.find("<")
-    class_idx = docs.find("class=")
-    first_occurence = docs[open_bracket:class_idx]
-    enclosed_tag = first_occurence.rfind("<")
-    tag = first_occurence[enclosed_tag:]
-    tag = tag[1 : tag.find(" ")]
-    # if name == "modal":  # modal can use different tags
-    # tag = "dialog"
-    if len(tag) <= 0 or len(tag) > 13:
-        print(f"WARNING, TAG MAY BE MISSING FOR {name}")
-    print(f"class: {name} uses tag: {tag}")
-    c["tag"] = tag
+    if name == parent or isSub or category == "part":
+        lines = docs.splitlines()
+        first_line = None
+        for line in lines:
+            if name in line and "class" in line and "#" not in line:
+                first_line = line.strip()
+                break
+        if first_line == None:
+            print(f"tag not found for {name}")
+            continue
+        tag = first_line[1 : first_line.find(" ")]
+        if not set(tag).issubset(allowed_chars):
+            print(f"WARNING: Tag may be malformed for {name} using tag: {tag}")
+        c["tag"] = tag
     del c["documentation"]
 with open("components.json", "w") as file:
     json.dump(components, file, indent=4)

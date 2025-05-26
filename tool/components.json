@@ -69,16 +69,14 @@
         "category": "direction",
         "parent": "stats",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "stats-vertical",
         "category": "direction",
         "parent": "stats",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "select",
@@ -108,112 +106,98 @@
         "category": "style",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-neutral",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-primary",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-secondary",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-accent",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-info",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-success",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-warning",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-error",
         "category": "color",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-xs",
         "category": "size",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-sm",
         "category": "size",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-md",
         "category": "size",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-lg",
         "category": "size",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "select-xl",
         "category": "size",
         "parent": "select",
         "children": [],
-        "is_sub": false,
-        "tag": "select"
+        "is_sub": false
     },
     {
         "label": "drawer",
@@ -228,7 +212,7 @@
             "drawer-open"
         ],
         "is_sub": false,
-        "tag": "div"
+        "tag": "ou"
     },
     {
         "label": "drawer-toggle",
@@ -236,7 +220,7 @@
         "parent": "drawer",
         "children": [],
         "is_sub": false,
-        "tag": "div"
+        "tag": "input"
     },
     {
         "label": "drawer-content",
@@ -260,23 +244,21 @@
         "parent": "drawer",
         "children": [],
         "is_sub": false,
-        "tag": "div"
+        "tag": "label"
     },
     {
         "label": "drawer-end",
         "category": "placement",
         "parent": "drawer",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "drawer-open",
         "category": "modifier",
         "parent": "drawer",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress",
@@ -293,71 +275,63 @@
             "progress-error"
         ],
         "is_sub": false,
-        "tag": "div"
+        "tag": "progress"
     },
     {
         "label": "progress-neutral",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-primary",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-secondary",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-accent",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-info",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-success",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-warning",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "progress-error",
         "category": "color",
         "parent": "progress",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "fieldset",
@@ -375,7 +349,7 @@
             "fieldset-legend"
         ],
         "is_sub": false,
-        "tag": "fieldset"
+        "tag": "p"
     },
     {
         "label": "fieldset-legend",
@@ -383,7 +357,7 @@
         "parent": "label",
         "children": [],
         "is_sub": false,
-        "tag": "fieldset"
+        "tag": "legend"
     },
     {
         "label": "alert",
@@ -408,72 +382,63 @@
         "category": "style",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-dash",
         "category": "style",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-soft",
         "category": "style",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-info",
         "category": "color",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-success",
         "category": "color",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-warning",
         "category": "color",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-error",
         "category": "color",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-vertical",
         "category": "direction",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "alert-horizontal",
         "category": "direction",
         "parent": "alert",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider",
@@ -501,96 +466,84 @@
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-primary",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-secondary",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-accent",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-success",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-warning",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-info",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-error",
         "category": "color",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-vertical",
         "category": "direction",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-horizontal",
         "category": "direction",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-start",
         "category": "placement",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "divider-end",
         "category": "placement",
         "parent": "divider",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "hero",
@@ -642,72 +595,63 @@
         "category": "style",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-neutral",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-primary",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-secondary",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-accent",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-success",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-info",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-warning",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "link-error",
         "category": "color",
         "parent": "link",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "kbd",
@@ -728,40 +672,35 @@
         "category": "size",
         "parent": "kbd",
         "children": [],
-        "is_sub": false,
-        "tag": "kbd"
+        "is_sub": false
     },
     {
         "label": "kbd-sm",
         "category": "size",
         "parent": "kbd",
         "children": [],
-        "is_sub": false,
-        "tag": "kbd"
+        "is_sub": false
     },
     {
         "label": "kbd-md",
         "category": "size",
         "parent": "kbd",
         "children": [],
-        "is_sub": false,
-        "tag": "kbd"
+        "is_sub": false
     },
     {
         "label": "kbd-lg",
         "category": "size",
         "parent": "kbd",
         "children": [],
-        "is_sub": false,
-        "tag": "kbd"
+        "is_sub": false
     },
     {
         "label": "kbd-xl",
         "category": "size",
         "parent": "kbd",
         "children": [],
-        "is_sub": false,
-        "tag": "kbd"
+        "is_sub": false
     },
     {
         "label": "mockup-code",
@@ -796,88 +735,77 @@
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-dots",
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-ring",
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-ball",
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-bars",
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-infinity",
         "category": "style",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-xs",
         "category": "size",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-sm",
         "category": "size",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-md",
         "category": "size",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-lg",
         "category": "size",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "loading-xl",
         "category": "size",
         "parent": "loading",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "skeleton",
@@ -908,7 +836,7 @@
         "parent": "swap",
         "children": [],
         "is_sub": false,
-        "tag": "label"
+        "tag": "div"
     },
     {
         "label": "swap-off",
@@ -916,7 +844,7 @@
         "parent": "swap",
         "children": [],
         "is_sub": false,
-        "tag": "label"
+        "tag": "div"
     },
     {
         "label": "swap-indeterminate",
@@ -924,31 +852,28 @@
         "parent": "swap",
         "children": [],
         "is_sub": false,
-        "tag": "label"
+        "documentation": "### ~Swap text\n<label class='swap'>\n  <input type='checkbox' />\n  <div class='swap-on'>ON</div>\n  <div class='swap-off'>OFF</div>\n</label>\n\n```html\n<label class='swap'>\n  <input type='checkbox' />\n  <div class='swap-on'>ON</div>\n  <div class='swap-off'>OFF</div>\n</label>\n```\n\n\n### ~Swap volume icons\n<label class='swap'>\n  <input type='checkbox' />\n  <svg class='swap-on fill-current' xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><path d='M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z'/></svg>\n  <svg class='swap-off fill-current' xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><path d='M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z'/></svg>\n</label>\n\n```html\n<label class='swap'>\n  <!-- this hidden checkbox controls the state -->\n  <input type='checkbox' />\n\n  <!-- volume on icon -->\n  <svg\n    class='swap-on fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    width='48'\n    height='48'\n    viewBox='0 0 24 24'>\n    <path\n      d='M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z' />\n  </svg>\n\n  <!-- volume off icon -->\n  <svg\n    class='swap-off fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    width='48'\n    height='48'\n    viewBox='0 0 24 24'>\n    <path\n      d='M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z' />\n  </svg>\n</label>\n```\n\n\n### ~Swap icons with rotate effect\n<label class='swap swap-rotate'>\n  <input type='checkbox' />\n  <svg class='swap-on fill-current w-10 h-10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z'/></svg>\n  <svg class='swap-off fill-current w-10 h-10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z'/></svg>\n</label>\n\n```html\n<label class='swap swap-rotate'>\n  <!-- this hidden checkbox controls the state -->\n  <input type='checkbox' />\n\n  <!-- sun icon -->\n  <svg\n    class='swap-on h-10 w-10 fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    viewBox='0 0 24 24'>\n    <path\n      d='M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z' />\n  </svg>\n\n  <!-- moon icon -->\n  <svg\n    class='swap-off h-10 w-10 fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    viewBox='0 0 24 24'>\n    <path\n      d='M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z' />\n  </svg>\n</label>\n```\n\n\n### ~Hamburger button\n<label class='btn btn-circle swap swap-rotate'>\n  <input type='checkbox' />\n  <svg class='swap-off fill-current' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 512 512'><path d='M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z'/></svg>\n  <svg class='swap-on fill-current' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 512 512'><polygon points='400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49'/></svg>\n</label>\n\n```html\n<label class='btn btn-circle swap swap-rotate'>\n  <!-- this hidden checkbox controls the state -->\n  <input type='checkbox' />\n\n  <!-- hamburger icon -->\n  <svg\n    class='swap-off fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    width='32'\n    height='32'\n    viewBox='0 0 512 512'>\n    <path d='M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z' />\n  </svg>\n\n  <!-- close icon -->\n  <svg\n    class='swap-on fill-current'\n    xmlns='http://www.w3.org/2000/svg'\n    width='32'\n    height='32'\n    viewBox='0 0 512 512'>\n    <polygon\n      points='400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49' />\n  </svg>\n</label>\n```\n\n\n### ~Swap icons with flip effect\n<label class='swap swap-flip text-9xl'>\n  <input type='checkbox' />\n  <div class='swap-on'>\ud83d\ude08</div>\n  <div class='swap-off'>\ud83d\ude07</div>\n</label>\n\n```html\n<label class='swap swap-flip text-9xl'>\n  <!-- this hidden checkbox controls the state -->\n  <input type='checkbox' />\n\n  <div class='swap-on'>\ud83d\ude08</div>\n  <div class='swap-off'>\ud83d\ude07</div>\n</label>\n```\n\n\n### ~Activate using class name instead of checkbox\n#### Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS\n\n<div class='swap text-6xl'>\n  <div class='swap-on'>\ud83e\udd75</div>\n  <div class='swap-off'>\ud83e\udd76</div>\n</div>\n<div class='swap swap-active text-6xl'>\n  <div class='swap-on'>\ud83e\udd73</div>\n  <div class='swap-off'>\ud83d\ude2d</div>\n</div>\n\n```html\n<label class='swap text-6xl'>\n  <div class='swap-on'>\ud83e\udd75</div>\n  <div class='swap-off'>\ud83e\udd76</div>\n</label>\n<label class='swap swap-active text-6xl'>\n  <div class='swap-on'>\ud83e\udd73</div>\n  <div class='swap-off'>\ud83d\ude2d</div>\n</label>\n```\n"
     },
     {
         "label": "swap-active",
         "category": "modifier",
         "parent": "swap",
         "children": [],
-        "is_sub": false,
-        "tag": "label"
+        "is_sub": false
     },
     {
         "label": "swap-rotate",
         "category": "style",
         "parent": "swap",
         "children": [],
-        "is_sub": false,
-        "tag": "label"
+        "is_sub": false
     },
     {
         "label": "swap-flip",
         "category": "style",
         "parent": "swap",
         "children": [],
-        "is_sub": false,
-        "tag": "label"
+        "is_sub": false
     },
     {
         "label": "badge",
@@ -981,136 +906,119 @@
         "category": "style",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-dash",
         "category": "style",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-soft",
         "category": "style",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-ghost",
         "category": "style",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-neutral",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-primary",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-secondary",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-accent",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-info",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-success",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-warning",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-error",
         "category": "color",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-xs",
         "category": "size",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-sm",
         "category": "size",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-md",
         "category": "size",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-lg",
         "category": "size",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "badge-xl",
         "category": "size",
         "parent": "badge",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "radio",
@@ -1139,104 +1047,91 @@
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-primary",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-secondary",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-accent",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-success",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-warning",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-info",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-error",
         "category": "color",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-xs",
         "category": "size",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-sm",
         "category": "size",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-md",
         "category": "size",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-lg",
         "category": "size",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radio-xl",
         "category": "size",
         "parent": "radio",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "navbar",
@@ -1310,32 +1205,28 @@
         "category": "modifier",
         "parent": "collapse",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "collapse-plus",
         "category": "modifier",
         "parent": "collapse",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "collapse-open",
         "category": "modifier",
         "parent": "collapse",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "collapse-close",
         "category": "modifier",
         "parent": "collapse",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "textarea",
@@ -1365,112 +1256,98 @@
         "category": "style",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-neutral",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-primary",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-secondary",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-accent",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-info",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-success",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-warning",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-error",
         "category": "color",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-xs",
         "category": "size",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-sm",
         "category": "size",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-md",
         "category": "size",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-lg",
         "category": "size",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "textarea-xl",
         "category": "size",
         "parent": "textarea",
         "children": [],
-        "is_sub": false,
-        "tag": "textarea"
+        "is_sub": false
     },
     {
         "label": "btn",
@@ -1510,192 +1387,168 @@
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-primary",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-secondary",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-accent",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-info",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-success",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-warning",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-error",
         "category": "color",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-outline",
         "category": "style",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-dash",
         "category": "style",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-soft",
         "category": "style",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-ghost",
         "category": "style",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-link",
         "category": "style",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-active",
         "category": "behavior",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-disabled",
         "category": "behavior",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-xs",
         "category": "size",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-sm",
         "category": "size",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-md",
         "category": "size",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-lg",
         "category": "size",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-xl",
         "category": "size",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-wide",
         "category": "modifier",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-block",
         "category": "modifier",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-square",
         "category": "modifier",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "btn-circle",
         "category": "modifier",
         "parent": "btn",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "chat",
@@ -1757,80 +1610,70 @@
         "category": "placement",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-end",
         "category": "placement",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-neutral",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-primary",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-secondary",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-accent",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-info",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-success",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-warning",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "chat-bubble-error",
         "category": "color",
         "parent": "chat",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs",
@@ -1876,96 +1719,84 @@
         "category": "style",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-border",
         "category": "style",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-lift",
         "category": "style",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tab-active",
         "category": "modifier",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tab-disabled",
         "category": "modifier",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-top",
         "category": "placement",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-bottom",
         "category": "placement",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-xs",
         "category": "size",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-sm",
         "category": "size",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-md",
         "category": "size",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-lg",
         "category": "size",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tabs-xl",
         "category": "size",
         "parent": "tabs",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "stack",
@@ -1985,32 +1816,28 @@
         "category": "modifier",
         "parent": "stack",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "stack-bottom",
         "category": "modifier",
         "parent": "stack",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "stack-start",
         "category": "modifier",
         "parent": "stack",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "stack-end",
         "category": "modifier",
         "parent": "stack",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "join",
@@ -2030,23 +1857,21 @@
         "parent": "join",
         "children": [],
         "is_sub": true,
-        "tag": "div"
+        "tag": "button"
     },
     {
         "label": "join-vertical",
         "category": "direction",
         "parent": "join",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "join-horizontal",
         "category": "direction",
         "parent": "join",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "range",
@@ -2075,104 +1900,91 @@
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-primary",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-secondary",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-accent",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-success",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-warning",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-info",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-error",
         "category": "color",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-xs",
         "category": "size",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-sm",
         "category": "size",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-md",
         "category": "size",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-lg",
         "category": "size",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "range-xl",
         "category": "size",
         "parent": "range",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox",
@@ -2201,104 +2013,91 @@
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-secondary",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-accent",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-neutral",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-success",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-warning",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-info",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-error",
         "category": "color",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-xs",
         "category": "size",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-sm",
         "category": "size",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-md",
         "category": "size",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-lg",
         "category": "size",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "checkbox-xl",
         "category": "size",
         "parent": "checkbox",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "radial-progress",
@@ -2328,48 +2127,42 @@
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "toast-center",
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "toast-end",
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "toast-top",
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "toast-middle",
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "toast-bottom",
         "category": "placement",
         "parent": "toast",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "steps",
@@ -2406,87 +2199,77 @@
         "parent": "steps",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "span"
     },
     {
         "label": "step-neutral",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-primary",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-secondary",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-accent",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-info",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-success",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-warning",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "step-error",
         "category": "color",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "steps-vertical",
         "category": "direction",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "steps-horizontal",
         "category": "direction",
         "parent": "steps",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "cally",
@@ -2502,7 +2285,7 @@
         "parent": "pika-single",
         "children": [],
         "is_sub": false,
-        "tag": "calendar-date"
+        "tag": "input"
     },
     {
         "label": "react-day-picker",
@@ -2510,7 +2293,7 @@
         "parent": "react-day-picker",
         "children": [],
         "is_sub": false,
-        "tag": "calendar-date"
+        "tag": "DayPicker"
     },
     {
         "label": "toggle",
@@ -2539,104 +2322,91 @@
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-secondary",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-accent",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-neutral",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-success",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-warning",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-info",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-error",
         "category": "color",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-xs",
         "category": "size",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-sm",
         "category": "size",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-md",
         "category": "size",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-lg",
         "category": "size",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "toggle-xl",
         "category": "size",
         "parent": "toggle",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "mockup-phone",
@@ -2701,40 +2471,35 @@
         "category": "modifier",
         "parent": "carousel",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "carousel-center",
         "category": "modifier",
         "parent": "carousel",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "carousel-end",
         "category": "modifier",
         "parent": "carousel",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "carousel-horizontal",
         "category": "direction",
         "parent": "carousel",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "carousel-vertical",
         "category": "direction",
         "parent": "carousel",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "list",
@@ -2744,7 +2509,7 @@
             "list-row"
         ],
         "is_sub": false,
-        "tag": "div"
+        "tag": "ul"
     },
     {
         "label": "list-row",
@@ -2755,23 +2520,21 @@
             "list-col-grow"
         ],
         "is_sub": true,
-        "tag": "div"
+        "tag": "li"
     },
     {
         "label": "list-col-wrap",
         "category": "modifier",
         "parent": "list-row",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "list-col-grow",
         "category": "modifier",
         "parent": "list-row",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip",
@@ -2809,104 +2572,91 @@
         "category": "placement",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-bottom",
         "category": "placement",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-left",
         "category": "placement",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-right",
         "category": "placement",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-open",
         "category": "modifier",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-neutral",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-primary",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-secondary",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-accent",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-info",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-success",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-warning",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "tooltip-error",
         "category": "color",
         "parent": "tooltip",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock",
@@ -2930,55 +2680,49 @@
         "parent": "dock",
         "children": [],
         "is_sub": false,
-        "tag": "div"
+        "tag": "span"
     },
     {
         "label": "dock-active",
         "category": "modifier",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock-xs",
         "category": "size",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock-sm",
         "category": "size",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock-md",
         "category": "size",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock-lg",
         "category": "size",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "dock-xl",
         "category": "size",
         "parent": "dock",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "modal",
@@ -3005,7 +2749,7 @@
         "parent": "modal",
         "children": [],
         "is_sub": false,
-        "tag": "button"
+        "tag": "div"
     },
     {
         "label": "modal-action",
@@ -3013,7 +2757,7 @@
         "parent": "modal",
         "children": [],
         "is_sub": false,
-        "tag": "button"
+        "tag": "div"
     },
     {
         "label": "modal-backdrop",
@@ -3021,7 +2765,7 @@
         "parent": "modal",
         "children": [],
         "is_sub": false,
-        "tag": "button"
+        "tag": "form"
     },
     {
         "label": "modal-toggle",
@@ -3029,55 +2773,49 @@
         "parent": "modal",
         "children": [],
         "is_sub": false,
-        "tag": "button"
+        "tag": "input"
     },
     {
         "label": "modal-open",
         "category": "modifier",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "modal-top",
         "category": "placement",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "modal-middle",
         "category": "placement",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "modal-bottom",
         "category": "placement",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "modal-start",
         "category": "placement",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "modal-end",
         "category": "placement",
         "parent": "modal",
         "children": [],
-        "is_sub": false,
-        "tag": "button"
+        "is_sub": false
     },
     {
         "label": "menu",
@@ -3108,7 +2846,7 @@
         "parent": "menu",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "li"
     },
     {
         "label": "menu-dropdown",
@@ -3116,7 +2854,7 @@
         "parent": "menu",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "span"
     },
     {
         "label": "menu-dropdown-toggle",
@@ -3124,95 +2862,84 @@
         "parent": "menu",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "span"
     },
     {
         "label": "menu-disabled",
         "category": "modifier",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-active",
         "category": "modifier",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-focus",
         "category": "modifier",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-dropdown-show",
         "category": "modifier",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-xs",
         "category": "size",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-sm",
         "category": "size",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-md",
         "category": "size",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-lg",
         "category": "size",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-xl",
         "category": "size",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-vertical",
         "category": "direction",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "menu-horizontal",
         "category": "direction",
         "parent": "menu",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "table",
@@ -3229,71 +2956,63 @@
             "table-xl"
         ],
         "is_sub": false,
-        "tag": "div"
+        "tag": "table"
     },
     {
         "label": "table-zebra",
         "category": "modifier",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-pin-rows",
         "category": "modifier",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-pin-cols",
         "category": "modifier",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-xs",
         "category": "size",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-sm",
         "category": "size",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-md",
         "category": "size",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-lg",
         "category": "size",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "table-xl",
         "category": "size",
         "parent": "table",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "validator",
@@ -3303,7 +3022,7 @@
             "validator-hint"
         ],
         "is_sub": false,
-        "tag": "form"
+        "tag": "input"
     },
     {
         "label": "validator-hint",
@@ -3311,7 +3030,7 @@
         "parent": "validator",
         "children": [],
         "is_sub": false,
-        "tag": "form"
+        "tag": "div"
     },
     {
         "label": "card",
@@ -3340,7 +3059,7 @@
         "parent": "card",
         "children": [],
         "is_sub": false,
-        "tag": "div"
+        "tag": "h2"
     },
     {
         "label": "card-body",
@@ -3363,72 +3082,63 @@
         "category": "style",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-dash",
         "category": "style",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-side",
         "category": "modifier",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "image-full",
         "category": "modifier",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-xs",
         "category": "size",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-sm",
         "category": "size",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-md",
         "category": "size",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-lg",
         "category": "size",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "card-xl",
         "category": "size",
         "parent": "card",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "breadcrumbs",
@@ -3475,56 +3185,49 @@
         "category": "modifier",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-hidden",
         "category": "modifier",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-xs",
         "category": "size",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-sm",
         "category": "size",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-md",
         "category": "size",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-lg",
         "category": "size",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "rating-xl",
         "category": "size",
         "parent": "rating",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "avatar",
@@ -3553,24 +3256,21 @@
         "category": "modifier",
         "parent": "avatar-group",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "avatar-offline",
         "category": "modifier",
         "parent": "avatar-group",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "avatar-placeholder",
         "category": "modifier",
         "parent": "avatar-group",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "mask",
@@ -3603,136 +3303,119 @@
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-heart",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-hexagon",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-hexagon-2",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-decagon",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-pentagon",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-diamond",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-square",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-circle",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-star",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-star-2",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-triangle",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-triangle-2",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-triangle-3",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-triangle-4",
         "category": "style",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-half-1",
         "category": "modifier",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "mask-half-2",
         "category": "modifier",
         "parent": "mask",
         "children": [],
-        "is_sub": false,
-        "tag": "img"
+        "is_sub": false
     },
     {
         "label": "dropdown",
@@ -3759,79 +3442,70 @@
         "parent": "dropdown",
         "children": [],
         "is_sub": false,
-        "tag": "details"
+        "tag": "ul"
     },
     {
         "label": "dropdown-start",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-center",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-end",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-top",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-bottom",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-left",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-right",
         "category": "placement",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-hover",
         "category": "modifier",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "dropdown-open",
         "category": "modifier",
         "parent": "dropdown",
         "children": [],
-        "is_sub": false,
-        "tag": "details"
+        "is_sub": false
     },
     {
         "label": "indicator",
@@ -3855,55 +3529,49 @@
         "parent": "indicator",
         "children": [],
         "is_sub": false,
-        "tag": "div"
+        "tag": "span"
     },
     {
         "label": "indicator-start",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "indicator-center",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "indicator-end",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "indicator-top",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "indicator-middle",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "indicator-bottom",
         "category": "placement",
         "parent": "indicator",
         "children": [],
-        "is_sub": false,
-        "tag": "div"
+        "is_sub": false
     },
     {
         "label": "timeline",
@@ -3928,7 +3596,7 @@
         "parent": "timeline",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "div"
     },
     {
         "label": "timeline-middle",
@@ -3936,7 +3604,7 @@
         "parent": "timeline",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "div"
     },
     {
         "label": "timeline-end",
@@ -3944,47 +3612,42 @@
         "parent": "timeline",
         "children": [],
         "is_sub": false,
-        "tag": "ul"
+        "tag": "div"
     },
     {
         "label": "timeline-snap-icon",
         "category": "modifier",
         "parent": "timeline",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "timeline-box",
         "category": "modifier",
         "parent": "timeline",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "timeline-compact",
         "category": "modifier",
         "parent": "timeline",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "timeline-horizontal",
         "category": "direction",
         "parent": "timeline",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "timeline-vertical",
         "category": "direction",
         "parent": "timeline",
         "children": [],
-        "is_sub": false,
-        "tag": "ul"
+        "is_sub": false
     },
     {
         "label": "input",
@@ -4014,112 +3677,98 @@
         "category": "style",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-neutral",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-primary",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-secondary",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-accent",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-info",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-success",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-warning",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-error",
         "category": "color",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-xs",
         "category": "size",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-sm",
         "category": "size",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-md",
         "category": "size",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-lg",
         "category": "size",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "input-xl",
         "category": "size",
         "parent": "input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "footer",
@@ -4140,31 +3789,28 @@
         "parent": "footer",
         "children": [],
         "is_sub": false,
-        "tag": "footer"
+        "tag": "h6"
     },
     {
         "label": "footer-center",
         "category": "placement",
         "parent": "footer",
         "children": [],
-        "is_sub": false,
-        "tag": "footer"
+        "is_sub": false
     },
     {
         "label": "footer-horizontal",
         "category": "direction",
         "parent": "footer",
         "children": [],
-        "is_sub": false,
-        "tag": "footer"
+        "is_sub": false
     },
     {
         "label": "footer-vertical",
         "category": "direction",
         "parent": "footer",
         "children": [],
-        "is_sub": false,
-        "tag": "footer"
+        "is_sub": false
     },
     {
         "label": "mockup-browser",
@@ -4211,104 +3857,91 @@
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-primary",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-secondary",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-accent",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-info",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-success",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-warning",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-error",
         "category": "color",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-xs",
         "category": "size",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-sm",
         "category": "size",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-md",
         "category": "size",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-lg",
         "category": "size",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "status-xl",
         "category": "size",
         "parent": "status",
         "children": [],
-        "is_sub": false,
-        "tag": "span"
+        "is_sub": false
     },
     {
         "label": "file-input",
@@ -4338,112 +3971,98 @@
         "category": "style",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-neutral",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-primary",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-secondary",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-accent",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-info",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-success",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-warning",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-error",
         "category": "color",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-xs",
         "category": "size",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-sm",
         "category": "size",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-md",
         "category": "size",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-lg",
         "category": "size",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "file-input-xl",
         "category": "size",
         "parent": "file-input",
         "children": [],
-        "is_sub": false,
-        "tag": "input"
+        "is_sub": false
     },
     {
         "label": "diff",
@@ -4463,7 +4082,7 @@
         "parent": "diff",
         "children": [],
         "is_sub": false,
-        "tag": "figure"
+        "tag": "div"
     },
     {
         "label": "diff-item-2",
@@ -4471,7 +4090,7 @@
         "parent": "diff",
         "children": [],
         "is_sub": false,
-        "tag": "figure"
+        "tag": "div"
     },
     {
         "label": "diff-resizer",
@@ -4479,7 +4098,7 @@
         "parent": "diff",
         "children": [],
         "is_sub": false,
-        "tag": "figure"
+        "tag": "div"
     },
     {
         "label": "filter",
@@ -4497,7 +4116,7 @@
         "parent": "filter",
         "children": [],
         "is_sub": false,
-        "tag": "form"
+        "tag": "input"
     },
     {
         "label": "theme-controller",
