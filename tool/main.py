@@ -81,7 +81,9 @@ for k, component in enumerate(component_contents):
                         "parent": locals().get("parent_name", None),
                         "children": locals().get("children", None),
                         "is_sub": is_sub,
-                        # "documentation": component_file[k][],
+                        "documentation": component_file[k][
+                            component_file[k].find("#") :
+                        ],
                     }
                 )
                 for c in components:
@@ -91,6 +93,26 @@ for k, component in enumerate(component_contents):
                         if c["label"] == c["children"][0]:
                             c["children"] = []
 
+for c in components:
+    docs: str = c["documentation"]
+    name: str = c["label"]
+    parent: str = c["parent"]
+    type: str = c["category"]
+    isSub: bool = c["is_sub"]
+    if parent == name or isSub or type == "part":
+        open_bracket = docs.find("<")
+        class_idx = docs.find("class=")
+        first_occurence = docs[open_bracket:class_idx]
+        enclosed_tag = first_occurence.rfind("<")
+        tag = first_occurence[enclosed_tag:]
+        tag = tag[1 : tag.find(" ")]
+        # if name == "modal":  # modal can use different tags
+        # tag = "dialog"
+        if len(tag) <= 0 or len(tag) > 13:
+            print(f"WARNING, TAG MAY BE MISSING FOR {name}")
+        print(f"class: {name} uses tag: {tag}")
+        c["tag"] = tag
+    del c["documentation"]
 with open("components.json", "w") as file:
     json.dump(components, file, indent=4)
 print("✅ components.json generated successfully.")
