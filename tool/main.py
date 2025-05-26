@@ -56,16 +56,13 @@ for k, component in enumerate(component_contents):
                 start = desc_line.index(":") + 2
                 desc = desc_line[start:].strip()
                 root_name = name.split("-")[0]
-                # parent_name = "stats"
                 children = []
                 if locals().get("category", None) == "component":
                     parent_name = name
-                    if (
-                        root_name in parent_name
-                        and len(parent_name) > len(root_name)
-                        and parent_name != name
-                    ):
-                        parent_name = root_name
+                    print(root_name)
+                    if root_name in parent_name and len(parent_name) > len(root_name):
+                        if components[-1]["parent"] == root_name:
+                            parent_name = root_name
 
                 components.append(
                     {

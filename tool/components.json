@@ -1793,30 +1793,31 @@
         "detail": "For grouping multiple items",
         "category": "component",
         "parent": "join",
-        "children": []
-    },
-    {
-        "label": "join-item",
-        "detail": "Item inside join. Can be a button, input, etc.",
-        "category": "component",
-        "parent": "join-item",
         "children": [
+            "join-item",
             "join-vertical",
             "join-horizontal"
         ]
     },
     {
+        "label": "join-item",
+        "detail": "Item inside join. Can be a button, input, etc.",
+        "category": "component",
+        "parent": "join",
+        "children": []
+    },
+    {
         "label": "join-vertical",
         "detail": "Show items vertically",
         "category": "direction",
-        "parent": "join-item",
+        "parent": "join",
         "children": []
     },
     {
         "label": "join-horizontal",
         "detail": "Show items horizontally",
         "category": "direction",
-        "parent": "join-item",
+        "parent": "join",
         "children": []
     },
     {
@@ -2435,30 +2436,31 @@
         "detail": "A vertical flex layout to include list rows",
         "category": "component",
         "parent": "list",
-        "children": []
-    },
-    {
-        "label": "list-row",
-        "detail": "The item inside list. A horizontal grid layout to include data",
-        "category": "component",
-        "parent": "list-row",
         "children": [
+            "list-row",
             "list-col-wrap",
             "list-col-grow"
         ]
     },
     {
+        "label": "list-row",
+        "detail": "The item inside list. A horizontal grid layout to include data",
+        "category": "component",
+        "parent": "list",
+        "children": []
+    },
+    {
         "label": "list-col-wrap",
         "detail": "For one of direct children of list-row to push it to the next line",
         "category": "modifier",
-        "parent": "list-row",
+        "parent": "list",
         "children": []
     },
     {
         "label": "list-col-grow",
         "detail": "For one of direct children of list-row to make it fill the remaining space",
         "category": "modifier",
-        "parent": "list-row",
+        "parent": "list",
         "children": []
     },
     {
@@ -3135,38 +3137,39 @@
         "detail": "Avatar",
         "category": "component",
         "parent": "avatar",
-        "children": []
-    },
-    {
-        "label": "avatar-group",
-        "detail": "Container for multiple avatars",
-        "category": "component",
-        "parent": "avatar-group",
         "children": [
+            "avatar-group",
             "avatar-online",
             "avatar-offline",
             "avatar-placeholder"
         ]
     },
     {
+        "label": "avatar-group",
+        "detail": "Container for multiple avatars",
+        "category": "component",
+        "parent": "avatar",
+        "children": []
+    },
+    {
         "label": "avatar-online",
         "detail": "shows a green dot as online indicator",
         "category": "modifier",
-        "parent": "avatar-group",
+        "parent": "avatar",
         "children": []
     },
     {
         "label": "avatar-offline",
         "detail": "shows a gray dot as offline indicator",
         "category": "modifier",
-        "parent": "avatar-group",
+        "parent": "avatar",
         "children": []
     },
     {
         "label": "avatar-placeholder",
         "detail": "To show letters as avatar placeholder",
         "category": "modifier",
-        "parent": "avatar-group",
+        "parent": "avatar",
         "children": []
     },
     {
