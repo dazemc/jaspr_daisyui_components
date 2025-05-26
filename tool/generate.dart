@@ -8,8 +8,8 @@ void main() async {
   List<DaisyuiComponent> componentModels = getDaisyuiModels(data);
   Map<String, Map<String, List<DaisyuiComponent>>> mappedModels =
       buildComponentHierarchy(componentModels);
-  print(mappedModels['btn']!['parent']!.first.toString());
-  // buildComponentList(mappedModels);
+  // print(mappedModels['btn']!['parent']!.first.toString());
+  buildComponentList(mappedModels);
 }
 
 Future<List<Map<String, dynamic>>> readFromJsonFile() async {
@@ -65,14 +65,74 @@ Map<String, Map<String, List<DaisyuiComponent>>> buildComponentHierarchy(
   return output;
 }
 
+String formatName(String input, String type) {
+  String fOutput = '';
+  List<String> splitName = input.split('-');
+  if (type == "Color") splitName.removeAt(splitName.length - 1);
+  for (String s in splitName) {
+    String cap = s.toUpperCase();
+    fOutput += cap.substring(0, 1) + cap.substring(1).toLowerCase();
+  }
+  return fOutput += type;
+}
+
+// "component",
+// "color",
+// "style",
+// "behavior",
+// "size",
+// "modifier",
+// "placement",
+// "part",
+// "direction",
+
+List<DaisyuiComponent> getColor(List<DaisyuiComponent> input) {
+  List<DaisyuiComponent> output = [];
+  for (DaisyuiComponent c in input) {
+    if (c.category == "color") output.add(c);
+  }
+  return output;
+}
+
+void buildColor(List<DaisyuiComponent> input) {
+  List<String> output = <String>[];
+  for (DaisyuiComponent c in input) {
+    String pname = formatName(c.label, "Color");
+    String name = c.label;
+    String s = """
+
+    enum $pname {
+      neutral('$name'),
+      primary('$name'),
+      secondary('$name'),
+      accent('$name'),
+      info('$name'),
+      success('$name'),
+      warning('$name'),
+      error('$name'),
+      none('');
+
+      final String value;
+      const $pname(this.value);
+      @override
+      String toString() => value.toString();
+    }
+
+  """;
+    print(s);
+  }
+}
+
 void buildComponentList(
   Map<String, Map<String, List<DaisyuiComponent>>> mappedModels,
 ) {
   mappedModels.forEach((k, v) {
     DaisyuiComponent parent = v['parent']!.first;
-    List<DaisyuiComponent> children = v['children'] ?? [];
-    if (children.isNotEmpty) {
-      // TODO: each entry already has a category, I can use that to define enums below.
+    String parentName = parent.label;
+    List<DaisyuiComponent>? children = v['children'];
+    if (children != null) {
+      List<DaisyuiComponent> colorComponents = getColor(children);
+      buildColor(colorComponents);
       String output = """
 import 'package:jaspr/jaspr.dart';
 
@@ -113,7 +173,7 @@ enum DividerColor {
   String toString() => value;
 }
 
-Component ${parent.label}(
+Component $parentName(
   final List<Component>? children, {
   final Component? child,
   final String? classes,
