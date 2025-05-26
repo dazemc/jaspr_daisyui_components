@@ -104,7 +104,7 @@ for c in components:
         lines = docs.splitlines()
         first_line = None
         for line in lines:
-            if name in line and "class" in line and "#" not in line:
+            if name in line and "class=" in line and "#" not in line:
                 first_line = line.strip()
                 break
         if first_line == None:
