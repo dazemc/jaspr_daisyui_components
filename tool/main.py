@@ -60,7 +60,11 @@ for k, component in enumerate(component_contents):
                 children = []
                 if locals().get("category", None) == "component":
                     parent_name = name
-                    if root_name in parent_name and len(parent_name) > len(root_name):
+                    if (
+                        root_name in parent_name
+                        and len(parent_name) > len(root_name)
+                        and parent_name != name
+                    ):
                         parent_name = root_name
 
                 components.append(
