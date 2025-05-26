@@ -14,7 +14,6 @@
         "category": "part",
         "parent": "stats",
         "children": [
-            "stat",
             "stat-title",
             "stat-value",
             "stat-desc",

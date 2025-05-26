@@ -106,7 +106,6 @@ for c in components:
     if name == "stat":
         c["parent"] = "stats"
         c["children"] = [
-            "stat",
             "stat-title",
             "stat-value",
             "stat-desc",
