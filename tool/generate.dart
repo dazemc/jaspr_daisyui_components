@@ -94,22 +94,37 @@ List<DaisyuiComponent> getColor(List<DaisyuiComponent> input) {
   return output;
 }
 
-void buildColor(List<DaisyuiComponent> input) {
-  List<String> output = <String>[];
+String buildColor(List<DaisyuiComponent> input) {
+  String pname = formatName(input.first.label, "Color");
+  String neutral = "";
+  String primary = "";
+  String secondary = "";
+  String accent = "";
+  String info = "";
+  String success = "";
+  String warning = "";
+  String error = "";
   for (DaisyuiComponent c in input) {
-    String pname = formatName(c.label, "Color");
-    String name = c.label;
-    String s = """
+    if (c.label.contains("neutral")) neutral = c.label;
+    if (c.label.contains("primary")) primary = c.label;
+    if (c.label.contains("secondary")) secondary = c.label;
+    if (c.label.contains("accent")) accent = c.label;
+    if (c.label.contains("info")) info = c.label;
+    if (c.label.contains("success")) success = c.label;
+    if (c.label.contains("warning")) warning = c.label;
+    if (c.label.contains("error")) error = c.label;
+  }
+  String s = """
 
     enum $pname {
-      neutral('$name'),
-      primary('$name'),
-      secondary('$name'),
-      accent('$name'),
-      info('$name'),
-      success('$name'),
-      warning('$name'),
-      error('$name'),
+      neutral('$neutral'),
+      primary('$primary'),
+      secondary('$secondary'),
+      accent('$accent'),
+      info('$info'),
+      success('$success'),
+      warning('$warning'),
+      error('$error'),
       none('');
 
       final String value;
@@ -119,8 +134,8 @@ void buildColor(List<DaisyuiComponent> input) {
     }
 
   """;
-    print(s);
-  }
+  print(s);
+  return s;
 }
 
 void buildComponentList(
@@ -130,9 +145,13 @@ void buildComponentList(
     DaisyuiComponent parent = v['parent']!.first;
     String parentName = parent.label;
     List<DaisyuiComponent>? children = v['children'];
-    if (children != null) {
+    if (children != null && children.isNotEmpty) {
       List<DaisyuiComponent> colorComponents = getColor(children);
-      buildColor(colorComponents);
+      String? colorEnum;
+      if (colorComponents.isNotEmpty) {
+        colorEnum = buildColor(colorComponents);
+      }
+      if (colorEnum != null) print(colorEnum);
       String output = """
 import 'package:jaspr/jaspr.dart';
 
@@ -157,21 +176,6 @@ enum DividerPlacement {
   String toString() => value;
 }
 
-enum DividerColor {
-  neutral(' divider-neutral'),
-  primary(' divider-primary'),
-  secondary(' divider-secondary'),
-  accent(' divider-accent'),
-  success(' divider-success'),
-  warning(' divider-warning'),
-  info(' divider-info'),
-  error(' divider-error');
-
-  final String value;
-  const DividerColor(this.value);
-  @override
-  String toString() => value;
-}
 
 Component $parentName(
   final List<Component>? children, {
