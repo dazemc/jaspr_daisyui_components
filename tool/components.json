@@ -324,22 +324,22 @@
         "detail": "for the fieldset container",
         "category": "component",
         "parent": "fieldset",
-        "children": [
-            "fieldset-legend"
-        ]
+        "children": []
     },
     {
         "label": "label",
         "detail": "label for inputs",
         "category": "component",
         "parent": "label",
-        "children": []
+        "children": [
+            "fieldset-legend"
+        ]
     },
     {
         "label": "fieldset-legend",
         "detail": "for the title of the fieldset",
         "category": "part",
-        "parent": "fieldset",
+        "parent": "label",
         "children": []
     },
     {
@@ -682,7 +682,7 @@
         "label": "mockup-code",
         "detail": "Code terminal mockup",
         "category": "component",
-        "parent": "mockup",
+        "parent": "mockup-code",
         "children": []
     },
     {
@@ -1634,9 +1634,13 @@
         "category": "component",
         "parent": "tabs",
         "children": [
+            "tab",
+            "tab-content",
             "tabs-box",
             "tabs-border",
             "tabs-lift",
+            "tab-active",
+            "tab-disabled",
             "tabs-top",
             "tabs-bottom",
             "tabs-xs",
@@ -1650,18 +1654,14 @@
         "label": "tab",
         "detail": "A single tab button (can be button, link, div, radio input, etc)",
         "category": "part",
-        "parent": "tab",
-        "children": [
-            "tab-content",
-            "tab-active",
-            "tab-disabled"
-        ]
+        "parent": "tabs",
+        "children": []
     },
     {
         "label": "tab-content",
         "detail": "Tab content that comes immediately after a tab",
         "category": "part",
-        "parent": "tab",
+        "parent": "tabs",
         "children": []
     },
     {
@@ -1689,14 +1689,14 @@
         "label": "tab-active",
         "detail": "Makes a single tab look active",
         "category": "modifier",
-        "parent": "tab",
+        "parent": "tabs",
         "children": []
     },
     {
         "label": "tab-disabled",
         "detail": "Makes a single tab look disabled",
         "category": "modifier",
-        "parent": "tab",
+        "parent": "tabs",
         "children": []
     },
     {
@@ -1793,31 +1793,30 @@
         "detail": "For grouping multiple items",
         "category": "component",
         "parent": "join",
-        "children": [
-            "join-item",
-            "join-vertical",
-            "join-horizontal"
-        ]
+        "children": []
     },
     {
         "label": "join-item",
         "detail": "Item inside join. Can be a button, input, etc.",
         "category": "component",
-        "parent": "join",
-        "children": []
+        "parent": "join-item",
+        "children": [
+            "join-vertical",
+            "join-horizontal"
+        ]
     },
     {
         "label": "join-vertical",
         "detail": "Show items vertically",
         "category": "direction",
-        "parent": "join",
+        "parent": "join-item",
         "children": []
     },
     {
         "label": "join-horizontal",
         "detail": "Show items horizontally",
         "category": "direction",
-        "parent": "join",
+        "parent": "join-item",
         "children": []
     },
     {
@@ -2048,7 +2047,7 @@
         "label": "radial-progress",
         "detail": "Shows a radial progress",
         "category": "component",
-        "parent": "radial",
+        "parent": "radial-progress",
         "children": []
     },
     {
@@ -2113,16 +2112,7 @@
         "category": "component",
         "parent": "steps",
         "children": [
-            "steps-vertical",
-            "steps-horizontal"
-        ]
-    },
-    {
-        "label": "step",
-        "detail": "A single step node",
-        "category": "part",
-        "parent": "step",
-        "children": [
+            "step",
             "step-icon",
             "step-neutral",
             "step-primary",
@@ -2131,70 +2121,79 @@
             "step-info",
             "step-success",
             "step-warning",
-            "step-error"
+            "step-error",
+            "steps-vertical",
+            "steps-horizontal"
         ]
+    },
+    {
+        "label": "step",
+        "detail": "A single step node",
+        "category": "part",
+        "parent": "steps",
+        "children": []
     },
     {
         "label": "step-icon",
         "detail": "For custom icon inside step",
         "category": "part",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-neutral",
         "detail": "neutral color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-primary",
         "detail": "primary color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-secondary",
         "detail": "secondary color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-accent",
         "detail": "accent color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-info",
         "detail": "info color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-success",
         "detail": "success color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-warning",
         "detail": "warning color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
         "label": "step-error",
         "detail": "error color",
         "category": "color",
-        "parent": "step",
+        "parent": "steps",
         "children": []
     },
     {
@@ -2222,14 +2221,14 @@
         "label": "pika-single",
         "detail": "for the input field that opens Pikaday calendar",
         "category": "component",
-        "parent": "pika",
+        "parent": "pika-single",
         "children": []
     },
     {
         "label": "react-day-picker",
         "detail": "for the DayPicker component",
         "category": "component",
-        "parent": "react",
+        "parent": "react-day-picker",
         "children": []
     },
     {
@@ -2348,28 +2347,31 @@
         "label": "mockup-phone",
         "detail": "Phone mockup",
         "category": "component",
-        "parent": "mockup",
-        "children": []
+        "parent": "mockup-phone",
+        "children": [
+            "mockup-phone-camera",
+            "mockup-phone-display"
+        ]
     },
     {
         "label": "mockup-phone-camera",
         "detail": "Camera part",
         "category": "part",
-        "parent": "mockup",
+        "parent": "mockup-phone",
         "children": []
     },
     {
         "label": "mockup-phone-display",
         "detail": "Display part",
         "category": "part",
-        "parent": "mockup",
+        "parent": "mockup-phone",
         "children": []
     },
     {
         "label": "mockup-window",
         "detail": "OS window mockup",
         "category": "component",
-        "parent": "mockup",
+        "parent": "mockup-window",
         "children": []
     },
     {
@@ -2433,31 +2435,30 @@
         "detail": "A vertical flex layout to include list rows",
         "category": "component",
         "parent": "list",
-        "children": [
-            "list-row",
-            "list-col-wrap",
-            "list-col-grow"
-        ]
+        "children": []
     },
     {
         "label": "list-row",
         "detail": "The item inside list. A horizontal grid layout to include data",
         "category": "component",
-        "parent": "list",
-        "children": []
+        "parent": "list-row",
+        "children": [
+            "list-col-wrap",
+            "list-col-grow"
+        ]
     },
     {
         "label": "list-col-wrap",
         "detail": "For one of direct children of list-row to push it to the next line",
         "category": "modifier",
-        "parent": "list",
+        "parent": "list-row",
         "children": []
     },
     {
         "label": "list-col-grow",
         "detail": "For one of direct children of list-row to make it fill the remaining space",
         "category": "modifier",
-        "parent": "list",
+        "parent": "list-row",
         "children": []
     },
     {
@@ -2952,6 +2953,7 @@
             "card-border",
             "card-dash",
             "card-side",
+            "image-full",
             "card-xs",
             "card-sm",
             "card-md",
@@ -3005,7 +3007,7 @@
         "label": "image-full",
         "detail": "The image in <figure> element will be the background",
         "category": "modifier",
-        "parent": "image",
+        "parent": "card",
         "children": []
     },
     {
@@ -3061,7 +3063,7 @@
         "label": "floating-label",
         "detail": "For the parent of an input field (or select) and a span that floats above the input field when the field is focused",
         "category": "component",
-        "parent": "floating",
+        "parent": "floating-label",
         "children": []
     },
     {
@@ -3133,39 +3135,38 @@
         "detail": "Avatar",
         "category": "component",
         "parent": "avatar",
+        "children": []
+    },
+    {
+        "label": "avatar-group",
+        "detail": "Container for multiple avatars",
+        "category": "component",
+        "parent": "avatar-group",
         "children": [
-            "avatar-group",
             "avatar-online",
             "avatar-offline",
             "avatar-placeholder"
         ]
     },
     {
-        "label": "avatar-group",
-        "detail": "Container for multiple avatars",
-        "category": "component",
-        "parent": "avatar",
-        "children": []
-    },
-    {
         "label": "avatar-online",
         "detail": "shows a green dot as online indicator",
         "category": "modifier",
-        "parent": "avatar",
+        "parent": "avatar-group",
         "children": []
     },
     {
         "label": "avatar-offline",
         "detail": "shows a gray dot as offline indicator",
         "category": "modifier",
-        "parent": "avatar",
+        "parent": "avatar-group",
         "children": []
     },
     {
         "label": "avatar-placeholder",
         "detail": "To show letters as avatar placeholder",
         "category": "modifier",
-        "parent": "avatar",
+        "parent": "avatar-group",
         "children": []
     },
     {
@@ -3700,14 +3701,16 @@
         "label": "mockup-browser",
         "detail": "Browser mockup",
         "category": "component",
-        "parent": "mockup",
-        "children": []
+        "parent": "mockup-browser",
+        "children": [
+            "mockup-browser-toolbar"
+        ]
     },
     {
         "label": "mockup-browser-toolbar",
         "detail": "Toolbar part which can include addressbar, etc",
         "category": "part",
-        "parent": "mockup",
+        "parent": "mockup-browser",
         "children": []
     },
     {
@@ -3826,105 +3829,120 @@
         "label": "file-input",
         "detail": "For <input type=\"file\"> element",
         "category": "component",
-        "parent": "file",
-        "children": []
+        "parent": "file-input",
+        "children": [
+            "file-input-ghost",
+            "file-input-neutral",
+            "file-input-primary",
+            "file-input-secondary",
+            "file-input-accent",
+            "file-input-info",
+            "file-input-success",
+            "file-input-warning",
+            "file-input-error",
+            "file-input-xs",
+            "file-input-sm",
+            "file-input-md",
+            "file-input-lg",
+            "file-input-xl"
+        ]
     },
     {
         "label": "file-input-ghost",
         "detail": "ghost style",
         "category": "style",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-neutral",
         "detail": "neutral color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-primary",
         "detail": "primary color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-secondary",
         "detail": "secondary color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-accent",
         "detail": "accent color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-info",
         "detail": "info color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-success",
         "detail": "success color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-warning",
         "detail": "warning color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-error",
         "detail": "error color",
         "category": "color",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-xs",
         "detail": "Extra small size",
         "category": "size",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-sm",
         "detail": "Small size",
         "category": "size",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-md",
         "detail": "Medium size",
         "category": "size",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-lg",
         "detail": "Large size",
         "category": "size",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
         "label": "file-input-xl",
         "detail": "Extra large size",
         "category": "size",
-        "parent": "file",
+        "parent": "file-input",
         "children": []
     },
     {
@@ -3979,7 +3997,7 @@
         "label": "theme-controller",
         "detail": "For a checkbox or radio input that must change the page theme",
         "category": "component",
-        "parent": "theme",
+        "parent": "theme-controller",
         "children": []
     }
 ]

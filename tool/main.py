@@ -55,29 +55,31 @@ for k, component in enumerate(component_contents):
             if class_desc_pattern in desc_line:
                 start = desc_line.index(":") + 2
                 desc = desc_line[start:].strip()
-                parent_name = name.split("-")[0]
-                if parent_name == "stat":
-                    parent_name = "stats"
+                # parent_name = name.split("-")[0]
+                # if parent_name == "stat":
+                # parent_name = "stats"
                 children = []
-                if parent_name != name:
-                    children.append(name)
+                # if parent_name != name:
+                # children.append(name)
+                if locals().get("category", None) == "component":
+                    print(name)
+                    parent_name = name
                 components.append(
                     {
                         "label": name,
                         "detail": desc,
                         "category": locals().get("category", None),
-                        "parent": parent_name,
+                        "parent": locals().get("parent_name", None),
                         "children": locals().get("children", None),
                         # "documentation": component_file[k][],
                     }
                 )
                 for c in components:
-                    if c["label"] == parent_name:
+                    if c["label"] == locals().get("parent_name", None):
                         c["children"].append(name)
                     if len(c["children"]) > 0:
                         if c["label"] == c["children"][0]:
                             c["children"] = []
-
 
 with open("components.json", "w") as file:
     json.dump(components, file, indent=4)
