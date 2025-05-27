@@ -63,7 +63,6 @@ for component in component_contents:
                 # docs are odd for this one
                 pass
             potential_sub = [name for name in children if name in line and "=" in line]
-
             if len(sub_children) == 0:
                 sub_children = potential_sub
             else:
@@ -80,9 +79,13 @@ for component in component_contents:
                     "category": category,
                     "parent": root_name,
                     "children": children if class_name == root_name else None,
-                    "is_sub": class_name in sub_children,
                 }
             )
+    if len(sub_children) > 0:
+        for c in components:
+            if c["label"] in sub_children:
+                c["is_sub"] = True
+
 
 with open("components.json", "w") as file:
     json.dump(components, file, indent=4)
