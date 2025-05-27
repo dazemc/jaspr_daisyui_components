@@ -53,6 +53,7 @@ for k, component in enumerate(component_contents):
                 continue
             desc_line = component[i + 1]
             if class_desc_pattern in desc_line:
+                # this is chaos need to break it up...
                 start = desc_line.index(":") + 2
                 desc = desc_line[start:].strip()
                 root_name = name.split("-")[0]
@@ -69,14 +70,22 @@ for k, component in enumerate(component_contents):
                         parent_name = components[-1]["label"]
                         if parent_name == "join-item":
                             parent_name = "join"
-                    elif locals().get("category", None) == "direction":
+                    elif (
+                        locals().get("category", None) == "direction"
+                        or locals().get("category", None) == "placement"
+                    ):
                         parent_name = root_name
                     else:
                         parent_name = components[-1]["parent"]
                 if name == "avatar" or name == "avatar-group":
                     parent_name = "avatar"
-                if name == "step" or name == "stat":
+                if name == "step" or name == "stat" or name == "chat-bubble":
                     is_sub = True
+                if (
+                    parent_name == "chat-bubble"
+                    and locals().get("category", None) == "placement"
+                ):
+                    parent_name = "chat"
                 components.append(
                     {
                         "label": name,

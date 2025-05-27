@@ -1602,7 +1602,7 @@
         "category": "part",
         "parent": "chat",
         "children": null,
-        "is_sub": false,
+        "is_sub": true,
         "tag": "div"
     },
     {
