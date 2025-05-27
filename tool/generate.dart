@@ -86,56 +86,50 @@ String formatName(String input, String type) {
 // "part",
 // "direction",
 
-List<DaisyuiComponent> getColor(List<DaisyuiComponent> input) {
+List<DaisyuiComponent> getCategory(
+  List<DaisyuiComponent> input,
+  String category,
+) {
   List<DaisyuiComponent> output = [];
   for (DaisyuiComponent c in input) {
-    if (c.category == "color") output.add(c);
+    if (c.category == category) output.add(c);
   }
   return output;
 }
 
-String? getColorType(DaisyuiComponent input) {
-  List<String> colors = [
-    "neutral",
-    "primary",
-    "secondary",
-    "accent",
-    "info",
-    "success",
-    "warning",
-    "error",
-  ];
-  for (String color in colors) {
-    if (input.label.contains(color)) {
-      return "      $color('${input.label}'),\n";
-    }
-  }
-  return null;
+String? getCategoryType(DaisyuiComponent input) {
+  String? style = input.label
+      .replaceFirst(input.parent ?? "", "")
+      .replaceAll("-", "");
+  return "     $style('${input.label}'),\n";
 }
 
-String buildColor(List<DaisyuiComponent> input) {
-  String pname = formatName(input.first.label, "Color");
-  List<String> colorTypeStrings = [];
-  for (DaisyuiComponent c in input) {
-    String? colorType = getColorType(c);
-    if (colorType != null) {
-      colorTypeStrings.add(colorType);
-    }
-  }
-  String s = """
+String buildEnumLine(String pascalName, List<String> enums) {
+  return """
 
-    enum $pname {
-${colorTypeStrings.join()}
+    enum $pascalName {
+${enums.join()}
       none('');
 
       final String value;
-      const $pname(this.value);
+      const $pascalName(this.value);
       @override
       String toString() => value.toString();
     }
 
   """;
-  return s;
+}
+
+String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
+  String pascalName = formatName(input.first.label, titleCategory);
+  List<String> categoryStrings = [];
+  for (DaisyuiComponent c in input) {
+    String? colorType = getCategoryType(c);
+    if (colorType != null) {
+      categoryStrings.add(colorType);
+    }
+  }
+  return buildEnumLine(pascalName, categoryStrings);
 }
 
 void buildComponentList(
@@ -146,12 +140,19 @@ void buildComponentList(
     String parentName = parent.label;
     List<DaisyuiComponent>? children = v['children'];
     if (children != null && children.isNotEmpty) {
-      List<DaisyuiComponent> colorComponents = getColor(children);
+      List<DaisyuiComponent> colorComponents = getCategory(children, "color");
+      List<DaisyuiComponent> styleComponents = getCategory(children, "style");
       String? colorEnum;
+      String? styleEnum;
       if (colorComponents.isNotEmpty) {
-        colorEnum = buildColor(colorComponents);
+        colorEnum = buildCategory(colorComponents, "Color");
+        print(colorEnum);
       }
-      if (colorEnum != null) print(colorEnum);
+      if (styleComponents.isNotEmpty) {
+        styleEnum = buildCategory(styleComponents, "Style");
+        print(styleEnum);
+      }
+      // if (colorEnum != null) print(colorEnum);
       String output = """
 import 'package:jaspr/jaspr.dart';
 

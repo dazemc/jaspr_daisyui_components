@@ -69,10 +69,14 @@ for k, component in enumerate(component_contents):
                         parent_name = components[-1]["label"]
                         if parent_name == "join-item":
                             parent_name = "join"
+                    elif locals().get("category", None) == "direction":
+                        parent_name = root_name
                     else:
                         parent_name = components[-1]["parent"]
                 if name == "avatar" or name == "avatar-group":
                     parent_name = "avatar"
+                if name == "step" or name == "stat":
+                    is_sub = True
                 components.append(
                     {
                         "label": name,

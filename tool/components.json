@@ -22,13 +22,13 @@
             "stats-horizontal",
             "stats-vertical"
         ],
-        "is_sub": false,
+        "is_sub": true,
         "tag": "div"
     },
     {
         "label": "stat-title",
         "category": "part",
-        "parent": "stats",
+        "parent": "stat",
         "children": null,
         "is_sub": false,
         "tag": "div"
@@ -36,7 +36,7 @@
     {
         "label": "stat-value",
         "category": "part",
-        "parent": "stats",
+        "parent": "stat",
         "children": null,
         "is_sub": false,
         "tag": "div"
@@ -44,7 +44,7 @@
     {
         "label": "stat-desc",
         "category": "part",
-        "parent": "stats",
+        "parent": "stat",
         "children": null,
         "is_sub": false,
         "tag": "div"
@@ -52,7 +52,7 @@
     {
         "label": "stat-figure",
         "category": "part",
-        "parent": "stats",
+        "parent": "stat",
         "children": null,
         "is_sub": false,
         "tag": "div"
@@ -60,7 +60,7 @@
     {
         "label": "stat-actions",
         "category": "part",
-        "parent": "stats",
+        "parent": "stat",
         "children": null,
         "is_sub": false,
         "tag": "div"
@@ -2170,15 +2170,6 @@
         "parent": null,
         "children": [
             "step",
-            "step-icon",
-            "step-neutral",
-            "step-primary",
-            "step-secondary",
-            "step-accent",
-            "step-info",
-            "step-success",
-            "step-warning",
-            "step-error",
             "steps-vertical",
             "steps-horizontal"
         ],
@@ -2189,14 +2180,24 @@
         "label": "step",
         "category": "part",
         "parent": "steps",
-        "children": null,
-        "is_sub": false,
+        "children": [
+            "step-icon",
+            "step-neutral",
+            "step-primary",
+            "step-secondary",
+            "step-accent",
+            "step-info",
+            "step-success",
+            "step-warning",
+            "step-error"
+        ],
+        "is_sub": true,
         "tag": "ul"
     },
     {
         "label": "step-icon",
         "category": "part",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false,
         "tag": "span"
@@ -2204,56 +2205,56 @@
     {
         "label": "step-neutral",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-primary",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-secondary",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-accent",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-info",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-success",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-warning",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
     {
         "label": "step-error",
         "category": "color",
-        "parent": "steps",
+        "parent": "step",
         "children": null,
         "is_sub": false
     },
