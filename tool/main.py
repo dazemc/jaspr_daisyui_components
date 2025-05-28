@@ -1,4 +1,5 @@
 import json
+import re
 import os
 from os.path import isdir, isfile, join
 
@@ -39,9 +40,12 @@ for component in component_contents:
     children = []
     sub_children = []
     sub_component = ""
+    tag = None
     for line in component:
+        # CATEGORY
         if any(" " + category + ":" in line for category in class_categories):
             category = line.strip().replace(":", "")
+        # CLASS NAME
         if class_name_pattern in line:
             class_name = (
                 line.strip()
@@ -49,8 +53,10 @@ for component in component_contents:
                 .replace(" ", "")
                 .replace("'", "")[1:]
             )
+        # ROOT NAME
         if len(root_name) == 0 and len(class_name) > 0:
             root_name = class_name
+        # CHILDREN
         if root_name != class_name and len(root_name) > 0:
             if class_name not in children:
                 children.append(class_name)
@@ -59,7 +65,6 @@ for component in component_contents:
             and root_name + " " not in line
             and "=" in line
         ):
-            # Maybe I can assume the first one by itself is a subparent
             if root_name == "fieldset":
                 # docs are odd for this one
                 pass
@@ -70,19 +75,46 @@ for component in component_contents:
                 for name in potential_sub:
                     if name not in sub_children:
                         sub_children.append(name)
-        # stop parsing and return
-        if len(components) > 0:
-            if components[-1]["label"] == class_name:
-                continue
-        if len(class_name) > 0:
-            components.append(
-                {
-                    "label": class_name,
-                    "category": category,
-                    "parent": root_name,
-                    "children": children if class_name == root_name else None,
-                }
+        # GET TAG
+        if "class=" in line and "<" in line:
+            match = re.search(
+                r'<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*class="[^"]*"[^>]*>', line
             )
+            if match and not line.strip().startswith("</"):
+                tag = match.group(1)
+                class_attr = line.split('class="')[1].split('"')[0]
+                for c in components:
+                    c["tag"] = (
+                        tag
+                        if class_attr.find(c["label"]) >= 0
+                        and (
+                            class_attr[
+                                class_attr.find(c["label"])
+                                + len(c["label"]) : class_attr.find(c["label"])
+                                + len(c["label"])
+                                + 1
+                            ]
+                            in [" ", ""]
+                            or class_attr.find(c["label"]) + len(c["label"])
+                            == len(class_attr)
+                        )
+                        and c["label"] != "join-item"  # special
+                        and c["tag"] is None
+                        else c["tag"]
+                    )
+        # APPEND COMPONENT
+        if len(class_name) > 0:
+            if class_name not in [c["label"] for c in components]:
+                components.append(
+                    {
+                        "label": class_name,
+                        "category": category,
+                        "parent": root_name,
+                        "children": children if class_name == root_name else None,
+                        "tag": locals().get("tag", None),
+                    }
+                )
+    # HEIRARCHY
     if len(sub_children) > 0:
         for c in components:
             if c["label"] in sub_children:
