@@ -68,7 +68,7 @@ Map<String, Map<String, List<DaisyuiComponent>>> buildComponentHierarchy(
 String formatName(String input, String type) {
   String fOutput = '';
   List<String> splitName = input.split('-');
-  if (type == "Color") splitName.removeAt(splitName.length - 1);
+  splitName.removeAt(splitName.length - 1);
   for (String s in splitName) {
     String cap = s.toUpperCase();
     fOutput += cap.substring(0, 1) + cap.substring(1).toLowerCase();
