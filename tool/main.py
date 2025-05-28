@@ -59,6 +59,7 @@ for component in component_contents:
             and root_name + " " not in line
             and "=" in line
         ):
+            # Maybe I can assume the first one by itself is a subparent
             if root_name == "fieldset":
                 # docs are odd for this one
                 pass
@@ -69,6 +70,7 @@ for component in component_contents:
                 for name in potential_sub:
                     if name not in sub_children:
                         sub_children.append(name)
+        # stop parsing and return
         if len(components) > 0:
             if components[-1]["label"] == class_name:
                 continue
@@ -85,7 +87,10 @@ for component in component_contents:
         for c in components:
             if c["label"] in sub_children:
                 c["is_sub"] = True
-
+                if c["category"] != "component" or c["category"] != "part":
+                    sub_parent = "-".join(str(c["label"]).split("-")[:-1])
+                    if len(sub_parent) > 0:
+                        c["sub_parent"] = sub_parent
 
 with open("components.json", "w") as file:
     json.dump(components, file, indent=4)
