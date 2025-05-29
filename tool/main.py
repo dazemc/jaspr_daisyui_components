@@ -17,7 +17,7 @@ for dir_path in component_dirs:
     for name in dir_content:
         name_path = join(dir_path, name)
         if isfile(name_path):
-            component_contents.append(open(name_path, "r").read().strip().splitlines())
+            component_contents.append(open(name_path, "r"))
 
 components = []
 class_categories = [
@@ -41,7 +41,15 @@ for component in component_contents:
     sub_children = []
     sub_component = ""
     tag = None
-    for line in component:
+    temp_html = []
+    # HTML EXTRACTION
+    c = component.read()
+    html_starts = [match.start() for match in re.finditer("```html", c)]
+    for i in html_starts:
+        end = c[i].find("```")
+        temp_html.append(c[i:end][8:-3])
+    component.seek(0)
+    for line in component.readlines():
         # CATEGORY
         if any(" " + category + ":" in line for category in class_categories):
             category = line.strip().replace(":", "")
@@ -53,6 +61,7 @@ for component in component_contents:
                 .replace(" ", "")
                 .replace("'", "")[1:]
             )
+        # ...why don't I just extract the html examples and load them in dart's html package?
         # ROOT NAME
         if len(root_name) == 0 and len(class_name) > 0:
             root_name = class_name
@@ -76,33 +85,34 @@ for component in component_contents:
                     if name not in sub_children:
                         sub_children.append(name)
         # GET TAG
-        if "class=" in line and "<" in line:
-            match = re.search(
-                r'<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*class="[^"]*"[^>]*>', line
-            )
-            if match and not line.strip().startswith("</"):
-                tag = match.group(1)
-                class_attr = line.split('class="')[1].split('"')[0]
-                for c in components:
-                    c["tag"] = (
-                        tag
-                        if class_attr.find(c["label"]) >= 0
-                        and (
-                            class_attr[
-                                class_attr.find(c["label"])
-                                + len(c["label"]) : class_attr.find(c["label"])
-                                + len(c["label"])
-                                + 1
-                            ]
-                            in [" ", ""]
-                            or class_attr.find(c["label"]) + len(c["label"])
-                            == len(class_attr)
-                        )
-                        and c["label"] != "join-item"  # special
-                        and c["tag"] is None
-                        else c["tag"]
-                    )
+        # if "class=" in line and "<" in line:
+        #     match = re.search(
+        #         r'<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*class="[^"]*"[^>]*>', line
+        #     )
+        #     if match and not line.strip().startswith("</"):
+        #         tag = match.group(1)
+        #         class_attr = line.split('class="')[1].split('"')[0]
+        #         for c in components:
+        #             c["tag"] = (
+        #                 tag
+        #                 if class_attr.find(c["label"]) >= 0
+        #                 and (
+        #                     class_attr[
+        #                         class_attr.find(c["label"])
+        #                         + len(c["label"]) : class_attr.find(c["label"])
+        #                         + len(c["label"])
+        #                         + 1
+        #                     ]
+        #                     in [" ", ""]
+        #                     or class_attr.find(c["label"]) + len(c["label"])
+        #                     == len(class_attr)
+        #                 )
+        #                 and c["label"] != "join-item"  # special
+        #                 and c["tag"] is None
+        #                 else c["tag"]
+        #             )
         # APPEND COMPONENT
+        html = [html for html in temp_html if class_name in html]
         if len(class_name) > 0:
             if class_name not in [c["label"] for c in components]:
                 components.append(
@@ -111,7 +121,7 @@ for component in component_contents:
                         "category": category,
                         "parent": root_name,
                         "children": children if class_name == root_name else None,
-                        "tag": locals().get("tag", None),
+                        "html": html,
                     }
                 )
     # HEIRARCHY
