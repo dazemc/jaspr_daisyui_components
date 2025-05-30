@@ -1691,14 +1691,16 @@
         "type": "modifier",
         "parent": "tabs",
         "children": null,
-        "tag": "a"
+        "tag": "a",
+        "sub_parent": "tab"
     },
     {
         "label": "tab-disabled",
         "type": "modifier",
         "parent": "tabs",
         "children": null,
-        "html": []
+        "html": [],
+        "sub_parent": "tab"
     },
     {
         "label": "tabs-top",
@@ -2157,56 +2159,64 @@
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-primary",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-secondary",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-accent",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-info",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-success",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "html": []
+        "html": [],
+        "sub_parent": "step"
     },
     {
         "label": "step-warning",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "step-error",
         "type": "color",
         "parent": "steps",
         "children": null,
-        "tag": "li"
+        "tag": "li",
+        "sub_parent": "step"
     },
     {
         "label": "steps-vertical",
@@ -3028,7 +3038,8 @@
         "type": "modifier",
         "parent": "card",
         "children": null,
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "image"
     },
     {
         "label": "card-xs",
@@ -3876,98 +3887,112 @@
         "type": "style",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-neutral",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-primary",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-secondary",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-accent",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-info",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-success",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-warning",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-error",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-xs",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-sm",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-md",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-lg",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "file-input-xl",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input"
+        "tag": "input",
+        "sub_parent": "file"
     },
     {
         "label": "diff",

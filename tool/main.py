@@ -83,6 +83,12 @@ def check_children(root_name: str, class_name: str) -> bool:
     return root_name != class_name and len(root_name) > 0
 
 
+def check_sub(root_name: str, class_name: str, value: str) -> bool:
+    return check_children(
+        root_name=root_name, class_name=class_name
+    ) and root_name not in value.replace(root_name, "")
+
+
 def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[dict]:
     components: list[dict] = []
     for component in documentation_contents:
@@ -125,7 +131,7 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
     return components
 
 
-def parse_html(components: list[dict]):
+def parse_html(components: list[dict]) -> None:
     for component in tqdm(components, desc="Generating components.json", colour="blue"):
         html: list[str] = component["html"]
         parser = html5lib.HTMLParser(
@@ -134,7 +140,6 @@ def parse_html(components: list[dict]):
         )
         for example in tqdm(
             html,
-            total=len(locals().get("html", 0)),
             desc=f"Parsing HTML for {component['label']}",
             leave=False,
             colour="green",
@@ -151,11 +156,50 @@ def parse_html(components: list[dict]):
                                 component["tag"] = element.tag
 
 
+def build_heirarchy(components: list[dict]):
+    for component in components:
+        ctype: str = component["type"]
+        name: str = component["label"]
+        parent: str = component["parent"]
+        prefix_name: str = name.split("-")[0]
+
+        if ctype != "component" and ctype != "part":
+            if prefix_name != parent:
+                component["sub_parent"] = prefix_name
+
+
+def check_components(components: list[dict]) -> None:
+    for component in components:
+        name: str = component["label"]
+        html: str = component.get("html", False)
+        ctype: str = component["type"]
+        children: list[str] | None = component.get("children", None)
+        isComp: bool = ctype == "part" or ctype == "component"
+        # HTML
+        if html:
+            if len(html) == 0 and isComp:
+                component.pop("html", None)
+            if len(html) > 0:
+                print(f"⚠️{name} has unprocessed HTML!")
+            if isComp and name not in html:
+                print(f"⚠️{name} is missing a HTML example!")
+        # CHILDREN
+        if children == []:
+            print(f"⚠️{name} has no children!")
+        # DIV
+        if not component.get("tag", True) and isComp:
+            print(f"⚠️{name} is missing a tag")
+
+
 def main() -> None:
     components_dirs: list[str] = extract_dirs()
     component_contents: list[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
+
     parse_html(components)
+    build_heirarchy(components)
+    # TODO: parse other attributes for components like range, progress, etc
+    check_components(components)
 
     with open("components.json", "w") as file:
         dump(components, file, indent=4)
