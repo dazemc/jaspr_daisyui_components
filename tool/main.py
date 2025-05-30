@@ -1,9 +1,11 @@
 from io import TextIOWrapper
-import html5lib
 from json import dump
 from re import finditer
 from os import listdir
 from os.path import isdir, isfile, join
+
+import html5lib
+from tqdm import tqdm
 
 CLASS_NAME_PATTERN: str = "class:"
 CLASS_DESC_PATTERN: str = "desc:"
@@ -44,10 +46,10 @@ def extract_files(component_dirs: list[str]) -> list[TextIOWrapper]:
 def extract_html(raw_documentation: TextIOWrapper) -> list[str]:
     output: list[str] = []
     c: str = raw_documentation.read()
-    html_starts = [match.start() for match in finditer("```html", c)]
+    html_starts: list[int] = [match.start() for match in finditer("```html", c)]
     for i in html_starts:
         end: int = c[i].find("```")
-        output.append(c[i:end][8:-3])
+        output.append(c[i:end][8:-3].replace("$$", ""))
     raw_documentation.seek(0)
     return output
 
@@ -123,10 +125,37 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
     return components
 
 
+def parse_html(components: list[dict]):
+    for component in tqdm(components, desc="Generating components.json", colour="blue"):
+        html: list[str] = component["html"]
+        parser = html5lib.HTMLParser(
+            tree=html5lib.treebuilders.getTreeBuilder("etree"),
+            namespaceHTMLElements=False,
+        )
+        for example in tqdm(
+            html,
+            total=len(locals().get("html", 0)),
+            desc=f"Parsing HTML for {component['label']}",
+            leave=False,
+            colour="green",
+        ):
+            tree = parser.parseFragment(example)
+            for element in tree.iter():
+                for k, v in element.items():
+                    if k == "class":
+                        if component["label"] in v:
+                            if component.get("tag", False):
+                                component.pop("html", None)
+                                break
+                            else:
+                                component["tag"] = element.tag
+
+
 def main() -> None:
     components_dirs: list[str] = extract_dirs()
     component_contents: list[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
+    parse_html(components)
 
     with open("components.json", "w") as file:
         dump(components, file, indent=4)
