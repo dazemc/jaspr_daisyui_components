@@ -83,10 +83,8 @@ def check_children(root_name: str, class_name: str) -> bool:
     return root_name != class_name and len(root_name) > 0
 
 
-def check_sub(root_name: str, class_name: str, value: str) -> bool:
-    return check_children(
-        root_name=root_name, class_name=class_name
-    ) and root_name not in value.replace(root_name, "")
+def is_sub(component: dict) -> bool:
+    return component["type"] == "component" or component["type"] == "part"
 
 
 def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[dict]:
@@ -132,6 +130,7 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
 
 
 def parse_html(components: list[dict]) -> None:
+    sub_parent: str | None = None
     for component in tqdm(components, desc="Generating components.json", colour="blue"):
         html: list[str] = component["html"]
         parser = html5lib.HTMLParser(
@@ -149,6 +148,14 @@ def parse_html(components: list[dict]) -> None:
                 for k, v in element.items():
                     if k == "class":
                         if component["label"] in v:
+                            if is_sub(component):
+                                sub_parent = component["label"]
+                                component["is_sub"] = True
+                            if sub_parent:
+                                if sub_parent in v and component["label"] != sub_parent:
+                                    component["sub_parent"] = (
+                                        sub_parent if sub_parent is not None else None
+                                    )
                             if component.get("tag", False):
                                 component.pop("html", None)
                                 break
@@ -189,6 +196,9 @@ def check_components(components: list[dict]) -> None:
         # DIV
         if not component.get("tag", True) and isComp:
             print(f"⚠️{name} is missing a tag")
+        # SUB PARENT
+        if component.get("sub_parent", False) is None:
+            print(f"🛑 {name} has a malform sub parent!")
 
 
 def main() -> None:

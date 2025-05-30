@@ -13,6 +13,7 @@
             "stats-horizontal",
             "stats-vertical"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -20,6 +21,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -27,6 +29,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -34,6 +37,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -41,6 +45,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -48,6 +53,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -55,6 +61,7 @@
         "type": "part",
         "parent": "stats",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -91,6 +98,7 @@
             "select-lg",
             "select-xl"
         ],
+        "is_sub": true,
         "tag": "select"
     },
     {
@@ -98,6 +106,7 @@
         "type": "style",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -105,6 +114,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -112,6 +122,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -119,6 +130,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -126,6 +138,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -133,6 +146,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -140,6 +154,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -147,6 +162,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -154,6 +170,7 @@
         "type": "color",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -161,6 +178,7 @@
         "type": "size",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -168,6 +186,7 @@
         "type": "size",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -175,6 +194,7 @@
         "type": "size",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -182,6 +202,7 @@
         "type": "size",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -189,6 +210,7 @@
         "type": "size",
         "parent": "select",
         "children": null,
+        "sub_parent": "select",
         "tag": "select"
     },
     {
@@ -203,6 +225,7 @@
             "drawer-end",
             "drawer-open"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -210,6 +233,7 @@
         "type": "part",
         "parent": "drawer",
         "children": null,
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -217,6 +241,7 @@
         "type": "part",
         "parent": "drawer",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -224,6 +249,7 @@
         "type": "part",
         "parent": "drawer",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -231,6 +257,7 @@
         "type": "part",
         "parent": "drawer",
         "children": null,
+        "is_sub": true,
         "tag": "label"
     },
     {
@@ -261,6 +288,7 @@
             "progress-warning",
             "progress-error"
         ],
+        "is_sub": true,
         "tag": "progress"
     },
     {
@@ -268,6 +296,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -275,6 +304,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -282,6 +312,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -289,6 +320,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -296,6 +328,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -303,6 +336,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -310,6 +344,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -317,6 +352,7 @@
         "type": "color",
         "parent": "progress",
         "children": null,
+        "sub_parent": "progress",
         "tag": "progress"
     },
     {
@@ -327,6 +363,7 @@
             "label",
             "fieldset-legend"
         ],
+        "is_sub": true,
         "tag": "fieldset"
     },
     {
@@ -334,6 +371,7 @@
         "type": "component",
         "parent": "fieldset",
         "children": null,
+        "is_sub": true,
         "tag": "p"
     },
     {
@@ -341,6 +379,7 @@
         "type": "part",
         "parent": "fieldset",
         "children": null,
+        "is_sub": true,
         "tag": "legend"
     },
     {
@@ -358,6 +397,7 @@
             "alert-vertical",
             "alert-horizontal"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -365,6 +405,7 @@
         "type": "style",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -372,6 +413,7 @@
         "type": "style",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -379,6 +421,7 @@
         "type": "style",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -386,6 +429,7 @@
         "type": "color",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -393,6 +437,7 @@
         "type": "color",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -400,6 +445,7 @@
         "type": "color",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -407,6 +453,7 @@
         "type": "color",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -414,6 +461,7 @@
         "type": "direction",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -421,6 +469,7 @@
         "type": "direction",
         "parent": "alert",
         "children": null,
+        "sub_parent": "alert",
         "tag": "div"
     },
     {
@@ -441,6 +490,7 @@
             "divider-start",
             "divider-end"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -448,6 +498,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -455,6 +506,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -462,6 +514,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -469,6 +522,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -476,6 +530,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -483,6 +538,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -490,6 +546,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -497,6 +554,7 @@
         "type": "color",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -511,6 +569,7 @@
         "type": "direction",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -518,6 +577,7 @@
         "type": "placement",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -525,6 +585,7 @@
         "type": "placement",
         "parent": "divider",
         "children": null,
+        "sub_parent": "divider",
         "tag": "div"
     },
     {
@@ -535,6 +596,7 @@
             "hero-content",
             "hero-overlay"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -542,6 +604,7 @@
         "type": "part",
         "parent": "hero",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -549,6 +612,7 @@
         "type": "part",
         "parent": "hero",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -566,6 +630,7 @@
             "link-warning",
             "link-error"
         ],
+        "is_sub": true,
         "tag": "a"
     },
     {
@@ -573,6 +638,7 @@
         "type": "style",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -580,6 +646,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -587,6 +654,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -594,6 +662,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -601,6 +670,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -608,6 +678,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -615,6 +686,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -622,6 +694,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -629,6 +702,7 @@
         "type": "color",
         "parent": "link",
         "children": null,
+        "sub_parent": "link",
         "tag": "button"
     },
     {
@@ -642,6 +716,7 @@
             "kbd-lg",
             "kbd-xl"
         ],
+        "is_sub": true,
         "tag": "kbd"
     },
     {
@@ -649,6 +724,7 @@
         "type": "size",
         "parent": "kbd",
         "children": null,
+        "sub_parent": "kbd",
         "tag": "kbd"
     },
     {
@@ -656,6 +732,7 @@
         "type": "size",
         "parent": "kbd",
         "children": null,
+        "sub_parent": "kbd",
         "tag": "kbd"
     },
     {
@@ -663,6 +740,7 @@
         "type": "size",
         "parent": "kbd",
         "children": null,
+        "sub_parent": "kbd",
         "tag": "kbd"
     },
     {
@@ -670,6 +748,7 @@
         "type": "size",
         "parent": "kbd",
         "children": null,
+        "sub_parent": "kbd",
         "tag": "kbd"
     },
     {
@@ -677,6 +756,7 @@
         "type": "size",
         "parent": "kbd",
         "children": null,
+        "sub_parent": "kbd",
         "tag": "kbd"
     },
     {
@@ -684,6 +764,7 @@
         "type": "component",
         "parent": "mockup-code",
         "children": [],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -703,6 +784,7 @@
             "loading-lg",
             "loading-xl"
         ],
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -710,6 +792,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -717,6 +800,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -724,6 +808,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -731,6 +816,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -738,6 +824,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -745,6 +832,7 @@
         "type": "style",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -752,6 +840,7 @@
         "type": "size",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -759,6 +848,7 @@
         "type": "size",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -766,6 +856,7 @@
         "type": "size",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -773,6 +864,7 @@
         "type": "size",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -780,6 +872,7 @@
         "type": "size",
         "parent": "loading",
         "children": null,
+        "sub_parent": "loading",
         "tag": "span"
     },
     {
@@ -787,6 +880,7 @@
         "type": "component",
         "parent": "skeleton",
         "children": [],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -801,6 +895,7 @@
             "swap-rotate",
             "swap-flip"
         ],
+        "is_sub": true,
         "tag": "label"
     },
     {
@@ -808,6 +903,7 @@
         "type": "part",
         "parent": "swap",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -815,6 +911,7 @@
         "type": "part",
         "parent": "swap",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -868,6 +965,7 @@
             "badge-lg",
             "badge-xl"
         ],
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -875,6 +973,7 @@
         "type": "style",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -882,6 +981,7 @@
         "type": "style",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -889,6 +989,7 @@
         "type": "style",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -896,6 +997,7 @@
         "type": "style",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -903,6 +1005,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -910,6 +1013,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -917,6 +1021,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -924,6 +1029,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -931,6 +1037,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -938,6 +1045,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -945,6 +1053,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -952,6 +1061,7 @@
         "type": "color",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -959,6 +1069,7 @@
         "type": "size",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -966,6 +1077,7 @@
         "type": "size",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -973,6 +1085,7 @@
         "type": "size",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -980,6 +1093,7 @@
         "type": "size",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -987,6 +1101,7 @@
         "type": "size",
         "parent": "badge",
         "children": null,
+        "sub_parent": "badge",
         "tag": "div"
     },
     {
@@ -1008,6 +1123,7 @@
             "radio-lg",
             "radio-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -1015,6 +1131,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1022,6 +1139,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1029,6 +1147,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1036,6 +1155,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1043,6 +1163,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1050,6 +1171,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1057,6 +1179,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1064,6 +1187,7 @@
         "type": "color",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1071,6 +1195,7 @@
         "type": "size",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1078,6 +1203,7 @@
         "type": "size",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1085,6 +1211,7 @@
         "type": "size",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1092,6 +1219,7 @@
         "type": "size",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1099,6 +1227,7 @@
         "type": "size",
         "parent": "radio",
         "children": null,
+        "sub_parent": "radio",
         "tag": "input"
     },
     {
@@ -1110,6 +1239,7 @@
             "navbar-center",
             "navbar-end"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1117,6 +1247,7 @@
         "type": "part",
         "parent": "navbar",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1124,6 +1255,7 @@
         "type": "part",
         "parent": "navbar",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1131,6 +1263,7 @@
         "type": "part",
         "parent": "navbar",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1145,6 +1278,7 @@
             "collapse-open",
             "collapse-close"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1152,6 +1286,7 @@
         "type": "part",
         "parent": "collapse",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1159,6 +1294,7 @@
         "type": "part",
         "parent": "collapse",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1209,6 +1345,7 @@
             "textarea-lg",
             "textarea-xl"
         ],
+        "is_sub": true,
         "tag": "textarea"
     },
     {
@@ -1216,6 +1353,7 @@
         "type": "style",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1223,6 +1361,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1230,6 +1369,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1237,6 +1377,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1244,6 +1385,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1251,6 +1393,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1258,6 +1401,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1265,6 +1409,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1272,6 +1417,7 @@
         "type": "color",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1279,6 +1425,7 @@
         "type": "size",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1286,6 +1433,7 @@
         "type": "size",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1293,6 +1441,7 @@
         "type": "size",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1300,6 +1449,7 @@
         "type": "size",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1307,6 +1457,7 @@
         "type": "size",
         "parent": "textarea",
         "children": null,
+        "sub_parent": "textarea",
         "tag": "textarea"
     },
     {
@@ -1339,6 +1490,7 @@
             "btn-square",
             "btn-circle"
         ],
+        "is_sub": true,
         "tag": "button"
     },
     {
@@ -1346,6 +1498,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1353,6 +1506,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1360,6 +1514,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1367,6 +1522,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1374,6 +1530,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1381,6 +1538,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1388,6 +1546,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1395,6 +1554,7 @@
         "type": "color",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1402,6 +1562,7 @@
         "type": "style",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1409,6 +1570,7 @@
         "type": "style",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1416,6 +1578,7 @@
         "type": "style",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1423,6 +1586,7 @@
         "type": "style",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1430,6 +1594,7 @@
         "type": "style",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1437,6 +1602,7 @@
         "type": "behavior",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1444,6 +1610,7 @@
         "type": "behavior",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1451,6 +1618,7 @@
         "type": "size",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1458,6 +1626,7 @@
         "type": "size",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1465,6 +1634,7 @@
         "type": "size",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1472,6 +1642,7 @@
         "type": "size",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1479,6 +1650,7 @@
         "type": "size",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1486,6 +1658,7 @@
         "type": "modifier",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1493,6 +1666,7 @@
         "type": "modifier",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1500,6 +1674,7 @@
         "type": "modifier",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1507,6 +1682,7 @@
         "type": "modifier",
         "parent": "btn",
         "children": null,
+        "sub_parent": "btn",
         "tag": "button"
     },
     {
@@ -1529,6 +1705,7 @@
             "chat-bubble-warning",
             "chat-bubble-error"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1536,6 +1713,7 @@
         "type": "part",
         "parent": "chat",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1543,6 +1721,7 @@
         "type": "part",
         "parent": "chat",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1550,6 +1729,7 @@
         "type": "part",
         "parent": "chat",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1557,6 +1737,7 @@
         "type": "part",
         "parent": "chat",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1578,6 +1759,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1585,6 +1767,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1592,6 +1775,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1599,6 +1783,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1606,6 +1791,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1613,6 +1799,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1620,6 +1807,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1627,6 +1815,7 @@
         "type": "color",
         "parent": "chat",
         "children": null,
+        "sub_parent": "chat-bubble",
         "tag": "div"
     },
     {
@@ -1649,6 +1838,7 @@
             "tabs-lg",
             "tabs-xl"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1656,6 +1846,7 @@
         "type": "part",
         "parent": "tabs",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1663,6 +1854,7 @@
         "type": "part",
         "parent": "tabs",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1761,6 +1953,7 @@
             "stack-start",
             "stack-end"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1768,6 +1961,7 @@
         "type": "modifier",
         "parent": "stack",
         "children": null,
+        "sub_parent": "stack",
         "tag": "div"
     },
     {
@@ -1782,6 +1976,7 @@
         "type": "modifier",
         "parent": "stack",
         "children": null,
+        "sub_parent": "stack",
         "tag": "div"
     },
     {
@@ -1789,6 +1984,7 @@
         "type": "modifier",
         "parent": "stack",
         "children": null,
+        "sub_parent": "stack",
         "tag": "div"
     },
     {
@@ -1800,6 +1996,7 @@
             "join-vertical",
             "join-horizontal"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -1807,6 +2004,7 @@
         "type": "component",
         "parent": "join",
         "children": null,
+        "is_sub": true,
         "tag": "button"
     },
     {
@@ -1842,6 +2040,7 @@
             "range-lg",
             "range-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -1849,6 +2048,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1856,6 +2056,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1863,6 +2064,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1870,6 +2072,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1877,6 +2080,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1884,6 +2088,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1891,6 +2096,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1898,6 +2104,7 @@
         "type": "color",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1905,6 +2112,7 @@
         "type": "size",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1912,6 +2120,7 @@
         "type": "size",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1919,6 +2128,7 @@
         "type": "size",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1926,6 +2136,7 @@
         "type": "size",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1933,6 +2144,7 @@
         "type": "size",
         "parent": "range",
         "children": null,
+        "sub_parent": "range",
         "tag": "input"
     },
     {
@@ -1954,6 +2166,7 @@
             "checkbox-lg",
             "checkbox-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -1961,6 +2174,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -1968,6 +2182,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -1975,6 +2190,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -1982,6 +2198,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -1989,6 +2206,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -1996,6 +2214,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2003,6 +2222,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2010,6 +2230,7 @@
         "type": "color",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2017,6 +2238,7 @@
         "type": "size",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2024,6 +2246,7 @@
         "type": "size",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2031,6 +2254,7 @@
         "type": "size",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2038,6 +2262,7 @@
         "type": "size",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2045,6 +2270,7 @@
         "type": "size",
         "parent": "checkbox",
         "children": null,
+        "sub_parent": "checkbox",
         "tag": "input"
     },
     {
@@ -2052,6 +2278,7 @@
         "type": "component",
         "parent": "radial-progress",
         "children": [],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2066,6 +2293,7 @@
             "toast-middle",
             "toast-bottom"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2073,6 +2301,7 @@
         "type": "placement",
         "parent": "toast",
         "children": null,
+        "sub_parent": "toast",
         "tag": "div"
     },
     {
@@ -2080,6 +2309,7 @@
         "type": "placement",
         "parent": "toast",
         "children": null,
+        "sub_parent": "toast",
         "tag": "div"
     },
     {
@@ -2087,6 +2317,7 @@
         "type": "placement",
         "parent": "toast",
         "children": null,
+        "sub_parent": "toast",
         "tag": "div"
     },
     {
@@ -2094,6 +2325,7 @@
         "type": "placement",
         "parent": "toast",
         "children": null,
+        "sub_parent": "toast",
         "tag": "div"
     },
     {
@@ -2101,6 +2333,7 @@
         "type": "placement",
         "parent": "toast",
         "children": null,
+        "sub_parent": "toast",
         "tag": "div"
     },
     {
@@ -2138,6 +2371,7 @@
             "steps-vertical",
             "steps-horizontal"
         ],
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -2145,6 +2379,7 @@
         "type": "part",
         "parent": "steps",
         "children": null,
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -2152,6 +2387,7 @@
         "type": "part",
         "parent": "steps",
         "children": null,
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -2240,6 +2476,7 @@
             "pika-single",
             "react-day-picker"
         ],
+        "is_sub": true,
         "tag": "calendar-date"
     },
     {
@@ -2247,6 +2484,7 @@
         "type": "component",
         "parent": "cally",
         "children": null,
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -2279,6 +2517,7 @@
             "toggle-lg",
             "toggle-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -2286,6 +2525,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2293,6 +2533,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2300,6 +2541,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2307,6 +2549,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2314,6 +2557,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2321,6 +2565,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2328,6 +2573,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2335,6 +2581,7 @@
         "type": "color",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2342,6 +2589,7 @@
         "type": "size",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2349,6 +2597,7 @@
         "type": "size",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2356,6 +2605,7 @@
         "type": "size",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2363,6 +2613,7 @@
         "type": "size",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2370,6 +2621,7 @@
         "type": "size",
         "parent": "toggle",
         "children": null,
+        "sub_parent": "toggle",
         "tag": "input"
     },
     {
@@ -2380,6 +2632,7 @@
             "mockup-phone-camera",
             "mockup-phone-display"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2387,6 +2640,7 @@
         "type": "part",
         "parent": "mockup-phone",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2394,6 +2648,7 @@
         "type": "part",
         "parent": "mockup-phone",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2401,6 +2656,7 @@
         "type": "component",
         "parent": "mockup-window",
         "children": [],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2415,6 +2671,7 @@
             "carousel-horizontal",
             "carousel-vertical"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2422,6 +2679,7 @@
         "type": "part",
         "parent": "carousel",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2468,6 +2726,7 @@
             "list-col-wrap",
             "list-col-grow"
         ],
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -2475,6 +2734,7 @@
         "type": "component",
         "parent": "list",
         "children": null,
+        "is_sub": true,
         "tag": "li"
     },
     {
@@ -2511,6 +2771,7 @@
             "tooltip-warning",
             "tooltip-error"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2518,6 +2779,7 @@
         "type": "part",
         "parent": "tooltip",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2624,6 +2886,7 @@
             "dock-lg",
             "dock-xl"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2631,6 +2894,7 @@
         "type": "part",
         "parent": "dock",
         "children": null,
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -2691,6 +2955,7 @@
             "modal-start",
             "modal-end"
         ],
+        "is_sub": true,
         "tag": "dialog"
     },
     {
@@ -2698,6 +2963,7 @@
         "type": "part",
         "parent": "modal",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2705,6 +2971,7 @@
         "type": "part",
         "parent": "modal",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2712,6 +2979,7 @@
         "type": "part",
         "parent": "modal",
         "children": null,
+        "is_sub": true,
         "tag": "form"
     },
     {
@@ -2719,6 +2987,7 @@
         "type": "part",
         "parent": "modal",
         "children": null,
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -2783,6 +3052,7 @@
             "menu-vertical",
             "menu-horizontal"
         ],
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -2790,6 +3060,7 @@
         "type": "part",
         "parent": "menu",
         "children": null,
+        "is_sub": true,
         "tag": "li"
     },
     {
@@ -2797,6 +3068,7 @@
         "type": "part",
         "parent": "menu",
         "children": null,
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -2804,6 +3076,7 @@
         "type": "part",
         "parent": "menu",
         "children": null,
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -2832,6 +3105,7 @@
         "type": "modifier",
         "parent": "menu",
         "children": null,
+        "sub_parent": "menu-dropdown-toggle",
         "tag": "span"
     },
     {
@@ -2897,6 +3171,7 @@
             "table-lg",
             "table-xl"
         ],
+        "is_sub": true,
         "tag": "table"
     },
     {
@@ -2904,6 +3179,7 @@
         "type": "modifier",
         "parent": "table",
         "children": null,
+        "sub_parent": "table",
         "tag": "table"
     },
     {
@@ -2911,6 +3187,7 @@
         "type": "modifier",
         "parent": "table",
         "children": null,
+        "sub_parent": "table",
         "tag": "table"
     },
     {
@@ -2918,6 +3195,7 @@
         "type": "modifier",
         "parent": "table",
         "children": null,
+        "sub_parent": "table",
         "tag": "table"
     },
     {
@@ -2925,6 +3203,7 @@
         "type": "size",
         "parent": "table",
         "children": null,
+        "sub_parent": "table",
         "tag": "table"
     },
     {
@@ -2962,6 +3241,7 @@
         "children": [
             "validator-hint"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -2969,6 +3249,7 @@
         "type": "part",
         "parent": "validator",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2989,6 +3270,7 @@
             "card-lg",
             "card-xl"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -2996,6 +3278,7 @@
         "type": "part",
         "parent": "card",
         "children": null,
+        "is_sub": true,
         "tag": "h2"
     },
     {
@@ -3003,6 +3286,7 @@
         "type": "part",
         "parent": "card",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3010,6 +3294,7 @@
         "type": "part",
         "parent": "card",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3081,6 +3366,7 @@
         "type": "component",
         "parent": "breadcrumbs",
         "children": [],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3088,6 +3374,7 @@
         "type": "component",
         "parent": "countdown",
         "children": [],
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -3095,6 +3382,7 @@
         "type": "component",
         "parent": "label",
         "children": null,
+        "is_sub": true,
         "tag": "label"
     },
     {
@@ -3110,6 +3398,7 @@
             "rating-lg",
             "rating-xl"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3117,6 +3406,7 @@
         "type": "modifier",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3124,6 +3414,7 @@
         "type": "modifier",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "input"
     },
     {
@@ -3131,6 +3422,7 @@
         "type": "size",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3138,6 +3430,7 @@
         "type": "size",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3145,6 +3438,7 @@
         "type": "size",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3152,6 +3446,7 @@
         "type": "size",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3159,6 +3454,7 @@
         "type": "size",
         "parent": "rating",
         "children": null,
+        "sub_parent": "rating",
         "tag": "div"
     },
     {
@@ -3171,6 +3467,7 @@
             "avatar-offline",
             "avatar-placeholder"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3178,6 +3475,7 @@
         "type": "component",
         "parent": "avatar",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3224,6 +3522,7 @@
             "mask-half-1",
             "mask-half-2"
         ],
+        "is_sub": true,
         "tag": "img"
     },
     {
@@ -3234,6 +3533,7 @@
         "html": [
             "<img\n  class=\"mask mask-squircle\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Heart\n<img alt=\"Heart CSS mask\" class=\"mask mask-heart w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-heart\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Hexagon\n<img alt=\"Hexagon CSS mask\" class=\"mask mask-hexagon w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-hexagon\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Hexagon-2 (horizontal hexagon)\n<img alt=\"Hexagon-2 CSS mask\" class=\"mask mask-hexagon-2 w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-hexagon-2\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Decagon\n<img alt=\"Decagon CSS mask\" class=\"mask mask-decagon w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-decagon\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Pentagon\n<img alt=\"Pentagon CSS mask\" class=\"mask mask-pentagon w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-pentagon\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Diamond\n<img alt=\"Diamond CSS mask\" class=\"mask mask-diamond w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-diamond\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Square\n<img alt=\"Square CSS mask\" class=\"mask mask-square w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-square\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Circle\n<img alt=\"Circle CSS mask\" class=\"mask mask-circle w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-circle\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n### ~Star\n<img alt=\"Star CSS mask\" class=\"mask mask-star w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-star\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Star-2 (bold star)\n<img alt=\"Star-2 CSS mask\" class=\"mask mask-star-2 w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-star-2\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Triangle (pointing top)\n<img alt=\"Triangle CSS mask\" class=\"mask mask-triangle w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-triangle\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Triangle-2 (pointing down)\n<img alt=\"Triangle-2 CSS mask\" class=\"mask mask-triangle-2 w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-triangle-2\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Triangle-3 (pointing left)\n<img alt=\"Triangle-3 CSS mask\" class=\"mask mask-triangle-3 w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-triangle-3\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n```\n\n\n### ~Triangle-4 (pointing right)\n<img alt=\"Triangle-4 CSS mask\" class=\"mask mask-triangle-4 w-40 h-40\" src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n\n```html\n<img\n  class=\"mask mask-triangle-4\"\n  src=\"https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp\" />\n"
         ],
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3241,6 +3541,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3248,6 +3549,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3255,6 +3557,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3262,6 +3565,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3269,6 +3573,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3276,6 +3581,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3283,6 +3589,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3290,6 +3597,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3297,6 +3605,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3304,6 +3613,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3311,6 +3621,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3318,6 +3629,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3325,6 +3637,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3332,6 +3645,7 @@
         "type": "style",
         "parent": "mask",
         "children": null,
+        "sub_parent": "mask",
         "tag": "img"
     },
     {
@@ -3364,6 +3678,7 @@
             "dropdown-hover",
             "dropdown-open"
         ],
+        "is_sub": true,
         "tag": "details"
     },
     {
@@ -3371,6 +3686,7 @@
         "type": "part",
         "parent": "dropdown",
         "children": null,
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -3449,6 +3765,7 @@
             "indicator-middle",
             "indicator-bottom"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3456,6 +3773,7 @@
         "type": "part",
         "parent": "indicator",
         "children": null,
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -3463,6 +3781,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "span"
     },
     {
@@ -3470,6 +3789,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "span"
     },
     {
@@ -3477,6 +3797,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "span"
     },
     {
@@ -3484,6 +3805,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "span"
     },
     {
@@ -3491,6 +3813,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "span"
     },
     {
@@ -3498,6 +3821,7 @@
         "type": "placement",
         "parent": "indicator",
         "children": null,
+        "sub_parent": "indicator-item",
         "tag": "div"
     },
     {
@@ -3514,6 +3838,7 @@
             "timeline-horizontal",
             "timeline-vertical"
         ],
+        "is_sub": true,
         "tag": "ul"
     },
     {
@@ -3521,6 +3846,7 @@
         "type": "part",
         "parent": "timeline",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3528,6 +3854,7 @@
         "type": "part",
         "parent": "timeline",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3535,6 +3862,7 @@
         "type": "part",
         "parent": "timeline",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3549,6 +3877,7 @@
         "type": "modifier",
         "parent": "timeline",
         "children": null,
+        "sub_parent": "timeline-end",
         "tag": "div"
     },
     {
@@ -3592,6 +3921,7 @@
             "input-lg",
             "input-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -3599,6 +3929,7 @@
         "type": "style",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3606,6 +3937,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3613,6 +3945,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3620,6 +3953,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3627,6 +3961,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3634,6 +3969,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3641,6 +3977,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3648,6 +3985,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3655,6 +3993,7 @@
         "type": "color",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3662,6 +4001,7 @@
         "type": "size",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3669,6 +4009,7 @@
         "type": "size",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3676,6 +4017,7 @@
         "type": "size",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3683,6 +4025,7 @@
         "type": "size",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3690,6 +4033,7 @@
         "type": "size",
         "parent": "input",
         "children": null,
+        "sub_parent": "input",
         "tag": "input"
     },
     {
@@ -3702,6 +4046,7 @@
             "footer-horizontal",
             "footer-vertical"
         ],
+        "is_sub": true,
         "tag": "footer"
     },
     {
@@ -3709,6 +4054,7 @@
         "type": "part",
         "parent": "footer",
         "children": null,
+        "is_sub": true,
         "tag": "h6"
     },
     {
@@ -3739,6 +4085,7 @@
         "children": [
             "mockup-browser-toolbar"
         ],
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3746,6 +4093,7 @@
         "type": "part",
         "parent": "mockup-browser",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -3767,6 +4115,7 @@
             "status-lg",
             "status-xl"
         ],
+        "is_sub": true,
         "tag": "span"
     },
     {
@@ -3774,6 +4123,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3781,6 +4131,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3788,6 +4139,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3795,6 +4147,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3802,6 +4155,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3809,6 +4163,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3816,6 +4171,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3823,6 +4179,7 @@
         "type": "color",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3830,6 +4187,7 @@
         "type": "size",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3837,6 +4195,7 @@
         "type": "size",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3844,6 +4203,7 @@
         "type": "size",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3851,6 +4211,7 @@
         "type": "size",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3858,6 +4219,7 @@
         "type": "size",
         "parent": "status",
         "children": null,
+        "sub_parent": "status",
         "tag": "div"
     },
     {
@@ -3880,6 +4242,7 @@
             "file-input-lg",
             "file-input-xl"
         ],
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -3887,112 +4250,112 @@
         "type": "style",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-neutral",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-primary",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-secondary",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-accent",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-info",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-success",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-warning",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-error",
         "type": "color",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-xs",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-sm",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-md",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-lg",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "file-input-xl",
         "type": "size",
         "parent": "file-input",
         "children": null,
-        "tag": "input",
-        "sub_parent": "file"
+        "sub_parent": "file",
+        "tag": "input"
     },
     {
         "label": "diff",
@@ -4003,6 +4366,7 @@
             "diff-item-2",
             "diff-resizer"
         ],
+        "is_sub": true,
         "tag": "figure"
     },
     {
@@ -4010,6 +4374,7 @@
         "type": "part",
         "parent": "diff",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -4017,6 +4382,7 @@
         "type": "part",
         "parent": "diff",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -4024,6 +4390,7 @@
         "type": "part",
         "parent": "diff",
         "children": null,
+        "is_sub": true,
         "tag": "div"
     },
     {
@@ -4033,6 +4400,7 @@
         "children": [
             "filter-reset"
         ],
+        "is_sub": true,
         "tag": "form"
     },
     {
@@ -4040,6 +4408,7 @@
         "type": "part",
         "parent": "filter",
         "children": null,
+        "is_sub": true,
         "tag": "input"
     },
     {
@@ -4047,6 +4416,7 @@
         "type": "component",
         "parent": "theme-controller",
         "children": [],
+        "is_sub": true,
         "tag": "input"
     }
 ]
