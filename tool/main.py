@@ -150,7 +150,6 @@ def parse_html(components: list[dict]) -> None:
                         if component["label"] in v:
                             if is_sub(component):
                                 sub_parent = component["label"]
-                                component["is_sub"] = True
                             if sub_parent:
                                 if sub_parent in v and component["label"] != sub_parent:
                                     component["sub_parent"] = (
