@@ -22,6 +22,20 @@ CLASS_CATEGORIES: list = [
     "part",
     "direction",
 ]
+# TODO: Map types to attributes, probably in generate though
+REQUIRED_ATTRIBUTES = [
+    "value",
+    "min",
+    "max",
+    "step",
+    "type",
+    "id",
+    "checked",
+    "placeholder",
+    "data-prefix",
+    "role",
+    "required",
+]
 
 
 def extract_dirs() -> list[str]:
@@ -132,6 +146,7 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
 def parse_html(components: list[dict]) -> None:
     sub_parent: str | None = None
     for component in tqdm(components, desc="Generating components.json", colour="blue"):
+        attributes: set = set()
         html: list[str] = component["html"]
         parser = html5lib.HTMLParser(
             tree=html5lib.treebuilders.getTreeBuilder("etree"),
@@ -146,20 +161,19 @@ def parse_html(components: list[dict]) -> None:
             tree = parser.parseFragment(example)
             for element in tree.iter():
                 for k, v in element.items():
-                    if k == "class":
-                        if component["label"] in v:
-                            if is_sub(component):
-                                sub_parent = component["label"]
-                            if sub_parent:
-                                if sub_parent in v and component["label"] != sub_parent:
-                                    component["sub_parent"] = (
-                                        sub_parent if sub_parent is not None else None
-                                    )
-                            if component.get("tag", False):
-                                component.pop("html", None)
-                                break
-                            else:
-                                component["tag"] = element.tag
+                    attributes.add(k)
+                    if k == "class" and component["label"] in v:
+                        if is_sub(component):
+                            sub_parent = component["label"]
+                        if sub_parent:
+                            if sub_parent in v and component["label"] != sub_parent:
+                                component["sub_parent"] = sub_parent
+                        if component.get("tag", False):
+                            component.pop("html", None)
+                        else:
+                            component["tag"] = element.tag
+        attr = [i for i in list(attributes) if i in REQUIRED_ATTRIBUTES]
+        component["attributes"] = attr if len(attr) > 0 else None
 
 
 def build_heirarchy(components: list[dict]):
@@ -200,6 +214,22 @@ def check_components(components: list[dict]) -> None:
             print(f"🛑 {name} has a malform sub parent!")
 
 
+def unique_components(components: list[dict]):
+    # TODO:
+    for component in components:
+        name: str = component["label"]
+        match name:
+            case "select":
+                # Probably hand this off to the generate part
+                pass
+            case "react-day-picker":
+                pass
+            case "pika-single":
+                pass
+            case "cally":
+                pass
+
+
 def main() -> None:
     components_dirs: list[str] = extract_dirs()
     component_contents: list[TextIOWrapper] = extract_files(components_dirs)
@@ -207,7 +237,6 @@ def main() -> None:
 
     parse_html(components)
     build_heirarchy(components)
-    # TODO: parse other attributes for components like range, progress, etc
     check_components(components)
 
     with open("components.json", "w") as file:
