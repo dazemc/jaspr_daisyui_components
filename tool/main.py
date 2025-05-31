@@ -2,7 +2,7 @@ import copy
 from io import TextIOWrapper
 from json import dump
 from re import finditer
-from os import listdir
+from os import listdir, cpu_count
 from os.path import isdir, isfile, join
 
 import html5lib
@@ -139,6 +139,7 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
                             "type": type,
                             "parent": root_name,
                             "children": children if class_name == root_name else None,
+                            "direct_children": [],
                             "html": html,
                         }
                     )
@@ -168,7 +169,11 @@ def parse_html(components: list[dict]) -> None:
                         if is_sub(component):
                             sub_parent = component["label"]
                         if sub_parent:
-                            if sub_parent in v and component["label"] != sub_parent:
+                            if is_sub(component):
+                                pass
+                            if sub_parent not in v.replace(component["parent"], ""):
+                                pass
+                            else:
                                 component["sub_parent"] = sub_parent
                         if component.get("tag", False):
                             component.pop("html", None)
@@ -190,12 +195,12 @@ def build_heirarchy(components: list[dict]) -> dict[str, dict]:
         if name == parent:
             output[name] = component_copy
         elif sub_parent != parent and output.get(parent, False):
-            output[parent][name] = component_copy
+            output[parent]["direct_children"].append(component_copy)
         elif sub_parent != name and output.get(parent, {}).get(sub_parent, False):
-            output[parent][sub_parent][name] = component_copy
+            output[parent][sub_parent]["direct_children"].append(component_copy)
         else:
             if output.get(parent, False):
-                output[parent][name] = component_copy
+                output[parent]["direct_children"].append(component_copy)
     return output
 
 

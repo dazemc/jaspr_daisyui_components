@@ -4,64 +4,45 @@ import 'dart:convert';
 import 'component_model.dart';
 
 void main() async {
-  List<Map<String, dynamic>> data = await readFromJsonFile();
-  List<DaisyuiComponent> componentModels = getDaisyuiModels(data);
-  Map<String, Map<String, List<DaisyuiComponent>>> mappedModels =
-      buildComponentHierarchy(componentModels);
+  Map<String, dynamic> data = await readFromJsonFile();
+  Map<String, dynamic> componentModels = getDaisyuiModels(data);
+  // print((componentModels['stat'] as DaisyuiComponent).label);
   // print(mappedModels['btn']!['parent']!.first.toString());
-  buildComponentList(mappedModels);
+  // buildComponentList(componentModels);
 }
 
-Future<List<Map<String, dynamic>>> readFromJsonFile() async {
+Future<Map<String, dynamic>> readFromJsonFile() async {
   try {
     File file = File('./components.json');
     String jsonString = await file.readAsString();
-    List<dynamic> jsonData = jsonDecode(jsonString);
-    return jsonData.cast<Map<String, dynamic>>();
+    dynamic jsonData = jsonDecode(jsonString);
+    return jsonData;
   } catch (e) {
     print('Error reading json file: $e');
-    return [];
+    return {};
   }
 }
 
-List<DaisyuiComponent> getDaisyuiModels(List<Map<String, dynamic>> data) {
-  List<DaisyuiComponent> output = [];
-  for (dynamic value in data) {
-    final map = value as Map<String, dynamic>;
-    output.add(
-      DaisyuiComponent(
-        label: value['label'],
-        category: value['category'],
-        parent: value['parent'],
-        children:
-            (map['children'] as List<dynamic>?)?.whereType<String>().toList(),
-        isSub: value['is_sub'],
-      ),
-    );
-  }
+Map<String, DaisyuiComponent> convertToModel(Map<String, dynamic> value) {
+  Map<String, DaisyuiComponent> output = {};
+  output['label'] = DaisyuiComponent(
+    label: value['label'],
+    type: value['type'],
+    parent: value['parent'],
+    subParent: value['sub_parent'],
+  );
   return output;
 }
 
-Map<String, Map<String, List<DaisyuiComponent>>> buildComponentHierarchy(
-  List<DaisyuiComponent> components,
-) {
-  Map<String, Map<String, List<DaisyuiComponent>>> output = {};
-
-  for (var component in components) {
-    output[component.label] = {
-      'parent': [component],
-      'children': <DaisyuiComponent>[],
-    };
-  }
-
-  for (var component in components) {
-    if (component.parent != null) {
-      if (component.parent!.isNotEmpty &&
-          output.containsKey(component.parent)) {
-        output[component.parent]!['children']!.add(component);
-      }
+Map<String, dynamic> getDaisyuiModels(Map<String, dynamic> data) {
+  Map<String, dynamic> output = {};
+  data.forEach((key, value) {
+    if (value is Map<String, dynamic>) {
+      output[key] = getDaisyuiModels(value);
+    } else {
+      output[key] = convertToModel(value);
     }
-  }
+  });
   return output;
 }
 
@@ -86,20 +67,17 @@ String formatName(String input, String type) {
 // "part",
 // "direction",
 
-List<DaisyuiComponent> getCategory(
-  List<DaisyuiComponent> input,
-  String category,
-) {
+List<DaisyuiComponent> getCategory(List<DaisyuiComponent> input, String type) {
   List<DaisyuiComponent> output = [];
   for (DaisyuiComponent c in input) {
-    if (c.category == category) output.add(c);
+    if (c.type == type) output.add(c);
   }
   return output;
 }
 
 String? getCategoryType(DaisyuiComponent input) {
   String? style = input.label
-      .replaceFirst(input.parent ?? "", "")
+      .replaceFirst(input.parent, "")
       .replaceAll("-", "");
   return "     $style('${input.label}'),\n";
 }
@@ -132,28 +110,10 @@ String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
   return buildEnumLine(pascalName, categoryStrings);
 }
 
-void buildComponentList(
-  Map<String, Map<String, List<DaisyuiComponent>>> mappedModels,
-) {
-  mappedModels.forEach((k, v) {
-    DaisyuiComponent parent = v['parent']!.first;
-    String parentName = parent.label;
-    List<DaisyuiComponent>? children = v['children'];
-    if (children != null && children.isNotEmpty) {
-      List<DaisyuiComponent> colorComponents = getCategory(children, "color");
-      List<DaisyuiComponent> styleComponents = getCategory(children, "style");
-      String? colorEnum;
-      String? styleEnum;
-      if (colorComponents.isNotEmpty) {
-        colorEnum = buildCategory(colorComponents, "Color");
-        print(colorEnum);
-      }
-      if (styleComponents.isNotEmpty) {
-        styleEnum = buildCategory(styleComponents, "Style");
-        print(styleEnum);
-      }
-      // if (colorEnum != null) print(colorEnum);
-      String output = """
+void treeWalk(Map<String, dynamic> mappedModels) {}
+
+void buildComponent(DaisyuiComponent model) {
+  String output = """
 import 'package:jaspr/jaspr.dart';
 
 enum DividerDirection {
@@ -178,7 +138,7 @@ enum DividerPlacement {
 }
 
 
-Component $parentName(
+Component parentName(
   final List<Component>? children, {
   final Component? child,
   final String? classes,
@@ -219,6 +179,4 @@ Component $parentName(
   );
 }
     """;
-    }
-  });
 }

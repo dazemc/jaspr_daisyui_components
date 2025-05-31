@@ -1,17 +1,17 @@
 class DaisyuiComponent {
   final String label;
-  final String category;
-  final String? parent;
+  final String type;
+  final String parent;
   final List<String>? children;
+  final String? subParent;
   final String? tag;
-  final bool? isSub;
   const DaisyuiComponent({
     required this.label,
-    required this.category,
+    required this.type,
     required this.parent,
+    this.subParent,
     this.tag,
-    required this.children,
-    required this.isSub,
+    this.children,
   });
 
   @override
@@ -19,10 +19,9 @@ class DaisyuiComponent {
     return '''
       {
         "label": $label,
-        "category": $category,
+        "category": $type,
         "parent": $parent,
         "children": ${children.toString()},
-        "isSub": $isSub,
         "tag": $tag,
       }
       ''';
