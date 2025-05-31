@@ -1,3 +1,4 @@
+import copy
 from io import TextIOWrapper
 from json import dump
 from re import finditer
@@ -35,6 +36,7 @@ REQUIRED_ATTRIBUTES = [
     "data-prefix",
     "role",
     "required",
+    "for",
 ]
 
 
@@ -176,16 +178,25 @@ def parse_html(components: list[dict]) -> None:
         component["attributes"] = attr if len(attr) > 0 else None
 
 
-def build_heirarchy(components: list[dict]):
+def build_heirarchy(components: list[dict]) -> dict[str, dict]:
+    output = {}
     for component in components:
-        ctype: str = component["type"]
         name: str = component["label"]
         parent: str = component["parent"]
-        prefix_name: str = name.split("-")[0]
-
-        if ctype != "component" and ctype != "part":
-            if prefix_name != parent:
-                component["sub_parent"] = prefix_name
+        sub_parent: str | None = component.get("sub_parent", None)
+        component_copy = copy.deepcopy(component)
+        if sub_parent == parent:
+            del component_copy["sub_parent"]
+        if name == parent:
+            output[name] = component_copy
+        elif sub_parent != parent and output.get(parent, False):
+            output[parent][name] = component_copy
+        elif sub_parent != name and output.get(parent, {}).get(sub_parent, False):
+            output[parent][sub_parent][name] = component_copy
+        else:
+            if output.get(parent, False):
+                output[parent][name] = component_copy
+    return output
 
 
 def check_components(components: list[dict]) -> None:
@@ -228,6 +239,9 @@ def unique_components(components: list[dict]):
                 pass
             case "cally":
                 pass
+            case "drawer":
+                # id and for attributes need to match
+                pass
 
 
 def main() -> None:
@@ -236,11 +250,11 @@ def main() -> None:
     components = extract_documentation(component_contents)
 
     parse_html(components)
-    build_heirarchy(components)
     check_components(components)
+    heir_components = build_heirarchy(components)
 
     with open("components.json", "w") as file:
-        dump(components, file, indent=4)
+        dump(heir_components, file, indent=4)
     print("✅ components.json generated successfully.")
 
 
