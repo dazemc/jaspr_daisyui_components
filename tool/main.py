@@ -105,6 +105,10 @@ def is_sub(component: dict) -> bool:
     return component["type"] == "component" or component["type"] == "part"
 
 
+def is_root(component: dict) -> bool:
+    return component["label"] == component["parent"]
+
+
 def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[dict]:
     components: list[dict] = []
     for component in documentation_contents:
@@ -140,26 +144,15 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
                             "label": class_name,
                             "type": type,
                             "parent": root_name,
-                            "children": children if class_name == root_name else None,
-                            "direct_children": [],
+                            "children": children,
                             "html": html,
                         }
                     )
     return components
 
 
-def get_depth(element, current_depth=0):
-    if not element.find_all(recursive=False):
-        return current_depth
-    return max(
-        get_depth(child, current_depth + 1)
-        for child in element.find_all(recursive=False)
-    )
-
-
 def parse_html(components: list[dict]) -> None:
     for component in tqdm(components, desc="Generating components.json", colour="blue"):
-        current_parent = None
         attributes: set = set()
         html: list[str] = component["html"]
         for example in tqdm(
@@ -168,37 +161,75 @@ def parse_html(components: list[dict]) -> None:
             leave=False,
             colour="green",
         ):
-            soup = BeautifulSoup(example, "html.parser")
-            root = soup.has_attr("class")
+            soup = BeautifulSoup(example, "lxml")
             element = soup.find(attrs={"class": component["label"]})
             tag = cast(Tag, element).name if element is not None else None
             if tag:
                 component["tag"] = tag
-            # for node in soup.descendants:
-            # if isinstance(node, Tag):
-            # pass
-            # print(soup.get("class"))
+            if element:
+                element = cast(Tag, element)
+                child_parent = element.parent
+                if child_parent and child_parent.has_attr("class"):
+                    for name in child_parent.attrs["class"]:
+                        for c in components:
+                            if is_sub(c):
+                                if c["label"] == name:
+                                    component["sub_parent"] = name
+                                    break
+                    if not is_sub(component):
+                        for name in element["class"]:
+                            for c in components:
+                                if is_sub(c):
+                                    if c["label"] == name:
+                                        component["sub_parent"] = name
+
+        del component["html"]
 
 
-def build_heirarchy(components: list[dict]) -> dict[str, dict]:
+def build_heirarchy(components: list[dict]) -> dict:
     output = {}
+    # Assign parents
     for component in components:
-        name: str = component["label"]
-        parent: str = component["parent"]
-        sub_parent: str | None = component.get("sub_parent", None)
-        component_copy = copy.deepcopy(component)
-        if sub_parent == parent:
-            del component_copy["sub_parent"]
-        if name == parent:
-            output[name] = component_copy
-        elif sub_parent != parent and output.get(parent, False):
-            output[parent]["direct_children"].append(component_copy)
-        elif sub_parent != name and output.get(parent, {}).get(sub_parent, False):
-            output[parent][sub_parent]["direct_children"].append(component_copy)
-        else:
-            if output.get(parent, False):
-                output[parent]["direct_children"].append(component_copy)
+        if not is_sub(component) and component.get("tag"):
+            del component["tag"]
+        if is_root(component):
+            output[component["label"]] = component
+            output[component["label"]]["children"] = []
+    # Assign Sub Parents
+    for component in components:
+        if not is_root(component):
+            if component.get("sub_parent") == component["parent"]:
+                component["children"] = []
+                output[component["parent"]]["children"].append(component)
+            # Assign root siblings
+            if not component.get("sub_parent") and not is_sub(component):
+                del component["children"]
+                output[component["parent"]]["children"].append(component)
+    # Assign sub children
+    for component in copy.deepcopy(components):
+        if not is_root(component) and component.get("sub_parent"):
+            for c in output[component["parent"]]["children"]:
+                if c["label"] == component["sub_parent"] and c["label"] != c.get(
+                    "sub_parent"
+                ):
+                    del component["children"]
+                    c["children"].append(component)
     return output
+
+
+def recursive_remove(component: dict) -> None:
+    if component.get("children"):
+        if len(component["children"]) == 0:
+            del component["children"]
+            return
+        else:
+            for c in component["children"]:
+                recursive_remove(c)
+
+
+def remove_empty_children(components: dict) -> None:
+    for c in components.values():
+        recursive_remove(c)
 
 
 def check_components(components: list[dict]) -> None:
@@ -254,6 +285,7 @@ def main() -> None:
     parse_html(components)
     # check_components(components)
     heir_components = build_heirarchy(components)
+    remove_empty_children(heir_components)
 
     with open("components.json", "w") as file:
         dump(heir_components, file, indent=4)
