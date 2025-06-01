@@ -1,12 +1,14 @@
 import copy
+from typing import cast
+from bs4 import BeautifulSoup, Tag
 from io import TextIOWrapper
 from json import dump
 from re import finditer
-from os import listdir, cpu_count
+from os import listdir
 from os.path import isdir, isfile, join
 
-import html5lib
 from tqdm import tqdm
+
 
 CLASS_NAME_PATTERN: str = "class:"
 CLASS_DESC_PATTERN: str = "desc:"
@@ -146,41 +148,36 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
     return components
 
 
+def get_depth(element, current_depth=0):
+    if not element.find_all(recursive=False):
+        return current_depth
+    return max(
+        get_depth(child, current_depth + 1)
+        for child in element.find_all(recursive=False)
+    )
+
+
 def parse_html(components: list[dict]) -> None:
-    sub_parent: str | None = None
     for component in tqdm(components, desc="Generating components.json", colour="blue"):
+        current_parent = None
         attributes: set = set()
         html: list[str] = component["html"]
-        parser = html5lib.HTMLParser(
-            tree=html5lib.treebuilders.getTreeBuilder("etree"),
-            namespaceHTMLElements=False,
-        )
         for example in tqdm(
             html,
             desc=f"Parsing HTML for {component['label']}",
             leave=False,
             colour="green",
         ):
-            tree = parser.parseFragment(example)
-            for element in tree.iter():
-                for k, v in element.items():
-                    attributes.add(k)
-                    if k == "class" and component["label"] in v:
-                        if is_sub(component):
-                            sub_parent = component["label"]
-                        if sub_parent:
-                            if is_sub(component):
-                                pass
-                            if sub_parent not in v.replace(component["parent"], ""):
-                                pass
-                            else:
-                                component["sub_parent"] = sub_parent
-                        if component.get("tag", False):
-                            component.pop("html", None)
-                        else:
-                            component["tag"] = element.tag
-        attr = [i for i in list(attributes) if i in REQUIRED_ATTRIBUTES]
-        component["attributes"] = attr if len(attr) > 0 else None
+            soup = BeautifulSoup(example, "html.parser")
+            root = soup.has_attr("class")
+            element = soup.find(attrs={"class": component["label"]})
+            tag = cast(Tag, element).name if element is not None else None
+            if tag:
+                component["tag"] = tag
+            # for node in soup.descendants:
+            # if isinstance(node, Tag):
+            # pass
+            # print(soup.get("class"))
 
 
 def build_heirarchy(components: list[dict]) -> dict[str, dict]:
@@ -255,12 +252,12 @@ def main() -> None:
     components = extract_documentation(component_contents)
 
     parse_html(components)
-    check_components(components)
+    # check_components(components)
     heir_components = build_heirarchy(components)
 
     with open("components.json", "w") as file:
         dump(heir_components, file, indent=4)
-    print("✅ components.json generated successfully.")
+        print("✅ components.json generated successfully.")
 
 
 if __name__ == "__main__":
