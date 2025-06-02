@@ -16,7 +16,7 @@ CLASS_NAME_PATTERN: str = "class:"
 CLASS_DESC_PATTERN: str = "desc:"
 COMPONENT_PATH: str = "./components/"
 COMPONENT_SUB: list[str] = listdir(COMPONENT_PATH)
-CLASS_CATEGORIES: list = [
+CLASS_CATEGORIES: List = [
     "component",
     "color",
     "style",
@@ -50,7 +50,7 @@ class Component(TypedDict):
     type: str
     html: Optional[List[str]]
     tag: Optional[str]
-    children: Optional[List[str | dict]]
+    children: Optional[List[Dict]]
     sub_parent: Optional[str]
 
 
@@ -58,7 +58,7 @@ class Component(TypedDict):
 _label_to_component: Dict[str, Component] = {}
 
 
-def extract_dirs() -> list[str]:
+def extract_dirs() -> List[str]:
     return [
         join(COMPONENT_PATH, name)
         for name in COMPONENT_SUB
@@ -66,10 +66,10 @@ def extract_dirs() -> list[str]:
     ]
 
 
-def extract_files(component_dirs: list[str]) -> list[TextIOWrapper]:
-    component_contents: list[TextIOWrapper] = []
+def extract_files(component_dirs: List[str]) -> List[TextIOWrapper]:
+    component_contents: List[TextIOWrapper] = []
     for dir_path in component_dirs:
-        dir_content: list[str] = listdir(dir_path)
+        dir_content: List[str] = listdir(dir_path)
         for name in dir_content:
             name_path: str = join(dir_path, name)
             if isfile(name_path):
@@ -77,10 +77,10 @@ def extract_files(component_dirs: list[str]) -> list[TextIOWrapper]:
     return component_contents
 
 
-def extract_html(raw_documentation: TextIOWrapper) -> list[str]:
-    output: list[str] = []
+def extract_html(raw_documentation: TextIOWrapper) -> List[str]:
+    output: List[str] = []
     c: str = raw_documentation.read()
-    html_starts: list[int] = [match.start() for match in finditer("```html", c)]
+    html_starts: List[int] = [match.start() for match in finditer("```html", c)]
     for i in html_starts:
         end: int = c[i].find("```")
         output.append(c[i:end][8:-3].replace("$$", ""))
@@ -126,16 +126,16 @@ def is_root(component: Component) -> bool:
 
 
 def extract_documentation(
-    documentation_contents: list[TextIOWrapper],
-) -> list[Component]:
-    components: list[Component] = []
+    documentation_contents: List[TextIOWrapper],
+) -> List[Component]:
+    components: List[Component] = []
     for component in documentation_contents:
         root_name: str = ""
         class_name: str = ""
         type: str = ""
-        children: list = []
+        children: List = []
         # HTML
-        temp_html: list = extract_html(raw_documentation=component)
+        temp_html: List = extract_html(raw_documentation=component)
         for line in component.readlines():
             # CATEGORY
             if check_type(line):
@@ -151,7 +151,7 @@ def extract_documentation(
                 if class_name not in children:
                     children.append(class_name)
             # APPEND HTML
-            html: list[str] = [html for html in temp_html if class_name in html]
+            html: List[str] = [html for html in temp_html if class_name in html]
             # APPEND COMPONENT
             if len(class_name) > 0:
                 if class_name not in [c["label"] for c in components]:
@@ -161,8 +161,8 @@ def extract_documentation(
                                 "label": class_name,
                                 "type": type,
                                 "parent": root_name,
-                                "children": children,
                                 "html": html,
+                                "tag": None,
                             }  # pyright: ignore[reportArgumentType]
                         )
                     )
@@ -220,15 +220,15 @@ def parse_html(components: List[Component]) -> None:
                 if sub_parent:
                     component["sub_parent"] = sub_parent
                     break
+            if component["tag"] is None or not is_sub(component):
+                del component["tag"]  # pyright: ignore[reportGeneralTypeIssues]
             del component["html"]  # pyright: ignore[reportGeneralTypeIssues]
 
 
-def build_heirarchy(components: list[Component]) -> dict:
+def build_heirarchy(components: List[Component]) -> Dict:
     output = {}
     # Assign parents
     for component in components:
-        if not is_sub(component) and component.get("tag"):
-            component["tag"] = None
         if is_root(component):
             output[component["label"]] = component
             output[component["label"]]["children"] = []
@@ -240,7 +240,6 @@ def build_heirarchy(components: list[Component]) -> dict:
                 output[component["parent"]]["children"].append(component)
             # Assign root siblings
             if not component.get("sub_parent") and not is_sub(component):
-                component["children"] = None
                 output[component["parent"]]["children"].append(component)
     # Assign sub children
     for component in copy.deepcopy(components):
@@ -249,38 +248,40 @@ def build_heirarchy(components: list[Component]) -> dict:
                 if c["label"] == component["sub_parent"] and c["label"] != c.get(
                     "sub_parent"
                 ):
-                    component["children"] = None
                     c["children"].append(component)
     return output
 
 
-def check_components(components: list[dict]) -> None:
+def delete_entry_recursive(component):
+    children: List[Dict] | None = component.get("children", None)
+    if children is not None:
+        if len(children) == 0:
+            component.pop("children")
+        else:
+            for child in children:
+                delete_entry_recursive(child)
+
+
+def check_components(components: Dict[str, Component]) -> None:
     for component in components:
-        name: str = component["label"]
-        html: str = component.get("html", False)
-        ctype: str = component["type"]
-        children: list[str] | None = component.get("children", None)
-        isComp: bool = ctype == "part" or ctype == "component"
-        # HTML
-        if html:
-            if len(html) == 0 and isComp:
-                component.pop("html", None)
-            if len(html) > 0:
-                print(f"⚠️{name} has unprocessed HTML!")
-            if isComp and name not in html:
-                print(f"⚠️{name} is missing a HTML example!")
+        c = components[component]
+        children: List[Dict] | None = c["children"]
+        name: str = c["label"]
+        ctype: str = c["type"]
         # CHILDREN
-        if children == []:
-            print(f"⚠️{name} has no children!")
+        if children:
+            for child in children:
+                delete_entry_recursive(child)
+
         # DIV
-        if not component.get("tag", True) and isComp:
+        if not c.get("tag", True) and is_sub(c):
             print(f"⚠️{name} is missing a tag")
         # SUB PARENT
-        if component.get("sub_parent", False) is None:
+        if c.get("sub_parent", False) is None:
             print(f"🛑 {name} has a malform sub parent!")
 
 
-def unique_components(components: list[dict]):
+def unique_components(components: List[Dict]):
     # TODO:
     for component in components:
         name: str = component["label"]
@@ -300,13 +301,13 @@ def unique_components(components: list[dict]):
 
 
 def main() -> None:
-    components_dirs: list[str] = extract_dirs()
-    component_contents: list[TextIOWrapper] = extract_files(components_dirs)
+    components_dirs: List[str] = extract_dirs()
+    component_contents: List[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
 
     parse_html(components)
-    # check_components(components)
     heir_components = build_heirarchy(components)
+    check_components(heir_components)
 
     with open("components.json", "w") as file:
         dump(heir_components, file, indent=4)
