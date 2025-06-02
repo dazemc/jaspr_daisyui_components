@@ -167,8 +167,8 @@
                 "parent": "drawer",
                 "tag": "input",
                 "additional_attributes": [
-                    "type",
-                    "id"
+                    "id",
+                    "type"
                 ],
                 "sub_parent": "drawer"
             },
@@ -225,80 +225,48 @@
                 "label": "progress-neutral",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-primary",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-secondary",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-accent",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-info",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-success",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-warning",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             },
             {
                 "label": "progress-error",
                 "type": "color",
                 "parent": "progress",
-                "additional_attributes": [
-                    "value",
-                    "max"
-                ],
                 "sub_parent": "progress"
             }
         ]
@@ -338,72 +306,48 @@
                 "label": "alert-outline",
                 "type": "style",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-dash",
                 "type": "style",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-soft",
                 "type": "style",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-info",
                 "type": "color",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-success",
                 "type": "color",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-warning",
                 "type": "color",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-error",
                 "type": "color",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
                 "label": "alert-vertical",
                 "type": "direction",
                 "parent": "alert",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "alert"
             },
             {
@@ -859,138 +803,86 @@
         "parent": "radio",
         "tag": "input",
         "additional_attributes": [
-            "type",
-            "checked"
+            "checked",
+            "type"
         ],
         "children": [
             {
                 "label": "radio-neutral",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-primary",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-secondary",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-accent",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-success",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-warning",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-info",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-error",
                 "type": "color",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-xs",
                 "type": "size",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-sm",
                 "type": "size",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-md",
                 "type": "size",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-lg",
                 "type": "size",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             },
             {
                 "label": "radio-xl",
                 "type": "size",
                 "parent": "radio",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "radio"
             }
         ]
@@ -1084,126 +976,84 @@
                 "label": "textarea-ghost",
                 "type": "style",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-neutral",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-primary",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-secondary",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-accent",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-info",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-success",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-warning",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-error",
                 "type": "color",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-xs",
                 "type": "size",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-sm",
                 "type": "size",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-md",
                 "type": "size",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-lg",
                 "type": "size",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             },
             {
                 "label": "textarea-xl",
                 "type": "size",
                 "parent": "textarea",
-                "additional_attributes": [
-                    "placeholder"
-                ],
                 "sub_parent": "textarea"
             }
         ]
@@ -1483,9 +1333,6 @@
                         "label": "tab-active",
                         "type": "modifier",
                         "parent": "tabs",
-                        "additional_attributes": [
-                            "role"
-                        ],
                         "sub_parent": "tab"
                     }
                 ]
@@ -1501,27 +1348,18 @@
                 "label": "tabs-box",
                 "type": "style",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
                 "label": "tabs-border",
                 "type": "style",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
                 "label": "tabs-lift",
                 "type": "style",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
@@ -1544,18 +1382,12 @@
                 "label": "tabs-xs",
                 "type": "size",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
                 "label": "tabs-sm",
                 "type": "size",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
@@ -1567,18 +1399,12 @@
                 "label": "tabs-lg",
                 "type": "size",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             },
             {
                 "label": "tabs-xl",
                 "type": "size",
                 "parent": "tabs",
-                "additional_attributes": [
-                    "role"
-                ],
                 "sub_parent": "tabs"
             }
         ]
@@ -1646,166 +1472,88 @@
         "parent": "range",
         "tag": "input",
         "additional_attributes": [
-            "value",
-            "type",
             "min",
-            "max"
+            "max",
+            "value",
+            "type"
         ],
         "children": [
             {
                 "label": "range-neutral",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-primary",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-secondary",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-accent",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-success",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-warning",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-info",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-error",
                 "type": "color",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-xs",
                 "type": "size",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-sm",
                 "type": "size",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-md",
                 "type": "size",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-lg",
                 "type": "size",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             },
             {
                 "label": "range-xl",
                 "type": "size",
                 "parent": "range",
-                "additional_attributes": [
-                    "value",
-                    "type",
-                    "min",
-                    "max"
-                ],
                 "sub_parent": "range"
             }
         ]
@@ -1816,8 +1564,8 @@
         "parent": "checkbox",
         "tag": "input",
         "additional_attributes": [
-            "type",
-            "checked"
+            "checked",
+            "type"
         ],
         "sub_parent": "label",
         "children": [
@@ -1825,130 +1573,78 @@
                 "label": "checkbox-primary",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-secondary",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-accent",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-neutral",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-success",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-warning",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-info",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-error",
                 "type": "color",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-xs",
                 "type": "size",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-sm",
                 "type": "size",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-md",
                 "type": "size",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-lg",
                 "type": "size",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             },
             {
                 "label": "checkbox-xl",
                 "type": "size",
                 "parent": "checkbox",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "checkbox"
             }
         ]
@@ -2102,8 +1798,8 @@
         "parent": "toggle",
         "tag": "input",
         "additional_attributes": [
-            "type",
-            "checked"
+            "checked",
+            "type"
         ],
         "sub_parent": "label",
         "children": [
@@ -2111,130 +1807,78 @@
                 "label": "toggle-primary",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-secondary",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-accent",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-neutral",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-success",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-warning",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-info",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-error",
                 "type": "color",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-xs",
                 "type": "size",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-sm",
                 "type": "size",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-md",
                 "type": "size",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-lg",
                 "type": "size",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             },
             {
                 "label": "toggle-xl",
                 "type": "size",
                 "parent": "toggle",
-                "additional_attributes": [
-                    "type",
-                    "checked"
-                ],
                 "sub_parent": "toggle"
             }
         ]
@@ -2483,8 +2127,8 @@
         "parent": "modal",
         "tag": "div",
         "additional_attributes": [
-            "role",
-            "id"
+            "id",
+            "role"
         ],
         "children": [
             {
@@ -2529,9 +2173,6 @@
                 "label": "modal-bottom",
                 "type": "placement",
                 "parent": "modal",
-                "additional_attributes": [
-                    "id"
-                ],
                 "sub_parent": "modal"
             },
             {
@@ -2796,9 +2437,6 @@
                 "label": "rating-hidden",
                 "type": "modifier",
                 "parent": "rating",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "rating"
             },
             {
@@ -3130,8 +2768,8 @@
         "parent": "input",
         "tag": "input",
         "additional_attributes": [
-            "type",
-            "placeholder"
+            "placeholder",
+            "type"
         ],
         "sub_parent": "fieldset",
         "children": [
@@ -3139,140 +2777,84 @@
                 "label": "input-ghost",
                 "type": "style",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-neutral",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-primary",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-secondary",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-accent",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-info",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-success",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-warning",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-error",
                 "type": "color",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-xs",
                 "type": "size",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-sm",
                 "type": "size",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-md",
                 "type": "size",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-lg",
                 "type": "size",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             },
             {
                 "label": "input-xl",
                 "type": "size",
                 "parent": "input",
-                "additional_attributes": [
-                    "type",
-                    "placeholder"
-                ],
                 "sub_parent": "input"
             }
         ]
@@ -3417,126 +2999,84 @@
                 "label": "file-input-ghost",
                 "type": "style",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-neutral",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-primary",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-secondary",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-accent",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-info",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-success",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-warning",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-error",
                 "type": "color",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-xs",
                 "type": "size",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-sm",
                 "type": "size",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-md",
                 "type": "size",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-lg",
                 "type": "size",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             },
             {
                 "label": "file-input-xl",
                 "type": "size",
                 "parent": "file-input",
-                "additional_attributes": [
-                    "type"
-                ],
                 "sub_parent": "file-input"
             }
         ]
@@ -3600,8 +3140,8 @@
         "parent": "theme-controller",
         "tag": "input",
         "additional_attributes": [
-            "type",
-            "value"
+            "value",
+            "type"
         ],
         "sub_parent": "swap",
         "children": []
