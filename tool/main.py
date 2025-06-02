@@ -52,6 +52,7 @@ class Component(TypedDict):
     tag: Optional[str]
     children: Optional[List[Dict]]
     sub_parent: Optional[str]
+    additional_attributes: Optional[List[str]]
 
 
 # this is needed for memoization
@@ -170,14 +171,19 @@ def extract_documentation(
 
 
 @lru_cache(maxsize=None)
-def _parse(html: str, label: str) -> tuple[Optional[str], Optional[str]]:
+def _parse(
+    html: str, label: str
+) -> tuple[Optional[str], Optional[str], Optional[List[str]]]:
     try:
+        unique_classnames: set[str] = set()
         soup = BeautifulSoup(html, features="lxml")
         element = soup.find(attrs={"class": label})
         if not element:
-            return None, None
+            return None, None, None
         element = cast(Tag, element)
-
+        for attr in element.attrs:
+            if attr in REQUIRED_ATTRIBUTES:
+                unique_classnames.add(attr)
         tag = element.name
         sub_parent = None
 
@@ -194,10 +200,10 @@ def _parse(html: str, label: str) -> tuple[Optional[str], Optional[str]]:
                     sub_parent = name
                     break
 
-        return tag, sub_parent
+        return tag, sub_parent, list(unique_classnames)
     except Exception as e:
         print(f"Error parsing HTML for label {label}: {e}")
-        return None, None
+        return None, None, None
 
 
 def parse_html(components: List[Component]) -> None:
@@ -214,9 +220,11 @@ def parse_html(components: List[Component]) -> None:
             ]
             results = pool.starmap(_parse, args)
 
-            for tag, sub_parent in results:
+            for tag, sub_parent, unique_classnames in results:
                 if tag:
                     component["tag"] = tag
+                if unique_classnames:
+                    component["additional_attributes"] = unique_classnames
                 if sub_parent:
                     component["sub_parent"] = sub_parent
                     break
