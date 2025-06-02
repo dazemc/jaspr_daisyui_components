@@ -217,8 +217,8 @@
         "parent": "progress",
         "tag": "progress",
         "additional_attributes": [
-            "value",
-            "max"
+            "max",
+            "value"
         ],
         "children": [
             {
@@ -1472,10 +1472,10 @@
         "parent": "range",
         "tag": "input",
         "additional_attributes": [
-            "min",
             "max",
-            "value",
-            "type"
+            "min",
+            "type",
+            "value"
         ],
         "children": [
             {
@@ -3140,8 +3140,8 @@
         "parent": "theme-controller",
         "tag": "input",
         "additional_attributes": [
-            "value",
-            "type"
+            "type",
+            "value"
         ],
         "sub_parent": "swap",
         "children": []

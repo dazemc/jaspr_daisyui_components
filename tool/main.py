@@ -225,7 +225,7 @@ def parse_html(components: List[Component]) -> None:
                     component["tag"] = tag
                 if unique_classnames:
                     if is_sub(component):
-                        component["additional_attributes"] = unique_classnames
+                        component["additional_attributes"] = sorted(unique_classnames)
                 if sub_parent:
                     component["sub_parent"] = sub_parent
                     break
