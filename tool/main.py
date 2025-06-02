@@ -1,5 +1,7 @@
 import copy
-from typing import cast
+from multiprocessing import Pool
+from functools import lru_cache
+from typing import TypedDict, List, Optional, Dict, cast
 from bs4 import BeautifulSoup, Tag
 from io import TextIOWrapper
 from json import dump
@@ -40,6 +42,20 @@ REQUIRED_ATTRIBUTES = [
     "required",
     "for",
 ]
+
+
+class Component(TypedDict):
+    label: str
+    parent: str
+    type: str
+    html: Optional[List[str]]
+    tag: Optional[str]
+    children: Optional[List[str | dict]]
+    sub_parent: Optional[str]
+
+
+# this is needed for memoization
+_label_to_component: Dict[str, Component] = {}
 
 
 def extract_dirs() -> list[str]:
@@ -101,16 +117,18 @@ def check_children(root_name: str, class_name: str) -> bool:
     return root_name != class_name and len(root_name) > 0
 
 
-def is_sub(component: dict) -> bool:
+def is_sub(component: Component) -> bool:
     return component["type"] == "component" or component["type"] == "part"
 
 
-def is_root(component: dict) -> bool:
+def is_root(component: Component) -> bool:
     return component["label"] == component["parent"]
 
 
-def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[dict]:
-    components: list[dict] = []
+def extract_documentation(
+    documentation_contents: list[TextIOWrapper],
+) -> list[Component]:
+    components: list[Component] = []
     for component in documentation_contents:
         root_name: str = ""
         class_name: str = ""
@@ -125,8 +143,6 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
             # CLASS NAME
             if check_class_name(line):
                 class_name: str = extract_class_name(line)
-                # ...why don't I just extract the html examples and load them in dart's html package?
-                # nevermind, apparently that is a port of python's html5lib
             # ROOT NAME
             if check_root_name(root_name=root_name, class_name=class_name):
                 root_name: str = class_name
@@ -140,58 +156,79 @@ def extract_documentation(documentation_contents: list[TextIOWrapper]) -> list[d
             if len(class_name) > 0:
                 if class_name not in [c["label"] for c in components]:
                     components.append(
-                        {
-                            "label": class_name,
-                            "type": type,
-                            "parent": root_name,
-                            "children": children,
-                            "html": html,
-                        }
+                        Component(
+                            {
+                                "label": class_name,
+                                "type": type,
+                                "parent": root_name,
+                                "children": children,
+                                "html": html,
+                            }  # pyright: ignore[reportArgumentType]
+                        )
                     )
     return components
 
 
-def parse_html(components: list[dict]) -> None:
-    for component in tqdm(components, desc="Generating components.json", colour="blue"):
-        attributes: set = set()
-        html: list[str] = component["html"]
-        for example in tqdm(
-            html,
-            desc=f"Parsing HTML for {component['label']}",
-            leave=False,
-            colour="green",
+@lru_cache(maxsize=None)
+def _parse(html: str, label: str) -> tuple[Optional[str], Optional[str]]:
+    try:
+        soup = BeautifulSoup(html, features="lxml")
+        element = soup.find(attrs={"class": label})
+        if not element:
+            return None, None
+        element = cast(Tag, element)
+
+        tag = element.name
+        sub_parent = None
+
+        parent = element.parent
+        if parent and parent.has_attr("class"):
+            for name in parent.attrs["class"]:
+                if name in _label_to_component and is_sub(_label_to_component[name]):
+                    sub_parent = name
+                    break
+
+        if not is_sub(_label_to_component[label]) and element.has_attr("class"):
+            for name in element["class"]:
+                if name in _label_to_component and is_sub(_label_to_component[name]):
+                    sub_parent = name
+                    break
+
+        return tag, sub_parent
+    except Exception as e:
+        print(f"Error parsing HTML for label {label}: {e}")
+        return None, None
+
+
+def parse_html(components: List[Component]) -> None:
+    global _label_to_component
+    _label_to_component = {c["label"]: c for c in components}
+
+    with Pool() as pool:
+        for component in tqdm(
+            components, desc="Generating components.json", colour="blue"
         ):
-            soup = BeautifulSoup(example, "lxml")
-            element = soup.find(attrs={"class": component["label"]})
-            tag = cast(Tag, element).name if element is not None else None
-            if tag:
-                component["tag"] = tag
-            if element:
-                element = cast(Tag, element)
-                child_parent = element.parent
-                if child_parent and child_parent.has_attr("class"):
-                    for name in child_parent.attrs["class"]:
-                        for c in components:
-                            if is_sub(c):
-                                if c["label"] == name:
-                                    component["sub_parent"] = name
-                                    break
-                    if not is_sub(component):
-                        for name in element["class"]:
-                            for c in components:
-                                if is_sub(c):
-                                    if c["label"] == name:
-                                        component["sub_parent"] = name
+            args = [
+                (example, component["label"])
+                for example in cast(List[str], component["html"])
+            ]
+            results = pool.starmap(_parse, args)
 
-        del component["html"]
+            for tag, sub_parent in results:
+                if tag:
+                    component["tag"] = tag
+                if sub_parent:
+                    component["sub_parent"] = sub_parent
+                    break
+            del component["html"]  # pyright: ignore[reportGeneralTypeIssues]
 
 
-def build_heirarchy(components: list[dict]) -> dict:
+def build_heirarchy(components: list[Component]) -> dict:
     output = {}
     # Assign parents
     for component in components:
         if not is_sub(component) and component.get("tag"):
-            del component["tag"]
+            component["tag"] = None
         if is_root(component):
             output[component["label"]] = component
             output[component["label"]]["children"] = []
@@ -203,7 +240,7 @@ def build_heirarchy(components: list[dict]) -> dict:
                 output[component["parent"]]["children"].append(component)
             # Assign root siblings
             if not component.get("sub_parent") and not is_sub(component):
-                del component["children"]
+                component["children"] = None
                 output[component["parent"]]["children"].append(component)
     # Assign sub children
     for component in copy.deepcopy(components):
@@ -212,24 +249,9 @@ def build_heirarchy(components: list[dict]) -> dict:
                 if c["label"] == component["sub_parent"] and c["label"] != c.get(
                     "sub_parent"
                 ):
-                    del component["children"]
+                    component["children"] = None
                     c["children"].append(component)
     return output
-
-
-def recursive_remove(component: dict) -> None:
-    if component.get("children"):
-        if len(component["children"]) == 0:
-            del component["children"]
-            return
-        else:
-            for c in component["children"]:
-                recursive_remove(c)
-
-
-def remove_empty_children(components: dict) -> None:
-    for c in components.values():
-        recursive_remove(c)
 
 
 def check_components(components: list[dict]) -> None:
@@ -285,7 +307,6 @@ def main() -> None:
     parse_html(components)
     # check_components(components)
     heir_components = build_heirarchy(components)
-    remove_empty_children(heir_components)
 
     with open("components.json", "w") as file:
         dump(heir_components, file, indent=4)
