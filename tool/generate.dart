@@ -3,43 +3,82 @@ import 'dart:convert';
 
 import 'component_model.dart';
 
+List<String> types = [
+  "color",
+  "style",
+  "behavior",
+  "size",
+  "modifier",
+  "placement",
+  "direction",
+];
+
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
   List<DaisyuiComponent> componentTrees = buildRootStructure(components);
   appendRootChildren(componentTrees, components);
   appendSubChildren(componentTrees, components);
-  Map<String, List<String>> mappedEnums = buildEnums(componentTrees);
+  Map<String, String> componentEnums = buildEnums(componentTrees);
+  Map<String, String> componentFields = buildFields(components);
+  print(componentEnums);
+  print(componentFields);
   buildComponent(componentTrees);
-  // print(mappedEnums);
+  buildFields(components);
 }
 
-Map<String, List<String>> buildEnums(List<DaisyuiComponent> components) {
-  List<String> types = [
-    "color",
-    "style",
-    "behavior",
-    "size",
-    "modifier",
-    "placement",
-    "direction",
-  ];
+Map<String, String> buildFields(List<DaisyuiComponent> components) {
+  Map<String, String> output = {};
+  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
+    String name = captialCase(c.label);
+    List<String> utypes = [];
+    String fields = '';
+    List<DaisyuiComponent> types =
+        c.children.where((e) => !isComponent(e)).toList();
+    Map<String, String> mappedTypes = {
+      "color": 'final ${name}Color? color;\n',
+      "style": 'final List<${name}Style>? ${name}Style;\n',
+      "size": 'final ${name}Size? size;\n',
+      "behavior": 'final ${name}Behavior? behavior;\n',
+      "modifier": 'final ${name}Modifier? modifier;\n',
+      "placement": 'final ${name}Placement? placement;\n',
+      "direction": 'final ${name}Direction? direction;\n',
+    };
 
-  Map<String, List<String>> output = {};
+    if (types.isNotEmpty) {
+      for (DaisyuiComponent child in types) {
+        if (!utypes.contains(child.type)) {
+          utypes.add(child.type);
+          fields += mappedTypes[child.type]!;
+        }
+      }
+      if (!output.containsKey(c.label)) {
+        output[c.label] = "";
+      }
+      output[c.label] = fields;
+    }
+  }
+  return output;
+}
+
+Map<String, String> buildEnums(List<DaisyuiComponent> components) {
+  Map<String, String> output = {};
   for (DaisyuiComponent c in components) {
     List<DaisyuiComponent> typedComponents =
         c.children.where((e) => !isComponent(e)).toList();
     if (typedComponents.isNotEmpty) {
+      String enums = "";
       for (String name in types) {
         List<DaisyuiComponent> input =
             typedComponents.where((e) => e.type == name).toList();
         if (input.isNotEmpty) {
-          if (!output.containsKey(c.label)) {
-            output[c.parent] = <String>[];
-          }
-          output[c.parent]!.add(buildCategory(input));
+          enums += buildCategory(input);
         }
       }
+      if (!output.containsKey(c.label)) {
+        output[c.parent] = "";
+      }
+      output[c.parent] = enums;
     }
   }
   return output;
@@ -259,6 +298,6 @@ void buildComponent(List<DaisyuiComponent> components) {
   }
 }
 """;
-    print(output);
+    // print(output);
   }
 }
