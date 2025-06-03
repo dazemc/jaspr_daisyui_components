@@ -6,15 +6,16 @@ import 'component_model.dart';
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
-  Map<String, DaisyuiComponent> rootStructure = buildRootStructure(components);
+  Map<String, DaisyuiComponent> tree = buildRootStructure(components);
 
   // TEST
   List<DaisyuiComponent> test = getChildren(components, "btn");
   List<DaisyuiComponent> testColors = getCategory(test, "color");
-  appendRootChildren(rootStructure, components);
-  print(rootStructure["stats"]!.children);
+  appendRootChildren(tree, components);
+  appendSubChildren(tree, components);
+  // print(tree["stats"]!.children.first.children);
   String testColorEnums = buildCategory(testColors, "Color");
-  // print(testColorEnums);
+  print(testColorEnums);
 }
 
 Map<String, DaisyuiComponent> buildRootStructure(
@@ -28,12 +29,29 @@ Map<String, DaisyuiComponent> buildRootStructure(
   return output;
 }
 
+void appendSubChildren(
+  Map<String, DaisyuiComponent> rootStructure,
+  List<DaisyuiComponent> components,
+) {
+  for (DaisyuiComponent rootC in rootStructure.values) {
+    if (rootC.children.isNotEmpty) {
+      List<DaisyuiComponent> children = rootC.children;
+      for (DaisyuiComponent c in children) {
+        c.children = components.where((e) => e.subParent == c.label).toList();
+      }
+    }
+  }
+}
+
 void appendRootChildren(
   Map<String, DaisyuiComponent> rootStructure,
   List<DaisyuiComponent> components,
 ) {
   for (DaisyuiComponent c in rootStructure.values) {
-    c.children = components.where((e) => e.parent == c.label).toList();
+    c.children =
+        components
+            .where((e) => e.parent == c.label && e.label != c.label)
+            .toList();
   }
 }
 
