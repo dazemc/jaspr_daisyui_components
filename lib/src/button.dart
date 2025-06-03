@@ -69,25 +69,37 @@ enum ButtonModifier {
   String toString() => value.toString();
 }
 
-Component button(
-  final List<Component>? children, {
-  final String? classes,
-  final ButtonColor? color,
-  final List<ButtonStyle>? buttonStyle,
-  final ButtonSize? size,
-  final ButtonBehavior? behavior,
-  final ButtonModifier? modifier,
-  final Styles? styles,
-  final Key? key,
-  final String? id,
-  final Map<String, String>? attributes,
-  final Map<String, EventCallback>? events,
-}) {
+class Btn extends StatelessComponent {
+  final List<Component>? children;
+  final String? classes;
+  final ButtonColor? color;
+  final List<ButtonStyle>? buttonStyle;
+  final ButtonSize? size;
+  final ButtonBehavior? behavior;
+  final ButtonModifier? modifier;
+  final Styles? styles;
+  final String? id;
+  final Map<String, String>? attributes;
+  final Map<String, EventCallback>? events;
+  const Btn(
+    this.children, {
+    this.classes,
+    this.color,
+    this.buttonStyle,
+    this.size,
+    this.behavior,
+    this.modifier,
+    this.styles,
+    this.id,
+    this.attributes,
+    this.events,
+    super.key,
+  });
   String getClasses() {
     List<String> output = [
       'btn',
       if (color != null) color.toString(),
-      if (buttonStyle != null) ...buttonStyle.map((style) => style.toString()),
+      if (buttonStyle != null) ...buttonStyle!.map((style) => style.toString()),
       if (size != null) size.toString(),
       if (behavior != null) behavior.toString(),
       if (modifier != null) modifier.toString(),
@@ -96,14 +108,17 @@ Component button(
     return output.join(' ');
   }
 
-  return DomComponent(
-    tag: 'div',
-    classes: getClasses(),
-    key: key,
-    id: id,
-    styles: styles,
-    children: children,
-    attributes: attributes,
-    events: events,
-  );
+  @override
+  Iterable<Component> build(BuildContext buiild) sync* {
+    yield DomComponent(
+      tag: 'div',
+      classes: getClasses(),
+      key: key,
+      id: id,
+      styles: styles,
+      children: children,
+      attributes: attributes,
+      events: events,
+    );
+  }
 }

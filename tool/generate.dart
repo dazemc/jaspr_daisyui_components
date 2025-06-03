@@ -113,70 +113,58 @@ String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
 void treeWalk(Map<String, dynamic> mappedModels) {}
 
 void buildComponent(DaisyuiComponent model) {
-  String output = """
-import 'package:jaspr/jaspr.dart';
-
-enum DividerDirection {
-  vertical(' divider-vertical'),
-  horziontal(' divider-horizontal');
-
-  final String value;
-  const DividerDirection(this.value);
-  @override
-  String toString() => value;
-}
-
-enum DividerPlacement {
-  start(' divider-start'),
-  center(''),
-  end(' divider-end');
-
-  final String value;
-  const DividerPlacement(this.value);
-  @override
-  String toString() => value;
-}
-
-
-Component parentName(
-  final List<Component>? children, {
-  final Component? child,
-  final String? classes,
-  final String? id,
-  final Styles? styles,
-  final DividerDirection? direction,
-  final DividerPlacement? placement,
-  final DividerColor? color,
-  final Map<String, String>? attributes,
-  final Map<String, EventCallback>? events,
-}) {
-  String nullEnumCheck(dynamic attr) => attr != null ? attr.toString() : '';
-
-  String getDirection() => nullEnumCheck(direction);
-  String getPlacement() => nullEnumCheck(placement);
-  String getColor() => nullEnumCheck(color);
-
-  String nullCheckDefaults(String? classes, String defaultClasses) {
-    return (classes != null) ? '\$defaultClasses \$classes' : defaultClasses;
-  }
-
+  String output = """class Btn extends StatelessComponent {
+  final List<Component>? children;
+  final String? classes;
+  final ButtonColor? color;
+  final List<ButtonStyle>? buttonStyle;
+  final ButtonSize? size;
+  final ButtonBehavior? behavior;
+  final ButtonModifier? modifier;
+  final Styles? styles;
+  final String? id;
+  final Map<String, String>? attributes;
+  final Map<String, EventCallback>? events;
+  const Btn(
+    this.children, {
+    this.classes,
+    this.color,
+    this.buttonStyle,
+    this.size,
+    this.behavior,
+    this.modifier,
+    this.styles,
+    this.id,
+    this.attributes,
+    this.events,
+    super.key,
+  });
   String getClasses() {
-    String output = nullCheckDefaults(classes, 'divider');
-    output += getDirection() + getPlacement() + getColor();
-
-    return output;
+    List<String> output = [
+      'btn',
+      if (color != null) color.toString(),
+      if (buttonStyle != null) ...buttonStyle!.map((style) => style.toString()),
+      if (size != null) size.toString(),
+      if (behavior != null) behavior.toString(),
+      if (modifier != null) modifier.toString(),
+      classes ?? '',
+    ];
+    return output.join(' ');
   }
 
-  return DomComponent(
-    tag: 'div',
-    classes: getClasses(),
-    id: id,
-    styles: styles,
-    attributes: attributes,
-    events: events,
-    child: child,
-    children: children,
-  );
+  @override
+  Iterable<Component> build(BuildContext buiild) sync* {
+    yield DomComponent(
+      tag: 'div',
+      classes: getClasses(),
+      key: key,
+      id: id,
+      styles: styles,
+      children: children,
+      attributes: attributes,
+      events: events,
+    );
+  }
 }
-    """;
+""";
 }
