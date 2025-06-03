@@ -315,11 +315,11 @@ def main() -> None:
     components = extract_documentation(component_contents)
 
     parse_html(components)
-    heir_components = build_heirarchy(components)
-    check_components(heir_components)
+    # heir_components = build_heirarchy(components)
+    # check_components(heir_components)
 
     with open("components.json", "w") as file:
-        dump(heir_components, file, indent=4)
+        dump(components, file, indent=4)
         print("✅ components.json generated successfully.")
 
 

@@ -4,45 +4,84 @@ import 'dart:convert';
 import 'component_model.dart';
 
 void main() async {
-  Map<String, dynamic> data = await readFromJsonFile();
-  Map<String, dynamic> componentModels = getDaisyuiModels(data);
-  // print((componentModels['stat'] as DaisyuiComponent).label);
-  // print(mappedModels['btn']!['parent']!.first.toString());
-  // buildComponentList(componentModels);
+  List<dynamic> data = await readFromJsonFile();
+  List<DaisyuiComponent> components = getDaisyuiComponents(data);
+  Map<String, DaisyuiComponent> rootStructure = buildRootStructure(components);
+
+  // TEST
+  List<DaisyuiComponent> test = getChildren(components, "btn");
+  List<DaisyuiComponent> testColors = getCategory(test, "color");
+  appendRootChildren(rootStructure, components);
+  print(rootStructure["stats"]!.children);
+  String testColorEnums = buildCategory(testColors, "Color");
+  // print(testColorEnums);
 }
 
-Future<Map<String, dynamic>> readFromJsonFile() async {
-  try {
-    File file = File('./components.json');
-    String jsonString = await file.readAsString();
-    dynamic jsonData = jsonDecode(jsonString);
-    return jsonData;
-  } catch (e) {
-    print('Error reading json file: $e');
-    return {};
+Map<String, DaisyuiComponent> buildRootStructure(
+  List<DaisyuiComponent> components,
+) {
+  Map<String, DaisyuiComponent> output = {};
+  List<String> parents = getUniqueParents(components);
+  for (String name in parents) {
+    output[name] = components.firstWhere((e) => e.parent == name);
+  }
+  return output;
+}
+
+void appendRootChildren(
+  Map<String, DaisyuiComponent> rootStructure,
+  List<DaisyuiComponent> components,
+) {
+  for (DaisyuiComponent c in rootStructure.values) {
+    c.children = components.where((e) => e.parent == c.label).toList();
   }
 }
 
-Map<String, DaisyuiComponent> convertToModel(Map<String, dynamic> value) {
-  Map<String, DaisyuiComponent> output = {};
-  output['label'] = DaisyuiComponent(
+List<DaisyuiComponent> getChildren(
+  List<DaisyuiComponent> components,
+  String rootParent,
+) {
+  return components
+      .where((DaisyuiComponent e) => e.parent == rootParent)
+      .toList();
+}
+
+Future<List<dynamic>> readFromJsonFile() async {
+  try {
+    File file = File('./components.json');
+    String jsonString = await file.readAsString();
+    List<dynamic> jsonData = jsonDecode(jsonString);
+    return jsonData;
+  } catch (e) {
+    print('Error reading json file: $e');
+    return [];
+  }
+}
+
+List<String> getUniqueParents(List<DaisyuiComponent> components) {
+  List<String> unique = [];
+  for (DaisyuiComponent c in components) {
+    if (!unique.contains(c.parent)) {
+      unique.add(c.parent);
+    }
+  }
+  return unique;
+}
+
+DaisyuiComponent convertToModel(Map<String, dynamic> value) {
+  return DaisyuiComponent(
     label: value['label'],
     type: value['type'],
     parent: value['parent'],
     subParent: value['sub_parent'],
   );
-  return output;
 }
 
-Map<String, dynamic> getDaisyuiModels(Map<String, dynamic> data) {
-  Map<String, dynamic> output = {};
-  data.forEach((key, value) {
-    if (value is Map<String, dynamic>) {
-      output[key] = getDaisyuiModels(value);
-    } else {
-      output[key] = convertToModel(value);
-    }
-  });
+List<DaisyuiComponent> getDaisyuiComponents(List<dynamic> data) {
+  List<DaisyuiComponent> output = [];
+  for (dynamic value in data) {
+    output.add(convertToModel(value));
+  }
   return output;
 }
 
@@ -68,26 +107,22 @@ String formatName(String input, String type) {
 // "direction",
 
 List<DaisyuiComponent> getCategory(List<DaisyuiComponent> input, String type) {
-  List<DaisyuiComponent> output = [];
-  for (DaisyuiComponent c in input) {
-    if (c.type == type) output.add(c);
-  }
-  return output;
+  return input.where((e) => e.type == type).toList();
 }
 
 String? getCategoryType(DaisyuiComponent input) {
   String? style = input.label
       .replaceFirst(input.parent, "")
       .replaceAll("-", "");
-  return "     $style('${input.label}'),\n";
+  return "      $style('${input.label}'),\n";
 }
 
 String buildEnumLine(String pascalName, List<String> enums) {
   return """
 
     enum $pascalName {
-${enums.join()}
       none('');
+${enums.join()}
 
       final String value;
       const $pascalName(this.value);
@@ -110,10 +145,9 @@ String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
   return buildEnumLine(pascalName, categoryStrings);
 }
 
-void treeWalk(Map<String, dynamic> mappedModels) {}
-
 void buildComponent(DaisyuiComponent model) {
-  String output = """class Btn extends StatelessComponent {
+  String output = """
+  class Btn extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final ButtonColor? color;
@@ -153,7 +187,7 @@ void buildComponent(DaisyuiComponent model) {
   }
 
   @override
-  Iterable<Component> build(BuildContext buiild) sync* {
+  Iterable<Component> build(BuildContext build) sync* {
     yield DomComponent(
       tag: 'div',
       classes: getClasses(),
