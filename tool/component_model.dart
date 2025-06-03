@@ -9,6 +9,7 @@ class DaisyuiComponent {
   final String parent;
   final String? subParent;
   final String? tag;
+  final List<String>? additionalAttributes;
   @JsonKey(defaultValue: [])
   List<DaisyuiComponent> children;
 
@@ -18,6 +19,7 @@ class DaisyuiComponent {
     required this.parent,
     this.subParent,
     this.tag,
+    this.additionalAttributes,
     List<DaisyuiComponent>? children,
   }) : children = children ?? [];
 
@@ -28,5 +30,5 @@ class DaisyuiComponent {
 
   @override
   String toString() =>
-      '\nDaisyuiComponent(label: $label, type: $type, parent: $parent, sub: $subParent)';
+      '\nDaisyuiComponent(label: $label, type: $type, parent: $parent, sub: $subParent, tag: $tag, attributes: $additionalAttributes)';
 }

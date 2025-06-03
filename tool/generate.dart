@@ -6,17 +6,47 @@ import 'component_model.dart';
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
-  List<DaisyuiComponent> trees = buildRootStructure(components);
+  List<DaisyuiComponent> componentTrees = buildRootStructure(components);
+  appendRootChildren(componentTrees, components);
+  appendSubChildren(componentTrees, components);
+  Map<String, List<String>> mappedEnums = buildEnums(componentTrees);
+  buildComponent(componentTrees);
+  // print(mappedEnums);
+}
 
-  // TEST
-  List<DaisyuiComponent> test = getChildren(components, "btn");
-  List<DaisyuiComponent> testColors = getCategory(test, "color");
-  appendRootChildren(trees, components);
-  appendSubChildren(trees, components);
-  print(trees);
-  // print(tree["stats"]!.children.first.children);
-  String testColorEnums = buildCategory(testColors, "Color");
-  // print(testColorEnums);
+Map<String, List<String>> buildEnums(List<DaisyuiComponent> components) {
+  List<String> types = [
+    "color",
+    "style",
+    "behavior",
+    "size",
+    "modifier",
+    "placement",
+    "direction",
+  ];
+
+  Map<String, List<String>> output = {};
+  for (DaisyuiComponent c in components) {
+    List<DaisyuiComponent> typedComponents =
+        c.children.where((e) => !isComponent(e)).toList();
+    if (typedComponents.isNotEmpty) {
+      for (String name in types) {
+        List<DaisyuiComponent> input =
+            typedComponents.where((e) => e.type == name).toList();
+        if (input.isNotEmpty) {
+          if (!output.containsKey(c.label)) {
+            output[c.parent] = <String>[];
+          }
+          output[c.parent]!.add(buildCategory(input));
+        }
+      }
+    }
+  }
+  return output;
+}
+
+bool isComponent(DaisyuiComponent component) {
+  return (component.type == "component" || component.type == "part");
 }
 
 List<DaisyuiComponent> buildRootStructure(List<DaisyuiComponent> components) {
@@ -91,6 +121,8 @@ DaisyuiComponent convertToModel(Map<String, dynamic> value) {
     type: value['type'],
     parent: value['parent'],
     subParent: value['sub_parent'],
+    tag: value['tag'],
+    additionalAttributes: value['additional_attributtes'],
   );
 }
 
@@ -112,16 +144,6 @@ String formatName(String input, String type) {
   }
   return fOutput += type;
 }
-
-// "component",
-// "color",
-// "style",
-// "behavior",
-// "size",
-// "modifier",
-// "placement",
-// "part",
-// "direction",
 
 List<DaisyuiComponent> getCategory(List<DaisyuiComponent> input, String type) {
   return input.where((e) => e.type == type).toList();
@@ -150,8 +172,16 @@ ${enums.join()}
   """;
 }
 
-String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
-  String pascalName = formatName(input.first.label, titleCategory);
+String capitalize(String str) {
+  if (str.isEmpty) return str;
+  return str.replaceFirst(str[0], str[0].toUpperCase());
+}
+
+String buildCategory(List<DaisyuiComponent> input) {
+  String pascalName = formatName(
+    input.first.label,
+    capitalize(input.first.type),
+  );
   List<String> categoryStrings = [];
   for (DaisyuiComponent c in input) {
     String? colorType = getCategoryType(c);
@@ -162,25 +192,36 @@ String buildCategory(List<DaisyuiComponent> input, String titleCategory) {
   return buildEnumLine(pascalName, categoryStrings);
 }
 
-void buildComponent(DaisyuiComponent model) {
-  String output = """
-  class Btn extends StatelessComponent {
+String captialCase(String str) {
+  String output = '';
+  for (String s in str.split('-')) {
+    output += capitalize(s);
+  }
+
+  return output;
+}
+
+void buildComponent(List<DaisyuiComponent> components) {
+  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
+    String name = captialCase(c.label);
+    String output = """
+  class $name extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
-  final ButtonColor? color;
-  final List<ButtonStyle>? buttonStyle;
-  final ButtonSize? size;
-  final ButtonBehavior? behavior;
-  final ButtonModifier? modifier;
+  final ${name}Color? color;
+  final List<${name}Style>? ${name}Style;
+  final ${name}Size? size;
+  final ${name}Behavior? behavior;
+  final ${name}Modifier? modifier;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Btn(
+  const $name(
     this.children, {
     this.classes,
     this.color,
-    this.buttonStyle,
+    this.${name}Style,
     this.size,
     this.behavior,
     this.modifier,
@@ -192,9 +233,9 @@ void buildComponent(DaisyuiComponent model) {
   });
   String getClasses() {
     List<String> output = [
-      'btn',
+      '${c.label}',
       if (color != null) color.toString(),
-      if (buttonStyle != null) ...buttonStyle!.map((style) => style.toString()),
+      if (${name}Style != null) ...${name}Style!.map((style) => style.toString()),
       if (size != null) size.toString(),
       if (behavior != null) behavior.toString(),
       if (modifier != null) modifier.toString(),
@@ -206,7 +247,7 @@ void buildComponent(DaisyuiComponent model) {
   @override
   Iterable<Component> build(BuildContext build) sync* {
     yield DomComponent(
-      tag: 'div',
+      tag: '${c.tag}',
       classes: getClasses(),
       key: key,
       id: id,
@@ -218,4 +259,6 @@ void buildComponent(DaisyuiComponent model) {
   }
 }
 """;
+    print(output);
+  }
 }

@@ -109,7 +109,7 @@ class Btn extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext buiild) sync* {
+  Iterable<Component> build(BuildContext build) sync* {
     yield DomComponent(
       tag: 'div',
       classes: getClasses(),

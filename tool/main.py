@@ -289,6 +289,14 @@ def check_components(components: Dict[str, Component]) -> None:
         if c.get("sub_parent", False) is None:
             print(f"🛑 {name} has a malform sub parent!")
 
+def null_sub(components: List[Component]) -> List[Component]:
+    output: List[Component] = []
+    for c in components:
+        if c["label"] == c["parent"]:
+            c["sub_parent"] = None
+            output.append(c)
+        output.append(c)
+    return output
 
 def unique_components(components: List[Dict]):
     # TODO:
@@ -313,8 +321,8 @@ def main() -> None:
     components_dirs: List[str] = extract_dirs()
     component_contents: List[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
-
     parse_html(components)
+    components = null_sub(components)
     # heir_components = build_heirarchy(components)
     # check_components(heir_components)
 
