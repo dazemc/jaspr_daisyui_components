@@ -28,5 +28,5 @@ class DaisyuiComponent {
 
   @override
   String toString() =>
-      'DaisyuiComponent(label: $label, type: $type, parent: $parent)';
+      '\nDaisyuiComponent(label: $label, type: $type, parent: $parent, sub: $subParent)';
 }

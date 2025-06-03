@@ -6,34 +6,33 @@ import 'component_model.dart';
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
-  Map<String, DaisyuiComponent> tree = buildRootStructure(components);
+  List<DaisyuiComponent> trees = buildRootStructure(components);
 
   // TEST
   List<DaisyuiComponent> test = getChildren(components, "btn");
   List<DaisyuiComponent> testColors = getCategory(test, "color");
-  appendRootChildren(tree, components);
-  appendSubChildren(tree, components);
+  appendRootChildren(trees, components);
+  appendSubChildren(trees, components);
+  print(trees);
   // print(tree["stats"]!.children.first.children);
   String testColorEnums = buildCategory(testColors, "Color");
-  print(testColorEnums);
+  // print(testColorEnums);
 }
 
-Map<String, DaisyuiComponent> buildRootStructure(
-  List<DaisyuiComponent> components,
-) {
-  Map<String, DaisyuiComponent> output = {};
+List<DaisyuiComponent> buildRootStructure(List<DaisyuiComponent> components) {
+  List<DaisyuiComponent> output = [];
   List<String> parents = getUniqueParents(components);
   for (String name in parents) {
-    output[name] = components.firstWhere((e) => e.parent == name);
+    output.add(components.firstWhere((e) => e.parent == name));
   }
   return output;
 }
 
 void appendSubChildren(
-  Map<String, DaisyuiComponent> rootStructure,
+  List<DaisyuiComponent> rootStructure,
   List<DaisyuiComponent> components,
 ) {
-  for (DaisyuiComponent rootC in rootStructure.values) {
+  for (DaisyuiComponent rootC in rootStructure) {
     if (rootC.children.isNotEmpty) {
       List<DaisyuiComponent> children = rootC.children;
       for (DaisyuiComponent c in children) {
@@ -44,10 +43,10 @@ void appendSubChildren(
 }
 
 void appendRootChildren(
-  Map<String, DaisyuiComponent> rootStructure,
+  List<DaisyuiComponent> rootStructure,
   List<DaisyuiComponent> components,
 ) {
-  for (DaisyuiComponent c in rootStructure.values) {
+  for (DaisyuiComponent c in rootStructure) {
     c.children =
         components
             .where((e) => e.parent == c.label && e.label != c.label)
