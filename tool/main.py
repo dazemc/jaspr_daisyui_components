@@ -303,6 +303,8 @@ def unique_components(components: List[Component]):
     # TODO:
     for component in components:
         name: str = component["label"]
+        if name == component["parent"]:
+            component["sub_parent"] = component["parent"]
         match name:
             case "theme-controller":
                 component["sub_parent"] = component["label"]
