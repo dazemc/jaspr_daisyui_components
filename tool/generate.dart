@@ -13,6 +13,10 @@ List<String> types = [
   "direction",
 ];
 
+String header = '''
+import 'package:jaspr/jaspr.dart';
+''';
+
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
@@ -21,11 +25,27 @@ void main() async {
   appendSubChildren(componentTrees, components);
   Map<String, String> componentEnums = buildEnums(componentTrees);
   Map<String, String> componentFields = buildFields(components);
-  print(componentEnums);
-  print(componentFields);
   buildComponent(componentTrees);
   buildFields(components);
+  mergeSections(componentEnums, componentFields);
 }
+
+Map<String, String> mergeSections(
+  Map<String, String> enums,
+  Map<String, String> fields,
+) {
+  Map<String, String> merged = enums.map((k, v) {
+    return MapEntry(k, '$v\n${fields[k]!}');
+  });
+  print(merged);
+  return merged;
+}
+//
+// Map<String, String> buildConstructor(Map<String, String> fields) {
+//   fields.map((k, v) {
+//     return MapEntry(k, )
+//   });
+// }
 
 Map<String, String> buildFields(List<DaisyuiComponent> components) {
   Map<String, String> output = {};
@@ -36,26 +56,34 @@ Map<String, String> buildFields(List<DaisyuiComponent> components) {
     List<DaisyuiComponent> types =
         c.children.where((e) => !isComponent(e)).toList();
     Map<String, String> mappedTypes = {
-      "color": 'final ${name}Color? color;\n',
-      "style": 'final List<${name}Style>? ${name}Style;\n',
-      "size": 'final ${name}Size? size;\n',
-      "behavior": 'final ${name}Behavior? behavior;\n',
-      "modifier": 'final ${name}Modifier? modifier;\n',
-      "placement": 'final ${name}Placement? placement;\n',
-      "direction": 'final ${name}Direction? direction;\n',
+      "color": '  final ${name}Color? color;\n',
+      "style": '  final List<${name}Style>? ${name}Style;\n',
+      "size": '  final ${name}Size? size;\n',
+      "behavior": '  final ${name}Behavior? behavior;\n',
+      "modifier": '  final ${name}Modifier? modifier;\n',
+      "placement": '  final ${name}Placement? placement;\n',
+      "direction": '  final ${name}Direction? direction;\n',
     };
 
     if (types.isNotEmpty) {
       for (DaisyuiComponent child in types) {
         if (!utypes.contains(child.type)) {
           utypes.add(child.type);
-          fields += mappedTypes[child.type]!;
+          fields += mappedTypes[child.type] ?? "";
         }
       }
       if (!output.containsKey(c.label)) {
-        output[c.label] = "";
+        output[c.label] = '''
+class $name extends StatelessComponent {
+  final List<Component>? children;
+  final String? classes;
+  final Styles? styles;
+  final String? id;
+  final Map<String, String>? attributes;
+  final Map<String, EventCallback>? events;
+''';
       }
-      output[c.label] = fields;
+      output[c.label] = '${output[c.label]!}$fields';
     }
   }
   return output;
@@ -76,9 +104,9 @@ Map<String, String> buildEnums(List<DaisyuiComponent> components) {
         }
       }
       if (!output.containsKey(c.label)) {
-        output[c.parent] = "";
+        output[c.parent] = header;
       }
-      output[c.parent] = enums;
+      output[c.parent] = '${output[c.parent]}\n$enums';
     }
   }
   return output;
@@ -244,18 +272,6 @@ void buildComponent(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = captialCase(c.label);
     String output = """
-  class $name extends StatelessComponent {
-  final List<Component>? children;
-  final String? classes;
-  final ${name}Color? color;
-  final List<${name}Style>? ${name}Style;
-  final ${name}Size? size;
-  final ${name}Behavior? behavior;
-  final ${name}Modifier? modifier;
-  final Styles? styles;
-  final String? id;
-  final Map<String, String>? attributes;
-  final Map<String, EventCallback>? events;
   const $name(
     this.children, {
     this.classes,
