@@ -1,6 +1,51 @@
 import 'package:jaspr/jaspr.dart';
 
-enum ButtonColor {
+enum BadgeColor {
+  neutral('badge-neutral'),
+  primary('badge-primary'),
+  secondary('badge-secondary'),
+  accent('badge-accent'),
+  info('badge-info'),
+  success('badge-success'),
+  warning('badge-warning'),
+  error('badge-error'),
+
+  none('');
+  final String value;
+  const BadgeColor(this.value);
+  @override
+  String toString() => value.toString();
+}
+  
+enum BadgeStyle {
+  outline('badge-outline'),
+  dash('badge-dash'),
+  soft('badge-soft'),
+  ghost('badge-ghost'),
+
+  none('');
+  final String value;
+  const BadgeStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+  
+enum BadgeSize {
+  xs('badge-xs'),
+  sm('badge-sm'),
+  md('badge-md'),
+  lg('badge-lg'),
+  xl('badge-xl'),
+
+  none('');
+  final String value;
+  const BadgeSize(this.value);
+  @override
+  String toString() => value.toString();
+}
+  
+
+enum BtnColor {
   neutral('btn-neutral'),
   primary('btn-primary'),
   secondary('btn-secondary'),
@@ -9,99 +54,92 @@ enum ButtonColor {
   success('btn-success'),
   warning('btn-warning'),
   error('btn-error'),
-  none('');
 
+  none('');
   final String value;
-  const ButtonColor(this.value);
+  const BtnColor(this.value);
   @override
   String toString() => value.toString();
 }
-
-enum ButtonStyle {
+  
+enum BtnStyle {
   outline('btn-outline'),
   dash('btn-dash'),
   soft('btn-soft'),
   ghost('btn-ghost'),
   link('btn-link'),
-  none('');
 
+  none('');
   final String value;
-  const ButtonStyle(this.value);
+  const BtnStyle(this.value);
   @override
   String toString() => value.toString();
 }
-
-enum ButtonBehavior {
+  
+enum BtnBehavior {
   active('btn-active'),
   disabled('btn-disabled'),
-  none('');
 
+  none('');
   final String value;
-  const ButtonBehavior(this.value);
+  const BtnBehavior(this.value);
   @override
   String toString() => value.toString();
 }
-
-enum ButtonSize {
+  
+enum BtnSize {
   xs('btn-xs'),
   sm('btn-sm'),
   md('btn-md'),
   lg('btn-lg'),
   xl('btn-xl'),
-  none('');
 
+  none('');
   final String value;
-  const ButtonSize(this.value);
+  const BtnSize(this.value);
   @override
   String toString() => value.toString();
 }
-
-enum ButtonModifier {
+  
+enum BtnModifier {
   wide('btn-wide'),
   block('btn-block'),
   square('btn-square'),
   circle('btn-circle'),
-  none('');
 
+  none('');
   final String value;
-  const ButtonModifier(this.value);
+  const BtnModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Btn extends StatelessComponent {
+  class Btn extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
-  final ButtonColor? color;
-  final List<ButtonStyle>? buttonStyle;
-  final ButtonSize? size;
-  final ButtonBehavior? behavior;
-  final ButtonModifier? modifier;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final BtnColor? color;
+  final List<BtnStyle>? style;
+  final BtnBehavior? behavior;
+  final BtnSize? size;
+  final BtnModifier? modifier;
   const Btn(
     this.children, {
     this.classes,
-    this.color,
-    this.buttonStyle,
-    this.size,
-    this.behavior,
-    this.modifier,
-    this.styles,
     this.id,
     this.attributes,
     this.events,
-    super.key,
-  });
-  String getClasses() {
+    this.styles,
+    this.color,
+    this.style,
+    this.behavior,
+    this.size,
+    this.modifier,
+});  String getClasses() {
     List<String> output = [
       'btn',
-      if (color != null) color.toString(),
-      if (buttonStyle != null) ...buttonStyle!.map((style) => style.toString()),
-      if (size != null) size.toString(),
-      if (behavior != null) behavior.toString(),
       if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
@@ -111,7 +149,7 @@ class Btn extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext build) sync* {
     yield DomComponent(
-      tag: 'div',
+      tag: 'button',
       classes: getClasses(),
       key: key,
       id: id,

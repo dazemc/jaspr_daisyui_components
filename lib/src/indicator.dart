@@ -1,0 +1,55 @@
+import 'package:jaspr/jaspr.dart';
+
+enum IndicatorItemPlacement {
+  indicatorstart('indicator-start'),
+  indicatorcenter('indicator-center'),
+  indicatorend('indicator-end'),
+  indicatortop('indicator-top'),
+  indicatormiddle('indicator-middle'),
+  indicatorbottom('indicator-bottom'),
+
+  none('');
+  final String value;
+  const IndicatorItemPlacement(this.value);
+  @override
+  String toString() => value.toString();
+}
+  class Indicator extends StatelessComponent {
+  final List<Component>? children;
+  final String? classes;
+  final Styles? styles;
+  final String? id;
+  final Map<String, String>? attributes;
+  final Map<String, EventCallback>? events;
+  final IndicatorPlacement? placement;
+  const Indicator(
+    this.children, {
+    this.classes,
+    this.id,
+    this.attributes,
+    this.events,
+    this.styles,
+    this.placement,
+});  String getClasses() {
+    List<String> output = [
+      'indicator',
+      if (modifier != null) modifier.toString(),
+      classes ?? '',
+    ];
+    return output.join(' ');
+  }
+
+  @override
+  Iterable<Component> build(BuildContext build) sync* {
+    yield DomComponent(
+      tag: 'a',
+      classes: getClasses(),
+      key: key,
+      id: id,
+      styles: styles,
+      children: children,
+      attributes: attributes,
+      events: events,
+    );
+  }
+}
