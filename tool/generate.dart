@@ -45,7 +45,7 @@ Map<String, String> mergeSections(
   Map<String, String> consts,
 ) {
   Map<String, String> merged = enums.map((k, v) {
-    return MapEntry(k, '$v\n${fields[k]!}\n${consts[k]}});');
+    return MapEntry(k, '$v\n${fields[k]!}\n${consts[k]}    super.key\n});');
   });
   return merged;
 }
@@ -115,7 +115,7 @@ class $name extends StatelessComponent {
     this.id,
     this.attributes,
     this.events,
-    super.key,
+    this.styles,
 ''';
       }
       output[c.label] = '${output[c.label]}$fields';
