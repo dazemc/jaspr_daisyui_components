@@ -5,12 +5,14 @@ enum JoinDirection {
   horizontal('join-horizontal'),
 
   none('');
+
   final String value;
   const JoinDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Join extends StatelessComponent {
+
+class Join extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -26,11 +28,9 @@ enum JoinDirection {
     this.events,
     this.styles,
     this.direction,
-});  String getClasses() {
-    List<String> output = [
-      'join',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['join', classes ?? ''];
     return output.join(' ');
   }
 

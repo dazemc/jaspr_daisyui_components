@@ -6,23 +6,26 @@ enum TimelineModifier {
   compact('timeline-compact'),
 
   none('');
+
   final String value;
   const TimelineModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TimelineDirection {
   horizontal('timeline-horizontal'),
   vertical('timeline-vertical'),
 
   none('');
+
   final String value;
   const TimelineDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Timeline extends StatelessComponent {
+
+class Timeline extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -40,11 +43,9 @@ enum TimelineDirection {
     this.styles,
     this.modifier,
     this.direction,
-});  String getClasses() {
-    List<String> output = [
-      'timeline',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['timeline', classes ?? ''];
     return output.join(' ');
   }
 

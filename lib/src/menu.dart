@@ -8,12 +8,13 @@ enum MenuSize {
   xl('menu-xl'),
 
   none('');
+
   final String value;
   const MenuSize(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
@@ -21,23 +22,26 @@ enum MenuModifier {
   menudropdownshow('menu-dropdown-show'),
 
   none('');
+
   final String value;
   const MenuModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum MenuDirection {
   vertical('menu-vertical'),
   horizontal('menu-horizontal'),
 
   none('');
+
   final String value;
   const MenuDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Menu extends StatelessComponent {
+
+class Menu extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -57,11 +61,9 @@ enum MenuDirection {
     this.modifier,
     this.size,
     this.direction,
-});  String getClasses() {
-    List<String> output = [
-      'menu',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['menu', classes ?? ''];
     return output.join(' ');
   }
 

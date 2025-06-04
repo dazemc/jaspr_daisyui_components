@@ -5,12 +5,14 @@ enum ListRowModifier {
   listcolgrow('list-col-grow'),
 
   none('');
+
   final String value;
   const ListRowModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class List extends StatelessComponent {
+
+class List extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -26,11 +28,9 @@ enum ListRowModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
-    List<String> output = [
-      'list',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['list', classes ?? ''];
     return output.join(' ');
   }
 

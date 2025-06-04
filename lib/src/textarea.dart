@@ -11,22 +11,24 @@ enum TextareaColor {
   error('textarea-error'),
 
   none('');
+
   final String value;
   const TextareaColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TextareaStyle {
   ghost('textarea-ghost'),
 
   none('');
+
   final String value;
   const TextareaStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TextareaSize {
   xs('textarea-xs'),
   sm('textarea-sm'),
@@ -35,12 +37,14 @@ enum TextareaSize {
   xl('textarea-xl'),
 
   none('');
+
   final String value;
   const TextareaSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Textarea extends StatelessComponent {
+
+class Textarea extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -60,11 +64,9 @@ enum TextareaSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'textarea',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['textarea', classes ?? ''];
     return output.join(' ');
   }
 

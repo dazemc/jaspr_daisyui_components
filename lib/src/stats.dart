@@ -5,12 +5,14 @@ enum StatsDirection {
   vertical('stats-vertical'),
 
   none('');
+
   final String value;
   const StatsDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Stats extends StatelessComponent {
+
+class Stats extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -26,11 +28,9 @@ enum StatsDirection {
     this.events,
     this.styles,
     this.direction,
-});  String getClasses() {
-    List<String> output = [
-      'stats',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['stats', classes ?? ''];
     return output.join(' ');
   }
 

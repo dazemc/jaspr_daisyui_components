@@ -11,22 +11,24 @@ enum SelectColor {
   error('select-error'),
 
   none('');
+
   final String value;
   const SelectColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum SelectStyle {
   ghost('select-ghost'),
 
   none('');
+
   final String value;
   const SelectStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum SelectSize {
   xs('select-xs'),
   sm('select-sm'),
@@ -35,12 +37,14 @@ enum SelectSize {
   xl('select-xl'),
 
   none('');
+
   final String value;
   const SelectSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Select extends StatelessComponent {
+
+class Select extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -60,11 +64,9 @@ enum SelectSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'select',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['select', classes ?? ''];
     return output.join(' ');
   }
 

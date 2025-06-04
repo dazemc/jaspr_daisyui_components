@@ -11,22 +11,24 @@ enum InputColor {
   error('input-error'),
 
   none('');
+
   final String value;
   const InputColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum InputStyle {
   ghost('input-ghost'),
 
   none('');
+
   final String value;
   const InputStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum InputSize {
   xs('input-xs'),
   sm('input-sm'),
@@ -35,12 +37,14 @@ enum InputSize {
   xl('input-xl'),
 
   none('');
+
   final String value;
   const InputSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Input extends StatelessComponent {
+
+class Input extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -60,11 +64,9 @@ enum InputSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'input',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['input', classes ?? ''];
     return output.join(' ');
   }
 

@@ -7,12 +7,14 @@ enum CollapseModifier {
   close('collapse-close'),
 
   none('');
+
   final String value;
   const CollapseModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Collapse extends StatelessComponent {
+
+class Collapse extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -28,11 +30,9 @@ enum CollapseModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
-    List<String> output = [
-      'collapse',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['collapse', classes ?? ''];
     return output.join(' ');
   }
 

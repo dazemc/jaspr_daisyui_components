@@ -11,23 +11,26 @@ enum ChatBubbleColor {
   error('chat-bubble-error'),
 
   none('');
+
   final String value;
   const ChatBubbleColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum ChatPlacement {
   start('chat-start'),
   end('chat-end'),
 
   none('');
+
   final String value;
   const ChatPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  class Chat extends StatelessComponent {
+
+class Chat extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -45,11 +48,9 @@ enum ChatPlacement {
     this.styles,
     this.placement,
     this.color,
-});  String getClasses() {
-    List<String> output = [
-      'chat',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['chat', classes ?? ''];
     return output.join(' ');
   }
 

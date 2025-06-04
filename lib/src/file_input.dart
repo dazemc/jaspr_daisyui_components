@@ -11,22 +11,24 @@ enum FileInputColor {
   error('file-input-error'),
 
   none('');
+
   final String value;
   const FileInputColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum FileInputStyle {
   ghost('file-input-ghost'),
 
   none('');
+
   final String value;
   const FileInputStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum FileInputSize {
   xs('file-input-xs'),
   sm('file-input-sm'),
@@ -35,12 +37,14 @@ enum FileInputSize {
   xl('file-input-xl'),
 
   none('');
+
   final String value;
   const FileInputSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class FileInput extends StatelessComponent {
+
+class FileInput extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -60,11 +64,9 @@ enum FileInputSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'file-input',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['file-input', classes ?? ''];
     return output.join(' ');
   }
 

@@ -9,12 +9,14 @@ enum IndicatorItemPlacement {
   indicatorbottom('indicator-bottom'),
 
   none('');
+
   final String value;
   const IndicatorItemPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  class Indicator extends StatelessComponent {
+
+class Indicator extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -30,11 +32,9 @@ enum IndicatorItemPlacement {
     this.events,
     this.styles,
     this.placement,
-});  String getClasses() {
-    List<String> output = [
-      'indicator',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['indicator', classes ?? ''];
     return output.join(' ');
   }
 

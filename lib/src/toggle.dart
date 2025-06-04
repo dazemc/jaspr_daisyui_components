@@ -11,12 +11,13 @@ enum ToggleColor {
   error('toggle-error'),
 
   none('');
+
   final String value;
   const ToggleColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum ToggleSize {
   xs('toggle-xs'),
   sm('toggle-sm'),
@@ -25,12 +26,14 @@ enum ToggleSize {
   xl('toggle-xl'),
 
   none('');
+
   final String value;
   const ToggleSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Toggle extends StatelessComponent {
+
+class Toggle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -48,11 +51,9 @@ enum ToggleSize {
     this.styles,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'toggle',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['toggle', classes ?? ''];
     return output.join(' ');
   }
 

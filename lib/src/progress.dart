@@ -11,12 +11,14 @@ enum ProgressColor {
   error('progress-error'),
 
   none('');
+
   final String value;
   const ProgressColor(this.value);
   @override
   String toString() => value.toString();
 }
-  class Progress extends StatelessComponent {
+
+class Progress extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -32,11 +34,9 @@ enum ProgressColor {
     this.events,
     this.styles,
     this.color,
-});  String getClasses() {
-    List<String> output = [
-      'progress',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['progress', classes ?? ''];
     return output.join(' ');
   }
 

@@ -1,0 +1,59 @@
+import 'package:jaspr/jaspr.dart';
+
+enum SwapStyle {
+  rotate('swap-rotate'),
+  flip('swap-flip'),
+
+  none('');
+
+  final String value;
+  const SwapStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+enum SwapModifier {
+  active('swap-active'),
+
+  none('');
+
+  final String value;
+  const SwapModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+class SwapOn extends StatelessComponent {
+  final List<Component>? children;
+  final String? classes;
+  final Styles? styles;
+  final String? id;
+  final Map<String, String>? attributes;
+  final Map<String, EventCallback>? events;
+  const SwapOn(
+    this.children, {
+    this.classes,
+    this.id,
+    this.attributes,
+    this.events,
+    this.styles,
+  });
+  String getClasses() {
+    List<String> output = ['swap-on', classes ?? ''];
+    return output.join(' ');
+  }
+
+  @override
+  Iterable<Component> build(BuildContext build) sync* {
+    yield DomComponent(
+      tag: 'div',
+      classes: getClasses(),
+      key: key,
+      id: id,
+      styles: styles,
+      children: children,
+      attributes: attributes,
+      events: events,
+    );
+  }
+}

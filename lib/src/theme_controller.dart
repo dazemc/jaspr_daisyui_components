@@ -1,26 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-enum SwapStyle {
-  rotate('swap-rotate'),
-  flip('swap-flip'),
-
-  none('');
-  final String value;
-  const SwapStyle(this.value);
-  @override
-  String toString() => value.toString();
-}
-  
-enum SwapModifier {
-  active('swap-active'),
-
-  none('');
-  final String value;
-  const SwapModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-  class ThemeController extends StatelessComponent {
+class ThemeController extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -34,12 +14,9 @@ enum SwapModifier {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'theme-controller',
-      if (modifier != null) modifier.toString(),
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['theme-controller', classes ?? ''];
     return output.join(' ');
   }
 

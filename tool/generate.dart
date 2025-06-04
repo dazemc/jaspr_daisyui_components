@@ -19,7 +19,7 @@ void main() async {
   List<DaisyuiComponent> componentTrees = buildRootStructure(components);
   appendRootChildren(componentTrees, components);
   appendSubChildren(componentTrees, components);
-  buildEnums(componentTrees);
+  buildEnums(components);
   buildFields(components);
   buildFunctions(components);
   writeComponentsToFile(components);
@@ -32,6 +32,9 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     String? header = c.enumString;
     String? body = c.fieldString;
     String? footer = c.footerString;
+    if (header == null) {
+      print(c);
+    }
     if (header != null && body != null && footer != null) {
       if (header.isNotEmpty && body.isNotEmpty && footer.isNotEmpty) {
         String output = '$header$body$footer';
@@ -152,20 +155,18 @@ void buildEnums(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     List<DaisyuiComponent> typedComponents =
         c.children.where((e) => !isComponent(e)).toList();
-    if (typedComponents.isNotEmpty) {
-      String enums = "";
-      for (String name in types) {
-        List<DaisyuiComponent> input =
-            typedComponents.where((e) => e.type == name).toList();
-        if (input.isNotEmpty) {
-          enums += buildCategory(input);
-        }
+    String enums = "";
+    for (String name in types) {
+      List<DaisyuiComponent> input =
+          typedComponents.where((e) => e.type == name).toList();
+      if (input.isNotEmpty) {
+        enums += buildCategory(input);
       }
-      if (!output.containsKey(c.label)) {
-        output[c.subParent] = '''import 'package:jaspr/jaspr.dart';''';
-      }
-      output[c.subParent] = '${output[c.subParent]}\n$enums';
     }
+    if (!output.containsKey(c.subParent)) {
+      output[c.subParent] = '''import 'package:jaspr/jaspr.dart';\n''';
+    }
+    output[c.subParent] = '${output[c.subParent]}\n$enums';
     c.enumString = output[c.subParent];
   }
 }

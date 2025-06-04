@@ -11,12 +11,13 @@ enum RadioColor {
   error('radio-error'),
 
   none('');
+
   final String value;
   const RadioColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum RadioSize {
   xs('radio-xs'),
   sm('radio-sm'),
@@ -25,12 +26,14 @@ enum RadioSize {
   xl('radio-xl'),
 
   none('');
+
   final String value;
   const RadioSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Radio extends StatelessComponent {
+
+class Radio extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -48,11 +51,9 @@ enum RadioSize {
     this.styles,
     this.color,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'radio',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['radio', classes ?? ''];
     return output.join(' ');
   }
 

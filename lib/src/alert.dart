@@ -7,35 +7,39 @@ enum AlertColor {
   error('alert-error'),
 
   none('');
+
   final String value;
   const AlertColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum AlertStyle {
   outline('alert-outline'),
   dash('alert-dash'),
   soft('alert-soft'),
 
   none('');
+
   final String value;
   const AlertStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum AlertDirection {
   vertical('alert-vertical'),
   horizontal('alert-horizontal'),
 
   none('');
+
   final String value;
   const AlertDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Alert extends StatelessComponent {
+
+class Alert extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -55,11 +59,9 @@ enum AlertDirection {
     this.style,
     this.color,
     this.direction,
-});  String getClasses() {
-    List<String> output = [
-      'alert',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['alert', classes ?? ''];
     return output.join(' ');
   }
 

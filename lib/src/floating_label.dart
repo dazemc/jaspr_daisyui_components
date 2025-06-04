@@ -1,36 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-enum ToggleColor {
-  primary('toggle-primary'),
-  secondary('toggle-secondary'),
-  accent('toggle-accent'),
-  neutral('toggle-neutral'),
-  success('toggle-success'),
-  warning('toggle-warning'),
-  info('toggle-info'),
-  error('toggle-error'),
-
-  none('');
-  final String value;
-  const ToggleColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-  
-enum ToggleSize {
-  xs('toggle-xs'),
-  sm('toggle-sm'),
-  md('toggle-md'),
-  lg('toggle-lg'),
-  xl('toggle-xl'),
-
-  none('');
-  final String value;
-  const ToggleSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-  class FloatingLabel extends StatelessComponent {
+class FloatingLabel extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -44,11 +14,9 @@ enum ToggleSize {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'floating-label',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['floating-label', classes ?? ''];
     return output.join(' ');
   }
 

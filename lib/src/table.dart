@@ -8,24 +8,27 @@ enum TableSize {
   xl('table-xl'),
 
   none('');
+
   final String value;
   const TableSize(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TableModifier {
   zebra('table-zebra'),
   pinrows('table-pin-rows'),
   pincols('table-pin-cols'),
 
   none('');
+
   final String value;
   const TableModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Table extends StatelessComponent {
+
+class Table extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -43,11 +46,9 @@ enum TableModifier {
     this.styles,
     this.modifier,
     this.size,
-});  String getClasses() {
-    List<String> output = [
-      'table',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['table', classes ?? ''];
     return output.join(' ');
   }
 

@@ -6,12 +6,14 @@ enum AvatarModifier {
   placeholder('avatar-placeholder'),
 
   none('');
+
   final String value;
   const AvatarModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Avatar extends StatelessComponent {
+
+class Avatar extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -27,11 +29,9 @@ enum AvatarModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
-    List<String> output = [
-      'avatar',
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['avatar', classes ?? ''];
     return output.join(' ');
   }
 
