@@ -322,7 +322,7 @@ def main() -> None:
     component_contents: List[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
     parse_html(components)
-    components = null_sub(components)
+    # components = null_sub(components)
     # heir_components = build_heirarchy(components)
     # check_components(heir_components)
 

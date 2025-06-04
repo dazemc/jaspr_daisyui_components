@@ -23,51 +23,49 @@ void main() async {
   List<DaisyuiComponent> componentTrees = buildRootStructure(components);
   appendRootChildren(componentTrees, components);
   appendSubChildren(componentTrees, components);
-  Map<String, String> componentEnums = buildEnums(componentTrees);
-  Map<String, Map> componentFieldsConst = buildFields(components);
-  Map<String, String> componentFields =
-      componentFieldsConst["fields"] as Map<String, String>;
-  Map<String, String> componentConstrutor =
-      componentFieldsConst["const"] as Map<String, String>;
-  Map<String, String> componentFunctions = buildFunctions(components);
-  print(componentFunctions);
+  buildEnums(componentTrees);
   buildFields(components);
-  Map<String, String> merged = mergeSections(
-    componentEnums,
-    componentFields,
-    componentConstrutor,
-  );
-  // print(merged);
+  buildFunctions(components);
+  writeComponentsToFile(components);
+  // print(components.firstWhere((e) => e.label == 'btn').enumString);
 }
 
-Map<String, String> mergeSections(
-  Map<String, String> enums,
-  Map<String, String> fields,
-  Map<String, String> consts,
-) {
-  Map<String, String> merged = enums.map((k, v) {
-    return MapEntry(k, '$v\n${fields[k]!}\n${consts[k]}    super.key\n});');
-  });
-  return merged;
+void writeComponentsToFile(List<DaisyuiComponent> components) async {
+  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
+    String name = c.label.replaceAll("-", "_");
+    String? header = c.enumString;
+    String? body = c.fieldString;
+    String? footer = c.footerString;
+    if (header != null && body != null && footer != null) {
+      if (header.isNotEmpty && body.isNotEmpty && footer.isNotEmpty) {
+        if (c.label == 'btn') {
+          print(c.fieldString);
+        }
+        String output = '$header$body$footer';
+        final file = File('../lib/src/$name.dart');
+        await file.writeAsString(output);
+      }
+    }
+  }
 }
-//
-// Map<String, String> buildConstructor(Map<String, String> fields) {
-//   fields.map((k, v) {
-//     return MapEntry(k, )
-//   });
-// }
 
-Map<String, String> buildFunctions(List<DaisyuiComponent> components) {
-  Map<String, String> output = {};
-  for (DaisyuiComponent c in components) {
+void buildFunctions(List<DaisyuiComponent> components) {
+  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = formatName(c.subParent ?? c.parent, "");
-    output[c.parent] = '''  String getClasses() {
+    Map<String, String> mappedCalls = {
+      "color": '      if (color != null) color.toString(),',
+      "style":
+          '      if (style != null) ...style!.map((style) => style.toString()),',
+      "size": '      if (size != null) size.toString(),',
+      "behavior": '      if (behavior != null) behavior.toString(),',
+      "placement": '      if (placement != null) placement.toString(),',
+      "direction": '      if (direction != null) direction.toString(),',
+    };
+    List<DaisyuiComponent> typed =
+        components.where((e) => e.subParent == name).toList();
+    c.footerString = '''  String getClasses() {
     List<String> output = [
       '${c.label}',
-      if (color != null) color.toString(),
-      if (${name}Style != null) ...${name}Style!.map((style) => style.toString()),
-      if (size != null) size.toString(),
-      if (behavior != null) behavior.toString(),
       if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
@@ -90,15 +88,11 @@ Map<String, String> buildFunctions(List<DaisyuiComponent> components) {
 }
 ''';
   }
-  return output;
 }
 
-Map<String, Map<dynamic, dynamic>> buildFields(
-  List<DaisyuiComponent> components,
-) {
+void buildFields(List<DaisyuiComponent> components) {
   Map<String, String> output = {};
   Map<String, String> outputConst = {};
-  Map<String, Map> keyed = {};
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = captialCase(c.label);
     List<String> utypes = [];
@@ -108,7 +102,7 @@ Map<String, Map<dynamic, dynamic>> buildFields(
         c.children.where((e) => !isComponent(e)).toList();
     Map<String, String> mappedTypes = {
       "color": '  final ${name}Color? color;\n',
-      "style": '  final List<${name}Style>? ${name}Style;\n',
+      "style": '  final List<${name}Style>? style;\n',
       "size": '  final ${name}Size? size;\n',
       "behavior": '  final ${name}Behavior? behavior;\n',
       "modifier": '  final ${name}Modifier? modifier;\n',
@@ -116,8 +110,8 @@ Map<String, Map<dynamic, dynamic>> buildFields(
       "direction": '  final ${name}Direction? direction;\n',
     };
     Map<String, String> mappedConst = {
-      "color": '    this.${name}Color? color;\n',
-      "style": '    this.${name}Style,\n',
+      "color": '    this.color,\n',
+      "style": '    this.style,\n',
       "size": '    this.size,\n',
       "behavior": '    this.behavior,\n',
       "modifier": '    this.modifier,\n',
@@ -125,16 +119,15 @@ Map<String, Map<dynamic, dynamic>> buildFields(
       "direction": '    this.direction,\n',
     };
 
-    if (types.isNotEmpty) {
-      for (DaisyuiComponent child in types) {
-        if (!utypes.contains(child.type)) {
-          utypes.add(child.type);
-          fields += mappedTypes[child.type] ?? '';
-          constructor += mappedConst[child.type] ?? '';
-        }
+    for (DaisyuiComponent child in types) {
+      if (!utypes.contains(child.type)) {
+        utypes.add(child.type);
+        fields += mappedTypes[child.type] ?? '';
+        constructor += mappedConst[child.type] ?? '';
       }
-      if (!output.containsKey(c.label)) {
-        output[c.label] = '''
+    }
+    if (!output.containsKey(c.label)) {
+      output[c.label] = '''
 class $name extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
@@ -143,9 +136,9 @@ class $name extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
 ''';
-      }
-      if (!outputConst.containsKey(c.label)) {
-        outputConst[c.label] = '''
+    }
+    if (!outputConst.containsKey(c.label)) {
+      outputConst[c.label] = '''
   const $name(
     this.children, {
     this.classes,
@@ -154,17 +147,13 @@ class $name extends StatelessComponent {
     this.events,
     this.styles,
 ''';
-      }
-      output[c.label] = '${output[c.label]}$fields';
-      outputConst[c.label] = '${outputConst[c.label]}$constructor';
     }
+    c.fieldString =
+        '${output[c.label]}$fields${outputConst[c.label]}$constructor});';
   }
-  keyed["fields"] = output;
-  keyed["const"] = outputConst;
-  return keyed;
 }
 
-Map<String, String> buildEnums(List<DaisyuiComponent> components) {
+void buildEnums(List<DaisyuiComponent> components) {
   Map<String, String> output = {};
   for (DaisyuiComponent c in components) {
     List<DaisyuiComponent> typedComponents =
@@ -179,12 +168,12 @@ Map<String, String> buildEnums(List<DaisyuiComponent> components) {
         }
       }
       if (!output.containsKey(c.label)) {
-        output[c.parent] = header;
+        output[c.subParent ?? c.parent] = header;
       }
-      output[c.parent] = '${output[c.parent]}\n$enums';
+      output[c.subParent ?? c.parent] = '${output[c.parent]}\n$enums';
     }
+    c.enumString = output[c.subParent ?? c.parent];
   }
-  return output;
 }
 
 bool isComponent(DaisyuiComponent component) {
@@ -295,22 +284,20 @@ String? getCategoryType(DaisyuiComponent input) {
   String? style = input.label
       .replaceFirst(input.parent, "")
       .replaceAll("-", "");
-  return "      $style('${input.label}'),\n";
+  return "$style('${input.label}'),\n";
 }
 
 String buildEnumLine(String pascalName, List<String> enums) {
   return """
 
-    enum $pascalName {
-      none('');
-${enums.join()}
-
-      final String value;
-      const $pascalName(this.value);
-      @override
-      String toString() => value.toString();
-    }
-
+enum $pascalName {
+  ${enums.join("  ")}
+  none('');
+  final String value;
+  const $pascalName(this.value);
+  @override
+  String toString() => value.toString();
+}
   """;
 }
 

@@ -12,6 +12,9 @@ class DaisyuiComponent {
   final List<String>? additionalAttributes;
   @JsonKey(defaultValue: [])
   List<DaisyuiComponent> children;
+  String? enumString;
+  String? fieldString;
+  String? footerString;
 
   DaisyuiComponent({
     required this.label,
@@ -20,6 +23,9 @@ class DaisyuiComponent {
     this.subParent,
     this.tag,
     this.additionalAttributes,
+    this.enumString,
+    this.fieldString,
+    this.footerString,
     List<DaisyuiComponent>? children,
   }) : children = children ?? [];
 

@@ -3,15 +3,7 @@
         "label": "stats",
         "type": "component",
         "parent": "stats",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "stats",
-        "type": "component",
-        "parent": "stats",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "stat",
@@ -71,14 +63,7 @@
         "type": "component",
         "parent": "select",
         "tag": "select",
-        "sub_parent": null
-    },
-    {
-        "label": "select",
-        "type": "component",
-        "parent": "select",
-        "tag": "select",
-        "sub_parent": null
+        "sub_parent": "fieldset"
     },
     {
         "label": "select-ghost",
@@ -168,15 +153,7 @@
         "label": "drawer",
         "type": "component",
         "parent": "drawer",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "drawer",
-        "type": "component",
-        "parent": "drawer",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "drawer-toggle",
@@ -232,19 +209,7 @@
         "additional_attributes": [
             "max",
             "value"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "progress",
-        "type": "component",
-        "parent": "progress",
-        "tag": "progress",
-        "additional_attributes": [
-            "max",
-            "value"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "progress-neutral",
@@ -298,15 +263,7 @@
         "label": "fieldset",
         "type": "component",
         "parent": "fieldset",
-        "tag": "fieldset",
-        "sub_parent": null
-    },
-    {
-        "label": "fieldset",
-        "type": "component",
-        "parent": "fieldset",
-        "tag": "fieldset",
-        "sub_parent": null
+        "tag": "fieldset"
     },
     {
         "label": "label",
@@ -329,18 +286,7 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "alert",
-        "type": "component",
-        "parent": "alert",
-        "tag": "div",
-        "additional_attributes": [
-            "role"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "alert-outline",
@@ -399,15 +345,7 @@
         "label": "divider",
         "type": "component",
         "parent": "divider",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "divider",
-        "type": "component",
-        "parent": "divider",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "divider-neutral",
@@ -484,15 +422,7 @@
         "label": "hero",
         "type": "component",
         "parent": "hero",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "hero",
-        "type": "component",
-        "parent": "hero",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "hero-content",
@@ -512,15 +442,7 @@
         "label": "link",
         "type": "component",
         "parent": "link",
-        "tag": "a",
-        "sub_parent": null
-    },
-    {
-        "label": "link",
-        "type": "component",
-        "parent": "link",
-        "tag": "a",
-        "sub_parent": null
+        "tag": "a"
     },
     {
         "label": "link-hover",
@@ -580,15 +502,7 @@
         "label": "kbd",
         "type": "component",
         "parent": "kbd",
-        "tag": "kbd",
-        "sub_parent": null
-    },
-    {
-        "label": "kbd",
-        "type": "component",
-        "parent": "kbd",
-        "tag": "kbd",
-        "sub_parent": null
+        "tag": "kbd"
     },
     {
         "label": "kbd-xs",
@@ -624,29 +538,13 @@
         "label": "mockup-code",
         "type": "component",
         "parent": "mockup-code",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "mockup-code",
-        "type": "component",
-        "parent": "mockup-code",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "loading",
         "type": "component",
         "parent": "loading",
-        "tag": "span",
-        "sub_parent": null
-    },
-    {
-        "label": "loading",
-        "type": "component",
-        "parent": "loading",
-        "tag": "span",
-        "sub_parent": null
+        "tag": "span"
     },
     {
         "label": "loading-spinner",
@@ -718,29 +616,13 @@
         "label": "skeleton",
         "type": "component",
         "parent": "skeleton",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "skeleton",
-        "type": "component",
-        "parent": "skeleton",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "swap",
         "type": "component",
         "parent": "swap",
-        "tag": "label",
-        "sub_parent": null
-    },
-    {
-        "label": "swap",
-        "type": "component",
-        "parent": "swap",
-        "tag": "label",
-        "sub_parent": null
+        "tag": "label"
     },
     {
         "label": "swap-on",
@@ -784,14 +666,7 @@
         "type": "component",
         "parent": "badge",
         "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "badge",
-        "type": "component",
-        "parent": "badge",
-        "tag": "div",
-        "sub_parent": null
+        "sub_parent": "btn"
     },
     {
         "label": "badge-outline",
@@ -903,19 +778,7 @@
         "additional_attributes": [
             "checked",
             "type"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "radio",
-        "type": "component",
-        "parent": "radio",
-        "tag": "input",
-        "additional_attributes": [
-            "checked",
-            "type"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "radio-neutral",
@@ -999,15 +862,7 @@
         "label": "navbar",
         "type": "component",
         "parent": "navbar",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "navbar",
-        "type": "component",
-        "parent": "navbar",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "navbar-start",
@@ -1034,15 +889,7 @@
         "label": "collapse",
         "type": "component",
         "parent": "collapse",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "collapse",
-        "type": "component",
-        "parent": "collapse",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "collapse-title",
@@ -1090,17 +937,7 @@
         "additional_attributes": [
             "placeholder"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "textarea",
-        "type": "component",
-        "parent": "textarea",
-        "tag": "textarea",
-        "additional_attributes": [
-            "placeholder"
-        ],
-        "sub_parent": null
+        "sub_parent": "fieldset"
     },
     {
         "label": "textarea-ghost",
@@ -1193,18 +1030,7 @@
         "tag": "button",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "btn",
-        "type": "component",
-        "parent": "btn",
-        "tag": "button",
-        "additional_attributes": [
-            "role"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "btn-neutral",
@@ -1353,15 +1179,7 @@
         "label": "chat",
         "type": "component",
         "parent": "chat",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "chat",
-        "type": "component",
-        "parent": "chat",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "chat-image",
@@ -1458,18 +1276,7 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "tabs",
-        "type": "component",
-        "parent": "tabs",
-        "tag": "div",
-        "additional_attributes": [
-            "role"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "tab",
@@ -1561,15 +1368,7 @@
         "label": "stack",
         "type": "component",
         "parent": "stack",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "stack",
-        "type": "component",
-        "parent": "stack",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "stack-top",
@@ -1598,15 +1397,7 @@
         "label": "join",
         "type": "component",
         "parent": "join",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "join",
-        "type": "component",
-        "parent": "join",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "join-item",
@@ -1636,21 +1427,7 @@
             "min",
             "type",
             "value"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "range",
-        "type": "component",
-        "parent": "range",
-        "tag": "input",
-        "additional_attributes": [
-            "max",
-            "min",
-            "type",
-            "value"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "range-neutral",
@@ -1739,18 +1516,7 @@
             "checked",
             "type"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "checkbox",
-        "type": "component",
-        "parent": "checkbox",
-        "tag": "input",
-        "additional_attributes": [
-            "checked",
-            "type"
-        ],
-        "sub_parent": null
+        "sub_parent": "label"
     },
     {
         "label": "checkbox-primary",
@@ -1837,32 +1603,13 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "radial-progress",
-        "type": "component",
-        "parent": "radial-progress",
-        "tag": "div",
-        "additional_attributes": [
-            "role"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "toast",
         "type": "component",
         "parent": "toast",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "toast",
-        "type": "component",
-        "parent": "toast",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "toast-start",
@@ -1903,15 +1650,7 @@
         "label": "steps",
         "type": "component",
         "parent": "steps",
-        "tag": "ul",
-        "sub_parent": null
-    },
-    {
-        "label": "steps",
-        "type": "component",
-        "parent": "steps",
-        "tag": "ul",
-        "sub_parent": null
+        "tag": "ul"
     },
     {
         "label": "step",
@@ -1990,14 +1729,7 @@
         "type": "component",
         "parent": "cally",
         "tag": "calendar-date",
-        "sub_parent": null
-    },
-    {
-        "label": "cally",
-        "type": "component",
-        "parent": "cally",
-        "tag": "calendar-date",
-        "sub_parent": null
+        "sub_parent": "dropdown"
     },
     {
         "label": "pika-single",
@@ -2023,18 +1755,7 @@
             "checked",
             "type"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "toggle",
-        "type": "component",
-        "parent": "toggle",
-        "tag": "input",
-        "additional_attributes": [
-            "checked",
-            "type"
-        ],
-        "sub_parent": null
+        "sub_parent": "label"
     },
     {
         "label": "toggle-primary",
@@ -2118,15 +1839,7 @@
         "label": "mockup-phone",
         "type": "component",
         "parent": "mockup-phone",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "mockup-phone",
-        "type": "component",
-        "parent": "mockup-phone",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "mockup-phone-camera",
@@ -2146,29 +1859,13 @@
         "label": "mockup-window",
         "type": "component",
         "parent": "mockup-window",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "mockup-window",
-        "type": "component",
-        "parent": "mockup-window",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "carousel",
         "type": "component",
         "parent": "carousel",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "carousel",
-        "type": "component",
-        "parent": "carousel",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "carousel-item",
@@ -2209,15 +1906,7 @@
         "label": "list",
         "type": "component",
         "parent": "list",
-        "tag": "ul",
-        "sub_parent": null
-    },
-    {
-        "label": "list",
-        "type": "component",
-        "parent": "list",
-        "tag": "ul",
-        "sub_parent": null
+        "tag": "ul"
     },
     {
         "label": "list-row",
@@ -2242,15 +1931,7 @@
         "label": "tooltip",
         "type": "component",
         "parent": "tooltip",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "tooltip",
-        "type": "component",
-        "parent": "tooltip",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "tooltip-content",
@@ -2341,15 +2022,7 @@
         "label": "dock",
         "type": "component",
         "parent": "dock",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "dock",
-        "type": "component",
-        "parent": "dock",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "dock-label",
@@ -2401,19 +2074,7 @@
         "additional_attributes": [
             "id",
             "role"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "modal",
-        "type": "component",
-        "parent": "modal",
-        "tag": "div",
-        "additional_attributes": [
-            "id",
-            "role"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "modal-box",
@@ -2481,15 +2142,7 @@
         "label": "menu",
         "type": "component",
         "parent": "menu",
-        "tag": "ul",
-        "sub_parent": null
-    },
-    {
-        "label": "menu",
-        "type": "component",
-        "parent": "menu",
-        "tag": "ul",
-        "sub_parent": null
+        "tag": "ul"
     },
     {
         "label": "menu-title",
@@ -2578,15 +2231,7 @@
         "label": "table",
         "type": "component",
         "parent": "table",
-        "tag": "table",
-        "sub_parent": null
-    },
-    {
-        "label": "table",
-        "type": "component",
-        "parent": "table",
-        "tag": "table",
-        "sub_parent": null
+        "tag": "table"
     },
     {
         "label": "table-zebra",
@@ -2639,18 +2284,7 @@
         "tag": "select",
         "additional_attributes": [
             "required"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "validator",
-        "type": "component",
-        "parent": "validator",
-        "tag": "select",
-        "additional_attributes": [
-            "required"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "validator-hint",
@@ -2662,15 +2296,7 @@
         "label": "card",
         "type": "component",
         "parent": "card",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "card",
-        "type": "component",
-        "parent": "card",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "card-title",
@@ -2751,29 +2377,13 @@
         "label": "breadcrumbs",
         "type": "component",
         "parent": "breadcrumbs",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "breadcrumbs",
-        "type": "component",
-        "parent": "breadcrumbs",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "countdown",
         "type": "component",
         "parent": "countdown",
-        "tag": "span",
-        "sub_parent": null
-    },
-    {
-        "label": "countdown",
-        "type": "component",
-        "parent": "countdown",
-        "tag": "span",
-        "sub_parent": null
+        "tag": "span"
     },
     {
         "label": "floating-label",
@@ -2785,15 +2395,7 @@
         "label": "rating",
         "type": "component",
         "parent": "rating",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "rating",
-        "type": "component",
-        "parent": "rating",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "rating-half",
@@ -2842,14 +2444,7 @@
         "type": "component",
         "parent": "avatar",
         "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "avatar",
-        "type": "component",
-        "parent": "avatar",
-        "tag": "div",
-        "sub_parent": null
+        "sub_parent": "avatar-group"
     },
     {
         "label": "avatar-group",
@@ -2879,15 +2474,7 @@
         "label": "mask",
         "type": "component",
         "parent": "mask",
-        "tag": "img",
-        "sub_parent": null
-    },
-    {
-        "label": "mask",
-        "type": "component",
-        "parent": "mask",
-        "tag": "img",
-        "sub_parent": null
+        "tag": "img"
     },
     {
         "label": "mask-squircle",
@@ -2996,18 +2583,7 @@
         "tag": "div",
         "additional_attributes": [
             "id"
-        ],
-        "sub_parent": null
-    },
-    {
-        "label": "dropdown",
-        "type": "component",
-        "parent": "dropdown",
-        "tag": "div",
-        "additional_attributes": [
-            "id"
-        ],
-        "sub_parent": null
+        ]
     },
     {
         "label": "dropdown-content",
@@ -3075,14 +2651,7 @@
         "type": "component",
         "parent": "indicator",
         "tag": "a",
-        "sub_parent": null
-    },
-    {
-        "label": "indicator",
-        "type": "component",
-        "parent": "indicator",
-        "tag": "a",
-        "sub_parent": null
+        "sub_parent": "tabs"
     },
     {
         "label": "indicator-item",
@@ -3131,15 +2700,7 @@
         "label": "timeline",
         "type": "component",
         "parent": "timeline",
-        "tag": "ul",
-        "sub_parent": null
-    },
-    {
-        "label": "timeline",
-        "type": "component",
-        "parent": "timeline",
-        "tag": "ul",
-        "sub_parent": null
+        "tag": "ul"
     },
     {
         "label": "timeline-start",
@@ -3196,18 +2757,7 @@
             "placeholder",
             "type"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "input",
-        "type": "component",
-        "parent": "input",
-        "tag": "input",
-        "additional_attributes": [
-            "placeholder",
-            "type"
-        ],
-        "sub_parent": null
+        "sub_parent": "fieldset"
     },
     {
         "label": "input-ghost",
@@ -3297,15 +2847,7 @@
         "label": "footer",
         "type": "component",
         "parent": "footer",
-        "tag": "footer",
-        "sub_parent": null
-    },
-    {
-        "label": "footer",
-        "type": "component",
-        "parent": "footer",
-        "tag": "footer",
-        "sub_parent": null
+        "tag": "footer"
     },
     {
         "label": "footer-title",
@@ -3334,15 +2876,7 @@
         "label": "mockup-browser",
         "type": "component",
         "parent": "mockup-browser",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "mockup-browser",
-        "type": "component",
-        "parent": "mockup-browser",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "mockup-browser-toolbar",
@@ -3355,15 +2889,7 @@
         "label": "status",
         "type": "component",
         "parent": "status",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "status",
-        "type": "component",
-        "parent": "status",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "status-neutral",
@@ -3451,17 +2977,7 @@
         "additional_attributes": [
             "type"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "file-input",
-        "type": "component",
-        "parent": "file-input",
-        "tag": "input",
-        "additional_attributes": [
-            "type"
-        ],
-        "sub_parent": null
+        "sub_parent": "fieldset"
     },
     {
         "label": "file-input-ghost",
@@ -3551,15 +3067,7 @@
         "label": "diff",
         "type": "component",
         "parent": "diff",
-        "tag": "figure",
-        "sub_parent": null
-    },
-    {
-        "label": "diff",
-        "type": "component",
-        "parent": "diff",
-        "tag": "figure",
-        "sub_parent": null
+        "tag": "figure"
     },
     {
         "label": "diff-item-1",
@@ -3592,15 +3100,7 @@
         "label": "filter",
         "type": "component",
         "parent": "filter",
-        "tag": "div",
-        "sub_parent": null
-    },
-    {
-        "label": "filter",
-        "type": "component",
-        "parent": "filter",
-        "tag": "div",
-        "sub_parent": null
+        "tag": "div"
     },
     {
         "label": "filter-reset",
@@ -3621,17 +3121,6 @@
             "type",
             "value"
         ],
-        "sub_parent": null
-    },
-    {
-        "label": "theme-controller",
-        "type": "component",
-        "parent": "theme-controller",
-        "tag": "input",
-        "additional_attributes": [
-            "type",
-            "value"
-        ],
-        "sub_parent": null
+        "sub_parent": "swap"
     }
 ]
