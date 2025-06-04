@@ -24,20 +24,29 @@ void main() async {
   appendRootChildren(componentTrees, components);
   appendSubChildren(componentTrees, components);
   Map<String, String> componentEnums = buildEnums(componentTrees);
-  Map<String, String> componentFields = buildFields(components);
+  Map<String, Map> componentFieldsConst = buildFields(components);
+  Map<String, String> componentFields =
+      componentFieldsConst["fields"] as Map<String, String>;
+  Map<String, String> componentConstrutor =
+      componentFieldsConst["const"] as Map<String, String>;
   buildComponent(componentTrees);
   buildFields(components);
-  mergeSections(componentEnums, componentFields);
+  Map<String, String> merged = mergeSections(
+    componentEnums,
+    componentFields,
+    componentConstrutor,
+  );
+  print(merged);
 }
 
 Map<String, String> mergeSections(
   Map<String, String> enums,
   Map<String, String> fields,
+  Map<String, String> consts,
 ) {
   Map<String, String> merged = enums.map((k, v) {
-    return MapEntry(k, '$v\n${fields[k]!}');
+    return MapEntry(k, '$v\n${fields[k]!}\n${consts[k]}});');
   });
-  print(merged);
   return merged;
 }
 //
@@ -47,12 +56,17 @@ Map<String, String> mergeSections(
 //   });
 // }
 
-Map<String, String> buildFields(List<DaisyuiComponent> components) {
+Map<String, Map<dynamic, dynamic>> buildFields(
+  List<DaisyuiComponent> components,
+) {
   Map<String, String> output = {};
+  Map<String, String> outputConst = {};
+  Map<String, Map> keyed = {};
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = captialCase(c.label);
     List<String> utypes = [];
     String fields = '';
+    String constructor = '';
     List<DaisyuiComponent> types =
         c.children.where((e) => !isComponent(e)).toList();
     Map<String, String> mappedTypes = {
@@ -64,12 +78,22 @@ Map<String, String> buildFields(List<DaisyuiComponent> components) {
       "placement": '  final ${name}Placement? placement;\n',
       "direction": '  final ${name}Direction? direction;\n',
     };
+    Map<String, String> mappedConst = {
+      "color": '    this.${name}Color? color;\n',
+      "style": '    this.${name}Style,\n',
+      "size": '    this.size,\n',
+      "behavior": '    this.behavior,\n',
+      "modifier": '    this.modifier,\n',
+      "placement": '    this.placement,\n',
+      "direction": '    this.direction,\n',
+    };
 
     if (types.isNotEmpty) {
       for (DaisyuiComponent child in types) {
         if (!utypes.contains(child.type)) {
           utypes.add(child.type);
-          fields += mappedTypes[child.type] ?? "";
+          fields += mappedTypes[child.type] ?? '';
+          constructor += mappedConst[child.type] ?? '';
         }
       }
       if (!output.containsKey(c.label)) {
@@ -83,10 +107,24 @@ class $name extends StatelessComponent {
   final Map<String, EventCallback>? events;
 ''';
       }
-      output[c.label] = '${output[c.label]!}$fields';
+      if (!outputConst.containsKey(c.label)) {
+        outputConst[c.label] = '''
+  const $name(
+    this.children, {
+    this.classes,
+    this.id,
+    this.attributes,
+    this.events,
+    super.key,
+''';
+      }
+      output[c.label] = '${output[c.label]}$fields';
+      outputConst[c.label] = '${outputConst[c.label]}$constructor';
     }
   }
-  return output;
+  keyed["fields"] = output;
+  keyed["const"] = outputConst;
+  return keyed;
 }
 
 Map<String, String> buildEnums(List<DaisyuiComponent> components) {
@@ -272,15 +310,6 @@ void buildComponent(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = captialCase(c.label);
     String output = """
-  const $name(
-    this.children, {
-    this.classes,
-    this.color,
-    this.${name}Style,
-    this.size,
-    this.behavior,
-    this.modifier,
-    this.styles,
     this.id,
     this.attributes,
     this.events,
