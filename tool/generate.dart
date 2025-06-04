@@ -29,14 +29,15 @@ void main() async {
       componentFieldsConst["fields"] as Map<String, String>;
   Map<String, String> componentConstrutor =
       componentFieldsConst["const"] as Map<String, String>;
-  buildComponent(componentTrees);
+  Map<String, String> componentFunctions = buildFunctions(components);
+  print(componentFunctions);
   buildFields(components);
   Map<String, String> merged = mergeSections(
     componentEnums,
     componentFields,
     componentConstrutor,
   );
-  print(merged);
+  // print(merged);
 }
 
 Map<String, String> mergeSections(
@@ -55,6 +56,42 @@ Map<String, String> mergeSections(
 //     return MapEntry(k, )
 //   });
 // }
+
+Map<String, String> buildFunctions(List<DaisyuiComponent> components) {
+  Map<String, String> output = {};
+  for (DaisyuiComponent c in components) {
+    String name = formatName(c.subParent ?? c.parent, "");
+    output[c.parent] = '''  String getClasses() {
+    List<String> output = [
+      '${c.label}',
+      if (color != null) color.toString(),
+      if (${name}Style != null) ...${name}Style!.map((style) => style.toString()),
+      if (size != null) size.toString(),
+      if (behavior != null) behavior.toString(),
+      if (modifier != null) modifier.toString(),
+      classes ?? '',
+    ];
+    return output.join(' ');
+  }
+
+  @override
+  Iterable<Component> build(BuildContext build) sync* {
+    yield DomComponent(
+      tag: '${c.tag}',
+      classes: getClasses(),
+      key: key,
+      id: id,
+      styles: styles,
+      children: children,
+      attributes: attributes,
+      events: events,
+    );
+  }
+}
+''';
+  }
+  return output;
+}
 
 Map<String, Map<dynamic, dynamic>> buildFields(
   List<DaisyuiComponent> components,
