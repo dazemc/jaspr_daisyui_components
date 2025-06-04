@@ -32,7 +32,6 @@ enum KbdSize {
 });  String getClasses() {
     List<String> output = [
       'kbd',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

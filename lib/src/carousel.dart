@@ -43,7 +43,6 @@ enum CarouselDirection {
 });  String getClasses() {
     List<String> output = [
       'carousel',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

@@ -62,7 +62,6 @@ enum TooltipPlacement {
 });  String getClasses() {
     List<String> output = [
       'tooltip',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

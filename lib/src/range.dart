@@ -51,7 +51,6 @@ enum RangeSize {
 });  String getClasses() {
     List<String> output = [
       'range',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

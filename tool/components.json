@@ -641,7 +641,8 @@
     {
         "label": "swap-indeterminate",
         "type": "part",
-        "parent": "swap"
+        "parent": "swap",
+        "sub_parent": "swap"
     },
     {
         "label": "swap-active",
@@ -3121,6 +3122,6 @@
             "type",
             "value"
         ],
-        "sub_parent": "swap"
+        "sub_parent": "theme-controller"
     }
 ]

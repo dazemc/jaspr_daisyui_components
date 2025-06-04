@@ -51,7 +51,6 @@ enum CheckboxSize {
 });  String getClasses() {
     List<String> output = [
       'checkbox',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

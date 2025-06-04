@@ -41,7 +41,6 @@ enum FooterDirection {
 });  String getClasses() {
     List<String> output = [
       'footer',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

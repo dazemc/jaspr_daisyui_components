@@ -58,7 +58,6 @@ enum AlertDirection {
 });  String getClasses() {
     List<String> output = [
       'alert',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

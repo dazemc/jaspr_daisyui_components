@@ -51,7 +51,6 @@ enum RadioSize {
 });  String getClasses() {
     List<String> output = [
       'radio',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

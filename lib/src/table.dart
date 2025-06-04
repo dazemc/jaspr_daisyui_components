@@ -46,7 +46,6 @@ enum TableModifier {
 });  String getClasses() {
     List<String> output = [
       'table',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

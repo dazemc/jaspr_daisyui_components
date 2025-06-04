@@ -47,7 +47,6 @@ enum ToggleSize {
 });  String getClasses() {
     List<String> output = [
       'floating-label',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

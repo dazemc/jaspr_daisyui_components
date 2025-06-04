@@ -51,7 +51,6 @@ enum ToggleSize {
 });  String getClasses() {
     List<String> output = [
       'toggle',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

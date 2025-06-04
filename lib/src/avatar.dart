@@ -30,7 +30,6 @@ enum AvatarModifier {
 });  String getClasses() {
     List<String> output = [
       'avatar',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

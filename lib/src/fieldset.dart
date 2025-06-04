@@ -57,7 +57,6 @@ enum SelectSize {
 });  String getClasses() {
     List<String> output = [
       'fieldset',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

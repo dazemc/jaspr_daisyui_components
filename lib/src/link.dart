@@ -47,7 +47,6 @@ enum LinkStyle {
 });  String getClasses() {
     List<String> output = [
       'link',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

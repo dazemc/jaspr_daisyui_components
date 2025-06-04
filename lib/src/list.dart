@@ -29,7 +29,6 @@ enum ListRowModifier {
 });  String getClasses() {
     List<String> output = [
       'list',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

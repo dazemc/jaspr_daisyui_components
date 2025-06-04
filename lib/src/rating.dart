@@ -45,7 +45,6 @@ enum RatingModifier {
 });  String getClasses() {
     List<String> output = [
       'rating',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

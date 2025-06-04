@@ -48,7 +48,6 @@ enum ChatPlacement {
 });  String getClasses() {
     List<String> output = [
       'chat',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

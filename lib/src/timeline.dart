@@ -43,7 +43,6 @@ enum TimelineDirection {
 });  String getClasses() {
     List<String> output = [
       'timeline',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

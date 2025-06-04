@@ -58,7 +58,6 @@ enum CardModifier {
 });  String getClasses() {
     List<String> output = [
       'card',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

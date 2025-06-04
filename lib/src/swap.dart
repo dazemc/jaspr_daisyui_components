@@ -41,7 +41,6 @@ enum SwapModifier {
 });  String getClasses() {
     List<String> output = [
       'swap',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

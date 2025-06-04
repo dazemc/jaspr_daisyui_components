@@ -63,7 +63,6 @@ enum TextareaSize {
 });  String getClasses() {
     List<String> output = [
       'textarea',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

@@ -157,7 +157,6 @@ void buildEnums(List<DaisyuiComponent> components) {
       for (String name in types) {
         List<DaisyuiComponent> input =
             typedComponents.where((e) => e.type == name).toList();
-        typedComponents.forEach(print);
         if (input.isNotEmpty) {
           enums += buildCategory(input);
         }

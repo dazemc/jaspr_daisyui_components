@@ -63,7 +63,6 @@ enum SelectSize {
 });  String getClasses() {
     List<String> output = [
       'select',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

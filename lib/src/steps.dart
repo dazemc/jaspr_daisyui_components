@@ -48,7 +48,6 @@ enum StepsDirection {
 });  String getClasses() {
     List<String> output = [
       'steps',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

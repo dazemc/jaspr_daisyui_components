@@ -44,7 +44,6 @@ enum DockModifier {
 });  String getClasses() {
     List<String> output = [
       'dock',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

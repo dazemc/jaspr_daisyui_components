@@ -289,6 +289,7 @@ def check_components(components: Dict[str, Component]) -> None:
         if c.get("sub_parent", False) is None:
             print(f"🛑 {name} has a malform sub parent!")
 
+
 def null_sub(components: List[Component]) -> List[Component]:
     output: List[Component] = []
     for c in components:
@@ -297,11 +298,16 @@ def null_sub(components: List[Component]) -> List[Component]:
         output.append(c)
     return output
 
-def unique_components(components: List[Dict]):
+
+def unique_components(components: List[Component]):
     # TODO:
     for component in components:
         name: str = component["label"]
         match name:
+            case "theme-controller":
+                component["sub_parent"] = component["label"]
+            case "swap-indeterminate":
+                component["sub_parent"] = component["parent"]
             case "select":
                 # Probably hand this off to the generate part
                 pass
@@ -316,11 +322,14 @@ def unique_components(components: List[Dict]):
                 pass
 
 
+
+
 def main() -> None:
     components_dirs: List[str] = extract_dirs()
     component_contents: List[TextIOWrapper] = extract_files(components_dirs)
     components = extract_documentation(component_contents)
     parse_html(components)
+    unique_components(components)
     # components = null_sub(components)
     # heir_components = build_heirarchy(components)
     # check_components(heir_components)

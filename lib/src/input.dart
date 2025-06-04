@@ -63,7 +63,6 @@ enum InputSize {
 });  String getClasses() {
     List<String> output = [
       'input',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

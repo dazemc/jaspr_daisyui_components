@@ -31,7 +31,6 @@ enum StackModifier {
 });  String getClasses() {
     List<String> output = [
       'stack',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

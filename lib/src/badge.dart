@@ -66,7 +66,6 @@ enum BadgeSize {
 });  String getClasses() {
     List<String> output = [
       'badge',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

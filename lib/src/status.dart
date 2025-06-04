@@ -51,7 +51,6 @@ enum StatusSize {
 });  String getClasses() {
     List<String> output = [
       'status',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

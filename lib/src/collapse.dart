@@ -31,7 +31,6 @@ enum CollapseModifier {
 });  String getClasses() {
     List<String> output = [
       'collapse',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

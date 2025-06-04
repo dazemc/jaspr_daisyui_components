@@ -33,7 +33,6 @@ enum IndicatorItemPlacement {
 });  String getClasses() {
     List<String> output = [
       'indicator',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

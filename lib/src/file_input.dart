@@ -63,7 +63,6 @@ enum FileInputSize {
 });  String getClasses() {
     List<String> output = [
       'file-input',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

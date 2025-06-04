@@ -60,7 +60,6 @@ enum MenuDirection {
 });  String getClasses() {
     List<String> output = [
       'menu',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

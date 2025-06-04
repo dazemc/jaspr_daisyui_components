@@ -55,7 +55,6 @@ enum MaskModifier {
 });  String getClasses() {
     List<String> output = [
       'mask',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

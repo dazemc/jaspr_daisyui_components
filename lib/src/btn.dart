@@ -140,7 +140,6 @@ enum BtnModifier {
 });  String getClasses() {
     List<String> output = [
       'btn',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

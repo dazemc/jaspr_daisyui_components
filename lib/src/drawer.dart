@@ -40,7 +40,6 @@ enum DrawerPlacement {
 });  String getClasses() {
     List<String> output = [
       'drawer',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

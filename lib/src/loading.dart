@@ -49,7 +49,6 @@ enum LoadingSize {
 });  String getClasses() {
     List<String> output = [
       'loading',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

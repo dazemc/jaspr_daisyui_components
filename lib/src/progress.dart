@@ -35,7 +35,6 @@ enum ProgressColor {
 });  String getClasses() {
     List<String> output = [
       'progress',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

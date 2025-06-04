@@ -33,7 +33,6 @@ enum ToastPlacement {
 });  String getClasses() {
     List<String> output = [
       'toast',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

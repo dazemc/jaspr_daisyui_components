@@ -72,7 +72,6 @@ enum TabsPlacement {
 });  String getClasses() {
     List<String> output = [
       'tabs',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

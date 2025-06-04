@@ -61,7 +61,6 @@ enum DividerDirection {
 });  String getClasses() {
     List<String> output = [
       'divider',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

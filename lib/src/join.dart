@@ -29,7 +29,6 @@ enum JoinDirection {
 });  String getClasses() {
     List<String> output = [
       'join',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

@@ -29,7 +29,6 @@ enum StatsDirection {
 });  String getClasses() {
     List<String> output = [
       'stats',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

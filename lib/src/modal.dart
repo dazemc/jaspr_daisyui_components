@@ -44,7 +44,6 @@ enum ModalPlacement {
 });  String getClasses() {
     List<String> output = [
       'modal',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');

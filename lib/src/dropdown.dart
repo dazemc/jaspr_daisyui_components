@@ -47,7 +47,6 @@ enum DropdownPlacement {
 });  String getClasses() {
     List<String> output = [
       'dropdown',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');
