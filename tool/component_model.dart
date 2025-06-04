@@ -7,7 +7,7 @@ class DaisyuiComponent {
   final String label;
   final String type;
   final String parent;
-  final String? subParent;
+  final String subParent;
   final String? tag;
   final List<String>? additionalAttributes;
   @JsonKey(defaultValue: [])
@@ -20,7 +20,7 @@ class DaisyuiComponent {
     required this.label,
     required this.type,
     required this.parent,
-    this.subParent,
+    required this.subParent,
     this.tag,
     this.additionalAttributes,
     this.enumString,

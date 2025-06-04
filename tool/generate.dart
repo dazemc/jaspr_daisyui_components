@@ -13,10 +13,6 @@ List<String> types = [
   "direction",
 ];
 
-String header = '''
-import 'package:jaspr/jaspr.dart';
-''';
-
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
@@ -38,9 +34,6 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     String? footer = c.footerString;
     if (header != null && body != null && footer != null) {
       if (header.isNotEmpty && body.isNotEmpty && footer.isNotEmpty) {
-        if (c.label == 'btn') {
-          print(c.fieldString);
-        }
         String output = '$header$body$footer';
         final file = File('../lib/src/$name.dart');
         await file.writeAsString(output);
@@ -50,8 +43,9 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
 }
 
 void buildFunctions(List<DaisyuiComponent> components) {
+  //TODO:
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = formatName(c.subParent ?? c.parent, "");
+    String name = formatName(c.subParent, "");
     Map<String, String> mappedCalls = {
       "color": '      if (color != null) color.toString(),',
       "style":
@@ -60,13 +54,13 @@ void buildFunctions(List<DaisyuiComponent> components) {
       "behavior": '      if (behavior != null) behavior.toString(),',
       "placement": '      if (placement != null) placement.toString(),',
       "direction": '      if (direction != null) direction.toString(),',
+      "modifier": '      if (modifier != null) modifier.toString(),',
     };
     List<DaisyuiComponent> typed =
         components.where((e) => e.subParent == name).toList();
     c.footerString = '''  String getClasses() {
     List<String> output = [
       '${c.label}',
-      if (modifier != null) modifier.toString(),
       classes ?? '',
     ];
     return output.join(' ');
@@ -155,7 +149,7 @@ class $name extends StatelessComponent {
 
 void buildEnums(List<DaisyuiComponent> components) {
   Map<String, String> output = {};
-  for (DaisyuiComponent c in components) {
+  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     List<DaisyuiComponent> typedComponents =
         c.children.where((e) => !isComponent(e)).toList();
     if (typedComponents.isNotEmpty) {
@@ -163,16 +157,17 @@ void buildEnums(List<DaisyuiComponent> components) {
       for (String name in types) {
         List<DaisyuiComponent> input =
             typedComponents.where((e) => e.type == name).toList();
+        typedComponents.forEach(print);
         if (input.isNotEmpty) {
           enums += buildCategory(input);
         }
       }
       if (!output.containsKey(c.label)) {
-        output[c.subParent ?? c.parent] = header;
+        output[c.subParent] = '''import 'package:jaspr/jaspr.dart';''';
       }
-      output[c.subParent ?? c.parent] = '${output[c.parent]}\n$enums';
+      output[c.subParent] = '${output[c.subParent]}\n$enums';
     }
-    c.enumString = output[c.subParent ?? c.parent];
+    c.enumString = output[c.subParent];
   }
 }
 
@@ -251,7 +246,7 @@ DaisyuiComponent convertToModel(Map<String, dynamic> value) {
     label: value['label'],
     type: value['type'],
     parent: value['parent'],
-    subParent: value['sub_parent'],
+    subParent: value['sub_parent'] ?? value['parent'],
     tag: value['tag'],
     additionalAttributes: value['additional_attributtes'],
   );
@@ -282,7 +277,7 @@ List<DaisyuiComponent> getCategory(List<DaisyuiComponent> input, String type) {
 
 String? getCategoryType(DaisyuiComponent input) {
   String? style = input.label
-      .replaceFirst(input.parent, "")
+      .replaceFirst(input.subParent, "")
       .replaceAll("-", "");
   return "$style('${input.label}'),\n";
 }
@@ -308,14 +303,14 @@ String capitalize(String str) {
 
 String buildCategory(List<DaisyuiComponent> input) {
   String pascalName = formatName(
-    input.first.subParent ?? input.first.parent,
+    input.first.subParent,
     capitalize(input.first.type),
   );
   List<String> categoryStrings = [];
   for (DaisyuiComponent c in input) {
-    String? colorType = getCategoryType(c);
-    if (colorType != null) {
-      categoryStrings.add(colorType);
+    String? type = getCategoryType(c);
+    if (type != null) {
+      categoryStrings.add(type);
     }
   }
   return buildEnumLine(pascalName, categoryStrings);

@@ -51,7 +51,7 @@ class Component(TypedDict):
     html: Optional[List[str]]
     tag: Optional[str]
     children: Optional[List[Dict]]
-    sub_parent: Optional[str]
+    sub_parent: str
     additional_attributes: Optional[List[str]]
 
 
@@ -293,7 +293,6 @@ def null_sub(components: List[Component]) -> List[Component]:
     output: List[Component] = []
     for c in components:
         if c["label"] == c["parent"]:
-            c["sub_parent"] = None
             output.append(c)
         output.append(c)
     return output
