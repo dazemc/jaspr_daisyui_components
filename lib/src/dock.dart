@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum DockSize {
   xs('dock-xs'),
   sm('dock-sm'),
@@ -8,25 +9,22 @@ enum DockSize {
   xl('dock-xl'),
 
   none('');
-
   final String value;
   const DockSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum DockModifier {
   active('dock-active'),
 
   none('');
-
   final String value;
   const DockModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Dock extends StatelessComponent {
+  class Dock extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -44,9 +42,14 @@ class Dock extends StatelessComponent {
     this.styles,
     this.modifier,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['dock', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'dock',
+            if (modifier != null) modifier.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

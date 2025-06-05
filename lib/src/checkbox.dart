@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum CheckboxColor {
   primary('checkbox-primary'),
   secondary('checkbox-secondary'),
@@ -11,13 +12,12 @@ enum CheckboxColor {
   error('checkbox-error'),
 
   none('');
-
   final String value;
   const CheckboxColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum CheckboxSize {
   xs('checkbox-xs'),
   sm('checkbox-sm'),
@@ -26,14 +26,12 @@ enum CheckboxSize {
   xl('checkbox-xl'),
 
   none('');
-
   final String value;
   const CheckboxSize(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Checkbox extends StatelessComponent {
+  class Checkbox extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -51,9 +49,14 @@ class Checkbox extends StatelessComponent {
     this.styles,
     this.color,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['checkbox', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'checkbox',
+            if (color != null) color.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

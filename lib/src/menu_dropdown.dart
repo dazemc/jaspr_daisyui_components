@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum MenuSize {
   xs('menu-xs'),
   sm('menu-sm'),
@@ -8,56 +9,56 @@ enum MenuSize {
   xl('menu-xl'),
 
   none('');
-
   final String value;
   const MenuSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
   focus('menu-focus'),
-  menudropdownshow('menu-dropdown-show'),
 
   none('');
-
   final String value;
   const MenuModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum MenuDirection {
   vertical('menu-vertical'),
   horizontal('menu-horizontal'),
 
   none('');
-
   final String value;
   const MenuDirection(this.value);
   @override
   String toString() => value.toString();
 }
+  
 
-class MenuDropdown extends StatelessComponent {
+class Menu extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const MenuDropdown(
+  const Menu(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['menu-dropdown', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'menu-dropdown',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

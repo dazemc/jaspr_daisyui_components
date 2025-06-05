@@ -1,17 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum ListRowModifier {
-  listcolwrap('list-col-wrap'),
-  listcolgrow('list-col-grow'),
-
-  none('');
-
-  final String value;
-  const ListRowModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class List extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
@@ -19,7 +7,6 @@ class List extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final ListModifier? modifier;
   const List(
     this.children, {
     this.classes,
@@ -27,10 +14,12 @@ class List extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.modifier,
-  });
-  String getClasses() {
-    List<String> output = ['list', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'list',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

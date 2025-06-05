@@ -14,9 +14,12 @@ class ThemeController extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['theme-controller', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'theme-controller',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

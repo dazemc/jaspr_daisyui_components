@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum MenuSize {
   xs('menu-xs'),
   sm('menu-sm'),
@@ -8,40 +9,35 @@ enum MenuSize {
   xl('menu-xl'),
 
   none('');
-
   final String value;
   const MenuSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
   focus('menu-focus'),
-  menudropdownshow('menu-dropdown-show'),
 
   none('');
-
   final String value;
   const MenuModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum MenuDirection {
   vertical('menu-vertical'),
   horizontal('menu-horizontal'),
 
   none('');
-
   final String value;
   const MenuDirection(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Menu extends StatelessComponent {
+  class Menu extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -61,9 +57,15 @@ class Menu extends StatelessComponent {
     this.modifier,
     this.size,
     this.direction,
-  });
-  String getClasses() {
-    List<String> output = ['menu', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'menu',
+            if (modifier != null) modifier.toString(),
+      if (size != null) size.toString(),
+      if (direction != null) direction.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

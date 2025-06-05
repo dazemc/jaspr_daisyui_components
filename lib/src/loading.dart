@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum LoadingStyle {
   spinner('loading-spinner'),
   dots('loading-dots'),
@@ -9,13 +10,12 @@ enum LoadingStyle {
   infinity('loading-infinity'),
 
   none('');
-
   final String value;
   const LoadingStyle(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum LoadingSize {
   xs('loading-xs'),
   sm('loading-sm'),
@@ -24,14 +24,12 @@ enum LoadingSize {
   xl('loading-xl'),
 
   none('');
-
   final String value;
   const LoadingSize(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Loading extends StatelessComponent {
+  class Loading extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -49,9 +47,14 @@ class Loading extends StatelessComponent {
     this.styles,
     this.style,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['loading', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'loading',
+            if (style != null) ...style!.map((style) => style.toString()),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

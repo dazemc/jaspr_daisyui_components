@@ -1,45 +1,47 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum FooterPlacement {
   center('footer-center'),
 
   none('');
-
   final String value;
   const FooterPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum FooterDirection {
   horizontal('footer-horizontal'),
   vertical('footer-vertical'),
 
   none('');
-
   final String value;
   const FooterDirection(this.value);
   @override
   String toString() => value.toString();
 }
-
-class FooterTitle extends StatelessComponent {
+  
+class Footer extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const FooterTitle(
+  const Footer(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['footer-title', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'footer-title',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

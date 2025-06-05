@@ -1,36 +1,27 @@
 import 'package:jaspr/jaspr.dart';
 
-enum StepColor {
-  neutral('step-neutral'),
-  primary('step-primary'),
-  secondary('step-secondary'),
-  accent('step-accent'),
-  info('step-info'),
+
+enum StepsColor {
   stepsuccess('step-success'),
-  warning('step-warning'),
-  error('step-error'),
 
   none('');
-
   final String value;
-  const StepColor(this.value);
+  const StepsColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum StepsDirection {
   vertical('steps-vertical'),
   horizontal('steps-horizontal'),
 
   none('');
-
   final String value;
   const StepsDirection(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Steps extends StatelessComponent {
+  class Steps extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -48,9 +39,14 @@ class Steps extends StatelessComponent {
     this.styles,
     this.color,
     this.direction,
-  });
-  String getClasses() {
-    List<String> output = ['steps', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'steps',
+            if (color != null) color.toString(),
+      if (direction != null) direction.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

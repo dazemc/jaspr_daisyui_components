@@ -14,9 +14,12 @@ class Fieldset extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['fieldset', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'fieldset',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

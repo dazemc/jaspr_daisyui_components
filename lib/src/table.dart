@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum TableSize {
   xs('table-xs'),
   sm('table-sm'),
@@ -8,27 +9,24 @@ enum TableSize {
   xl('table-xl'),
 
   none('');
-
   final String value;
   const TableSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum TableModifier {
   zebra('table-zebra'),
   pinrows('table-pin-rows'),
   pincols('table-pin-cols'),
 
   none('');
-
   final String value;
   const TableModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Table extends StatelessComponent {
+  class Table extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -46,9 +44,14 @@ class Table extends StatelessComponent {
     this.styles,
     this.modifier,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['table', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'table',
+            if (modifier != null) modifier.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

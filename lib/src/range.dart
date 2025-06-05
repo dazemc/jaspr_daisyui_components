@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum RangeColor {
   neutral('range-neutral'),
   primary('range-primary'),
@@ -11,13 +12,12 @@ enum RangeColor {
   error('range-error'),
 
   none('');
-
   final String value;
   const RangeColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum RangeSize {
   xs('range-xs'),
   sm('range-sm'),
@@ -26,14 +26,12 @@ enum RangeSize {
   xl('range-xl'),
 
   none('');
-
   final String value;
   const RangeSize(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Range extends StatelessComponent {
+  class Range extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -51,9 +49,14 @@ class Range extends StatelessComponent {
     this.styles,
     this.color,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['range', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'range',
+            if (color != null) color.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

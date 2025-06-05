@@ -14,9 +14,12 @@ class MockupWindow extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['mockup-window', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'mockup-window',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

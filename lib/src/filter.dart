@@ -14,9 +14,12 @@ class Filter extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['filter', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'filter',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum StackModifier {
   top('stack-top'),
   bottom('stack-bottom'),
@@ -7,14 +8,12 @@ enum StackModifier {
   end('stack-end'),
 
   none('');
-
   final String value;
   const StackModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Stack extends StatelessComponent {
+  class Stack extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -30,9 +29,13 @@ class Stack extends StatelessComponent {
     this.events,
     this.styles,
     this.modifier,
-  });
-  String getClasses() {
-    List<String> output = ['stack', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'stack',
+            if (modifier != null) modifier.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

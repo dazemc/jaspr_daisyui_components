@@ -1,28 +1,26 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum DrawerModifier {
   open('drawer-open'),
 
   none('');
-
   final String value;
   const DrawerModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum DrawerPlacement {
   end('drawer-end'),
 
   none('');
-
   final String value;
   const DrawerPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Drawer extends StatelessComponent {
+  class Drawer extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -40,9 +38,14 @@ class Drawer extends StatelessComponent {
     this.styles,
     this.placement,
     this.modifier,
-  });
-  String getClasses() {
-    List<String> output = ['drawer', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'drawer',
+            if (placement != null) placement.toString(),
+      if (modifier != null) modifier.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

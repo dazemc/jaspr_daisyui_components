@@ -14,9 +14,12 @@ class Hero extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['hero', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'hero',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -1,17 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum CardStyle {
   border('card-border'),
   dash('card-dash'),
 
   none('');
-
   final String value;
   const CardStyle(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum CardSize {
   xs('card-xs'),
   sm('card-sm'),
@@ -20,26 +20,23 @@ enum CardSize {
   xl('card-xl'),
 
   none('');
-
   final String value;
   const CardSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum CardModifier {
   side('card-side'),
   imagefull('image-full'),
 
   none('');
-
   final String value;
   const CardModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Card extends StatelessComponent {
+  class Card extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -59,9 +56,15 @@ class Card extends StatelessComponent {
     this.style,
     this.modifier,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['card', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'card',
+            if (style != null) ...style!.map((style) => style.toString()),
+      if (modifier != null) modifier.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

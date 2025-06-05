@@ -14,9 +14,12 @@ class Breadcrumbs extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['breadcrumbs', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'breadcrumbs',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

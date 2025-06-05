@@ -14,9 +14,12 @@ class MockupBrowser extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['mockup-browser', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'mockup-browser',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -1,21 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum IndicatorItemPlacement {
-  indicatorstart('indicator-start'),
-  indicatorcenter('indicator-center'),
-  indicatorend('indicator-end'),
-  indicatortop('indicator-top'),
-  indicatormiddle('indicator-middle'),
-  indicatorbottom('indicator-bottom'),
-
-  none('');
-
-  final String value;
-  const IndicatorItemPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class Indicator extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
@@ -23,7 +7,6 @@ class Indicator extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final IndicatorPlacement? placement;
   const Indicator(
     this.children, {
     this.classes,
@@ -31,10 +14,12 @@ class Indicator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.placement,
-  });
-  String getClasses() {
-    List<String> output = ['indicator', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'indicator',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

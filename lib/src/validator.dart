@@ -14,9 +14,12 @@ class Validator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['validator', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'validator',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

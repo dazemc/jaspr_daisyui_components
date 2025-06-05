@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum StatusColor {
   neutral('status-neutral'),
   primary('status-primary'),
@@ -11,13 +12,12 @@ enum StatusColor {
   error('status-error'),
 
   none('');
-
   final String value;
   const StatusColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum StatusSize {
   xs('status-xs'),
   sm('status-sm'),
@@ -26,14 +26,12 @@ enum StatusSize {
   xl('status-xl'),
 
   none('');
-
   final String value;
   const StatusSize(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Status extends StatelessComponent {
+  class Status extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -51,9 +49,14 @@ class Status extends StatelessComponent {
     this.styles,
     this.color,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['status', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'status',
+            if (color != null) color.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

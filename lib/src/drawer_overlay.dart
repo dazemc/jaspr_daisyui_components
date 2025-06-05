@@ -1,22 +1,25 @@
 import 'package:jaspr/jaspr.dart';
 
-class DrawerOverlay extends StatelessComponent {
+class DrawerSide extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const DrawerOverlay(
+  const DrawerSide(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['drawer-overlay', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'drawer-overlay',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

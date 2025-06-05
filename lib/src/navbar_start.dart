@@ -1,22 +1,26 @@
 import 'package:jaspr/jaspr.dart';
 
-class NavbarStart extends StatelessComponent {
+
+class Navbar extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const NavbarStart(
+  const Navbar(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['navbar-start', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'navbar-start',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

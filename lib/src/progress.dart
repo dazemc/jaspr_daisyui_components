@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum ProgressColor {
   neutral('progress-neutral'),
   primary('progress-primary'),
@@ -11,14 +12,12 @@ enum ProgressColor {
   error('progress-error'),
 
   none('');
-
   final String value;
   const ProgressColor(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Progress extends StatelessComponent {
+  class Progress extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -34,9 +33,13 @@ class Progress extends StatelessComponent {
     this.events,
     this.styles,
     this.color,
-  });
-  String getClasses() {
-    List<String> output = ['progress', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'progress',
+            if (color != null) color.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

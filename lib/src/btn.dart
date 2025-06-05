@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum BtnColor {
   neutral('btn-neutral'),
   primary('btn-primary'),
@@ -11,13 +12,12 @@ enum BtnColor {
   error('btn-error'),
 
   none('');
-
   final String value;
   const BtnColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum BtnStyle {
   outline('btn-outline'),
   dash('btn-dash'),
@@ -26,25 +26,23 @@ enum BtnStyle {
   link('btn-link'),
 
   none('');
-
   final String value;
   const BtnStyle(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum BtnBehavior {
   active('btn-active'),
   disabled('btn-disabled'),
 
   none('');
-
   final String value;
   const BtnBehavior(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum BtnSize {
   xs('btn-xs'),
   sm('btn-sm'),
@@ -53,13 +51,12 @@ enum BtnSize {
   xl('btn-xl'),
 
   none('');
-
   final String value;
   const BtnSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum BtnModifier {
   wide('btn-wide'),
   block('btn-block'),
@@ -67,14 +64,12 @@ enum BtnModifier {
   circle('btn-circle'),
 
   none('');
-
   final String value;
   const BtnModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Btn extends StatelessComponent {
+  class Btn extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -98,9 +93,17 @@ class Btn extends StatelessComponent {
     this.behavior,
     this.size,
     this.modifier,
-  });
-  String getClasses() {
-    List<String> output = ['btn', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'btn',
+            if (color != null) color.toString(),
+      if (style != null) ...style!.map((style) => style.toString()),
+      if (behavior != null) behavior.toString(),
+      if (size != null) size.toString(),
+      if (modifier != null) modifier.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

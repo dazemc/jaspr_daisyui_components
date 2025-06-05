@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum ToastPlacement {
   start('toast-start'),
   center('toast-center'),
@@ -9,14 +10,12 @@ enum ToastPlacement {
   bottom('toast-bottom'),
 
   none('');
-
   final String value;
   const ToastPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Toast extends StatelessComponent {
+  class Toast extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -32,9 +31,13 @@ class Toast extends StatelessComponent {
     this.events,
     this.styles,
     this.placement,
-  });
-  String getClasses() {
-    List<String> output = ['toast', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'toast',
+            if (placement != null) placement.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -14,9 +14,12 @@ class RadialProgress extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['radial-progress', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'radial-progress',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

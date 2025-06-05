@@ -1,22 +1,28 @@
 import 'package:jaspr/jaspr.dart';
 
-class DiffResizer extends StatelessComponent {
+
+
+
+class Diff extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const DiffResizer(
+  const Diff(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['diff-resizer', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'diff-resizer',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -14,9 +14,12 @@ class Diff extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['diff', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'diff',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

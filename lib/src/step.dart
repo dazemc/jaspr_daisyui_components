@@ -1,34 +1,27 @@
 import 'package:jaspr/jaspr.dart';
 
-enum StepColor {
-  neutral('step-neutral'),
-  primary('step-primary'),
-  secondary('step-secondary'),
-  accent('step-accent'),
-  info('step-info'),
+
+enum StepsColor {
   stepsuccess('step-success'),
-  warning('step-warning'),
-  error('step-error'),
 
   none('');
-
   final String value;
-  const StepColor(this.value);
+  const StepsColor(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum StepsDirection {
   vertical('steps-vertical'),
   horizontal('steps-horizontal'),
 
   none('');
-
   final String value;
   const StepsDirection(this.value);
   @override
   String toString() => value.toString();
 }
+  
 
 enum StepColor {
   neutral('step-neutral'),
@@ -40,22 +33,20 @@ enum StepColor {
   error('step-error'),
 
   none('');
-
   final String value;
   const StepColor(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Step extends StatelessComponent {
+  class Steps extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final StepColor? color;
-  const Step(
+  final StepsColor? color;
+  const Steps(
     this.children, {
     this.classes,
     this.id,
@@ -63,9 +54,13 @@ class Step extends StatelessComponent {
     this.events,
     this.styles,
     this.color,
-  });
-  String getClasses() {
-    List<String> output = ['step', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'step',
+            if (color != null) color.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -46,24 +46,34 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
 }
 
 void buildFunctions(List<DaisyuiComponent> components) {
-  //TODO:
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = formatName(c.subParent, "");
+    // String name = formatName(c.subParent, "");
+    List<String> presentTypes = [];
+    String output = '';
     Map<String, String> mappedCalls = {
-      "color": '      if (color != null) color.toString(),',
+      "color": '      if (color != null) color.toString(),\n',
       "style":
-          '      if (style != null) ...style!.map((style) => style.toString()),',
-      "size": '      if (size != null) size.toString(),',
-      "behavior": '      if (behavior != null) behavior.toString(),',
-      "placement": '      if (placement != null) placement.toString(),',
-      "direction": '      if (direction != null) direction.toString(),',
-      "modifier": '      if (modifier != null) modifier.toString(),',
+          '      if (style != null) ...style!.map((style) => style.toString()),\n',
+      "size": '      if (size != null) size.toString(),\n',
+      "behavior": '      if (behavior != null) behavior.toString(),\n',
+      "placement": '      if (placement != null) placement.toString(),\n',
+      "direction": '      if (direction != null) direction.toString(),\n',
+      "modifier": '      if (modifier != null) modifier.toString(),\n',
     };
-    List<DaisyuiComponent> typed =
-        components.where((e) => e.subParent == name).toList();
-    c.footerString = '''  String getClasses() {
+    for (DaisyuiComponent k
+        in c.children.where((e) => !isComponent(e)).toList()) {
+      if (!presentTypes.contains(k.type) && k.subParent == c.label) {
+        presentTypes.add(k.type);
+      }
+    }
+    for (String name in presentTypes) {
+      output += mappedCalls[name]!;
+    }
+    c.footerString = '''  
+  String getClasses() {
     List<String> output = [
       '${c.label}',
+      $output
       classes ?? '',
     ];
     return output.join(' ');
@@ -88,15 +98,17 @@ void buildFunctions(List<DaisyuiComponent> components) {
 }
 
 void buildFields(List<DaisyuiComponent> components) {
-  Map<String, String> output = {};
-  Map<String, String> outputConst = {};
+  Map<String, String> mappedConst = {
+    "color": '    this.color,\n',
+    "style": '    this.style,\n',
+    "size": '    this.size,\n',
+    "behavior": '    this.behavior,\n',
+    "modifier": '    this.modifier,\n',
+    "placement": '    this.placement,\n',
+    "direction": '    this.direction,\n',
+  };
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = captialCase(c.label);
-    List<String> utypes = [];
-    String fields = '';
-    String constructor = '';
-    List<DaisyuiComponent> types =
-        c.children.where((e) => !isComponent(e)).toList();
+    String name = captialCase(c.subParent);
     Map<String, String> mappedTypes = {
       "color": '  final ${name}Color? color;\n',
       "style": '  final List<${name}Style>? style;\n',
@@ -106,25 +118,9 @@ void buildFields(List<DaisyuiComponent> components) {
       "placement": '  final ${name}Placement? placement;\n',
       "direction": '  final ${name}Direction? direction;\n',
     };
-    Map<String, String> mappedConst = {
-      "color": '    this.color,\n',
-      "style": '    this.style,\n',
-      "size": '    this.size,\n',
-      "behavior": '    this.behavior,\n',
-      "modifier": '    this.modifier,\n',
-      "placement": '    this.placement,\n',
-      "direction": '    this.direction,\n',
-    };
-
-    for (DaisyuiComponent child in types) {
-      if (!utypes.contains(child.type)) {
-        utypes.add(child.type);
-        fields += mappedTypes[child.type] ?? '';
-        constructor += mappedConst[child.type] ?? '';
-      }
-    }
-    if (!output.containsKey(c.label)) {
-      output[c.label] = '''
+    String parameters = '';
+    String constructor = '';
+    String classInstanceHead = '''
 class $name extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
@@ -133,9 +129,7 @@ class $name extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
 ''';
-    }
-    if (!outputConst.containsKey(c.label)) {
-      outputConst[c.label] = '''
+    String classConstructorHead = '''
   const $name(
     this.children, {
     this.classes,
@@ -144,9 +138,24 @@ class $name extends StatelessComponent {
     this.events,
     this.styles,
 ''';
+    List<String> presentTypes = [];
+    if (c.children.isNotEmpty) {
+      for (DaisyuiComponent k in c.children.where(
+        (e) => e.subParent == c.label && !isComponent(e),
+      )) {
+        if (!presentTypes.contains(k.type)) {
+          presentTypes.add(k.type);
+        }
+      }
+      if (presentTypes.isNotEmpty) {
+        for (String name in presentTypes) {
+          parameters += mappedTypes[name]!;
+          constructor += mappedConst[name]!;
+        }
+      }
     }
     c.fieldString =
-        '${output[c.label]}$fields${outputConst[c.label]}$constructor});';
+        '$classInstanceHead$parameters$classConstructorHead$constructor});';
   }
 }
 
@@ -154,7 +163,9 @@ void buildEnums(List<DaisyuiComponent> components) {
   Map<String, String> output = {};
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     List<DaisyuiComponent> typedComponents =
-        c.children.where((e) => !isComponent(e)).toList();
+        c.children
+            .where((e) => !isComponent(e) && e.subParent == c.label)
+            .toList();
     String enums = "";
     for (String name in types) {
       List<DaisyuiComponent> input =

@@ -1,22 +1,25 @@
 import 'package:jaspr/jaspr.dart';
 
-class StepIcon extends StatelessComponent {
+class Step extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const StepIcon(
+  const Step(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['step-icon', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'step-icon',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

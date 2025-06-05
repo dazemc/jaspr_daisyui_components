@@ -1,22 +1,26 @@
 import 'package:jaspr/jaspr.dart';
 
-class ValidatorHint extends StatelessComponent {
+
+class Validator extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const ValidatorHint(
+  const Validator(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-  });
-  String getClasses() {
-    List<String> output = ['validator-hint', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'validator-hint',
+      
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 

@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+
 enum RatingSize {
   xs('rating-xs'),
   sm('rating-sm'),
@@ -8,26 +9,23 @@ enum RatingSize {
   xl('rating-xl'),
 
   none('');
-
   final String value;
   const RatingSize(this.value);
   @override
   String toString() => value.toString();
 }
-
+  
 enum RatingModifier {
   half('rating-half'),
   hidden('rating-hidden'),
 
   none('');
-
   final String value;
   const RatingModifier(this.value);
   @override
   String toString() => value.toString();
 }
-
-class Rating extends StatelessComponent {
+  class Rating extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -45,9 +43,14 @@ class Rating extends StatelessComponent {
     this.styles,
     this.modifier,
     this.size,
-  });
-  String getClasses() {
-    List<String> output = ['rating', classes ?? ''];
+});  String getClasses() {
+    List<String> output = [
+      'rating',
+            if (modifier != null) modifier.toString(),
+      if (size != null) size.toString(),
+
+      classes ?? '',
+    ];
     return output.join(' ');
   }
 
