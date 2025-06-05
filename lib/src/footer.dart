@@ -1,27 +1,29 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum FooterPlacement {
   center('footer-center'),
 
   none('');
+
   final String value;
   const FooterPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum FooterDirection {
   horizontal('footer-horizontal'),
   vertical('footer-vertical'),
 
   none('');
+
   final String value;
   const FooterDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Footer extends StatelessComponent {
+
+class Footer extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -39,10 +41,11 @@ enum FooterDirection {
     this.styles,
     this.placement,
     this.direction,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'footer',
-            if (placement != null) placement.toString(),
+      if (placement != null) placement.toString(),
       if (direction != null) direction.toString(),
 
       classes ?? '',

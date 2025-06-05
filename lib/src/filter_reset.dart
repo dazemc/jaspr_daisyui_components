@@ -1,26 +1,22 @@
 import 'package:jaspr/jaspr.dart';
 
-
-class Filter extends StatelessComponent {
+class FilterReset extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Filter(
+  const FilterReset(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'filter-reset',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['filter-reset', classes ?? ''];
     return output.join(' ');
   }
 

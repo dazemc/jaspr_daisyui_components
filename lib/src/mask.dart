@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum MaskStyle {
   squircle('mask-squircle'),
   heart('mask-heart'),
@@ -19,23 +18,26 @@ enum MaskStyle {
   triangle4('mask-triangle-4'),
 
   none('');
+
   final String value;
   const MaskStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum MaskModifier {
   half1('mask-half-1'),
   half2('mask-half-2'),
 
   none('');
+
   final String value;
   const MaskModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Mask extends StatelessComponent {
+
+class Mask extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -53,10 +55,11 @@ enum MaskModifier {
     this.styles,
     this.style,
     this.modifier,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'mask',
-            if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

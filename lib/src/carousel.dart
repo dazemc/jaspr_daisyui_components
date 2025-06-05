@@ -1,29 +1,31 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum CarouselModifier {
   start('carousel-start'),
   center('carousel-center'),
   end('carousel-end'),
 
   none('');
+
   final String value;
   const CarouselModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum CarouselDirection {
   horizontal('carousel-horizontal'),
   vertical('carousel-vertical'),
 
   none('');
+
   final String value;
   const CarouselDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Carousel extends StatelessComponent {
+
+class Carousel extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -41,10 +43,11 @@ enum CarouselDirection {
     this.styles,
     this.modifier,
     this.direction,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'carousel',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
       if (direction != null) direction.toString(),
 
       classes ?? '',

@@ -14,12 +14,9 @@ class MockupPhone extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'mockup-phone',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['mockup-phone', classes ?? ''];
     return output.join(' ');
   }
 

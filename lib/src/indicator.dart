@@ -14,12 +14,9 @@ class Indicator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'indicator',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['indicator', classes ?? ''];
     return output.join(' ');
   }
 

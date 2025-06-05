@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum BadgeColor {
   neutral('badge-neutral'),
   primary('badge-primary'),
@@ -12,12 +11,13 @@ enum BadgeColor {
   error('badge-error'),
 
   none('');
+
   final String value;
   const BadgeColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum BadgeStyle {
   outline('badge-outline'),
   dash('badge-dash'),
@@ -25,12 +25,13 @@ enum BadgeStyle {
   ghost('badge-ghost'),
 
   none('');
+
   final String value;
   const BadgeStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum BadgeSize {
   xs('badge-xs'),
   sm('badge-sm'),
@@ -39,12 +40,14 @@ enum BadgeSize {
   xl('badge-xl'),
 
   none('');
+
   final String value;
   const BadgeSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Badge extends StatelessComponent {
+
+class Badge extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -64,10 +67,11 @@ enum BadgeSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'badge',
-            if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

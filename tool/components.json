@@ -3,8 +3,7 @@
         "label": "stats",
         "type": "component",
         "parent": "stats",
-        "tag": "div",
-        "sub_parent": "stats"
+        "tag": "div"
     },
     {
         "label": "stat",
@@ -154,8 +153,7 @@
         "label": "drawer",
         "type": "component",
         "parent": "drawer",
-        "tag": "div",
-        "sub_parent": "drawer"
+        "tag": "div"
     },
     {
         "label": "drawer-toggle",
@@ -211,8 +209,7 @@
         "additional_attributes": [
             "max",
             "value"
-        ],
-        "sub_parent": "progress"
+        ]
     },
     {
         "label": "progress-neutral",
@@ -266,8 +263,7 @@
         "label": "fieldset",
         "type": "component",
         "parent": "fieldset",
-        "tag": "fieldset",
-        "sub_parent": "fieldset"
+        "tag": "fieldset"
     },
     {
         "label": "label",
@@ -290,8 +286,7 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": "alert"
+        ]
     },
     {
         "label": "alert-outline",
@@ -350,8 +345,7 @@
         "label": "divider",
         "type": "component",
         "parent": "divider",
-        "tag": "div",
-        "sub_parent": "divider"
+        "tag": "div"
     },
     {
         "label": "divider-neutral",
@@ -428,8 +422,7 @@
         "label": "hero",
         "type": "component",
         "parent": "hero",
-        "tag": "div",
-        "sub_parent": "hero"
+        "tag": "div"
     },
     {
         "label": "hero-content",
@@ -449,8 +442,7 @@
         "label": "link",
         "type": "component",
         "parent": "link",
-        "tag": "a",
-        "sub_parent": "link"
+        "tag": "a"
     },
     {
         "label": "link-hover",
@@ -510,8 +502,7 @@
         "label": "kbd",
         "type": "component",
         "parent": "kbd",
-        "tag": "kbd",
-        "sub_parent": "kbd"
+        "tag": "kbd"
     },
     {
         "label": "kbd-xs",
@@ -547,15 +538,13 @@
         "label": "mockup-code",
         "type": "component",
         "parent": "mockup-code",
-        "tag": "div",
-        "sub_parent": "mockup-code"
+        "tag": "div"
     },
     {
         "label": "loading",
         "type": "component",
         "parent": "loading",
-        "tag": "span",
-        "sub_parent": "loading"
+        "tag": "span"
     },
     {
         "label": "loading-spinner",
@@ -627,15 +616,13 @@
         "label": "skeleton",
         "type": "component",
         "parent": "skeleton",
-        "tag": "div",
-        "sub_parent": "skeleton"
+        "tag": "div"
     },
     {
         "label": "swap",
         "type": "component",
         "parent": "swap",
-        "tag": "label",
-        "sub_parent": "swap"
+        "tag": "label"
     },
     {
         "label": "swap-on",
@@ -792,8 +779,7 @@
         "additional_attributes": [
             "checked",
             "type"
-        ],
-        "sub_parent": "radio"
+        ]
     },
     {
         "label": "radio-neutral",
@@ -877,8 +863,7 @@
         "label": "navbar",
         "type": "component",
         "parent": "navbar",
-        "tag": "div",
-        "sub_parent": "navbar"
+        "tag": "div"
     },
     {
         "label": "navbar-start",
@@ -905,8 +890,7 @@
         "label": "collapse",
         "type": "component",
         "parent": "collapse",
-        "tag": "div",
-        "sub_parent": "collapse"
+        "tag": "div"
     },
     {
         "label": "collapse-title",
@@ -1047,8 +1031,7 @@
         "tag": "button",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": "btn"
+        ]
     },
     {
         "label": "btn-neutral",
@@ -1197,8 +1180,7 @@
         "label": "chat",
         "type": "component",
         "parent": "chat",
-        "tag": "div",
-        "sub_parent": "chat"
+        "tag": "div"
     },
     {
         "label": "chat-image",
@@ -1295,8 +1277,7 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": "tabs"
+        ]
     },
     {
         "label": "tab",
@@ -1388,8 +1369,7 @@
         "label": "stack",
         "type": "component",
         "parent": "stack",
-        "tag": "div",
-        "sub_parent": "stack"
+        "tag": "div"
     },
     {
         "label": "stack-top",
@@ -1418,8 +1398,7 @@
         "label": "join",
         "type": "component",
         "parent": "join",
-        "tag": "div",
-        "sub_parent": "join"
+        "tag": "div"
     },
     {
         "label": "join-item",
@@ -1449,8 +1428,7 @@
             "min",
             "type",
             "value"
-        ],
-        "sub_parent": "range"
+        ]
     },
     {
         "label": "range-neutral",
@@ -1626,15 +1604,13 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ],
-        "sub_parent": "radial-progress"
+        ]
     },
     {
         "label": "toast",
         "type": "component",
         "parent": "toast",
-        "tag": "div",
-        "sub_parent": "toast"
+        "tag": "div"
     },
     {
         "label": "toast-start",
@@ -1675,8 +1651,7 @@
         "label": "steps",
         "type": "component",
         "parent": "steps",
-        "tag": "ul",
-        "sub_parent": "steps"
+        "tag": "ul"
     },
     {
         "label": "step",
@@ -1865,8 +1840,7 @@
         "label": "mockup-phone",
         "type": "component",
         "parent": "mockup-phone",
-        "tag": "div",
-        "sub_parent": "mockup-phone"
+        "tag": "div"
     },
     {
         "label": "mockup-phone-camera",
@@ -1886,15 +1860,13 @@
         "label": "mockup-window",
         "type": "component",
         "parent": "mockup-window",
-        "tag": "div",
-        "sub_parent": "mockup-window"
+        "tag": "div"
     },
     {
         "label": "carousel",
         "type": "component",
         "parent": "carousel",
-        "tag": "div",
-        "sub_parent": "carousel"
+        "tag": "div"
     },
     {
         "label": "carousel-item",
@@ -1934,16 +1906,16 @@
     {
         "label": "list",
         "type": "component",
-        "parent": "list",
+        "parent": "list_",
         "tag": "ul",
-        "sub_parent": "list"
+        "sub_parent": "list_"
     },
     {
         "label": "list-row",
         "type": "component",
         "parent": "list",
         "tag": "li",
-        "sub_parent": "list"
+        "sub_parent": "list_"
     },
     {
         "label": "list-col-wrap",
@@ -1961,8 +1933,7 @@
         "label": "tooltip",
         "type": "component",
         "parent": "tooltip",
-        "tag": "div",
-        "sub_parent": "tooltip"
+        "tag": "div"
     },
     {
         "label": "tooltip-content",
@@ -2053,8 +2024,7 @@
         "label": "dock",
         "type": "component",
         "parent": "dock",
-        "tag": "div",
-        "sub_parent": "dock"
+        "tag": "div"
     },
     {
         "label": "dock-label",
@@ -2106,8 +2076,7 @@
         "additional_attributes": [
             "id",
             "role"
-        ],
-        "sub_parent": "modal"
+        ]
     },
     {
         "label": "modal-box",
@@ -2175,8 +2144,7 @@
         "label": "menu",
         "type": "component",
         "parent": "menu",
-        "tag": "ul",
-        "sub_parent": "menu"
+        "tag": "ul"
     },
     {
         "label": "menu-title",
@@ -2265,8 +2233,7 @@
         "label": "table",
         "type": "component",
         "parent": "table",
-        "tag": "table",
-        "sub_parent": "table"
+        "tag": "table"
     },
     {
         "label": "table-zebra",
@@ -2319,8 +2286,7 @@
         "tag": "select",
         "additional_attributes": [
             "required"
-        ],
-        "sub_parent": "validator"
+        ]
     },
     {
         "label": "validator-hint",
@@ -2332,8 +2298,7 @@
         "label": "card",
         "type": "component",
         "parent": "card",
-        "tag": "div",
-        "sub_parent": "card"
+        "tag": "div"
     },
     {
         "label": "card-title",
@@ -2414,15 +2379,13 @@
         "label": "breadcrumbs",
         "type": "component",
         "parent": "breadcrumbs",
-        "tag": "div",
-        "sub_parent": "breadcrumbs"
+        "tag": "div"
     },
     {
         "label": "countdown",
         "type": "component",
         "parent": "countdown",
-        "tag": "span",
-        "sub_parent": "countdown"
+        "tag": "span"
     },
     {
         "label": "floating-label",
@@ -2434,8 +2397,7 @@
         "label": "rating",
         "type": "component",
         "parent": "rating",
-        "tag": "div",
-        "sub_parent": "rating"
+        "tag": "div"
     },
     {
         "label": "rating-half",
@@ -2514,8 +2476,7 @@
         "label": "mask",
         "type": "component",
         "parent": "mask",
-        "tag": "img",
-        "sub_parent": "mask"
+        "tag": "img"
     },
     {
         "label": "mask-squircle",
@@ -2624,8 +2585,7 @@
         "tag": "div",
         "additional_attributes": [
             "id"
-        ],
-        "sub_parent": "dropdown"
+        ]
     },
     {
         "label": "dropdown-content",
@@ -2742,8 +2702,7 @@
         "label": "timeline",
         "type": "component",
         "parent": "timeline",
-        "tag": "ul",
-        "sub_parent": "timeline"
+        "tag": "ul"
     },
     {
         "label": "timeline-start",
@@ -2890,8 +2849,7 @@
         "label": "footer",
         "type": "component",
         "parent": "footer",
-        "tag": "footer",
-        "sub_parent": "footer"
+        "tag": "footer"
     },
     {
         "label": "footer-title",
@@ -2920,8 +2878,7 @@
         "label": "mockup-browser",
         "type": "component",
         "parent": "mockup-browser",
-        "tag": "div",
-        "sub_parent": "mockup-browser"
+        "tag": "div"
     },
     {
         "label": "mockup-browser-toolbar",
@@ -2934,8 +2891,7 @@
         "label": "status",
         "type": "component",
         "parent": "status",
-        "tag": "div",
-        "sub_parent": "status"
+        "tag": "div"
     },
     {
         "label": "status-neutral",
@@ -3113,8 +3069,7 @@
         "label": "diff",
         "type": "component",
         "parent": "diff",
-        "tag": "figure",
-        "sub_parent": "diff"
+        "tag": "figure"
     },
     {
         "label": "diff-item-1",
@@ -3147,8 +3102,7 @@
         "label": "filter",
         "type": "component",
         "parent": "filter",
-        "tag": "div",
-        "sub_parent": "filter"
+        "tag": "div"
     },
     {
         "label": "filter-reset",

@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum CollapseModifier {
   arrow('collapse-arrow'),
   plus('collapse-plus'),
@@ -8,12 +7,14 @@ enum CollapseModifier {
   close('collapse-close'),
 
   none('');
+
   final String value;
   const CollapseModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Collapse extends StatelessComponent {
+
+class Collapse extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -29,10 +30,11 @@ enum CollapseModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'collapse',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
 
       classes ?? '',
     ];

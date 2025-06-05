@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum FileInputColor {
   neutral('file-input-neutral'),
   primary('file-input-primary'),
@@ -12,22 +11,24 @@ enum FileInputColor {
   error('file-input-error'),
 
   none('');
+
   final String value;
   const FileInputColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum FileInputStyle {
   ghost('file-input-ghost'),
 
   none('');
+
   final String value;
   const FileInputStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum FileInputSize {
   xs('file-input-xs'),
   sm('file-input-sm'),
@@ -36,12 +37,14 @@ enum FileInputSize {
   xl('file-input-xl'),
 
   none('');
+
   final String value;
   const FileInputSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class FileInput extends StatelessComponent {
+
+class FileInput extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -61,10 +64,11 @@ enum FileInputSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'file-input',
-            if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

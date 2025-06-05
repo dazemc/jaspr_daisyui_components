@@ -14,12 +14,9 @@ class Skeleton extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'skeleton',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['skeleton', classes ?? ''];
     return output.join(' ');
   }
 

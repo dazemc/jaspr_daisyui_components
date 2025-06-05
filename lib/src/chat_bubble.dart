@@ -1,20 +1,16 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum ChatPlacement {
   start('chat-start'),
   end('chat-end'),
 
   none('');
+
   final String value;
   const ChatPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  
-
-
-
 
 enum ChatBubbleColor {
   neutral('chat-bubble-neutral'),
@@ -27,20 +23,22 @@ enum ChatBubbleColor {
   error('chat-bubble-error'),
 
   none('');
+
   final String value;
   const ChatBubbleColor(this.value);
   @override
   String toString() => value.toString();
 }
-  class Chat extends StatelessComponent {
+
+class ChatBubble extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final ChatColor? color;
-  const Chat(
+  final ChatBubbleColor? color;
+  const ChatBubble(
     this.children, {
     this.classes,
     this.id,
@@ -48,10 +46,11 @@ enum ChatBubbleColor {
     this.events,
     this.styles,
     this.color,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'chat-bubble',
-            if (color != null) color.toString(),
+      if (color != null) color.toString(),
 
       classes ?? '',
     ];

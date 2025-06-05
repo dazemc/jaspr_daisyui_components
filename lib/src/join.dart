@@ -1,17 +1,18 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum JoinDirection {
   vertical('join-vertical'),
   horizontal('join-horizontal'),
 
   none('');
+
   final String value;
   const JoinDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Join extends StatelessComponent {
+
+class Join extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -27,10 +28,11 @@ enum JoinDirection {
     this.events,
     this.styles,
     this.direction,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'join',
-            if (direction != null) direction.toString(),
+      if (direction != null) direction.toString(),
 
       classes ?? '',
     ];

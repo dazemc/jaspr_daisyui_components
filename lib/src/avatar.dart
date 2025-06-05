@@ -1,18 +1,19 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum AvatarModifier {
   online('avatar-online'),
   offline('avatar-offline'),
   placeholder('avatar-placeholder'),
 
   none('');
+
   final String value;
   const AvatarModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Avatar extends StatelessComponent {
+
+class Avatar extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -28,10 +29,11 @@ enum AvatarModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'avatar',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
 
       classes ?? '',
     ];

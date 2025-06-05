@@ -1,16 +1,16 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum ModalModifier {
   open('modal-open'),
 
   none('');
+
   final String value;
   const ModalModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum ModalPlacement {
   top('modal-top'),
   middle('modal-middle'),
@@ -19,12 +19,14 @@ enum ModalPlacement {
   end('modal-end'),
 
   none('');
+
   final String value;
   const ModalPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  class Modal extends StatelessComponent {
+
+class Modal extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -42,10 +44,11 @@ enum ModalPlacement {
     this.styles,
     this.modifier,
     this.placement,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'modal',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
       if (placement != null) placement.toString(),
 
       classes ?? '',

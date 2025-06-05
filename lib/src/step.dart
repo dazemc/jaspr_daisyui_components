@@ -1,27 +1,27 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum StepsColor {
   stepsuccess('step-success'),
 
   none('');
+
   final String value;
   const StepsColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum StepsDirection {
   vertical('steps-vertical'),
   horizontal('steps-horizontal'),
 
   none('');
+
   final String value;
   const StepsDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  
 
 enum StepColor {
   neutral('step-neutral'),
@@ -33,20 +33,22 @@ enum StepColor {
   error('step-error'),
 
   none('');
+
   final String value;
   const StepColor(this.value);
   @override
   String toString() => value.toString();
 }
-  class Steps extends StatelessComponent {
+
+class Step extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final StepsColor? color;
-  const Steps(
+  final StepColor? color;
+  const Step(
     this.children, {
     this.classes,
     this.id,
@@ -54,10 +56,11 @@ enum StepColor {
     this.events,
     this.styles,
     this.color,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'step',
-            if (color != null) color.toString(),
+      if (color != null) color.toString(),
 
       classes ?? '',
     ];

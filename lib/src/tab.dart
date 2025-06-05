@@ -1,18 +1,18 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum TabsStyle {
   box('tabs-box'),
   border('tabs-border'),
   lift('tabs-lift'),
 
   none('');
+
   final String value;
   const TabsStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TabsSize {
   xs('tabs-xs'),
   sm('tabs-sm'),
@@ -21,52 +21,56 @@ enum TabsSize {
   xl('tabs-xl'),
 
   none('');
+
   final String value;
   const TabsSize(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TabsModifier {
   tabdisabled('tab-disabled'),
 
   none('');
+
   final String value;
   const TabsModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TabsPlacement {
   top('tabs-top'),
   bottom('tabs-bottom'),
 
   none('');
+
   final String value;
   const TabsPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  
 
 enum TabModifier {
   active('tab-active'),
 
   none('');
+
   final String value;
   const TabModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Tabs extends StatelessComponent {
+
+class Tab extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final TabsModifier? modifier;
-  const Tabs(
+  final TabModifier? modifier;
+  const Tab(
     this.children, {
     this.classes,
     this.id,
@@ -74,10 +78,11 @@ enum TabModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'tab',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
 
       classes ?? '',
     ];

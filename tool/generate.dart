@@ -108,7 +108,8 @@ void buildFields(List<DaisyuiComponent> components) {
     "direction": '    this.direction,\n',
   };
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = captialCase(c.subParent);
+    String name = captialCase(c.label);
+    if (name == 'List') name = 'List_';
     Map<String, String> mappedTypes = {
       "color": '  final ${name}Color? color;\n',
       "style": '  final List<${name}Style>? style;\n',
@@ -334,45 +335,4 @@ String captialCase(String str) {
   }
 
   return output;
-}
-
-void buildComponent(List<DaisyuiComponent> components) {
-  for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = captialCase(c.label);
-    String output = """
-    this.id,
-    this.attributes,
-    this.events,
-    super.key,
-  });
-  String getClasses() {
-    List<String> output = [
-      '${c.label}',
-      if (color != null) color.toString(),
-      if (${name}Style != null) ...${name}Style!.map((style) => style.toString()),
-      if (size != null) size.toString(),
-      if (behavior != null) behavior.toString(),
-      if (modifier != null) modifier.toString(),
-      classes ?? '',
-    ];
-    return output.join(' ');
-  }
-
-  @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
-      tag: '${c.tag}',
-      classes: getClasses(),
-      key: key,
-      id: id,
-      styles: styles,
-      children: children,
-      attributes: attributes,
-      events: events,
-    );
-  }
-}
-""";
-    // print(output);
-  }
 }

@@ -14,12 +14,9 @@ class MockupCode extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'mockup-code',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['mockup-code', classes ?? ''];
     return output.join(' ');
   }
 

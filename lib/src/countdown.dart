@@ -14,12 +14,9 @@ class Countdown extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'countdown',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['countdown', classes ?? ''];
     return output.join(' ');
   }
 

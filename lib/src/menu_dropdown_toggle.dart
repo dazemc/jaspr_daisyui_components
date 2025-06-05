@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum MenuSize {
   xs('menu-xs'),
   sm('menu-sm'),
@@ -9,56 +8,58 @@ enum MenuSize {
   xl('menu-xl'),
 
   none('');
+
   final String value;
   const MenuSize(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
   focus('menu-focus'),
 
   none('');
+
   final String value;
   const MenuModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum MenuDirection {
   vertical('menu-vertical'),
   horizontal('menu-horizontal'),
 
   none('');
+
   final String value;
   const MenuDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  
-
-
 
 enum MenuDropdownToggleModifier {
   menudropdownshow('menu-dropdown-show'),
 
   none('');
+
   final String value;
   const MenuDropdownToggleModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  class Menu extends StatelessComponent {
+
+class MenuDropdownToggle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final MenuModifier? modifier;
-  const Menu(
+  final MenuDropdownToggleModifier? modifier;
+  const MenuDropdownToggle(
     this.children, {
     this.classes,
     this.id,
@@ -66,10 +67,11 @@ enum MenuDropdownToggleModifier {
     this.events,
     this.styles,
     this.modifier,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'menu-dropdown-toggle',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
 
       classes ?? '',
     ];

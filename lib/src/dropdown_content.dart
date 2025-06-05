@@ -1,17 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum DropdownModifier {
   hover('dropdown-hover'),
   open('dropdown-open'),
 
   none('');
+
   final String value;
   const DropdownModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum DropdownPlacement {
   start('dropdown-start'),
   center('dropdown-center'),
@@ -22,32 +22,30 @@ enum DropdownPlacement {
   right('dropdown-right'),
 
   none('');
+
   final String value;
   const DropdownPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  
-class Dropdown extends StatelessComponent {
+
+class DropdownContent extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Dropdown(
+  const DropdownContent(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'dropdown-content',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['dropdown-content', classes ?? ''];
     return output.join(' ');
   }
 

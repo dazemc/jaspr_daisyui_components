@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum KbdSize {
   xs('kbd-xs'),
   sm('kbd-sm'),
@@ -9,12 +8,14 @@ enum KbdSize {
   xl('kbd-xl'),
 
   none('');
+
   final String value;
   const KbdSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Kbd extends StatelessComponent {
+
+class Kbd extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -30,10 +31,11 @@ enum KbdSize {
     this.events,
     this.styles,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'kbd',
-            if (size != null) size.toString(),
+      if (size != null) size.toString(),
 
       classes ?? '',
     ];

@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum TooltipColor {
   neutral('tooltip-neutral'),
   primary('tooltip-primary'),
@@ -12,22 +11,24 @@ enum TooltipColor {
   error('tooltip-error'),
 
   none('');
+
   final String value;
   const TooltipColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TooltipModifier {
   open('tooltip-open'),
 
   none('');
+
   final String value;
   const TooltipModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TooltipPlacement {
   top('tooltip-top'),
   bottom('tooltip-bottom'),
@@ -35,32 +36,30 @@ enum TooltipPlacement {
   right('tooltip-right'),
 
   none('');
+
   final String value;
   const TooltipPlacement(this.value);
   @override
   String toString() => value.toString();
 }
-  
-class Tooltip extends StatelessComponent {
+
+class TooltipContent extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Tooltip(
+  const TooltipContent(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'tooltip-content',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['tooltip-content', classes ?? ''];
     return output.join(' ');
   }
 

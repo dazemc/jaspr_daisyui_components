@@ -1,38 +1,35 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum AvatarModifier {
   online('avatar-online'),
   offline('avatar-offline'),
   placeholder('avatar-placeholder'),
 
   none('');
+
   final String value;
   const AvatarModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
-class Avatar extends StatelessComponent {
+
+class AvatarGroup extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Avatar(
+  const AvatarGroup(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'avatar-group',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['avatar-group', classes ?? ''];
     return output.join(' ');
   }
 

@@ -1,27 +1,22 @@
 import 'package:jaspr/jaspr.dart';
 
-
-
-class Diff extends StatelessComponent {
+class DiffItem2 extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Diff(
+  const DiffItem2(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'diff-item-2',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['diff-item-2', classes ?? ''];
     return output.join(' ');
   }
 

@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum ToggleColor {
   primary('toggle-primary'),
   secondary('toggle-secondary'),
@@ -12,12 +11,13 @@ enum ToggleColor {
   error('toggle-error'),
 
   none('');
+
   final String value;
   const ToggleColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum ToggleSize {
   xs('toggle-xs'),
   sm('toggle-sm'),
@@ -26,12 +26,14 @@ enum ToggleSize {
   xl('toggle-xl'),
 
   none('');
+
   final String value;
   const ToggleSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Toggle extends StatelessComponent {
+
+class Toggle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -49,10 +51,11 @@ enum ToggleSize {
     this.styles,
     this.color,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'toggle',
-            if (color != null) color.toString(),
+      if (color != null) color.toString(),
       if (size != null) size.toString(),
 
       classes ?? '',

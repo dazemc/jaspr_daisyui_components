@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum SelectColor {
   neutral('select-neutral'),
   primary('select-primary'),
@@ -12,22 +11,24 @@ enum SelectColor {
   error('select-error'),
 
   none('');
+
   final String value;
   const SelectColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum SelectStyle {
   ghost('select-ghost'),
 
   none('');
+
   final String value;
   const SelectStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum SelectSize {
   xs('select-xs'),
   sm('select-sm'),
@@ -36,12 +37,14 @@ enum SelectSize {
   xl('select-xl'),
 
   none('');
+
   final String value;
   const SelectSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Select extends StatelessComponent {
+
+class Select extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -61,10 +64,11 @@ enum SelectSize {
     this.style,
     this.color,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'select',
-            if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

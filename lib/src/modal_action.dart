@@ -1,25 +1,22 @@
 import 'package:jaspr/jaspr.dart';
 
-class ModalBox extends StatelessComponent {
+class ModalAction extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const ModalBox(
+  const ModalAction(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'modal-action',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['modal-action', classes ?? ''];
     return output.join(' ');
   }
 

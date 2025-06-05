@@ -1,25 +1,22 @@
 import 'package:jaspr/jaspr.dart';
 
-class Stat extends StatelessComponent {
+class StatTitle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Stat(
+  const StatTitle(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'stat-title',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['stat-title', classes ?? ''];
     return output.join(' ');
   }
 

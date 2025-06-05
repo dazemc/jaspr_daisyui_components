@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum LinkColor {
   neutral('link-neutral'),
   primary('link-primary'),
@@ -12,22 +11,25 @@ enum LinkColor {
   error('link-error'),
 
   none('');
+
   final String value;
   const LinkColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum LinkStyle {
   hover('link-hover'),
 
   none('');
+
   final String value;
   const LinkStyle(this.value);
   @override
   String toString() => value.toString();
 }
-  class Link extends StatelessComponent {
+
+class Link extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -45,10 +47,11 @@ enum LinkStyle {
     this.styles,
     this.style,
     this.color,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'link',
-            if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
 
       classes ?? '',

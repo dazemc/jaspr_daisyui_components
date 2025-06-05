@@ -1,27 +1,22 @@
 import 'package:jaspr/jaspr.dart';
 
-
-
-class Hero extends StatelessComponent {
+class HeroOverlay extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Hero(
+  const HeroOverlay(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'hero-overlay',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['hero-overlay', classes ?? ''];
     return output.join(' ');
   }
 

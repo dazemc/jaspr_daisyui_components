@@ -1,37 +1,34 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum StatsDirection {
   horizontal('stats-horizontal'),
   vertical('stats-vertical'),
 
   none('');
+
   final String value;
   const StatsDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  
-class Stats extends StatelessComponent {
+
+class Stat extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Stats(
+  const Stat(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-});  String getClasses() {
-    List<String> output = [
-      'stat',
-      
-      classes ?? '',
-    ];
+  });
+  String getClasses() {
+    List<String> output = ['stat', classes ?? ''];
     return output.join(' ');
   }
 

@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum RadioColor {
   neutral('radio-neutral'),
   primary('radio-primary'),
@@ -12,12 +11,13 @@ enum RadioColor {
   error('radio-error'),
 
   none('');
+
   final String value;
   const RadioColor(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum RadioSize {
   xs('radio-xs'),
   sm('radio-sm'),
@@ -26,12 +26,14 @@ enum RadioSize {
   xl('radio-xl'),
 
   none('');
+
   final String value;
   const RadioSize(this.value);
   @override
   String toString() => value.toString();
 }
-  class Radio extends StatelessComponent {
+
+class Radio extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -49,10 +51,11 @@ enum RadioSize {
     this.styles,
     this.color,
     this.size,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'radio',
-            if (color != null) color.toString(),
+      if (color != null) color.toString(),
       if (size != null) size.toString(),
 
       classes ?? '',

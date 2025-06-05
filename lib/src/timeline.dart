@@ -1,28 +1,30 @@
 import 'package:jaspr/jaspr.dart';
 
-
 enum TimelineModifier {
   snapicon('timeline-snap-icon'),
   compact('timeline-compact'),
 
   none('');
+
   final String value;
   const TimelineModifier(this.value);
   @override
   String toString() => value.toString();
 }
-  
+
 enum TimelineDirection {
   horizontal('timeline-horizontal'),
   vertical('timeline-vertical'),
 
   none('');
+
   final String value;
   const TimelineDirection(this.value);
   @override
   String toString() => value.toString();
 }
-  class Timeline extends StatelessComponent {
+
+class Timeline extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
   final Styles? styles;
@@ -40,10 +42,11 @@ enum TimelineDirection {
     this.styles,
     this.modifier,
     this.direction,
-});  String getClasses() {
+  });
+  String getClasses() {
     List<String> output = [
       'timeline',
-            if (modifier != null) modifier.toString(),
+      if (modifier != null) modifier.toString(),
       if (direction != null) direction.toString(),
 
       classes ?? '',
