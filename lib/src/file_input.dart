@@ -9,7 +9,6 @@ enum FileInputColor {
   success('file-input-success'),
   warning('file-input-warning'),
   error('file-input-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum FileInputColor {
 
 enum FileInputStyle {
   ghost('file-input-ghost'),
-
   none('');
 
   final String value;
@@ -35,7 +33,6 @@ enum FileInputSize {
   md('file-input-md'),
   lg('file-input-lg'),
   xl('file-input-xl'),
-
   none('');
 
   final String value;
@@ -68,6 +65,7 @@ class FileInput extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'file-input',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),

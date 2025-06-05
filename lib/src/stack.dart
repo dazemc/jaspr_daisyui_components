@@ -5,7 +5,6 @@ enum StackModifier {
   bottom('stack-bottom'),
   start('stack-start'),
   end('stack-end'),
-
   none('');
 
   final String value;
@@ -34,6 +33,7 @@ class Stack extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'stack',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

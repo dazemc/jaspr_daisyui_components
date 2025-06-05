@@ -9,7 +9,6 @@ enum ToggleColor {
   warning('toggle-warning'),
   info('toggle-info'),
   error('toggle-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum ToggleSize {
   md('toggle-md'),
   lg('toggle-lg'),
   xl('toggle-xl'),
-
   none('');
 
   final String value;
@@ -55,6 +53,7 @@ class Toggle extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'toggle',
+
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

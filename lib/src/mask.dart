@@ -16,7 +16,6 @@ enum MaskStyle {
   triangle2('mask-triangle-2'),
   triangle3('mask-triangle-3'),
   triangle4('mask-triangle-4'),
-
   none('');
 
   final String value;
@@ -28,7 +27,6 @@ enum MaskStyle {
 enum MaskModifier {
   half1('mask-half-1'),
   half2('mask-half-2'),
-
   none('');
 
   final String value;
@@ -59,6 +57,7 @@ class Mask extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'mask',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
 

@@ -9,7 +9,6 @@ enum ChatBubbleColor {
   success('chat-bubble-success'),
   warning('chat-bubble-warning'),
   error('chat-bubble-error'),
-
   none('');
 
   final String value;
@@ -38,6 +37,7 @@ class ChatBubble extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'chat-bubble',
+
       if (color != null) color.toString(),
 
       classes ?? '',

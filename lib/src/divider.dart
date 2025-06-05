@@ -9,7 +9,6 @@ enum DividerColor {
   warning('divider-warning'),
   info('divider-info'),
   error('divider-error'),
-
   none('');
 
   final String value;
@@ -21,7 +20,6 @@ enum DividerColor {
 enum DividerPlacement {
   start('divider-start'),
   end('divider-end'),
-
   none('');
 
   final String value;
@@ -33,7 +31,6 @@ enum DividerPlacement {
 enum DividerDirection {
   vertical('divider-vertical'),
   horizontal('divider-horizontal'),
-
   none('');
 
   final String value;
@@ -66,6 +63,7 @@ class Divider extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'divider',
+
       if (color != null) color.toString(),
       if (direction != null) direction.toString(),
       if (placement != null) placement.toString(),

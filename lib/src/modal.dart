@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum ModalModifier {
   open('modal-open'),
-
   none('');
 
   final String value;
@@ -17,7 +16,6 @@ enum ModalPlacement {
   bottom('modal-bottom'),
   start('modal-start'),
   end('modal-end'),
-
   none('');
 
   final String value;
@@ -48,6 +46,7 @@ class Modal extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'modal',
+
       if (modifier != null) modifier.toString(),
       if (placement != null) placement.toString(),
 

@@ -6,7 +6,6 @@ enum MenuSize {
   md('menu-md'),
   lg('menu-lg'),
   xl('menu-xl'),
-
   none('');
 
   final String value;
@@ -19,7 +18,6 @@ enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
   focus('menu-focus'),
-
   none('');
 
   final String value;
@@ -31,7 +29,6 @@ enum MenuModifier {
 enum MenuDirection {
   vertical('menu-vertical'),
   horizontal('menu-horizontal'),
-
   none('');
 
   final String value;
@@ -64,6 +61,7 @@ class Menu extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'menu',
+
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
       if (direction != null) direction.toString(),

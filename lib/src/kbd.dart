@@ -6,7 +6,6 @@ enum KbdSize {
   md('kbd-md'),
   lg('kbd-lg'),
   xl('kbd-xl'),
-
   none('');
 
   final String value;
@@ -35,6 +34,7 @@ class Kbd extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'kbd',
+
       if (size != null) size.toString(),
 
       classes ?? '',

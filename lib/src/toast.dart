@@ -7,7 +7,6 @@ enum ToastPlacement {
   top('toast-top'),
   middle('toast-middle'),
   bottom('toast-bottom'),
-
   none('');
 
   final String value;
@@ -36,6 +35,7 @@ class Toast extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'toast',
+
       if (placement != null) placement.toString(),
 
       classes ?? '',

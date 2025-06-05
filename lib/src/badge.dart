@@ -9,7 +9,6 @@ enum BadgeColor {
   success('badge-success'),
   warning('badge-warning'),
   error('badge-error'),
-
   none('');
 
   final String value;
@@ -23,7 +22,6 @@ enum BadgeStyle {
   dash('badge-dash'),
   soft('badge-soft'),
   ghost('badge-ghost'),
-
   none('');
 
   final String value;
@@ -38,7 +36,6 @@ enum BadgeSize {
   md('badge-md'),
   lg('badge-lg'),
   xl('badge-xl'),
-
   none('');
 
   final String value;
@@ -71,6 +68,7 @@ class Badge extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'badge',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),

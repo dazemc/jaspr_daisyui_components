@@ -9,7 +9,6 @@ enum InputColor {
   success('input-success'),
   warning('input-warning'),
   error('input-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum InputColor {
 
 enum InputStyle {
   ghost('input-ghost'),
-
   none('');
 
   final String value;
@@ -35,7 +33,6 @@ enum InputSize {
   md('input-md'),
   lg('input-lg'),
   xl('input-xl'),
-
   none('');
 
   final String value;
@@ -68,6 +65,7 @@ class Input extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'input',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),

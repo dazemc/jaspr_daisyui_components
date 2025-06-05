@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum DropdownModifier {
   hover('dropdown-hover'),
   open('dropdown-open'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum DropdownPlacement {
   bottom('dropdown-bottom'),
   left('dropdown-left'),
   right('dropdown-right'),
-
   none('');
 
   final String value;
@@ -51,6 +49,7 @@ class Dropdown extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'dropdown',
+
       if (placement != null) placement.toString(),
       if (modifier != null) modifier.toString(),
 

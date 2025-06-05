@@ -4,7 +4,6 @@ enum TabsStyle {
   box('tabs-box'),
   border('tabs-border'),
   lift('tabs-lift'),
-
   none('');
 
   final String value;
@@ -19,7 +18,6 @@ enum TabsSize {
   md('tabs-md'),
   lg('tabs-lg'),
   xl('tabs-xl'),
-
   none('');
 
   final String value;
@@ -30,7 +28,6 @@ enum TabsSize {
 
 enum TabsModifier {
   tabdisabled('tab-disabled'),
-
   none('');
 
   final String value;
@@ -42,7 +39,6 @@ enum TabsModifier {
 enum TabsPlacement {
   top('tabs-top'),
   bottom('tabs-bottom'),
-
   none('');
 
   final String value;
@@ -77,6 +73,7 @@ class Tabs extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'tabs',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
       if (placement != null) placement.toString(),

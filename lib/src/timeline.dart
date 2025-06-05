@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum TimelineModifier {
   snapicon('timeline-snap-icon'),
   compact('timeline-compact'),
-
   none('');
 
   final String value;
@@ -15,7 +14,6 @@ enum TimelineModifier {
 enum TimelineDirection {
   horizontal('timeline-horizontal'),
   vertical('timeline-vertical'),
-
   none('');
 
   final String value;
@@ -46,6 +44,7 @@ class Timeline extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'timeline',
+
       if (modifier != null) modifier.toString(),
       if (direction != null) direction.toString(),
 

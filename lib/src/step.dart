@@ -8,7 +8,6 @@ enum StepColor {
   info('step-info'),
   warning('step-warning'),
   error('step-error'),
-
   none('');
 
   final String value;
@@ -37,6 +36,7 @@ class Step extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'step',
+
       if (color != null) color.toString(),
 
       classes ?? '',

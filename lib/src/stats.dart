@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum StatsDirection {
   horizontal('stats-horizontal'),
   vertical('stats-vertical'),
-
   none('');
 
   final String value;
@@ -32,6 +31,7 @@ class Stats extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'stats',
+
       if (direction != null) direction.toString(),
 
       classes ?? '',

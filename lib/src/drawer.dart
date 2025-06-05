@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum DrawerModifier {
   open('drawer-open'),
-
   none('');
 
   final String value;
@@ -13,7 +12,6 @@ enum DrawerModifier {
 
 enum DrawerPlacement {
   end('drawer-end'),
-
   none('');
 
   final String value;
@@ -44,6 +42,7 @@ class Drawer extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'drawer',
+
       if (placement != null) placement.toString(),
       if (modifier != null) modifier.toString(),
 

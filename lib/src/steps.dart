@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum StepsColor {
   stepsuccess('step-success'),
-
   none('');
 
   final String value;
@@ -14,7 +13,6 @@ enum StepsColor {
 enum StepsDirection {
   vertical('steps-vertical'),
   horizontal('steps-horizontal'),
-
   none('');
 
   final String value;
@@ -45,6 +43,7 @@ class Steps extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'steps',
+
       if (color != null) color.toString(),
       if (direction != null) direction.toString(),
 

@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum TimelineEndModifier {
   timelinebox('timeline-box'),
-
   none('');
 
   final String value;
@@ -31,6 +30,7 @@ class TimelineEnd extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'timeline-end',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

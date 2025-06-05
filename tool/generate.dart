@@ -53,7 +53,7 @@ void buildFunctions(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     // String name = formatName(c.subParent, "");
     List<String> presentTypes = [];
-    String output = '';
+    String output = '\n';
     Map<String, String> mappedCalls = {
       "color": '      if (color != null) color.toString(),\n',
       "style":
@@ -292,15 +292,15 @@ String? getCategoryType(DaisyuiComponent input) {
   String? style = input.label
       .replaceFirst(input.subParent, "")
       .replaceAll("-", "");
-  return "$style('${input.label}'),\n";
+  return "$style('${input.label}'),";
 }
 
 String buildEnumLine(String pascalName, List<String> enums) {
   return """
 
 enum $pascalName {
-  ${enums.join("  ")}
-  none('');
+  ${enums.join("\n  ")}
+  none('');\n
   final String value;
   const $pascalName(this.value);
   @override

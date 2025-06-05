@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum ListRowModifier {
   listcolwrap('list-col-wrap'),
   listcolgrow('list-col-grow'),
-
   none('');
 
   final String value;
@@ -32,6 +31,7 @@ class ListRow extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'list-row',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

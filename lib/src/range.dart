@@ -9,7 +9,6 @@ enum RangeColor {
   warning('range-warning'),
   info('range-info'),
   error('range-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum RangeSize {
   md('range-md'),
   lg('range-lg'),
   xl('range-xl'),
-
   none('');
 
   final String value;
@@ -55,6 +53,7 @@ class Range extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'range',
+
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

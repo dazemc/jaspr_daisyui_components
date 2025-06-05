@@ -5,7 +5,6 @@ enum AlertColor {
   success('alert-success'),
   warning('alert-warning'),
   error('alert-error'),
-
   none('');
 
   final String value;
@@ -18,7 +17,6 @@ enum AlertStyle {
   outline('alert-outline'),
   dash('alert-dash'),
   soft('alert-soft'),
-
   none('');
 
   final String value;
@@ -30,7 +28,6 @@ enum AlertStyle {
 enum AlertDirection {
   vertical('alert-vertical'),
   horizontal('alert-horizontal'),
-
   none('');
 
   final String value;
@@ -63,6 +60,7 @@ class Alert extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'alert',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (direction != null) direction.toString(),

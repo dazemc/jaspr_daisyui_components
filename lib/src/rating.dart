@@ -6,7 +6,6 @@ enum RatingSize {
   md('rating-md'),
   lg('rating-lg'),
   xl('rating-xl'),
-
   none('');
 
   final String value;
@@ -18,7 +17,6 @@ enum RatingSize {
 enum RatingModifier {
   half('rating-half'),
   hidden('rating-hidden'),
-
   none('');
 
   final String value;
@@ -49,6 +47,7 @@ class Rating extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'rating',
+
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
 

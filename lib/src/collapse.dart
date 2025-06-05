@@ -5,7 +5,6 @@ enum CollapseModifier {
   plus('collapse-plus'),
   open('collapse-open'),
   close('collapse-close'),
-
   none('');
 
   final String value;
@@ -34,6 +33,7 @@ class Collapse extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'collapse',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

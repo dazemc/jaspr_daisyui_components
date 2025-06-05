@@ -9,7 +9,6 @@ enum BtnColor {
   success('btn-success'),
   warning('btn-warning'),
   error('btn-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum BtnStyle {
   soft('btn-soft'),
   ghost('btn-ghost'),
   link('btn-link'),
-
   none('');
 
   final String value;
@@ -36,7 +34,6 @@ enum BtnStyle {
 enum BtnBehavior {
   active('btn-active'),
   disabled('btn-disabled'),
-
   none('');
 
   final String value;
@@ -51,7 +48,6 @@ enum BtnSize {
   md('btn-md'),
   lg('btn-lg'),
   xl('btn-xl'),
-
   none('');
 
   final String value;
@@ -65,7 +61,6 @@ enum BtnModifier {
   block('btn-block'),
   square('btn-square'),
   circle('btn-circle'),
-
   none('');
 
   final String value;
@@ -102,6 +97,7 @@ class Btn extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'btn',
+
       if (color != null) color.toString(),
       if (style != null) ...style!.map((style) => style.toString()),
       if (behavior != null) behavior.toString(),

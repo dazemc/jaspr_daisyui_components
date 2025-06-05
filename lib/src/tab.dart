@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum TabModifier {
   active('tab-active'),
-
   none('');
 
   final String value;
@@ -31,6 +30,7 @@ class Tab extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'tab',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

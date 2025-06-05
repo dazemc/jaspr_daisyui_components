@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum MenuDropdownToggleModifier {
   menudropdownshow('menu-dropdown-show'),
-
   none('');
 
   final String value;
@@ -31,6 +30,7 @@ class MenuDropdownToggle extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'menu-dropdown-toggle',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

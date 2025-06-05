@@ -6,7 +6,6 @@ enum DockSize {
   md('dock-md'),
   lg('dock-lg'),
   xl('dock-xl'),
-
   none('');
 
   final String value;
@@ -17,7 +16,6 @@ enum DockSize {
 
 enum DockModifier {
   active('dock-active'),
-
   none('');
 
   final String value;
@@ -48,6 +46,7 @@ class Dock extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'dock',
+
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
 

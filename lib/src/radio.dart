@@ -9,7 +9,6 @@ enum RadioColor {
   warning('radio-warning'),
   info('radio-info'),
   error('radio-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum RadioSize {
   md('radio-md'),
   lg('radio-lg'),
   xl('radio-xl'),
-
   none('');
 
   final String value;
@@ -55,6 +53,7 @@ class Radio extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'radio',
+
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

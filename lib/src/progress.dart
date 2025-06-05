@@ -9,7 +9,6 @@ enum ProgressColor {
   success('progress-success'),
   warning('progress-warning'),
   error('progress-error'),
-
   none('');
 
   final String value;
@@ -38,6 +37,7 @@ class Progress extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'progress',
+
       if (color != null) color.toString(),
 
       classes ?? '',

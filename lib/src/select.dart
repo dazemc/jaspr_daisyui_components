@@ -9,7 +9,6 @@ enum SelectColor {
   success('select-success'),
   warning('select-warning'),
   error('select-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum SelectColor {
 
 enum SelectStyle {
   ghost('select-ghost'),
-
   none('');
 
   final String value;
@@ -35,7 +33,6 @@ enum SelectSize {
   md('select-md'),
   lg('select-lg'),
   xl('select-xl'),
-
   none('');
 
   final String value;
@@ -68,6 +65,7 @@ class Select extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'select',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),

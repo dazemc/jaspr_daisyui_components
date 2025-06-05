@@ -9,7 +9,6 @@ enum TextareaColor {
   success('textarea-success'),
   warning('textarea-warning'),
   error('textarea-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum TextareaColor {
 
 enum TextareaStyle {
   ghost('textarea-ghost'),
-
   none('');
 
   final String value;
@@ -35,7 +33,6 @@ enum TextareaSize {
   md('textarea-md'),
   lg('textarea-lg'),
   xl('textarea-xl'),
-
   none('');
 
   final String value;
@@ -68,6 +65,7 @@ class Textarea extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'textarea',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),

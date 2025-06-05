@@ -9,7 +9,6 @@ enum LinkColor {
   info('link-info'),
   warning('link-warning'),
   error('link-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum LinkColor {
 
 enum LinkStyle {
   hover('link-hover'),
-
   none('');
 
   final String value;
@@ -51,6 +49,7 @@ class Link extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'link',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
 

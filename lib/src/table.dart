@@ -6,7 +6,6 @@ enum TableSize {
   md('table-md'),
   lg('table-lg'),
   xl('table-xl'),
-
   none('');
 
   final String value;
@@ -19,7 +18,6 @@ enum TableModifier {
   zebra('table-zebra'),
   pinrows('table-pin-rows'),
   pincols('table-pin-cols'),
-
   none('');
 
   final String value;
@@ -50,6 +48,7 @@ class Table extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'table',
+
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
 

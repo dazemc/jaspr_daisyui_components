@@ -4,7 +4,6 @@ enum CarouselModifier {
   start('carousel-start'),
   center('carousel-center'),
   end('carousel-end'),
-
   none('');
 
   final String value;
@@ -16,7 +15,6 @@ enum CarouselModifier {
 enum CarouselDirection {
   horizontal('carousel-horizontal'),
   vertical('carousel-vertical'),
-
   none('');
 
   final String value;
@@ -47,6 +45,7 @@ class Carousel extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'carousel',
+
       if (modifier != null) modifier.toString(),
       if (direction != null) direction.toString(),
 

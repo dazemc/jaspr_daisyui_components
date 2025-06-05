@@ -7,7 +7,6 @@ enum LoadingStyle {
   ball('loading-ball'),
   bars('loading-bars'),
   infinity('loading-infinity'),
-
   none('');
 
   final String value;
@@ -22,7 +21,6 @@ enum LoadingSize {
   md('loading-md'),
   lg('loading-lg'),
   xl('loading-xl'),
-
   none('');
 
   final String value;
@@ -53,6 +51,7 @@ class Loading extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'loading',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (size != null) size.toString(),
 

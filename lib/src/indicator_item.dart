@@ -7,7 +7,6 @@ enum IndicatorItemPlacement {
   indicatortop('indicator-top'),
   indicatormiddle('indicator-middle'),
   indicatorbottom('indicator-bottom'),
-
   none('');
 
   final String value;
@@ -36,6 +35,7 @@ class IndicatorItem extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'indicator-item',
+
       if (placement != null) placement.toString(),
 
       classes ?? '',

@@ -4,7 +4,6 @@ enum AvatarModifier {
   online('avatar-online'),
   offline('avatar-offline'),
   placeholder('avatar-placeholder'),
-
   none('');
 
   final String value;
@@ -33,6 +32,7 @@ class Avatar extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'avatar',
+
       if (modifier != null) modifier.toString(),
 
       classes ?? '',

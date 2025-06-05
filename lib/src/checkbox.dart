@@ -9,7 +9,6 @@ enum CheckboxColor {
   warning('checkbox-warning'),
   info('checkbox-info'),
   error('checkbox-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum CheckboxSize {
   md('checkbox-md'),
   lg('checkbox-lg'),
   xl('checkbox-xl'),
-
   none('');
 
   final String value;
@@ -55,6 +53,7 @@ class Checkbox extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'checkbox',
+
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

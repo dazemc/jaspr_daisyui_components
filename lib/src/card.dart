@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum CardStyle {
   border('card-border'),
   dash('card-dash'),
-
   none('');
 
   final String value;
@@ -18,7 +17,6 @@ enum CardSize {
   md('card-md'),
   lg('card-lg'),
   xl('card-xl'),
-
   none('');
 
   final String value;
@@ -30,7 +28,6 @@ enum CardSize {
 enum CardModifier {
   side('card-side'),
   imagefull('image-full'),
-
   none('');
 
   final String value;
@@ -63,6 +60,7 @@ class Card extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'card',
+
       if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),

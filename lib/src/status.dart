@@ -9,7 +9,6 @@ enum StatusColor {
   success('status-success'),
   warning('status-warning'),
   error('status-error'),
-
   none('');
 
   final String value;
@@ -24,7 +23,6 @@ enum StatusSize {
   md('status-md'),
   lg('status-lg'),
   xl('status-xl'),
-
   none('');
 
   final String value;
@@ -55,6 +53,7 @@ class Status extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'status',
+
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

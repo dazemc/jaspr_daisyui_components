@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum JoinDirection {
   vertical('join-vertical'),
   horizontal('join-horizontal'),
-
   none('');
 
   final String value;
@@ -32,6 +31,7 @@ class Join extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'join',
+
       if (direction != null) direction.toString(),
 
       classes ?? '',

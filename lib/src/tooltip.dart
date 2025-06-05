@@ -9,7 +9,6 @@ enum TooltipColor {
   success('tooltip-success'),
   warning('tooltip-warning'),
   error('tooltip-error'),
-
   none('');
 
   final String value;
@@ -20,7 +19,6 @@ enum TooltipColor {
 
 enum TooltipModifier {
   open('tooltip-open'),
-
   none('');
 
   final String value;
@@ -34,7 +32,6 @@ enum TooltipPlacement {
   bottom('tooltip-bottom'),
   left('tooltip-left'),
   right('tooltip-right'),
-
   none('');
 
   final String value;
@@ -67,6 +64,7 @@ class Tooltip extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'tooltip',
+
       if (placement != null) placement.toString(),
       if (modifier != null) modifier.toString(),
       if (color != null) color.toString(),

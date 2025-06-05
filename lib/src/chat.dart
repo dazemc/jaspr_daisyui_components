@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum ChatPlacement {
   start('chat-start'),
   end('chat-end'),
-
   none('');
 
   final String value;
@@ -32,6 +31,7 @@ class Chat extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'chat',
+
       if (placement != null) placement.toString(),
 
       classes ?? '',

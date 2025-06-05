@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 
 enum FooterPlacement {
   center('footer-center'),
-
   none('');
 
   final String value;
@@ -14,7 +13,6 @@ enum FooterPlacement {
 enum FooterDirection {
   horizontal('footer-horizontal'),
   vertical('footer-vertical'),
-
   none('');
 
   final String value;
@@ -45,6 +43,7 @@ class Footer extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'footer',
+
       if (placement != null) placement.toString(),
       if (direction != null) direction.toString(),
 

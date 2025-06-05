@@ -3,7 +3,6 @@ import 'package:jaspr/jaspr.dart';
 enum SwapStyle {
   rotate('swap-rotate'),
   flip('swap-flip'),
-
   none('');
 
   final String value;
@@ -14,7 +13,6 @@ enum SwapStyle {
 
 enum SwapModifier {
   active('swap-active'),
-
   none('');
 
   final String value;
@@ -45,6 +43,7 @@ class Swap extends StatelessComponent {
   String getClasses() {
     List<String> output = [
       'swap',
+
       if (modifier != null) modifier.toString(),
       if (style != null) ...style!.map((style) => style.toString()),
 
