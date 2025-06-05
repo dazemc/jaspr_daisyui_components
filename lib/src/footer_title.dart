@@ -1,28 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum FooterPlacement {
-  center('footer-center'),
-
-  none('');
-
-  final String value;
-  const FooterPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum FooterDirection {
-  horizontal('footer-horizontal'),
-  vertical('footer-vertical'),
-
-  none('');
-
-  final String value;
-  const FooterDirection(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class FooterTitle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

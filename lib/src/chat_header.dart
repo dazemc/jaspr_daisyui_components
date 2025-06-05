@@ -1,17 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum ChatPlacement {
-  start('chat-start'),
-  end('chat-end'),
-
-  none('');
-
-  final String value;
-  const ChatPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class ChatHeader extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

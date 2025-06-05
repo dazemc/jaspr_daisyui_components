@@ -306,6 +306,8 @@ def unique_components(components: List[Component]):
         if name == component["parent"]:
             component["sub_parent"] = component["parent"]
         match name:
+            case 'stats-horizontal':
+                component["sub_parent"] = "stats"
             case "theme-controller":
                 component["sub_parent"] = component["label"]
             case "swap-indeterminate":

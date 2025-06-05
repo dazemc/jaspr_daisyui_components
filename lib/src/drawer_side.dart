@@ -1,27 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum DrawerModifier {
-  open('drawer-open'),
-
-  none('');
-
-  final String value;
-  const DrawerModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum DrawerPlacement {
-  end('drawer-end'),
-
-  none('');
-
-  final String value;
-  const DrawerPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class DrawerSide extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

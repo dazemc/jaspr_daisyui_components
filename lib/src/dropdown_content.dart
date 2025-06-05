@@ -1,34 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum DropdownModifier {
-  hover('dropdown-hover'),
-  open('dropdown-open'),
-
-  none('');
-
-  final String value;
-  const DropdownModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum DropdownPlacement {
-  start('dropdown-start'),
-  center('dropdown-center'),
-  end('dropdown-end'),
-  top('dropdown-top'),
-  bottom('dropdown-bottom'),
-  left('dropdown-left'),
-  right('dropdown-right'),
-
-  none('');
-
-  final String value;
-  const DropdownPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class DropdownContent extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

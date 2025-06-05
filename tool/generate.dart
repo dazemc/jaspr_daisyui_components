@@ -27,6 +27,7 @@ void main() async {
 }
 
 void writeComponentsToFile(List<DaisyuiComponent> components) async {
+  String libraryList = 'library;\n\n';
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = c.label.replaceAll("-", "_");
     String? header = c.enumString;
@@ -39,10 +40,13 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
       if (header.isNotEmpty && body.isNotEmpty && footer.isNotEmpty) {
         String output = '$header$body$footer';
         final file = File('../lib/src/$name.dart');
+        libraryList += "export 'src/$name.dart';\n";
         await file.writeAsString(output);
       }
     }
   }
+  final libFile = File('../lib/jaspr_daisyui_components.dart');
+  libFile.writeAsString(libraryList);
 }
 
 void buildFunctions(List<DaisyuiComponent> components) {
@@ -161,8 +165,8 @@ class $name extends StatelessComponent {
 }
 
 void buildEnums(List<DaisyuiComponent> components) {
-  Map<String, String> output = {};
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
+    String output = '''import 'package:jaspr/jaspr.dart';\n''';
     List<DaisyuiComponent> typedComponents =
         c.children
             .where((e) => !isComponent(e) && e.subParent == c.label)
@@ -175,11 +179,8 @@ void buildEnums(List<DaisyuiComponent> components) {
         enums += buildCategory(input);
       }
     }
-    if (!output.containsKey(c.subParent)) {
-      output[c.subParent] = '''import 'package:jaspr/jaspr.dart';\n''';
-    }
-    output[c.subParent] = '${output[c.subParent]}\n$enums';
-    c.enumString = output[c.subParent];
+    output += enums;
+    c.enumString = output;
   }
 }
 

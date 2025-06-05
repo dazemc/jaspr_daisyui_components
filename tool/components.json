@@ -3,7 +3,8 @@
         "label": "stats",
         "type": "component",
         "parent": "stats",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "stats"
     },
     {
         "label": "stat",
@@ -50,7 +51,8 @@
     {
         "label": "stats-horizontal",
         "type": "direction",
-        "parent": "stats"
+        "parent": "stats",
+        "sub_parent": "stats"
     },
     {
         "label": "stats-vertical",
@@ -153,7 +155,8 @@
         "label": "drawer",
         "type": "component",
         "parent": "drawer",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "drawer"
     },
     {
         "label": "drawer-toggle",
@@ -209,7 +212,8 @@
         "additional_attributes": [
             "max",
             "value"
-        ]
+        ],
+        "sub_parent": "progress"
     },
     {
         "label": "progress-neutral",
@@ -263,7 +267,8 @@
         "label": "fieldset",
         "type": "component",
         "parent": "fieldset",
-        "tag": "fieldset"
+        "tag": "fieldset",
+        "sub_parent": "fieldset"
     },
     {
         "label": "label",
@@ -286,7 +291,8 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ]
+        ],
+        "sub_parent": "alert"
     },
     {
         "label": "alert-outline",
@@ -345,7 +351,8 @@
         "label": "divider",
         "type": "component",
         "parent": "divider",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "divider"
     },
     {
         "label": "divider-neutral",
@@ -422,7 +429,8 @@
         "label": "hero",
         "type": "component",
         "parent": "hero",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "hero"
     },
     {
         "label": "hero-content",
@@ -442,7 +450,8 @@
         "label": "link",
         "type": "component",
         "parent": "link",
-        "tag": "a"
+        "tag": "a",
+        "sub_parent": "link"
     },
     {
         "label": "link-hover",
@@ -502,7 +511,8 @@
         "label": "kbd",
         "type": "component",
         "parent": "kbd",
-        "tag": "kbd"
+        "tag": "kbd",
+        "sub_parent": "kbd"
     },
     {
         "label": "kbd-xs",
@@ -538,13 +548,15 @@
         "label": "mockup-code",
         "type": "component",
         "parent": "mockup-code",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "mockup-code"
     },
     {
         "label": "loading",
         "type": "component",
         "parent": "loading",
-        "tag": "span"
+        "tag": "span",
+        "sub_parent": "loading"
     },
     {
         "label": "loading-spinner",
@@ -616,13 +628,15 @@
         "label": "skeleton",
         "type": "component",
         "parent": "skeleton",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "skeleton"
     },
     {
         "label": "swap",
         "type": "component",
         "parent": "swap",
-        "tag": "label"
+        "tag": "label",
+        "sub_parent": "swap"
     },
     {
         "label": "swap-on",
@@ -779,7 +793,8 @@
         "additional_attributes": [
             "checked",
             "type"
-        ]
+        ],
+        "sub_parent": "radio"
     },
     {
         "label": "radio-neutral",
@@ -863,7 +878,8 @@
         "label": "navbar",
         "type": "component",
         "parent": "navbar",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "navbar"
     },
     {
         "label": "navbar-start",
@@ -890,7 +906,8 @@
         "label": "collapse",
         "type": "component",
         "parent": "collapse",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "collapse"
     },
     {
         "label": "collapse-title",
@@ -1031,7 +1048,8 @@
         "tag": "button",
         "additional_attributes": [
             "role"
-        ]
+        ],
+        "sub_parent": "btn"
     },
     {
         "label": "btn-neutral",
@@ -1180,7 +1198,8 @@
         "label": "chat",
         "type": "component",
         "parent": "chat",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "chat"
     },
     {
         "label": "chat-image",
@@ -1277,7 +1296,8 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ]
+        ],
+        "sub_parent": "tabs"
     },
     {
         "label": "tab",
@@ -1369,7 +1389,8 @@
         "label": "stack",
         "type": "component",
         "parent": "stack",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "stack"
     },
     {
         "label": "stack-top",
@@ -1398,7 +1419,8 @@
         "label": "join",
         "type": "component",
         "parent": "join",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "join"
     },
     {
         "label": "join-item",
@@ -1428,7 +1450,8 @@
             "min",
             "type",
             "value"
-        ]
+        ],
+        "sub_parent": "range"
     },
     {
         "label": "range-neutral",
@@ -1604,13 +1627,15 @@
         "tag": "div",
         "additional_attributes": [
             "role"
-        ]
+        ],
+        "sub_parent": "radial-progress"
     },
     {
         "label": "toast",
         "type": "component",
         "parent": "toast",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "toast"
     },
     {
         "label": "toast-start",
@@ -1651,7 +1676,8 @@
         "label": "steps",
         "type": "component",
         "parent": "steps",
-        "tag": "ul"
+        "tag": "ul",
+        "sub_parent": "steps"
     },
     {
         "label": "step",
@@ -1840,7 +1866,8 @@
         "label": "mockup-phone",
         "type": "component",
         "parent": "mockup-phone",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "mockup-phone"
     },
     {
         "label": "mockup-phone-camera",
@@ -1860,13 +1887,15 @@
         "label": "mockup-window",
         "type": "component",
         "parent": "mockup-window",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "mockup-window"
     },
     {
         "label": "carousel",
         "type": "component",
         "parent": "carousel",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "carousel"
     },
     {
         "label": "carousel-item",
@@ -1906,16 +1935,16 @@
     {
         "label": "list",
         "type": "component",
-        "parent": "list_",
+        "parent": "list",
         "tag": "ul",
-        "sub_parent": "list_"
+        "sub_parent": "list"
     },
     {
         "label": "list-row",
         "type": "component",
         "parent": "list",
         "tag": "li",
-        "sub_parent": "list_"
+        "sub_parent": "list"
     },
     {
         "label": "list-col-wrap",
@@ -1933,7 +1962,8 @@
         "label": "tooltip",
         "type": "component",
         "parent": "tooltip",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "tooltip"
     },
     {
         "label": "tooltip-content",
@@ -2024,7 +2054,8 @@
         "label": "dock",
         "type": "component",
         "parent": "dock",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "dock"
     },
     {
         "label": "dock-label",
@@ -2076,7 +2107,8 @@
         "additional_attributes": [
             "id",
             "role"
-        ]
+        ],
+        "sub_parent": "modal"
     },
     {
         "label": "modal-box",
@@ -2144,7 +2176,8 @@
         "label": "menu",
         "type": "component",
         "parent": "menu",
-        "tag": "ul"
+        "tag": "ul",
+        "sub_parent": "menu"
     },
     {
         "label": "menu-title",
@@ -2233,7 +2266,8 @@
         "label": "table",
         "type": "component",
         "parent": "table",
-        "tag": "table"
+        "tag": "table",
+        "sub_parent": "table"
     },
     {
         "label": "table-zebra",
@@ -2286,7 +2320,8 @@
         "tag": "select",
         "additional_attributes": [
             "required"
-        ]
+        ],
+        "sub_parent": "validator"
     },
     {
         "label": "validator-hint",
@@ -2298,7 +2333,8 @@
         "label": "card",
         "type": "component",
         "parent": "card",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "card"
     },
     {
         "label": "card-title",
@@ -2379,13 +2415,15 @@
         "label": "breadcrumbs",
         "type": "component",
         "parent": "breadcrumbs",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "breadcrumbs"
     },
     {
         "label": "countdown",
         "type": "component",
         "parent": "countdown",
-        "tag": "span"
+        "tag": "span",
+        "sub_parent": "countdown"
     },
     {
         "label": "floating-label",
@@ -2397,7 +2435,8 @@
         "label": "rating",
         "type": "component",
         "parent": "rating",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "rating"
     },
     {
         "label": "rating-half",
@@ -2476,7 +2515,8 @@
         "label": "mask",
         "type": "component",
         "parent": "mask",
-        "tag": "img"
+        "tag": "img",
+        "sub_parent": "mask"
     },
     {
         "label": "mask-squircle",
@@ -2585,7 +2625,8 @@
         "tag": "div",
         "additional_attributes": [
             "id"
-        ]
+        ],
+        "sub_parent": "dropdown"
     },
     {
         "label": "dropdown-content",
@@ -2702,7 +2743,8 @@
         "label": "timeline",
         "type": "component",
         "parent": "timeline",
-        "tag": "ul"
+        "tag": "ul",
+        "sub_parent": "timeline"
     },
     {
         "label": "timeline-start",
@@ -2849,7 +2891,8 @@
         "label": "footer",
         "type": "component",
         "parent": "footer",
-        "tag": "footer"
+        "tag": "footer",
+        "sub_parent": "footer"
     },
     {
         "label": "footer-title",
@@ -2878,7 +2921,8 @@
         "label": "mockup-browser",
         "type": "component",
         "parent": "mockup-browser",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "mockup-browser"
     },
     {
         "label": "mockup-browser-toolbar",
@@ -2891,7 +2935,8 @@
         "label": "status",
         "type": "component",
         "parent": "status",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "status"
     },
     {
         "label": "status-neutral",
@@ -3069,7 +3114,8 @@
         "label": "diff",
         "type": "component",
         "parent": "diff",
-        "tag": "figure"
+        "tag": "figure",
+        "sub_parent": "diff"
     },
     {
         "label": "diff-item-1",
@@ -3102,7 +3148,8 @@
         "label": "filter",
         "type": "component",
         "parent": "filter",
-        "tag": "div"
+        "tag": "div",
+        "sub_parent": "filter"
     },
     {
         "label": "filter-reset",

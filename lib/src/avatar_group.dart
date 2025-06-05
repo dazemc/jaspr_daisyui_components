@@ -1,18 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum AvatarModifier {
-  online('avatar-online'),
-  offline('avatar-offline'),
-  placeholder('avatar-placeholder'),
-
-  none('');
-
-  final String value;
-  const AvatarModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class AvatarGroup extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

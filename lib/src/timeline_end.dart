@@ -1,29 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum TimelineModifier {
-  snapicon('timeline-snap-icon'),
-  compact('timeline-compact'),
-
-  none('');
-
-  final String value;
-  const TimelineModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TimelineDirection {
-  horizontal('timeline-horizontal'),
-  vertical('timeline-vertical'),
-
-  none('');
-
-  final String value;
-  const TimelineDirection(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum TimelineEndModifier {
   timelinebox('timeline-box'),
 

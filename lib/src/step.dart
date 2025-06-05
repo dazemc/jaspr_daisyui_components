@@ -1,28 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum StepsColor {
-  stepsuccess('step-success'),
-
-  none('');
-
-  final String value;
-  const StepsColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum StepsDirection {
-  vertical('steps-vertical'),
-  horizontal('steps-horizontal'),
-
-  none('');
-
-  final String value;
-  const StepsDirection(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum StepColor {
   neutral('step-neutral'),
   primary('step-primary'),

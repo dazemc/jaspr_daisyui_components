@@ -1,19 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum CollapseModifier {
-  arrow('collapse-arrow'),
-  plus('collapse-plus'),
-  open('collapse-open'),
-  close('collapse-close'),
-
-  none('');
-
-  final String value;
-  const CollapseModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class CollapseTitle extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

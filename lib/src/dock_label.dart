@@ -1,31 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum DockSize {
-  xs('dock-xs'),
-  sm('dock-sm'),
-  md('dock-md'),
-  lg('dock-lg'),
-  xl('dock-xl'),
-
-  none('');
-
-  final String value;
-  const DockSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum DockModifier {
-  active('dock-active'),
-
-  none('');
-
-  final String value;
-  const DockModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class DockLabel extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

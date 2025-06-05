@@ -1,56 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum TabsStyle {
-  box('tabs-box'),
-  border('tabs-border'),
-  lift('tabs-lift'),
-
-  none('');
-
-  final String value;
-  const TabsStyle(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TabsSize {
-  xs('tabs-xs'),
-  sm('tabs-sm'),
-  md('tabs-md'),
-  lg('tabs-lg'),
-  xl('tabs-xl'),
-
-  none('');
-
-  final String value;
-  const TabsSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TabsModifier {
-  tabdisabled('tab-disabled'),
-
-  none('');
-
-  final String value;
-  const TabsModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TabsPlacement {
-  top('tabs-top'),
-  bottom('tabs-bottom'),
-
-  none('');
-
-  final String value;
-  const TabsPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum TabModifier {
   active('tab-active'),
 

@@ -1,31 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum ModalModifier {
-  open('modal-open'),
-
-  none('');
-
-  final String value;
-  const ModalModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum ModalPlacement {
-  top('modal-top'),
-  middle('modal-middle'),
-  bottom('modal-bottom'),
-  start('modal-start'),
-  end('modal-end'),
-
-  none('');
-
-  final String value;
-  const ModalPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class ModalBox extends StatelessComponent {
   final List<Component>? children;
   final String? classes;

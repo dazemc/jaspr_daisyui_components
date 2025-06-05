@@ -1,17 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-enum StatsDirection {
-  horizontal('stats-horizontal'),
-  vertical('stats-vertical'),
-
-  none('');
-
-  final String value;
-  const StatsDirection(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 class Stat extends StatelessComponent {
   final List<Component>? children;
   final String? classes;
