@@ -7,6 +7,7 @@ class PikaSingle extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? type;
   const PikaSingle(
     this.children, {
     this.classes,
@@ -14,6 +15,7 @@ class PikaSingle extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.type,
   });
   String getClasses() {
     List<String> output = ['pika-single', classes ?? ''];

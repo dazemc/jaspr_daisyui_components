@@ -48,6 +48,8 @@ class Input extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? placeholder;
+  final String? type;
   final List<InputStyle>? style;
   final InputColor? color;
   final InputSize? size;
@@ -58,6 +60,8 @@ class Input extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.placeholder,
+    this.type,
     this.style,
     this.color,
     this.size,

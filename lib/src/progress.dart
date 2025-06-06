@@ -24,6 +24,8 @@ class Progress extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? max;
+  final String? value;
   final ProgressColor? color;
   const Progress(
     this.children, {
@@ -32,6 +34,8 @@ class Progress extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.max,
+    this.value,
     this.color,
   });
   String getClasses() {

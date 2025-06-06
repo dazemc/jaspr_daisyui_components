@@ -31,6 +31,7 @@ class Modal extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   final ModalModifier? modifier;
   final ModalPlacement? placement;
   const Modal(
@@ -40,6 +41,7 @@ class Modal extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
     this.modifier,
     this.placement,
   });

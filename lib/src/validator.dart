@@ -7,6 +7,7 @@ class Validator extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? required;
   const Validator(
     this.children, {
     this.classes,
@@ -14,6 +15,7 @@ class Validator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.required,
   });
   String getClasses() {
     List<String> output = ['validator', classes ?? ''];

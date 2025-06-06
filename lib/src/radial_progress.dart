@@ -7,6 +7,7 @@ class RadialProgress extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   const RadialProgress(
     this.children, {
     this.classes,
@@ -14,6 +15,7 @@ class RadialProgress extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
   });
   String getClasses() {
     List<String> output = ['radial-progress', classes ?? ''];

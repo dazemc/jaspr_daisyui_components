@@ -113,6 +113,20 @@ void buildFields(List<DaisyuiComponent> components) {
   };
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = captialCase(c.label);
+    String requiredAttributesPara = '';
+    String requiredAttributesConst = '';
+    List<String>? additionalAttrs = c.additionalAttributes;
+    if (additionalAttrs != null) {
+      if (additionalAttrs.isNotEmpty) {
+        for (String name in additionalAttrs) {
+          if (name == "for") {
+            name = "for_";
+          }
+          requiredAttributesPara += 'final String? $name;';
+          requiredAttributesConst += 'this.$name,';
+        }
+      }
+    }
     if (name == 'List') name = 'List_';
     Map<String, String> mappedTypes = {
       "color": '  final ${name}Color? color;\n',
@@ -159,8 +173,14 @@ class $name extends StatelessComponent {
         }
       }
     }
+    for (DaisyuiComponent k
+        in c.children
+            .where((e) => isComponent(e) && e.parent == c.parent)
+            .toList()) {
+      // print(k);
+    }
     c.fieldString =
-        '$classInstanceHead$parameters$classConstructorHead$constructor});';
+        '$classInstanceHead$requiredAttributesPara$parameters$classConstructorHead$requiredAttributesConst$constructor});';
   }
 }
 
@@ -261,7 +281,13 @@ DaisyuiComponent convertToModel(Map<String, dynamic> value) {
     parent: value['parent'],
     subParent: value['sub_parent'] ?? value['parent'],
     tag: value['tag'],
-    additionalAttributes: value['additional_attributtes'],
+    additionalAttributes:
+        value['additional_attributes'] != null
+            ? (value['additional_attributes'] as List<dynamic>)
+                .whereType<String>()
+                .cast<String>()
+                .toList()
+            : null,
   );
 }
 

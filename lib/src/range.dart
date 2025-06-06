@@ -38,6 +38,10 @@ class Range extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? max;
+  final String? min;
+  final String? type;
+  final String? value;
   final RangeColor? color;
   final RangeSize? size;
   const Range(
@@ -47,6 +51,10 @@ class Range extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.max,
+    this.min,
+    this.type,
+    this.value,
     this.color,
     this.size,
   });

@@ -34,13 +34,13 @@ REQUIRED_ATTRIBUTES = [
     "max",
     "step",
     "type",
-    "id",
     "checked",
     "placeholder",
     "data-prefix",
     "role",
     "required",
     "for",
+    "tabindex"
 ]
 
 

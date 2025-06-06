@@ -17,6 +17,7 @@ class Tab extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   final TabModifier? modifier;
   const Tab(
     this.children, {
@@ -25,6 +26,7 @@ class Tab extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
     this.modifier,
   });
   String getClasses() {

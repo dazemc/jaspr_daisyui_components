@@ -7,6 +7,7 @@ class DrawerOverlay extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? for_;
   const DrawerOverlay(
     this.children, {
     this.classes,
@@ -14,6 +15,7 @@ class DrawerOverlay extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.for_,
   });
   String getClasses() {
     List<String> output = ['drawer-overlay', classes ?? ''];

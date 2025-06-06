@@ -38,6 +38,8 @@ class Toggle extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? checked;
+  final String? type;
   final ToggleColor? color;
   final ToggleSize? size;
   const Toggle(
@@ -47,6 +49,8 @@ class Toggle extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.checked,
+    this.type,
     this.color,
     this.size,
   });

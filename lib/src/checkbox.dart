@@ -38,6 +38,8 @@ class Checkbox extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? checked;
+  final String? type;
   final CheckboxColor? color;
   final CheckboxSize? size;
   const Checkbox(
@@ -47,6 +49,8 @@ class Checkbox extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.checked,
+    this.type,
     this.color,
     this.size,
   });

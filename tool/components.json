@@ -164,7 +164,6 @@
         "parent": "drawer",
         "tag": "input",
         "additional_attributes": [
-            "id",
             "type"
         ],
         "sub_parent": "drawer"
@@ -907,6 +906,9 @@
         "type": "component",
         "parent": "collapse",
         "tag": "div",
+        "additional_attributes": [
+            "tabindex"
+        ],
         "sub_parent": "collapse"
     },
     {
@@ -1764,7 +1766,6 @@
         "parent": "cally",
         "tag": "input",
         "additional_attributes": [
-            "id",
             "type"
         ]
     },
@@ -2105,7 +2106,6 @@
         "parent": "modal",
         "tag": "div",
         "additional_attributes": [
-            "id",
             "role"
         ],
         "sub_parent": "modal"
@@ -2137,7 +2137,6 @@
         "parent": "modal",
         "tag": "input",
         "additional_attributes": [
-            "id",
             "type"
         ]
     },
@@ -2623,9 +2622,6 @@
         "type": "component",
         "parent": "dropdown",
         "tag": "div",
-        "additional_attributes": [
-            "id"
-        ],
         "sub_parent": "dropdown"
     },
     {
@@ -3115,6 +3111,9 @@
         "type": "component",
         "parent": "diff",
         "tag": "figure",
+        "additional_attributes": [
+            "tabindex"
+        ],
         "sub_parent": "diff"
     },
     {
@@ -3123,7 +3122,8 @@
         "parent": "diff",
         "tag": "div",
         "additional_attributes": [
-            "role"
+            "role",
+            "tabindex"
         ],
         "sub_parent": "diff"
     },

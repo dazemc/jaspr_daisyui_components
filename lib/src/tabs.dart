@@ -54,6 +54,7 @@ class Tabs extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   final List<TabsStyle>? style;
   final TabsModifier? modifier;
   final TabsPlacement? placement;
@@ -65,6 +66,7 @@ class Tabs extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
     this.style,
     this.modifier,
     this.placement,

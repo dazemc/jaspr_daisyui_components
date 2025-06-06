@@ -7,6 +7,7 @@ class DiffItem2 extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   const DiffItem2(
     this.children, {
     this.classes,
@@ -14,6 +15,7 @@ class DiffItem2 extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
   });
   String getClasses() {
     List<String> output = ['diff-item-2', classes ?? ''];

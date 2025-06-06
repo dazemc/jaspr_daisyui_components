@@ -7,6 +7,8 @@ class ThemeController extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? type;
+  final String? value;
   const ThemeController(
     this.children, {
     this.classes,
@@ -14,6 +16,8 @@ class ThemeController extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.type,
+    this.value,
   });
   String getClasses() {
     List<String> output = ['theme-controller', classes ?? ''];

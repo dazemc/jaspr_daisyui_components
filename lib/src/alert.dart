@@ -43,6 +43,7 @@ class Alert extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? role;
   final List<AlertStyle>? style;
   final AlertColor? color;
   final AlertDirection? direction;
@@ -53,6 +54,7 @@ class Alert extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.role,
     this.style,
     this.color,
     this.direction,
