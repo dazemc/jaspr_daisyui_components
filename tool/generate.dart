@@ -57,8 +57,7 @@ void buildFunctions(List<DaisyuiComponent> components) {
     String output = '\n';
     Map<String, String> mappedCalls = {
       "color": '      if (color != null) color.toString(),\n',
-      "style":
-          '      if (style != null) ...style!.map((style) => style.toString()),\n',
+      "style": '      if (style != null) style.toString(),\n',
       "size": '      if (size != null) size.toString(),\n',
       "behavior": '      if (behavior != null) behavior.toString(),\n',
       "placement": '      if (placement != null) placement.toString(),\n',

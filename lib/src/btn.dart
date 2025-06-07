@@ -107,7 +107,7 @@ class Btn extends StatelessComponent {
       'btn',
 
       if (color != null) color.toString(),
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (behavior != null) behavior.toString(),
       if (size != null) size.toString(),
       if (modifier != null) modifier.toString(),

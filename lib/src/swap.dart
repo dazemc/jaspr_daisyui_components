@@ -69,7 +69,7 @@ class Swap extends StatelessComponent {
       'swap',
 
       if (modifier != null) modifier.toString(),
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
 
       classes ?? '',
     ];

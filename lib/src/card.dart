@@ -85,7 +85,7 @@ class Card extends StatelessComponent {
     List<String> output = [
       'card',
 
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
 

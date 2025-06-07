@@ -56,7 +56,7 @@ class Link extends StatelessComponent {
     List<String> output = [
       'link',
 
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (color != null) color.toString(),
 
       classes ?? '',

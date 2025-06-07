@@ -74,7 +74,7 @@ class FileInput extends StatelessComponent {
     List<String> output = [
       'file-input',
 
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

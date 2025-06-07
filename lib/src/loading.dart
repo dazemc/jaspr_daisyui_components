@@ -58,7 +58,7 @@ class Loading extends StatelessComponent {
     List<String> output = [
       'loading',
 
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (size != null) size.toString(),
 
       classes ?? '',

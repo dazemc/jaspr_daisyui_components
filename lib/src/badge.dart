@@ -75,7 +75,7 @@ class Badge extends StatelessComponent {
     List<String> output = [
       'badge',
 
-      if (style != null) ...style!.map((style) => style.toString()),
+      if (style != null) style.toString(),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 
