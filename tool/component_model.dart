@@ -12,6 +12,7 @@ class DaisyuiComponent {
   final List<String>? additionalAttributes;
   @JsonKey(defaultValue: [])
   List<DaisyuiComponent> children;
+  String? importHeader;
   String? enumString;
   String? fieldString;
   String? footerString;
@@ -23,6 +24,7 @@ class DaisyuiComponent {
     required this.subParent,
     this.tag,
     this.additionalAttributes,
+    this.importHeader,
     this.enumString,
     this.fieldString,
     this.footerString,

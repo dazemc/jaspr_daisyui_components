@@ -1,4 +1,10 @@
 import 'package:jaspr/jaspr.dart';
+import 'stat.dart';
+import 'stat_title.dart';
+import 'stat_value.dart';
+import 'stat_desc.dart';
+import 'stat_figure.dart';
+import 'stat_actions.dart';
 
 enum StatsDirection {
   horizontal('stats-horizontal'),
@@ -18,6 +24,12 @@ class Stats extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final Stat? stat;
+  final StatTitle? statTitle;
+  final StatValue? statValue;
+  final StatDesc? statDesc;
+  final StatFigure? statFigure;
+  final StatActions? statActions;
   final StatsDirection? direction;
   const Stats(
     this.children, {
@@ -26,6 +38,12 @@ class Stats extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.stat,
+    this.statTitle,
+    this.statValue,
+    this.statDesc,
+    this.statFigure,
+    this.statActions,
     this.direction,
   });
   String getClasses() {

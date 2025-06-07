@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'step_icon.dart';
 
 enum StepColor {
   neutral('step-neutral'),
@@ -23,6 +24,7 @@ class Step extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final StepIcon? stepIcon;
   final StepColor? color;
   const Step(
     this.children, {
@@ -31,6 +33,7 @@ class Step extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.stepIcon,
     this.color,
   });
   String getClasses() {

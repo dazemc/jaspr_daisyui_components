@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'mockup_phone_camera.dart';
+import 'mockup_phone_display.dart';
 
 class MockupPhone extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +9,8 @@ class MockupPhone extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final MockupPhoneCamera? mockupPhonemockupCamera;
+  final MockupPhoneDisplay? mockupPhonemockupDisplay;
   const MockupPhone(
     this.children, {
     this.classes,
@@ -14,6 +18,8 @@ class MockupPhone extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.mockupPhonemockupCamera,
+    this.mockupPhonemockupDisplay,
   });
   String getClasses() {
     List<String> output = ['mockup-phone', classes ?? ''];

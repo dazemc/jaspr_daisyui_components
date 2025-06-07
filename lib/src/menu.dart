@@ -1,4 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'menu_title.dart';
+import 'menu_dropdown.dart';
+import 'menu_dropdown_toggle.dart';
 
 enum MenuSize {
   xs('menu-xs'),
@@ -44,6 +47,9 @@ class Menu extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final MenuTitle? menuTitle;
+  final MenuDropdown? menuDropdown;
+  final MenuDropdownToggle? menuDropdownmenuToggle;
   final MenuModifier? modifier;
   final MenuSize? size;
   final MenuDirection? direction;
@@ -54,6 +60,9 @@ class Menu extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.menuTitle,
+    this.menuDropdown,
+    this.menuDropdownmenuToggle,
     this.modifier,
     this.size,
     this.direction,

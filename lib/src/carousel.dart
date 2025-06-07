@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'carousel_item.dart';
 
 enum CarouselModifier {
   start('carousel-start'),
@@ -30,6 +31,7 @@ class Carousel extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final CarouselItem? carouselItem;
   final CarouselModifier? modifier;
   final CarouselDirection? direction;
   const Carousel(
@@ -39,6 +41,7 @@ class Carousel extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.carouselItem,
     this.modifier,
     this.direction,
   });

@@ -1,4 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'swap_on.dart';
+import 'swap_off.dart';
+import 'swap_indeterminate.dart';
 
 enum SwapStyle {
   rotate('swap-rotate'),
@@ -28,6 +31,9 @@ class Swap extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final SwapOn? swapOn;
+  final SwapOff? swapOff;
+  final SwapIndeterminate? swapIndeterminate;
   final SwapModifier? modifier;
   final List<SwapStyle>? style;
   const Swap(
@@ -37,6 +43,9 @@ class Swap extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.swapOn,
+    this.swapOff,
+    this.swapIndeterminate,
     this.modifier,
     this.style,
   });

@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'dock_label.dart';
 
 enum DockSize {
   xs('dock-xs'),
@@ -31,6 +32,7 @@ class Dock extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final DockLabel? dockLabel;
   final DockModifier? modifier;
   final DockSize? size;
   const Dock(
@@ -40,6 +42,7 @@ class Dock extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.dockLabel,
     this.modifier,
     this.size,
   });

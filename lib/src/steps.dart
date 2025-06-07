@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'step.dart';
+import 'step_icon.dart';
 
 enum StepsColor {
   stepsuccess('step-success'),
@@ -28,6 +30,8 @@ class Steps extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final Step? step;
+  final StepIcon? stepIcon;
   final StepsColor? color;
   final StepsDirection? direction;
   const Steps(
@@ -37,6 +41,8 @@ class Steps extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.step,
+    this.stepIcon,
     this.color,
     this.direction,
   });

@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'pika_single.dart';
+import 'react_day_picker.dart';
 
 class Cally extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +9,8 @@ class Cally extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final PikaSingle? pikaSingle;
+  final ReactDayPicker? reactDayreactPicker;
   const Cally(
     this.children, {
     this.classes,
@@ -14,6 +18,8 @@ class Cally extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.pikaSingle,
+    this.reactDayreactPicker,
   });
   String getClasses() {
     List<String> output = ['cally', classes ?? ''];

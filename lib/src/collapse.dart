@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'collapse_title.dart';
+import 'collapse_content.dart';
 
 enum CollapseModifier {
   arrow('collapse-arrow'),
@@ -20,6 +22,8 @@ class Collapse extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final CollapseTitle? collapseTitle;
+  final CollapseContent? collapseContent;
   final String? tabindex;
   final CollapseModifier? modifier;
   const Collapse(
@@ -29,6 +33,8 @@ class Collapse extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.collapseTitle,
+    this.collapseContent,
     this.tabindex,
     this.modifier,
   });

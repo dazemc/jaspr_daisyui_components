@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'filter_reset.dart';
 
 class Filter extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +8,7 @@ class Filter extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final FilterReset? filterReset;
   const Filter(
     this.children, {
     this.classes,
@@ -14,6 +16,7 @@ class Filter extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.filterReset,
   });
   String getClasses() {
     List<String> output = ['filter', classes ?? ''];

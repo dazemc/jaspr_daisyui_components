@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'dropdown_content.dart';
 
 enum DropdownModifier {
   hover('dropdown-hover'),
@@ -34,6 +35,7 @@ class Dropdown extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final DropdownContent? dropdownContent;
   final DropdownPlacement? placement;
   final DropdownModifier? modifier;
   const Dropdown(
@@ -43,6 +45,7 @@ class Dropdown extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.dropdownContent,
     this.placement,
     this.modifier,
   });

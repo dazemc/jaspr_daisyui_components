@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'hero_content.dart';
+import 'hero_overlay.dart';
 
 class Hero extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +9,8 @@ class Hero extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final HeroContent? heroContent;
+  final HeroOverlay? heroOverlay;
   const Hero(
     this.children, {
     this.classes,
@@ -14,6 +18,8 @@ class Hero extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.heroContent,
+    this.heroOverlay,
   });
   String getClasses() {
     List<String> output = ['hero', classes ?? ''];

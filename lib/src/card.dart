@@ -1,4 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'card_title.dart';
+import 'card_body.dart';
+import 'card_actions.dart';
 
 enum CardStyle {
   border('card-border'),
@@ -43,6 +46,9 @@ class Card extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final CardTitle? cardTitle;
+  final CardBody? cardBody;
+  final CardActions? cardActions;
   final List<CardStyle>? style;
   final CardModifier? modifier;
   final CardSize? size;
@@ -53,6 +59,9 @@ class Card extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.cardTitle,
+    this.cardBody,
+    this.cardActions,
     this.style,
     this.modifier,
     this.size,

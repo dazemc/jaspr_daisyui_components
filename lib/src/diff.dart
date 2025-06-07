@@ -1,4 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'diff_item_1.dart';
+import 'diff_item_2.dart';
+import 'diff_resizer.dart';
 
 class Diff extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +10,9 @@ class Diff extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final DiffItem1? diffItemdiff1;
+  final DiffItem2? diffItemdiff2;
+  final DiffResizer? diffResizer;
   final String? tabindex;
   const Diff(
     this.children, {
@@ -15,6 +21,9 @@ class Diff extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.diffItemdiff1,
+    this.diffItemdiff2,
+    this.diffResizer,
     this.tabindex,
   });
   String getClasses() {

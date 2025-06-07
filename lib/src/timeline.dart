@@ -1,4 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'timeline_start.dart';
+import 'timeline_middle.dart';
+import 'timeline_end.dart';
 
 enum TimelineModifier {
   snapicon('timeline-snap-icon'),
@@ -29,6 +32,9 @@ class Timeline extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final TimelineStart? timelineStart;
+  final TimelineMiddle? timelineMiddle;
+  final TimelineEnd? timelineEnd;
   final TimelineModifier? modifier;
   final TimelineDirection? direction;
   const Timeline(
@@ -38,6 +44,9 @@ class Timeline extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.timelineStart,
+    this.timelineMiddle,
+    this.timelineEnd,
     this.modifier,
     this.direction,
   });

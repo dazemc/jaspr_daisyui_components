@@ -1,4 +1,8 @@
 import 'package:jaspr/jaspr.dart';
+import 'modal_box.dart';
+import 'modal_action.dart';
+import 'modal_backdrop.dart';
+import 'modal_toggle.dart';
 
 enum ModalModifier {
   open('modal-open'),
@@ -31,6 +35,10 @@ class Modal extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final ModalBox? modalBox;
+  final ModalAction? modalAction;
+  final ModalBackdrop? modalBackdrop;
+  final ModalToggle? modalToggle;
   final String? role;
   final ModalModifier? modifier;
   final ModalPlacement? placement;
@@ -41,6 +49,10 @@ class Modal extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.modalBox,
+    this.modalAction,
+    this.modalBackdrop,
+    this.modalToggle,
     this.role,
     this.modifier,
     this.placement,

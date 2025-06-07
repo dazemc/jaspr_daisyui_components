@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'avatar_group.dart';
 
 enum AvatarModifier {
   online('avatar-online'),
@@ -19,6 +20,7 @@ class Avatar extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final AvatarGroup? avatarGroup;
   final AvatarModifier? modifier;
   const Avatar(
     this.children, {
@@ -27,6 +29,7 @@ class Avatar extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.avatarGroup,
     this.modifier,
   });
   String getClasses() {

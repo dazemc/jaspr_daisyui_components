@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'mockup_browser_toolbar.dart';
 
 class MockupBrowser extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +8,7 @@ class MockupBrowser extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final MockupBrowserToolbar? mockupBrowsermockupToolbar;
   const MockupBrowser(
     this.children, {
     this.classes,
@@ -14,6 +16,7 @@ class MockupBrowser extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.mockupBrowsermockupToolbar,
   });
   String getClasses() {
     List<String> output = ['mockup-browser', classes ?? ''];

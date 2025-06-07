@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:convert';
 
+import 'package:jaspr/jaspr.dart';
+
 import 'component_model.dart';
 
 List<String> types = [
@@ -30,19 +32,18 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
   String libraryList = 'library;\n\n';
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     String name = c.label.replaceAll("-", "_");
-    String? header = c.enumString;
+    String header = c.importHeader ?? '';
+    if (header.isEmpty) {
+      header = '''import 'package:jaspr/jaspr.dart';''';
+    }
+    String? enums = c.enumString;
     String? body = c.fieldString;
     String? footer = c.footerString;
-    if (header == null) {
-      print(c);
-    }
-    if (header != null && body != null && footer != null) {
-      if (header.isNotEmpty && body.isNotEmpty && footer.isNotEmpty) {
-        String output = '$header$body$footer';
-        final file = File('../lib/src/$name.dart');
-        libraryList += "export 'src/$name.dart';\n";
-        await file.writeAsString(output);
-      }
+    if (enums != null && body != null && footer != null) {
+      String output = '$header$enums$body$footer';
+      final file = File('../lib/src/$name.dart');
+      libraryList += "export 'src/$name.dart';\n";
+      await file.writeAsString(output);
     }
   }
   final libFile = File('../lib/jaspr_daisyui_components.dart');
@@ -112,9 +113,12 @@ void buildFields(List<DaisyuiComponent> components) {
     "direction": '    this.direction,\n',
   };
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String name = captialCase(c.label);
+    String name = capitalCase(c.label);
     String requiredAttributesPara = '';
     String requiredAttributesConst = '';
+    String partParameters = '';
+    String partConst = '';
+    String header = '''import 'package:jaspr/jaspr.dart';''';
     List<String>? additionalAttrs = c.additionalAttributes;
     if (additionalAttrs != null) {
       if (additionalAttrs.isNotEmpty) {
@@ -177,16 +181,20 @@ class $name extends StatelessComponent {
         in c.children
             .where((e) => isComponent(e) && e.parent == c.parent)
             .toList()) {
-      // print(k);
+      partParameters +=
+          'final ${capitalCase(k.label)}? ${pascalCaseFromLabel(k.label)};\n';
+      partConst += 'this.${pascalCaseFromLabel(k.label)},\n';
+      header += "import '${k.label.replaceAll('-', '_')}.dart';";
     }
+    c.importHeader = '$header\n\n';
     c.fieldString =
-        '$classInstanceHead$requiredAttributesPara$parameters$classConstructorHead$requiredAttributesConst$constructor});';
+        '$classInstanceHead$partParameters$requiredAttributesPara$parameters$classConstructorHead$partConst$requiredAttributesConst$constructor});';
   }
 }
 
 void buildEnums(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String output = '''import 'package:jaspr/jaspr.dart';\n''';
+    String output = '';
     List<DaisyuiComponent> typedComponents =
         c.children
             .where((e) => !isComponent(e) && e.subParent == c.label)
@@ -355,11 +363,23 @@ String buildCategory(List<DaisyuiComponent> input) {
   return buildEnumLine(pascalName, categoryStrings);
 }
 
-String captialCase(String str) {
+String capitalCase(String str) {
   String output = '';
   for (String s in str.split('-')) {
     output += capitalize(s);
   }
 
+  return output;
+}
+
+String pascalCaseFromLabel(String str) {
+  String output = '';
+  List<String> splitStr = str.split('-');
+  if (splitStr.length == 1) {
+    return splitStr[0].toLowerCase();
+  }
+  for (String s in splitStr.sublist(1)) {
+    output += splitStr[0] + s.substring(0, 1).toUpperCase() + s.substring(1);
+  }
   return output;
 }

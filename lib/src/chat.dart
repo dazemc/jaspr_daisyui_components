@@ -1,4 +1,8 @@
 import 'package:jaspr/jaspr.dart';
+import 'chat_image.dart';
+import 'chat_header.dart';
+import 'chat_footer.dart';
+import 'chat_bubble.dart';
 
 enum ChatPlacement {
   start('chat-start'),
@@ -18,6 +22,10 @@ class Chat extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final ChatImage? chatImage;
+  final ChatHeader? chatHeader;
+  final ChatFooter? chatFooter;
+  final ChatBubble? chatBubble;
   final ChatPlacement? placement;
   const Chat(
     this.children, {
@@ -26,6 +34,10 @@ class Chat extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.chatImage,
+    this.chatHeader,
+    this.chatFooter,
+    this.chatBubble,
     this.placement,
   });
   String getClasses() {

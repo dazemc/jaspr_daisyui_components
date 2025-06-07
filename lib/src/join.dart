@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'join_item.dart';
 
 enum JoinDirection {
   vertical('join-vertical'),
@@ -18,6 +19,7 @@ class Join extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final JoinItem? joinItem;
   final JoinDirection? direction;
   const Join(
     this.children, {
@@ -26,6 +28,7 @@ class Join extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.joinItem,
     this.direction,
   });
   String getClasses() {

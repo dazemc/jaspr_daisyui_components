@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'indicator_item.dart';
 
 class Indicator extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +8,7 @@ class Indicator extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final IndicatorItem? indicatorItem;
   const Indicator(
     this.children, {
     this.classes,
@@ -14,6 +16,7 @@ class Indicator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.indicatorItem,
   });
   String getClasses() {
     List<String> output = ['indicator', classes ?? ''];

@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'tab.dart';
+import 'tab_content.dart';
 
 enum TabsStyle {
   box('tabs-box'),
@@ -54,6 +56,8 @@ class Tabs extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final Tab? tab;
+  final TabContent? tabContent;
   final String? role;
   final List<TabsStyle>? style;
   final TabsModifier? modifier;
@@ -66,6 +70,8 @@ class Tabs extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.tab,
+    this.tabContent,
     this.role,
     this.style,
     this.modifier,

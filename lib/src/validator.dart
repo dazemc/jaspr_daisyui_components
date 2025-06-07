@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'validator_hint.dart';
 
 class Validator extends StatelessComponent {
   final List<Component>? children;
@@ -7,6 +8,7 @@ class Validator extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final ValidatorHint? validatorHint;
   final String? required;
   const Validator(
     this.children, {
@@ -15,6 +17,7 @@ class Validator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.validatorHint,
     this.required,
   });
   String getClasses() {
