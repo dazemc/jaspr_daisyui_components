@@ -18,7 +18,7 @@ enum StatsDirection {
 }
 
 class Stats extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -46,6 +46,30 @@ class Stats extends StatelessComponent {
     this.statActions,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (stat != null) {
+      output.add(stat as Component);
+    }
+    if (statTitle != null) {
+      output.add(statTitle as Component);
+    }
+    if (statValue != null) {
+      output.add(statValue as Component);
+    }
+    if (statDesc != null) {
+      output.add(statDesc as Component);
+    }
+    if (statFigure != null) {
+      output.add(statFigure as Component);
+    }
+    if (statActions != null) {
+      output.add(statActions as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'stats',
@@ -65,7 +89,7 @@ class Stats extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

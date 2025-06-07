@@ -11,7 +11,7 @@ enum MenuDropdownToggleModifier {
 }
 
 class MenuDropdownToggle extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -27,6 +27,12 @@ class MenuDropdownToggle extends StatelessComponent {
     this.styles,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'menu-dropdown-toggle',
@@ -46,7 +52,7 @@ class MenuDropdownToggle extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

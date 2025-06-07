@@ -50,7 +50,7 @@ enum TabsPlacement {
 }
 
 class Tabs extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -78,6 +78,18 @@ class Tabs extends StatelessComponent {
     this.placement,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (tab != null) {
+      output.add(tab as Component);
+    }
+    if (tabContent != null) {
+      output.add(tabContent as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'tabs',
@@ -100,7 +112,7 @@ class Tabs extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

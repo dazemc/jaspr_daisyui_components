@@ -66,6 +66,21 @@ class Card extends StatelessComponent {
     this.modifier,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (cardTitle != null) {
+      output.add(cardTitle as Component);
+    }
+    if (cardBody != null) {
+      output.add(cardBody as Component);
+    }
+    if (cardActions != null) {
+      output.add(cardActions as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'card',
@@ -73,15 +88,10 @@ class Card extends StatelessComponent {
       if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
+
       classes ?? '',
     ];
     return output.join(' ');
-  }
-
-  List<Component> getChildren() {
-    List<Component> output = [];
-    if (cardTitle != null) output.add(cardTitle as Component);
-    return output;
   }
 
   @override

@@ -18,7 +18,7 @@ enum ChatBubbleColor {
 }
 
 class ChatBubble extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -34,6 +34,12 @@ class ChatBubble extends StatelessComponent {
     this.styles,
     this.color,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'chat-bubble',
@@ -53,7 +59,7 @@ class ChatBubble extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

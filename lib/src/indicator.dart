@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 import 'indicator_item.dart';
 
 class Indicator extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -18,6 +18,15 @@ class Indicator extends StatelessComponent {
     this.styles,
     this.indicatorItem,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (indicatorItem != null) {
+      output.add(indicatorItem as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['indicator', classes ?? ''];
     return output.join(' ');
@@ -31,7 +40,7 @@ class Indicator extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

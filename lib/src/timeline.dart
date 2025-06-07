@@ -26,7 +26,7 @@ enum TimelineDirection {
 }
 
 class Timeline extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -50,6 +50,21 @@ class Timeline extends StatelessComponent {
     this.modifier,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (timelineStart != null) {
+      output.add(timelineStart as Component);
+    }
+    if (timelineMiddle != null) {
+      output.add(timelineMiddle as Component);
+    }
+    if (timelineEnd != null) {
+      output.add(timelineEnd as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'timeline',
@@ -70,7 +85,7 @@ class Timeline extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

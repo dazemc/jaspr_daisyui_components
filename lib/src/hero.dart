@@ -3,7 +3,7 @@ import 'hero_content.dart';
 import 'hero_overlay.dart';
 
 class Hero extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -21,6 +21,18 @@ class Hero extends StatelessComponent {
     this.heroContent,
     this.heroOverlay,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (heroContent != null) {
+      output.add(heroContent as Component);
+    }
+    if (heroOverlay != null) {
+      output.add(heroOverlay as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['hero', classes ?? ''];
     return output.join(' ');
@@ -34,7 +46,7 @@ class Hero extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

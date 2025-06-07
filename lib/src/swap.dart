@@ -25,7 +25,7 @@ enum SwapModifier {
 }
 
 class Swap extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -49,6 +49,21 @@ class Swap extends StatelessComponent {
     this.modifier,
     this.style,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (swapOn != null) {
+      output.add(swapOn as Component);
+    }
+    if (swapOff != null) {
+      output.add(swapOff as Component);
+    }
+    if (swapIndeterminate != null) {
+      output.add(swapIndeterminate as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'swap',
@@ -69,7 +84,7 @@ class Swap extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

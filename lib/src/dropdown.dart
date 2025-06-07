@@ -29,7 +29,7 @@ enum DropdownPlacement {
 }
 
 class Dropdown extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -49,6 +49,15 @@ class Dropdown extends StatelessComponent {
     this.placement,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (dropdownContent != null) {
+      output.add(dropdownContent as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'dropdown',
@@ -69,7 +78,7 @@ class Dropdown extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

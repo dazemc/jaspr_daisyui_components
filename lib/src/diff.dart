@@ -4,7 +4,7 @@ import 'diff_item_2.dart';
 import 'diff_resizer.dart';
 
 class Diff extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -26,6 +26,21 @@ class Diff extends StatelessComponent {
     this.diffResizer,
     this.tabindex,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (diffItemdiff1 != null) {
+      output.add(diffItemdiff1 as Component);
+    }
+    if (diffItemdiff2 != null) {
+      output.add(diffItemdiff2 as Component);
+    }
+    if (diffResizer != null) {
+      output.add(diffResizer as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['diff', classes ?? ''];
     return output.join(' ');
@@ -39,7 +54,7 @@ class Diff extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

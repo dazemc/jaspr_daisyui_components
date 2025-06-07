@@ -42,7 +42,7 @@ enum InputSize {
 }
 
 class Input extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -66,6 +66,12 @@ class Input extends StatelessComponent {
     this.color,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'input',
@@ -87,7 +93,7 @@ class Input extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

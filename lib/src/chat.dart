@@ -16,7 +16,7 @@ enum ChatPlacement {
 }
 
 class Chat extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -40,6 +40,24 @@ class Chat extends StatelessComponent {
     this.chatBubble,
     this.placement,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (chatImage != null) {
+      output.add(chatImage as Component);
+    }
+    if (chatHeader != null) {
+      output.add(chatHeader as Component);
+    }
+    if (chatFooter != null) {
+      output.add(chatFooter as Component);
+    }
+    if (chatBubble != null) {
+      output.add(chatBubble as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'chat',
@@ -59,7 +77,7 @@ class Chat extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

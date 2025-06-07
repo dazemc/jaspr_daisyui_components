@@ -3,7 +3,7 @@ import 'card_title.dart';
 import 'card_actions.dart';
 
 class CardBody extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -21,6 +21,18 @@ class CardBody extends StatelessComponent {
     this.cardTitle,
     this.cardActions,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (cardTitle != null) {
+      output.add(cardTitle as Component);
+    }
+    if (cardActions != null) {
+      output.add(cardActions as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['card-body', classes ?? ''];
     return output.join(' ');
@@ -34,7 +46,7 @@ class CardBody extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

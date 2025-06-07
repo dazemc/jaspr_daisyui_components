@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 class DiffItem2 extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -17,6 +17,12 @@ class DiffItem2 extends StatelessComponent {
     this.styles,
     this.role,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['diff-item-2', classes ?? ''];
     return output.join(' ');
@@ -30,7 +36,7 @@ class DiffItem2 extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

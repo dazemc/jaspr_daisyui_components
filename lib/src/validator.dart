@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 import 'validator_hint.dart';
 
 class Validator extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -20,6 +20,15 @@ class Validator extends StatelessComponent {
     this.validatorHint,
     this.required,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (validatorHint != null) {
+      output.add(validatorHint as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['validator', classes ?? ''];
     return output.join(' ');
@@ -33,7 +42,7 @@ class Validator extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -34,7 +34,7 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     String name = c.label.replaceAll("-", "_");
     String header = c.importHeader ?? '';
     if (header.isEmpty) {
-      header = '''import 'package:jaspr/jaspr.dart';''';
+      header = '''import 'package:jaspr/jaspr.dart';\n\n''';
     }
     String? enums = c.enumString;
     String? body = c.fieldString;
@@ -165,6 +165,15 @@ class $name extends StatelessComponent {
     this.events,
     this.styles,
 ''';
+    String getChildrenFunctionHead = '''
+  List<Component> getChildren() {
+       List<Component> output = [];
+''';
+    String getChildrenFunctionBody = '';
+    String getChildrenFunctionFooter = '''
+         return output;
+  }
+  ''';
     List<String> presentTypes = [];
     if (c.children.isNotEmpty) {
       for (DaisyuiComponent k in c.children.where(
@@ -185,14 +194,18 @@ class $name extends StatelessComponent {
         in c.children
             .where((e) => isComponent(e) && e.parent == c.parent)
             .toList()) {
-      partParameters +=
-          'final ${capitalCase(k.label)}? ${pascalCaseFromLabel(k.label)};\n';
-      partConst += 'this.${pascalCaseFromLabel(k.label)},\n';
-      header += "import '${k.label.replaceAll('-', '_')}.dart';";
+      String pascalName = pascalCaseFromLabel(k.label);
+      partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
+      partConst += '    this.$pascalName,\n';
+      header += "\nimport '${k.label.replaceAll('-', '_')}.dart';";
+      getChildrenFunctionBody +=
+          'if ($pascalName != null) {output.add($pascalName as Component);}\n';
     }
+    String getChildrenFunction =
+        '$getChildrenFunctionHead$getChildrenFunctionBody$getChildrenFunctionFooter';
     c.importHeader = '$header\n\n';
     c.fieldString =
-        '$classInstanceHead$partParameters$requiredAttributesPara$parameters$classConstructorHead$partConst$requiredAttributesConst$constructor});';
+        '$classInstanceHead$partParameters$requiredAttributesPara$parameters$classConstructorHead$partConst$requiredAttributesConst$constructor});\n\n$getChildrenFunction';
   }
 }
 

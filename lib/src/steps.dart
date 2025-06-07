@@ -24,7 +24,7 @@ enum StepsDirection {
 }
 
 class Steps extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -46,6 +46,18 @@ class Steps extends StatelessComponent {
     this.color,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (step != null) {
+      output.add(step as Component);
+    }
+    if (stepIcon != null) {
+      output.add(stepIcon as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'steps',
@@ -66,7 +78,7 @@ class Steps extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -12,7 +12,7 @@ enum ListRowModifier {
 }
 
 class ListRow extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -28,6 +28,12 @@ class ListRow extends StatelessComponent {
     this.styles,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'list-row',
@@ -47,7 +53,7 @@ class ListRow extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

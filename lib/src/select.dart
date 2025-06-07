@@ -42,7 +42,7 @@ enum SelectSize {
 }
 
 class Select extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -62,6 +62,12 @@ class Select extends StatelessComponent {
     this.color,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'select',
@@ -83,7 +89,7 @@ class Select extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

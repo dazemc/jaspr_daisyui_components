@@ -28,7 +28,7 @@ enum LinkStyle {
 }
 
 class Link extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -46,6 +46,12 @@ class Link extends StatelessComponent {
     this.style,
     this.color,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'link',
@@ -66,7 +72,7 @@ class Link extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

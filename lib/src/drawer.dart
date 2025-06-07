@@ -25,7 +25,7 @@ enum DrawerPlacement {
 }
 
 class Drawer extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -51,6 +51,24 @@ class Drawer extends StatelessComponent {
     this.placement,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (drawerToggle != null) {
+      output.add(drawerToggle as Component);
+    }
+    if (drawerContent != null) {
+      output.add(drawerContent as Component);
+    }
+    if (drawerSide != null) {
+      output.add(drawerSide as Component);
+    }
+    if (drawerOverlay != null) {
+      output.add(drawerOverlay as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'drawer',
@@ -71,7 +89,7 @@ class Drawer extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

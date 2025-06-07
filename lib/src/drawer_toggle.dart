@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 class DrawerToggle extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -17,6 +17,12 @@ class DrawerToggle extends StatelessComponent {
     this.styles,
     this.type,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['drawer-toggle', classes ?? ''];
     return output.join(' ');
@@ -30,7 +36,7 @@ class DrawerToggle extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

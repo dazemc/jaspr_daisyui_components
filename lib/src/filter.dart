@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 import 'filter_reset.dart';
 
 class Filter extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -18,6 +18,15 @@ class Filter extends StatelessComponent {
     this.styles,
     this.filterReset,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (filterReset != null) {
+      output.add(filterReset as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['filter', classes ?? ''];
     return output.join(' ');
@@ -31,7 +40,7 @@ class Filter extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

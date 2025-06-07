@@ -26,7 +26,7 @@ enum DockModifier {
 }
 
 class Dock extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -46,6 +46,15 @@ class Dock extends StatelessComponent {
     this.modifier,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (dockLabel != null) {
+      output.add(dockLabel as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'dock',
@@ -66,7 +75,7 @@ class Dock extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

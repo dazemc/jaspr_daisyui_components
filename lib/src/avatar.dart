@@ -14,7 +14,7 @@ enum AvatarModifier {
 }
 
 class Avatar extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -32,6 +32,15 @@ class Avatar extends StatelessComponent {
     this.avatarGroup,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (avatarGroup != null) {
+      output.add(avatarGroup as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'avatar',
@@ -51,7 +60,7 @@ class Avatar extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

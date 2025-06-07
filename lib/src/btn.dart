@@ -70,7 +70,7 @@ enum BtnModifier {
 }
 
 class Btn extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -96,6 +96,12 @@ class Btn extends StatelessComponent {
     this.size,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'btn',
@@ -119,7 +125,7 @@ class Btn extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

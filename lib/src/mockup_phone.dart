@@ -3,7 +3,7 @@ import 'mockup_phone_camera.dart';
 import 'mockup_phone_display.dart';
 
 class MockupPhone extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -21,6 +21,18 @@ class MockupPhone extends StatelessComponent {
     this.mockupPhonemockupCamera,
     this.mockupPhonemockupDisplay,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (mockupPhonemockupCamera != null) {
+      output.add(mockupPhonemockupCamera as Component);
+    }
+    if (mockupPhonemockupDisplay != null) {
+      output.add(mockupPhonemockupDisplay as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['mockup-phone', classes ?? ''];
     return output.join(' ');
@@ -34,7 +46,7 @@ class MockupPhone extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 class MockupPhoneCamera extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -15,6 +15,12 @@ class MockupPhoneCamera extends StatelessComponent {
     this.events,
     this.styles,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['mockup-phone-camera', classes ?? ''];
     return output.join(' ');
@@ -28,7 +34,7 @@ class MockupPhoneCamera extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

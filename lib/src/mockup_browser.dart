@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 import 'mockup_browser_toolbar.dart';
 
 class MockupBrowser extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -18,6 +18,15 @@ class MockupBrowser extends StatelessComponent {
     this.styles,
     this.mockupBrowsermockupToolbar,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (mockupBrowsermockupToolbar != null) {
+      output.add(mockupBrowsermockupToolbar as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['mockup-browser', classes ?? ''];
     return output.join(' ');
@@ -31,7 +40,7 @@ class MockupBrowser extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

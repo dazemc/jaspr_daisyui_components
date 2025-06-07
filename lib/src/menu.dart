@@ -41,7 +41,7 @@ enum MenuDirection {
 }
 
 class Menu extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -67,6 +67,21 @@ class Menu extends StatelessComponent {
     this.size,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (menuTitle != null) {
+      output.add(menuTitle as Component);
+    }
+    if (menuDropdown != null) {
+      output.add(menuDropdown as Component);
+    }
+    if (menuDropdownmenuToggle != null) {
+      output.add(menuDropdownmenuToggle as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'menu',
@@ -88,7 +103,7 @@ class Menu extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

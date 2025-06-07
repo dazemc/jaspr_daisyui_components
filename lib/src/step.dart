@@ -18,7 +18,7 @@ enum StepColor {
 }
 
 class Step extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -36,6 +36,15 @@ class Step extends StatelessComponent {
     this.stepIcon,
     this.color,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (stepIcon != null) {
+      output.add(stepIcon as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'step',
@@ -55,7 +64,7 @@ class Step extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -27,7 +27,7 @@ enum TableModifier {
 }
 
 class Table extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -45,6 +45,12 @@ class Table extends StatelessComponent {
     this.modifier,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'table',
@@ -65,7 +71,7 @@ class Table extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

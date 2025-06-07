@@ -18,7 +18,7 @@ enum ProgressColor {
 }
 
 class Progress extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -38,6 +38,12 @@ class Progress extends StatelessComponent {
     this.value,
     this.color,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'progress',
@@ -57,7 +63,7 @@ class Progress extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -13,7 +13,7 @@ enum JoinDirection {
 }
 
 class Join extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -31,6 +31,15 @@ class Join extends StatelessComponent {
     this.joinItem,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (joinItem != null) {
+      output.add(joinItem as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'join',
@@ -50,7 +59,7 @@ class Join extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

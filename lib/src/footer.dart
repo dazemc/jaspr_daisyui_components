@@ -23,7 +23,7 @@ enum FooterDirection {
 }
 
 class Footer extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -43,6 +43,15 @@ class Footer extends StatelessComponent {
     this.placement,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (footerTitle != null) {
+      output.add(footerTitle as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'footer',
@@ -63,7 +72,7 @@ class Footer extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

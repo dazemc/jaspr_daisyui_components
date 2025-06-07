@@ -4,7 +4,7 @@ import 'navbar_center.dart';
 import 'navbar_end.dart';
 
 class Navbar extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -24,6 +24,21 @@ class Navbar extends StatelessComponent {
     this.navbarCenter,
     this.navbarEnd,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (navbarStart != null) {
+      output.add(navbarStart as Component);
+    }
+    if (navbarCenter != null) {
+      output.add(navbarCenter as Component);
+    }
+    if (navbarEnd != null) {
+      output.add(navbarEnd as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['navbar', classes ?? ''];
     return output.join(' ');
@@ -37,7 +52,7 @@ class Navbar extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

@@ -25,7 +25,7 @@ enum CarouselDirection {
 }
 
 class Carousel extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -45,6 +45,15 @@ class Carousel extends StatelessComponent {
     this.modifier,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (carouselItem != null) {
+      output.add(carouselItem as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'carousel',
@@ -65,7 +74,7 @@ class Carousel extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

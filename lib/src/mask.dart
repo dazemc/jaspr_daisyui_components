@@ -36,7 +36,7 @@ enum MaskModifier {
 }
 
 class Mask extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -54,6 +54,12 @@ class Mask extends StatelessComponent {
     this.style,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'mask',
@@ -74,7 +80,7 @@ class Mask extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

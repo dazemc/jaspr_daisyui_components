@@ -3,7 +3,7 @@ import 'pika_single.dart';
 import 'react_day_picker.dart';
 
 class Cally extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -21,6 +21,18 @@ class Cally extends StatelessComponent {
     this.pikaSingle,
     this.reactDayreactPicker,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (pikaSingle != null) {
+      output.add(pikaSingle as Component);
+    }
+    if (reactDayreactPicker != null) {
+      output.add(reactDayreactPicker as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['cally', classes ?? ''];
     return output.join(' ');
@@ -34,7 +46,7 @@ class Cally extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

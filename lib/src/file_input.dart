@@ -42,7 +42,7 @@ enum FileInputSize {
 }
 
 class FileInput extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -64,6 +64,12 @@ class FileInput extends StatelessComponent {
     this.color,
     this.size,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'file-input',
@@ -85,7 +91,7 @@ class FileInput extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

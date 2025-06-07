@@ -3,7 +3,7 @@ import 'label.dart';
 import 'fieldset_legend.dart';
 
 class Fieldset extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -21,6 +21,18 @@ class Fieldset extends StatelessComponent {
     this.label,
     this.fieldsetLegend,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (label != null) {
+      output.add(label as Component);
+    }
+    if (fieldsetLegend != null) {
+      output.add(fieldsetLegend as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = ['fieldset', classes ?? ''];
     return output.join(' ');
@@ -34,7 +46,7 @@ class Fieldset extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

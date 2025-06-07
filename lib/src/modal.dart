@@ -29,7 +29,7 @@ enum ModalPlacement {
 }
 
 class Modal extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -57,6 +57,24 @@ class Modal extends StatelessComponent {
     this.modifier,
     this.placement,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (modalBox != null) {
+      output.add(modalBox as Component);
+    }
+    if (modalAction != null) {
+      output.add(modalAction as Component);
+    }
+    if (modalBackdrop != null) {
+      output.add(modalBackdrop as Component);
+    }
+    if (modalToggle != null) {
+      output.add(modalToggle as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'modal',
@@ -77,7 +95,7 @@ class Modal extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

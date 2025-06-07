@@ -16,7 +16,7 @@ enum IndicatorItemPlacement {
 }
 
 class IndicatorItem extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -32,6 +32,12 @@ class IndicatorItem extends StatelessComponent {
     this.styles,
     this.placement,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'indicator-item',
@@ -51,7 +57,7 @@ class IndicatorItem extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

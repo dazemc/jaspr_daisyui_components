@@ -16,7 +16,7 @@ enum CollapseModifier {
 }
 
 class Collapse extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -38,6 +38,18 @@ class Collapse extends StatelessComponent {
     this.tabindex,
     this.modifier,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (collapseTitle != null) {
+      output.add(collapseTitle as Component);
+    }
+    if (collapseContent != null) {
+      output.add(collapseContent as Component);
+    }
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'collapse',
@@ -57,7 +69,7 @@ class Collapse extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );

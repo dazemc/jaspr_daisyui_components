@@ -37,7 +37,7 @@ enum AlertDirection {
 }
 
 class Alert extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -59,6 +59,12 @@ class Alert extends StatelessComponent {
     this.color,
     this.direction,
   });
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    return output;
+  }
+
   String getClasses() {
     List<String> output = [
       'alert',
@@ -80,7 +86,7 @@ class Alert extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );
