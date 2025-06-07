@@ -40,7 +40,7 @@ enum CardModifier {
 }
 
 class Card extends StatelessComponent {
-  final List<Component>? children;
+  final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
@@ -73,10 +73,15 @@ class Card extends StatelessComponent {
       if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
       if (size != null) size.toString(),
-
       classes ?? '',
     ];
     return output.join(' ');
+  }
+
+  List<Component> getChildren() {
+    List<Component> output = [];
+    if (cardTitle != null) output.add(cardTitle as Component);
+    return output;
   }
 
   @override
@@ -87,7 +92,7 @@ class Card extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: children,
+      children: [...children, ...getChildren()],
       attributes: attributes,
       events: events,
     );
