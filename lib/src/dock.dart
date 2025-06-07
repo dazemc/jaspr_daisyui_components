@@ -48,7 +48,7 @@ class Dock extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (dockLabel != null) {
       output.add(dockLabel as Component);
     }
@@ -75,7 +75,7 @@ class Dock extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

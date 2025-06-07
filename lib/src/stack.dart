@@ -32,7 +32,7 @@ class Stack extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     return output;
   }
 
@@ -55,7 +55,7 @@ class Stack extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

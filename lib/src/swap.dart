@@ -51,7 +51,7 @@ class Swap extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (swapOn != null) {
       output.add(swapOn as Component);
     }
@@ -84,7 +84,7 @@ class Swap extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

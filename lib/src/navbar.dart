@@ -26,7 +26,7 @@ class Navbar extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (navbarStart != null) {
       output.add(navbarStart as Component);
     }
@@ -52,7 +52,7 @@ class Navbar extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

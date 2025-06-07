@@ -20,7 +20,7 @@ class Indicator extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (indicatorItem != null) {
       output.add(indicatorItem as Component);
     }
@@ -40,7 +40,7 @@ class Indicator extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

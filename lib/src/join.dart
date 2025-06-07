@@ -33,7 +33,7 @@ class Join extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (joinItem != null) {
       output.add(joinItem as Component);
     }
@@ -59,7 +59,7 @@ class Join extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

@@ -23,7 +23,7 @@ class MockupPhone extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (mockupPhonemockupCamera != null) {
       output.add(mockupPhonemockupCamera as Component);
     }
@@ -46,7 +46,7 @@ class MockupPhone extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

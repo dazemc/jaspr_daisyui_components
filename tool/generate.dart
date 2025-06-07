@@ -74,10 +74,6 @@ void buildFunctions(List<DaisyuiComponent> components) {
     for (String name in presentTypes) {
       output += mappedCalls[name]!;
     }
-    //   List<Component> getChildren() {
-    //   List<Component> output = [];
-    //   if (cardTitle != null) output.add(cardTitle as Component);
-    //   return output;
     c.footerString = '''  
   String getClasses() {
     List<String> output = [
@@ -96,7 +92,7 @@ void buildFunctions(List<DaisyuiComponent> components) {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );
@@ -167,7 +163,7 @@ class $name extends StatelessComponent {
 ''';
     String getChildrenFunctionHead = '''
   List<Component> getChildren() {
-       List<Component> output = [];
+       List<Component> output = [...children];
 ''';
     String getChildrenFunctionBody = '';
     String getChildrenFunctionFooter = '''

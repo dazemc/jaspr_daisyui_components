@@ -23,7 +23,7 @@ class Hero extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (heroContent != null) {
       output.add(heroContent as Component);
     }
@@ -46,7 +46,7 @@ class Hero extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

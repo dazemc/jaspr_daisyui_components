@@ -80,7 +80,7 @@ class Tabs extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (tab != null) {
       output.add(tab as Component);
     }
@@ -112,7 +112,7 @@ class Tabs extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

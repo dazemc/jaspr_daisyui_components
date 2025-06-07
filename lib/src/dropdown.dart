@@ -51,7 +51,7 @@ class Dropdown extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (dropdownContent != null) {
       output.add(dropdownContent as Component);
     }
@@ -78,7 +78,7 @@ class Dropdown extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

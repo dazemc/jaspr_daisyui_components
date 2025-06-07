@@ -59,7 +59,7 @@ class Modal extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (modalBox != null) {
       output.add(modalBox as Component);
     }
@@ -95,7 +95,7 @@ class Modal extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

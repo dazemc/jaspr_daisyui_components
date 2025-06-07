@@ -34,7 +34,7 @@ class Avatar extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (avatarGroup != null) {
       output.add(avatarGroup as Component);
     }
@@ -60,7 +60,7 @@ class Avatar extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

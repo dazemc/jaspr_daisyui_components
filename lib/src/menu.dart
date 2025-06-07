@@ -69,7 +69,7 @@ class Menu extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (menuTitle != null) {
       output.add(menuTitle as Component);
     }
@@ -103,7 +103,7 @@ class Menu extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

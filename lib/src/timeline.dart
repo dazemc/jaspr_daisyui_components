@@ -52,7 +52,7 @@ class Timeline extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (timelineStart != null) {
       output.add(timelineStart as Component);
     }
@@ -85,7 +85,7 @@ class Timeline extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

@@ -20,7 +20,7 @@ class DrawerSide extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (drawerOverlay != null) {
       output.add(drawerOverlay as Component);
     }
@@ -40,7 +40,7 @@ class DrawerSide extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

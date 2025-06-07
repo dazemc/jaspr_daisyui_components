@@ -53,7 +53,7 @@ class Drawer extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (drawerToggle != null) {
       output.add(drawerToggle as Component);
     }
@@ -89,7 +89,7 @@ class Drawer extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

@@ -47,7 +47,7 @@ class Carousel extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     if (carouselItem != null) {
       output.add(carouselItem as Component);
     }
@@ -74,7 +74,7 @@ class Carousel extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );

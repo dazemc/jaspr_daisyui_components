@@ -19,7 +19,7 @@ class DrawerOverlay extends StatelessComponent {
   });
 
   List<Component> getChildren() {
-    List<Component> output = [];
+    List<Component> output = [...children];
     return output;
   }
 
@@ -36,7 +36,7 @@ class DrawerOverlay extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: [...children, ...getChildren()],
+      children: getChildren(),
       attributes: attributes,
       events: events,
     );
