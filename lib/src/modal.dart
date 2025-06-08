@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 import 'modal_box.dart';
-import 'modal_action.dart';
 import 'modal_backdrop.dart';
 import 'modal_toggle.dart';
 
@@ -36,7 +35,6 @@ class Modal extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final ModalBox? modalBox;
-  final ModalAction? modalAction;
   final ModalBackdrop? modalBackdrop;
   final ModalToggle? modalToggle;
   final String? role;
@@ -50,7 +48,6 @@ class Modal extends StatelessComponent {
     this.events,
     this.styles,
     this.modalBox,
-    this.modalAction,
     this.modalBackdrop,
     this.modalToggle,
     this.role,
@@ -62,9 +59,6 @@ class Modal extends StatelessComponent {
     List<Component> output = [...children];
     if (modalBox != null) {
       output.add(modalBox as Component);
-    }
-    if (modalAction != null) {
-      output.add(modalAction as Component);
     }
     if (modalBackdrop != null) {
       output.add(modalBackdrop as Component);

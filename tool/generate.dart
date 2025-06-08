@@ -25,7 +25,6 @@ void main() async {
   buildFields(components);
   buildFunctions(components);
   writeComponentsToFile(components);
-  // print(components.firstWhere((e) => e.label == 'btn').enumString);
 }
 
 void writeComponentsToFile(List<DaisyuiComponent> components) async {
@@ -187,7 +186,7 @@ class $name extends StatelessComponent {
     }
     for (DaisyuiComponent k
         in c.children
-            .where((e) => isComponent(e) && e.parent == c.parent)
+            .where((e) => isComponent(e) && e.subParent == c.label)
             .toList()) {
       String pascalName = pascalCaseFromLabel(k.label);
       partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
@@ -221,11 +220,10 @@ void buildEnums(List<DaisyuiComponent> components) {
               'enum ${formatName(k.subParent, capitalCase(k.type))} {\n';
         }
 
-        enumBody += getCategoryType(k)!;
+        enumBody += _getCategoryType(k)!;
         enumBodiesType[type] = enumBodiesType[type]! + enumBody;
         enumBody = '';
       }
-      print(enumBodiesType.keys);
       enumBodiesType.forEach(
         (k, v) =>
             finalEnum += '''
@@ -352,14 +350,14 @@ List<DaisyuiComponent> getCategory(List<DaisyuiComponent> input, String type) {
   return input.where((e) => e.type == type).toList();
 }
 
-String? getCategoryType(DaisyuiComponent input) {
+String? _getCategoryType(DaisyuiComponent input) {
   String? style = input.label
       .replaceFirst(input.subParent, "")
       .replaceAll("-", "");
   return "$style('${input.label}'),";
 }
 
-String capitalize(String str) {
+String _capitalize(String str) {
   if (str.isEmpty) return str;
   return str.replaceFirst(str[0], str[0].toUpperCase());
 }
@@ -367,7 +365,7 @@ String capitalize(String str) {
 String capitalCase(String str) {
   String output = '';
   for (String s in str.split('-')) {
-    output += capitalize(s);
+    output += _capitalize(s);
   }
 
   return output;

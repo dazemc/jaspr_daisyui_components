@@ -40,7 +40,7 @@ REQUIRED_ATTRIBUTES = [
     "role",
     "required",
     "for",
-    "tabindex"
+    "tabindex",
 ]
 
 
@@ -172,7 +172,9 @@ def extract_documentation(
 
 @lru_cache(maxsize=None)
 def _parse(
-    html: str, label: str
+    # TODO: Save elements child position, ie card has card-title and that goes before the child of 'card' but card-actions goes after the body of card, so I'll need to check if the current element has siblings that are not classed or the classes it contains does not have the contents of the current iterations class. Then in the generate portion I'll need to insert the child element at the right index.
+    html: str,
+    label: str,
 ) -> tuple[Optional[str], Optional[str], Optional[List[str]]]:
     try:
         unique_classnames: set[str] = set()
@@ -306,7 +308,7 @@ def unique_components(components: List[Component]):
         if name == component["parent"]:
             component["sub_parent"] = component["parent"]
         match name:
-            case 'stats-horizontal':
+            case "stats-horizontal":
                 component["sub_parent"] = "stats"
             case "theme-controller":
                 component["sub_parent"] = component["label"]
@@ -324,8 +326,6 @@ def unique_components(components: List[Component]):
             case "drawer":
                 # id and for attributes need to match
                 pass
-
-
 
 
 def main() -> None:

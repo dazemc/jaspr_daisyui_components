@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 import 'drawer_toggle.dart';
 import 'drawer_content.dart';
 import 'drawer_side.dart';
-import 'drawer_overlay.dart';
 
 enum DrawerPlacement {
   end('drawer-end'),
@@ -34,7 +33,6 @@ class Drawer extends StatelessComponent {
   final DrawerToggle? drawerToggle;
   final DrawerContent? drawerContent;
   final DrawerSide? drawerSide;
-  final DrawerOverlay? drawerOverlay;
   final DrawerPlacement? placement;
   final DrawerModifier? modifier;
   const Drawer(
@@ -47,7 +45,6 @@ class Drawer extends StatelessComponent {
     this.drawerToggle,
     this.drawerContent,
     this.drawerSide,
-    this.drawerOverlay,
     this.placement,
     this.modifier,
   });
@@ -62,9 +59,6 @@ class Drawer extends StatelessComponent {
     }
     if (drawerSide != null) {
       output.add(drawerSide as Component);
-    }
-    if (drawerOverlay != null) {
-      output.add(drawerOverlay as Component);
     }
     return output;
   }

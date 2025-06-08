@@ -25,7 +25,7 @@ class CardBody extends StatelessComponent {
   List<Component> getChildren() {
     List<Component> output = [...children];
     if (cardTitle != null) {
-      output.add(cardTitle as Component);
+      output.insert(0, cardTitle as Component);
     }
     if (cardActions != null) {
       output.add(cardActions as Component);
