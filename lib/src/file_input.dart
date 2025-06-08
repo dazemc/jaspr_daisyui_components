@@ -1,5 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
+enum FileInputStyle {
+  ghost('file-input-ghost'),
+  none('');
+
+  final String value;
+  const FileInputStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum FileInputColor {
   neutral('file-input-neutral'),
   primary('file-input-primary'),
@@ -13,16 +23,6 @@ enum FileInputColor {
 
   final String value;
   const FileInputColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum FileInputStyle {
-  ghost('file-input-ghost'),
-  none('');
-
-  final String value;
-  const FileInputStyle(this.value);
   @override
   String toString() => value.toString();
 }

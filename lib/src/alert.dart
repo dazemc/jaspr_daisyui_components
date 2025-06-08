@@ -1,5 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 
+enum AlertStyle {
+  outline('alert-outline'),
+  dash('alert-dash'),
+  soft('alert-soft'),
+  none('');
+
+  final String value;
+  const AlertStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum AlertColor {
   info('alert-info'),
   success('alert-success'),
@@ -9,18 +21,6 @@ enum AlertColor {
 
   final String value;
   const AlertColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum AlertStyle {
-  outline('alert-outline'),
-  dash('alert-dash'),
-  soft('alert-soft'),
-  none('');
-
-  final String value;
-  const AlertStyle(this.value);
   @override
   String toString() => value.toString();
 }

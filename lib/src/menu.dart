@@ -3,6 +3,18 @@ import 'menu_title.dart';
 import 'menu_dropdown.dart';
 import 'menu_dropdown_toggle.dart';
 
+enum MenuModifier {
+  disabled('menu-disabled'),
+  active('menu-active'),
+  focus('menu-focus'),
+  none('');
+
+  final String value;
+  const MenuModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum MenuSize {
   xs('menu-xs'),
   sm('menu-sm'),
@@ -13,18 +25,6 @@ enum MenuSize {
 
   final String value;
   const MenuSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum MenuModifier {
-  disabled('menu-disabled'),
-  active('menu-active'),
-  focus('menu-focus'),
-  none('');
-
-  final String value;
-  const MenuModifier(this.value);
   @override
   String toString() => value.toString();
 }

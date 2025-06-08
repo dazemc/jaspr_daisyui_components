@@ -4,22 +4,22 @@ import 'drawer_content.dart';
 import 'drawer_side.dart';
 import 'drawer_overlay.dart';
 
-enum DrawerModifier {
-  open('drawer-open'),
-  none('');
-
-  final String value;
-  const DrawerModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum DrawerPlacement {
   end('drawer-end'),
   none('');
 
   final String value;
   const DrawerPlacement(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+enum DrawerModifier {
+  open('drawer-open'),
+  none('');
+
+  final String value;
+  const DrawerModifier(this.value);
   @override
   String toString() => value.toString();
 }

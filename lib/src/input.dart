@@ -1,5 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
+enum InputStyle {
+  ghost('input-ghost'),
+  none('');
+
+  final String value;
+  const InputStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum InputColor {
   neutral('input-neutral'),
   primary('input-primary'),
@@ -13,16 +23,6 @@ enum InputColor {
 
   final String value;
   const InputColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum InputStyle {
-  ghost('input-ghost'),
-  none('');
-
-  final String value;
-  const InputStyle(this.value);
   @override
   String toString() => value.toString();
 }

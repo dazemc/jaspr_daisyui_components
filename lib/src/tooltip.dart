@@ -1,19 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 import 'tooltip_content.dart';
 
-enum TooltipColor {
-  neutral('tooltip-neutral'),
-  primary('tooltip-primary'),
-  secondary('tooltip-secondary'),
-  accent('tooltip-accent'),
-  info('tooltip-info'),
-  success('tooltip-success'),
-  warning('tooltip-warning'),
-  error('tooltip-error'),
+enum TooltipPlacement {
+  top('tooltip-top'),
+  bottom('tooltip-bottom'),
+  left('tooltip-left'),
+  right('tooltip-right'),
   none('');
 
   final String value;
-  const TooltipColor(this.value);
+  const TooltipPlacement(this.value);
   @override
   String toString() => value.toString();
 }
@@ -28,15 +24,19 @@ enum TooltipModifier {
   String toString() => value.toString();
 }
 
-enum TooltipPlacement {
-  top('tooltip-top'),
-  bottom('tooltip-bottom'),
-  left('tooltip-left'),
-  right('tooltip-right'),
+enum TooltipColor {
+  neutral('tooltip-neutral'),
+  primary('tooltip-primary'),
+  secondary('tooltip-secondary'),
+  accent('tooltip-accent'),
+  info('tooltip-info'),
+  success('tooltip-success'),
+  warning('tooltip-warning'),
+  error('tooltip-error'),
   none('');
 
   final String value;
-  const TooltipPlacement(this.value);
+  const TooltipColor(this.value);
   @override
   String toString() => value.toString();
 }

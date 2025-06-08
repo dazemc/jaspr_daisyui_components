@@ -1,5 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 
+enum TableModifier {
+  zebra('table-zebra'),
+  pinrows('table-pin-rows'),
+  pincols('table-pin-cols'),
+  none('');
+
+  final String value;
+  const TableModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum TableSize {
   xs('table-xs'),
   sm('table-sm'),
@@ -10,18 +22,6 @@ enum TableSize {
 
   final String value;
   const TableSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TableModifier {
-  zebra('table-zebra'),
-  pinrows('table-pin-rows'),
-  pincols('table-pin-cols'),
-  none('');
-
-  final String value;
-  const TableModifier(this.value);
   @override
   String toString() => value.toString();
 }

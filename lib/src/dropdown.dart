@@ -1,17 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'dropdown_content.dart';
 
-enum DropdownModifier {
-  hover('dropdown-hover'),
-  open('dropdown-open'),
-  none('');
-
-  final String value;
-  const DropdownModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum DropdownPlacement {
   start('dropdown-start'),
   center('dropdown-center'),
@@ -24,6 +13,17 @@ enum DropdownPlacement {
 
   final String value;
   const DropdownPlacement(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+enum DropdownModifier {
+  hover('dropdown-hover'),
+  open('dropdown-open'),
+  none('');
+
+  final String value;
+  const DropdownModifier(this.value);
   @override
   String toString() => value.toString();
 }

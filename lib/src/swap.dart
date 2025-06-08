@@ -3,6 +3,16 @@ import 'swap_on.dart';
 import 'swap_off.dart';
 import 'swap_indeterminate.dart';
 
+enum SwapModifier {
+  active('swap-active'),
+  none('');
+
+  final String value;
+  const SwapModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum SwapStyle {
   rotate('swap-rotate'),
   flip('swap-flip'),
@@ -10,16 +20,6 @@ enum SwapStyle {
 
   final String value;
   const SwapStyle(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum SwapModifier {
-  active('swap-active'),
-  none('');
-
-  final String value;
-  const SwapModifier(this.value);
   @override
   String toString() => value.toString();
 }

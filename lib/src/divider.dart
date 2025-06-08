@@ -17,17 +17,6 @@ enum DividerColor {
   String toString() => value.toString();
 }
 
-enum DividerPlacement {
-  start('divider-start'),
-  end('divider-end'),
-  none('');
-
-  final String value;
-  const DividerPlacement(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum DividerDirection {
   vertical('divider-vertical'),
   horizontal('divider-horizontal'),
@@ -35,6 +24,17 @@ enum DividerDirection {
 
   final String value;
   const DividerDirection(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+enum DividerPlacement {
+  start('divider-start'),
+  end('divider-end'),
+  none('');
+
+  final String value;
+  const DividerPlacement(this.value);
   @override
   String toString() => value.toString();
 }

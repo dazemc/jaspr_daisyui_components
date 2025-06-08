@@ -206,21 +206,39 @@ class $name extends StatelessComponent {
 
 void buildEnums(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
-    String output = '';
-    List<DaisyuiComponent> typedComponents =
+    Map<String, String> enumBodiesType = {};
+    List<DaisyuiComponent> children =
         c.children
             .where((e) => !isComponent(e) && e.subParent == c.label)
             .toList();
-    String enums = "";
-    for (String name in types) {
-      List<DaisyuiComponent> input =
-          typedComponents.where((e) => e.type == name).toList();
-      if (input.isNotEmpty) {
-        enums += buildCategory(input);
+    if (children.isNotEmpty) {
+      String finalEnum = '';
+      String enumBody = '';
+      for (DaisyuiComponent k in children) {
+        String type = k.type;
+        if (enumBodiesType[type] == null) {
+          enumBodiesType[type] =
+              'enum ${formatName(k.subParent, capitalCase(k.type))} {\n';
+        }
+
+        enumBody += getCategoryType(k)!;
+        enumBodiesType[type] = enumBodiesType[type]! + enumBody;
+        enumBody = '';
       }
+      print(enumBodiesType.keys);
+      enumBodiesType.forEach(
+        (k, v) =>
+            finalEnum += '''
+  ${v}none('');\n
+  final String value;
+  const ${formatName(c.label, capitalCase(k))}(this.value);
+  @override
+  String toString() => value.toString();
+}
+''',
+      );
+      c.enumString = finalEnum;
     }
-    output += enums;
-    c.enumString = output;
   }
 }
 
@@ -341,38 +359,9 @@ String? getCategoryType(DaisyuiComponent input) {
   return "$style('${input.label}'),";
 }
 
-String buildEnumLine(String pascalName, List<String> enums) {
-  return """
-
-enum $pascalName {
-  ${enums.join("\n  ")}
-  none('');\n
-  final String value;
-  const $pascalName(this.value);
-  @override
-  String toString() => value.toString();
-}
-  """;
-}
-
 String capitalize(String str) {
   if (str.isEmpty) return str;
   return str.replaceFirst(str[0], str[0].toUpperCase());
-}
-
-String buildCategory(List<DaisyuiComponent> input) {
-  String pascalName = formatName(
-    input.first.subParent,
-    capitalize(input.first.type),
-  );
-  List<String> categoryStrings = [];
-  for (DaisyuiComponent c in input) {
-    String? type = getCategoryType(c);
-    if (type != null) {
-      categoryStrings.add(type);
-    }
-  }
-  return buildEnumLine(pascalName, categoryStrings);
 }
 
 String capitalCase(String str) {

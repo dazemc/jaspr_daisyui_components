@@ -1,6 +1,16 @@
 import 'package:jaspr/jaspr.dart';
 import 'dock_label.dart';
 
+enum DockModifier {
+  active('dock-active'),
+  none('');
+
+  final String value;
+  const DockModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum DockSize {
   xs('dock-xs'),
   sm('dock-sm'),
@@ -11,16 +21,6 @@ enum DockSize {
 
   final String value;
   const DockSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum DockModifier {
-  active('dock-active'),
-  none('');
-
-  final String value;
-  const DockModifier(this.value);
   @override
   String toString() => value.toString();
 }

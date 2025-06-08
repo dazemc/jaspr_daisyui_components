@@ -14,6 +14,17 @@ enum CardStyle {
   String toString() => value.toString();
 }
 
+enum CardModifier {
+  side('card-side'),
+  imagefull('image-full'),
+  none('');
+
+  final String value;
+  const CardModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum CardSize {
   xs('card-xs'),
   sm('card-sm'),
@@ -24,17 +35,6 @@ enum CardSize {
 
   final String value;
   const CardSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum CardModifier {
-  side('card-side'),
-  imagefull('image-full'),
-  none('');
-
-  final String value;
-  const CardModifier(this.value);
   @override
   String toString() => value.toString();
 }

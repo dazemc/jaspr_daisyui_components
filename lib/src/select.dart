@@ -1,5 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
+enum SelectStyle {
+  ghost('select-ghost'),
+  none('');
+
+  final String value;
+  const SelectStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum SelectColor {
   neutral('select-neutral'),
   primary('select-primary'),
@@ -13,16 +23,6 @@ enum SelectColor {
 
   final String value;
   const SelectColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum SelectStyle {
-  ghost('select-ghost'),
-  none('');
-
-  final String value;
-  const SelectStyle(this.value);
   @override
   String toString() => value.toString();
 }

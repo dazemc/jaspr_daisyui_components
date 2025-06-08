@@ -14,20 +14,6 @@ enum TabsStyle {
   String toString() => value.toString();
 }
 
-enum TabsSize {
-  xs('tabs-xs'),
-  sm('tabs-sm'),
-  md('tabs-md'),
-  lg('tabs-lg'),
-  xl('tabs-xl'),
-  none('');
-
-  final String value;
-  const TabsSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
 enum TabsModifier {
   tabdisabled('tab-disabled'),
   none('');
@@ -45,6 +31,20 @@ enum TabsPlacement {
 
   final String value;
   const TabsPlacement(this.value);
+  @override
+  String toString() => value.toString();
+}
+
+enum TabsSize {
+  xs('tabs-xs'),
+  sm('tabs-sm'),
+  md('tabs-md'),
+  lg('tabs-lg'),
+  xl('tabs-xl'),
+  none('');
+
+  final String value;
+  const TabsSize(this.value);
   @override
   String toString() => value.toString();
 }

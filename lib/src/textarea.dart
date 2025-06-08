@@ -1,5 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
+enum TextareaStyle {
+  ghost('textarea-ghost'),
+  none('');
+
+  final String value;
+  const TextareaStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum TextareaColor {
   neutral('textarea-neutral'),
   primary('textarea-primary'),
@@ -13,16 +23,6 @@ enum TextareaColor {
 
   final String value;
   const TextareaColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum TextareaStyle {
-  ghost('textarea-ghost'),
-  none('');
-
-  final String value;
-  const TextareaStyle(this.value);
   @override
   String toString() => value.toString();
 }

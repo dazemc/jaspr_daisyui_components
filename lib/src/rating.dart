@@ -1,5 +1,16 @@
 import 'package:jaspr/jaspr.dart';
 
+enum RatingModifier {
+  half('rating-half'),
+  hidden('rating-hidden'),
+  none('');
+
+  final String value;
+  const RatingModifier(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum RatingSize {
   xs('rating-xs'),
   sm('rating-sm'),
@@ -10,17 +21,6 @@ enum RatingSize {
 
   final String value;
   const RatingSize(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum RatingModifier {
-  half('rating-half'),
-  hidden('rating-hidden'),
-  none('');
-
-  final String value;
-  const RatingModifier(this.value);
   @override
   String toString() => value.toString();
 }

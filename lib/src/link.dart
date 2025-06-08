@@ -1,5 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
+enum LinkStyle {
+  hover('link-hover'),
+  none('');
+
+  final String value;
+  const LinkStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum LinkColor {
   neutral('link-neutral'),
   primary('link-primary'),
@@ -13,16 +23,6 @@ enum LinkColor {
 
   final String value;
   const LinkColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum LinkStyle {
-  hover('link-hover'),
-  none('');
-
-  final String value;
-  const LinkStyle(this.value);
   @override
   String toString() => value.toString();
 }

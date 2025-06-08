@@ -1,5 +1,18 @@
 import 'package:jaspr/jaspr.dart';
 
+enum BadgeStyle {
+  outline('badge-outline'),
+  dash('badge-dash'),
+  soft('badge-soft'),
+  ghost('badge-ghost'),
+  none('');
+
+  final String value;
+  const BadgeStyle(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 enum BadgeColor {
   neutral('badge-neutral'),
   primary('badge-primary'),
@@ -13,19 +26,6 @@ enum BadgeColor {
 
   final String value;
   const BadgeColor(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-enum BadgeStyle {
-  outline('badge-outline'),
-  dash('badge-dash'),
-  soft('badge-soft'),
-  ghost('badge-ghost'),
-  none('');
-
-  final String value;
-  const BadgeStyle(this.value);
   @override
   String toString() => value.toString();
 }
