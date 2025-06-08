@@ -36,10 +36,10 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     if (header.isEmpty) {
       header = '''import 'package:jaspr/jaspr.dart';\n\n''';
     }
-    String? enums = c.enumString;
+    String enums = c.enumString ?? '';
     String? body = c.fieldString;
     String? footer = c.footerString;
-    if (enums != null && body != null && footer != null) {
+    if (body != null && footer != null) {
       String output = '$header$enums$body$footer';
       final file = File('../lib/src/$name.dart');
       libraryList += "export 'src/$name.dart';\n";
