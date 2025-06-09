@@ -63,7 +63,7 @@ class Alert extends StatelessComponent {
     List<String> output = [
       'alert',
 
-      if (style != null) style.toString(),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (direction != null) direction.toString(),
 

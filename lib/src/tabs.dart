@@ -76,7 +76,7 @@ class Tabs extends StatelessComponent {
     List<String> output = [
       'tabs',
 
-      if (style != null) style.toString(),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
       if (placement != null) placement.toString(),
       if (size != null) size.toString(),

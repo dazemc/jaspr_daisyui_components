@@ -70,7 +70,7 @@ class Input extends StatelessComponent {
     List<String> output = [
       'input',
 
-      if (style != null) style.toString(),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (color != null) color.toString(),
       if (size != null) size.toString(),
 

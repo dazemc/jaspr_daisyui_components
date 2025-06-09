@@ -58,7 +58,7 @@ class Mask extends StatelessComponent {
     List<String> output = [
       'mask',
 
-      if (style != null) style.toString(),
+      if (style != null) ...style!.map((style) => style.toString()),
       if (modifier != null) modifier.toString(),
 
       classes ?? '',
