@@ -1,3 +1,4 @@
+## Daisyui Card example
 ```html
 <div class="card bg-base-100 w-96 shadow-sm">
   <figure>
@@ -14,6 +15,7 @@
   </div>
 </div>
 ```
+## Using components
 ```dart
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_daisyui_components/jaspr_daisyui_components.dart';
@@ -44,6 +46,7 @@ class About extends StatelessComponent {
   }
 }
 ```
+## Btn
 ```dart
 Btn(
         style: [BtnStyle.outline, BtnStyle.dash],
