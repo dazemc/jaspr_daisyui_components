@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'card_body.dart';
 
 enum CardStyle {
   border('card-border'),
@@ -44,7 +43,6 @@ class Card extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final CardBody? cardBody;
   final List<CardStyle>? style;
   final CardModifier? modifier;
   final CardSize? size;
@@ -55,20 +53,10 @@ class Card extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.cardBody,
     this.style,
     this.modifier,
     this.size,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (cardBody != null) {
-      output.add(cardBody as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'card',
@@ -90,7 +78,7 @@ class Card extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

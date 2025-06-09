@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'dock_label.dart';
 
 enum DockModifier {
   active('dock-active'),
@@ -32,7 +31,6 @@ class Dock extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final DockLabel? dockLabel;
   final DockModifier? modifier;
   final DockSize? size;
   const Dock(
@@ -42,19 +40,9 @@ class Dock extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.dockLabel,
     this.modifier,
     this.size,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (dockLabel != null) {
-      output.add(dockLabel as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'dock',
@@ -75,7 +63,7 @@ class Dock extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

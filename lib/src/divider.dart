@@ -60,12 +60,6 @@ class Divider extends StatelessComponent {
     this.direction,
     this.placement,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'divider',
@@ -87,7 +81,7 @@ class Divider extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

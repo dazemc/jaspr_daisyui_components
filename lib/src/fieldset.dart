@@ -1,6 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'label.dart';
-import 'fieldset_legend.dart';
 
 class Fieldset extends StatelessComponent {
   final List<Component> children;
@@ -9,8 +7,6 @@ class Fieldset extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final Label? label;
-  final FieldsetLegend? fieldsetLegend;
   const Fieldset(
     this.children, {
     this.classes,
@@ -18,21 +14,7 @@ class Fieldset extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.label,
-    this.fieldsetLegend,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (label != null) {
-      output.add(label as Component);
-    }
-    if (fieldsetLegend != null) {
-      output.add(fieldsetLegend as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['fieldset', classes ?? ''];
     return output.join(' ');
@@ -46,7 +28,7 @@ class Fieldset extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'step.dart';
 
 enum StepsColor {
   stepsuccess('step-success'),
@@ -29,7 +28,6 @@ class Steps extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final Step? step;
   final StepsColor? color;
   final StepsDirection? direction;
   const Steps(
@@ -39,19 +37,9 @@ class Steps extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.step,
     this.color,
     this.direction,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (step != null) {
-      output.add(step as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'steps',
@@ -72,7 +60,7 @@ class Steps extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

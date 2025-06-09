@@ -90,7 +90,7 @@ void buildFunctions(List<DaisyuiComponent> components) {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );
@@ -159,15 +159,15 @@ class $name extends StatelessComponent {
     this.events,
     this.styles,
 ''';
-    String getChildrenFunctionHead = '''
-  List<Component> getChildren() {
-       List<Component> output = [...children];
-''';
-    String getChildrenFunctionBody = '';
-    String getChildrenFunctionFooter = '''
-         return output;
-  }
-  ''';
+    // String getChildrenFunctionHead = '''
+    // List<Component> getChildren() {
+    // List<Component> output = [...children];
+    // ''';
+    // String getChildrenFunctionBody = '';
+    // String getChildrenFunctionFooter = '''
+    // return output;
+    // }
+    // ''';
     List<String> presentTypes = [];
     if (c.children.isNotEmpty) {
       for (DaisyuiComponent k in c.children.where(
@@ -188,18 +188,18 @@ class $name extends StatelessComponent {
         in c.children
             .where((e) => isComponent(e) && e.subParent == c.label)
             .toList()) {
-      String pascalName = pascalCaseFromLabel(k.label);
-      partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
-      partConst += '    this.$pascalName,\n';
-      header += "\nimport '${k.label.replaceAll('-', '_')}.dart';";
-      getChildrenFunctionBody +=
-          'if ($pascalName != null) {output.add($pascalName as Component);}\n';
+      // String pascalName = pascalCaseFromLabel(k.label);
+      // partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
+      // partConst += '    this.$pascalName,\n';
+      // header += "\nimport '${k.label.replaceAll('-', '_')}.dart';";
+      // getChildrenFunctionBody +=
+      // 'if ($pascalName != null) {output.add($pascalName as Component);}\n';
     }
-    String getChildrenFunction =
-        '$getChildrenFunctionHead$getChildrenFunctionBody$getChildrenFunctionFooter';
-    c.importHeader = '$header\n\n';
+    // String getChildrenFunction =
+    // '$getChildrenFunctionHead$getChildrenFunctionBody$getChildrenFunctionFooter';
+    // c.importHeader = '$header\n\n';
     c.fieldString =
-        '$classInstanceHead$partParameters$requiredAttributesPara$parameters$classConstructorHead$partConst$requiredAttributesConst$constructor});\n\n$getChildrenFunction';
+        '$classInstanceHead$partParameters$requiredAttributesPara$parameters$classConstructorHead$partConst$requiredAttributesConst$constructor});';
   }
 }
 

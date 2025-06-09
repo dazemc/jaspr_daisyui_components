@@ -19,12 +19,6 @@ class DiffItem1 extends StatelessComponent {
     this.role,
     this.tabindex,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['diff-item-1', classes ?? ''];
     return output.join(' ');
@@ -38,7 +32,7 @@ class DiffItem1 extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

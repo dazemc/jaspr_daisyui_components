@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'modal_action.dart';
 
 class ModalBox extends StatelessComponent {
   final List<Component> children;
@@ -8,7 +7,6 @@ class ModalBox extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final ModalAction? modalAction;
   const ModalBox(
     this.children, {
     this.classes,
@@ -16,17 +14,7 @@ class ModalBox extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.modalAction,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (modalAction != null) {
-      output.add(modalAction as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['modal-box', classes ?? ''];
     return output.join(' ');
@@ -40,7 +28,7 @@ class ModalBox extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

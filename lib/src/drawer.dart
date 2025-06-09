@@ -1,7 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'drawer_toggle.dart';
-import 'drawer_content.dart';
-import 'drawer_side.dart';
 
 enum DrawerPlacement {
   end('drawer-end'),
@@ -30,9 +27,6 @@ class Drawer extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final DrawerToggle? drawerToggle;
-  final DrawerContent? drawerContent;
-  final DrawerSide? drawerSide;
   final DrawerPlacement? placement;
   final DrawerModifier? modifier;
   const Drawer(
@@ -42,27 +36,9 @@ class Drawer extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.drawerToggle,
-    this.drawerContent,
-    this.drawerSide,
     this.placement,
     this.modifier,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (drawerToggle != null) {
-      output.add(drawerToggle as Component);
-    }
-    if (drawerContent != null) {
-      output.add(drawerContent as Component);
-    }
-    if (drawerSide != null) {
-      output.add(drawerSide as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'drawer',
@@ -83,7 +59,7 @@ class Drawer extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

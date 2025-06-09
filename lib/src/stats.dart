@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'stat.dart';
 
 enum StatsDirection {
   horizontal('stats-horizontal'),
@@ -19,7 +18,6 @@ class Stats extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final Stat? stat;
   final StatsDirection? direction;
   const Stats(
     this.children, {
@@ -28,18 +26,8 @@ class Stats extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.stat,
     this.direction,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (stat != null) {
-      output.add(stat as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'stats',
@@ -59,7 +47,7 @@ class Stats extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

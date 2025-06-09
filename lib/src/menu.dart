@@ -1,7 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'menu_title.dart';
-import 'menu_dropdown.dart';
-import 'menu_dropdown_toggle.dart';
 
 enum MenuModifier {
   disabled('menu-disabled'),
@@ -47,9 +44,6 @@ class Menu extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final MenuTitle? menuTitle;
-  final MenuDropdown? menuDropdown;
-  final MenuDropdownToggle? menuDropdownmenuToggle;
   final MenuModifier? modifier;
   final MenuSize? size;
   final MenuDirection? direction;
@@ -60,28 +54,10 @@ class Menu extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.menuTitle,
-    this.menuDropdown,
-    this.menuDropdownmenuToggle,
     this.modifier,
     this.size,
     this.direction,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (menuTitle != null) {
-      output.add(menuTitle as Component);
-    }
-    if (menuDropdown != null) {
-      output.add(menuDropdown as Component);
-    }
-    if (menuDropdownmenuToggle != null) {
-      output.add(menuDropdownmenuToggle as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'menu',
@@ -103,7 +79,7 @@ class Menu extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

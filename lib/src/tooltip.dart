@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'tooltip_content.dart';
 
 enum TooltipPlacement {
   top('tooltip-top'),
@@ -48,7 +47,6 @@ class Tooltip extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final TooltipContent? tooltipContent;
   final TooltipPlacement? placement;
   final TooltipModifier? modifier;
   final TooltipColor? color;
@@ -59,20 +57,10 @@ class Tooltip extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.tooltipContent,
     this.placement,
     this.modifier,
     this.color,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (tooltipContent != null) {
-      output.add(tooltipContent as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'tooltip',
@@ -94,7 +82,7 @@ class Tooltip extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

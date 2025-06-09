@@ -27,12 +27,6 @@ class TimelineEnd extends StatelessComponent {
     this.styles,
     this.modifier,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'timeline-end',
@@ -52,7 +46,7 @@ class TimelineEnd extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

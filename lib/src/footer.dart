@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'footer_title.dart';
 
 enum FooterPlacement {
   center('footer-center'),
@@ -29,7 +28,6 @@ class Footer extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final FooterTitle? footerTitle;
   final FooterPlacement? placement;
   final FooterDirection? direction;
   const Footer(
@@ -39,19 +37,9 @@ class Footer extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.footerTitle,
     this.placement,
     this.direction,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (footerTitle != null) {
-      output.add(footerTitle as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'footer',
@@ -72,7 +60,7 @@ class Footer extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

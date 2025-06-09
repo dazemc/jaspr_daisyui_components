@@ -64,12 +64,6 @@ class FileInput extends StatelessComponent {
     this.color,
     this.size,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = [
       'file-input',
@@ -91,7 +85,7 @@ class FileInput extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

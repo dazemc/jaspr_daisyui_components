@@ -1,7 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'navbar_start.dart';
-import 'navbar_center.dart';
-import 'navbar_end.dart';
 
 class Navbar extends StatelessComponent {
   final List<Component> children;
@@ -10,9 +7,6 @@ class Navbar extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final NavbarStart? navbarStart;
-  final NavbarCenter? navbarCenter;
-  final NavbarEnd? navbarEnd;
   const Navbar(
     this.children, {
     this.classes,
@@ -20,25 +14,7 @@ class Navbar extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.navbarStart,
-    this.navbarCenter,
-    this.navbarEnd,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (navbarStart != null) {
-      output.add(navbarStart as Component);
-    }
-    if (navbarCenter != null) {
-      output.add(navbarCenter as Component);
-    }
-    if (navbarEnd != null) {
-      output.add(navbarEnd as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['navbar', classes ?? ''];
     return output.join(' ');
@@ -52,7 +28,7 @@ class Navbar extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

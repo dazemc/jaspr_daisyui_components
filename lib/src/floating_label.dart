@@ -15,12 +15,6 @@ class FloatingLabel extends StatelessComponent {
     this.events,
     this.styles,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['floating-label', classes ?? ''];
     return output.join(' ');
@@ -34,7 +28,7 @@ class FloatingLabel extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

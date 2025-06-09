@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'drawer_overlay.dart';
 
 class DrawerSide extends StatelessComponent {
   final List<Component> children;
@@ -8,7 +7,6 @@ class DrawerSide extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final DrawerOverlay? drawerOverlay;
   const DrawerSide(
     this.children, {
     this.classes,
@@ -16,17 +14,7 @@ class DrawerSide extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.drawerOverlay,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    if (drawerOverlay != null) {
-      output.add(drawerOverlay as Component);
-    }
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['drawer-side', classes ?? ''];
     return output.join(' ');
@@ -40,7 +28,7 @@ class DrawerSide extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

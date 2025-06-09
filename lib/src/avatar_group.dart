@@ -15,12 +15,6 @@ class AvatarGroup extends StatelessComponent {
     this.events,
     this.styles,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['avatar-group', classes ?? ''];
     return output.join(' ');
@@ -34,7 +28,7 @@ class AvatarGroup extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );

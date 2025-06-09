@@ -19,12 +19,6 @@ class ThemeController extends StatelessComponent {
     this.type,
     this.value,
   });
-
-  List<Component> getChildren() {
-    List<Component> output = [...children];
-    return output;
-  }
-
   String getClasses() {
     List<String> output = ['theme-controller', classes ?? ''];
     return output.join(' ');
@@ -38,7 +32,7 @@ class ThemeController extends StatelessComponent {
       key: key,
       id: id,
       styles: styles,
-      children: getChildren(),
+      children: children,
       attributes: attributes,
       events: events,
     );
