@@ -24,8 +24,8 @@ class About extends StatelessComponent {
   const About({super.key});
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield Card(classes: 'bg-base-100 w-96 shadow-sm', [
+  Component build(BuildContext context) {
+    return Card(classes: 'bg-base-100 w-96 shadow-sm', [
       img(
           src:
               'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
@@ -49,10 +49,10 @@ class About extends StatelessComponent {
 ## Btn
 ```dart
 Btn(
-        style: [BtnStyle.outline, BtnStyle.dash],
-        color: BtnColor.primary,
-        size: BtnSize.sm,
-        behavior: BtnBehavior.none,
-        modifier: BtnModifier.circle,
+        style: [.outline, .dash],
+        color: .primary,
+        size: .sm,
+        behavior: .none,
+        modifier: .circle,
         [InfoIcon()]);
 ```

@@ -20,6 +20,7 @@ enum DropdownPlacement {
 enum DropdownModifier {
   hover('dropdown-hover'),
   open('dropdown-open'),
+  close('dropdown-close'),
   none('');
 
   final String value;

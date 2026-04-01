@@ -1,25 +1,25 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
-enum SkeletonModifier {
-  text('skeleton-text'),
+enum FabModifier {
+  flower('fab-flower'),
   none('');
 
   final String value;
-  const SkeletonModifier(this.value);
+  const FabModifier(this.value);
   @override
   String toString() => value.toString();
 }
 
-class Skeleton extends StatelessComponent {
+class Fab extends StatelessComponent {
   final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final SkeletonModifier? modifier;
-  const Skeleton(
+  final FabModifier? modifier;
+  const Fab(
     this.children, {
     this.classes,
     this.id,
@@ -30,7 +30,7 @@ class Skeleton extends StatelessComponent {
   });
   String getClasses() {
     List<String> output = [
-      'skeleton',
+      'fab',
 
       if (modifier != null) modifier.toString(),
 
@@ -42,7 +42,7 @@ class Skeleton extends StatelessComponent {
   @override
   Component build(BuildContext build) {
     return .element(
-      tag: 'span',
+      tag: 'div',
       classes: getClasses(),
       key: key,
       id: id,

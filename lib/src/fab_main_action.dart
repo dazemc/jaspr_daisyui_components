@@ -1,48 +1,30 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
-enum SkeletonModifier {
-  text('skeleton-text'),
-  none('');
-
-  final String value;
-  const SkeletonModifier(this.value);
-  @override
-  String toString() => value.toString();
-}
-
-class Skeleton extends StatelessComponent {
+class FabMainAction extends StatelessComponent {
   final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final SkeletonModifier? modifier;
-  const Skeleton(
+  const FabMainAction(
     this.children, {
     this.classes,
     this.id,
     this.attributes,
     this.events,
     this.styles,
-    this.modifier,
   });
   String getClasses() {
-    List<String> output = [
-      'skeleton',
-
-      if (modifier != null) modifier.toString(),
-
-      classes ?? '',
-    ];
+    List<String> output = ['fab-main-action', classes ?? ''];
     return output.join(' ');
   }
 
   @override
   Component build(BuildContext build) {
     return .element(
-      tag: 'span',
+      tag: 'div',
       classes: getClasses(),
       key: key,
       id: id,

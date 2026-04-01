@@ -8,7 +8,9 @@ class Validator extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? placeholder;
   final String? required;
+  final String? type;
   const Validator(
     this.children, {
     this.classes,
@@ -16,7 +18,9 @@ class Validator extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.placeholder,
     this.required,
+    this.type,
   });
   String getClasses() {
     List<String> output = ['validator', classes ?? ''];
@@ -26,7 +30,7 @@ class Validator extends StatelessComponent {
   @override
   Component build(BuildContext build) {
     return .element(
-      tag: 'select',
+      tag: 'input',
       classes: getClasses(),
       key: key,
       id: id,

@@ -959,6 +959,16 @@
         "parent": "drawer"
     },
     {
+        "label": "\"is-drawer-open:\"",
+        "type": "modifier",
+        "parent": "drawer"
+    },
+    {
+        "label": "\"is-drawer-close:\"",
+        "type": "modifier",
+        "parent": "drawer"
+    },
+    {
         "label": "dropdown",
         "type": "component",
         "parent": "dropdown",
@@ -1022,6 +1032,12 @@
     },
     {
         "label": "dropdown-open",
+        "type": "modifier",
+        "parent": "dropdown",
+        "sub_parent": "dropdown"
+    },
+    {
+        "label": "dropdown-close",
         "type": "modifier",
         "parent": "dropdown",
         "sub_parent": "dropdown"
@@ -1438,8 +1454,7 @@
     {
         "label": "link-neutral",
         "type": "color",
-        "parent": "link",
-        "sub_parent": "link"
+        "parent": "link"
     },
     {
         "label": "link-primary",
@@ -2320,7 +2335,13 @@
         "label": "skeleton",
         "type": "component",
         "parent": "skeleton",
-        "tag": "div",
+        "tag": "span",
+        "sub_parent": "skeleton"
+    },
+    {
+        "label": "skeleton-text",
+        "type": "modifier",
+        "parent": "skeleton",
         "sub_parent": "skeleton"
     },
     {
@@ -3155,9 +3176,11 @@
         "label": "validator",
         "type": "component",
         "parent": "validator",
-        "tag": "select",
+        "tag": "input",
         "additional_attributes": [
-            "required"
+            "placeholder",
+            "required",
+            "type"
         ],
         "sub_parent": "validator"
     },
@@ -3165,6 +3188,55 @@
         "label": "validator-hint",
         "type": "part",
         "parent": "validator",
-        "tag": "p"
+        "tag": "p",
+        "sub_parent": "fieldset"
+    },
+    {
+        "label": "fab",
+        "type": "component",
+        "parent": "fab",
+        "tag": "div",
+        "sub_parent": "fab"
+    },
+    {
+        "label": "fab-close",
+        "type": "part",
+        "parent": "fab",
+        "tag": "div",
+        "sub_parent": "fab"
+    },
+    {
+        "label": "fab-main-action",
+        "type": "part",
+        "parent": "fab",
+        "tag": "div",
+        "sub_parent": "fab"
+    },
+    {
+        "label": "fab-flower",
+        "type": "modifier",
+        "parent": "fab",
+        "sub_parent": "fab"
+    },
+    {
+        "label": "hover-3d",
+        "type": "component",
+        "parent": "hover-3d",
+        "tag": "div",
+        "sub_parent": "hover-3d"
+    },
+    {
+        "label": "hover-gallery",
+        "type": "component",
+        "parent": "hover-gallery",
+        "tag": "figure",
+        "sub_parent": "hover-gallery"
+    },
+    {
+        "label": "text-rotate",
+        "type": "component",
+        "parent": "text-rotate",
+        "tag": "span",
+        "sub_parent": "text-rotate"
     }
 ]
