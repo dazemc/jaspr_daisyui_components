@@ -20,7 +20,6 @@ class Collapse extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final String? tabindex;
   final CollapseModifier? modifier;
   const Collapse(
     this.children, {
@@ -29,7 +28,6 @@ class Collapse extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
-    this.tabindex,
     this.modifier,
   });
   String getClasses() {

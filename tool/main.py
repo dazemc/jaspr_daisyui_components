@@ -14,7 +14,7 @@ from tqdm import tqdm
 
 CLASS_NAME_PATTERN: str = "class:"
 CLASS_DESC_PATTERN: str = "desc:"
-COMPONENT_PATH: str = "./components/"
+COMPONENT_PATH: str = "../src/daisyui/packages/docs/src/routes/(routes)/components/"
 COMPONENT_SUB: list[str] = listdir(COMPONENT_PATH)
 CLASS_CATEGORIES: List = [
     "component",
