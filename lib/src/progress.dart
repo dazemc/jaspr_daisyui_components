@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum ProgressColor {
   neutral('progress-neutral'),
@@ -50,8 +51,8 @@ class Progress extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'progress',
       classes: getClasses(),
       key: key,

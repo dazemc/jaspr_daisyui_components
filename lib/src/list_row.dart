@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum ListRowModifier {
   listcolwrap('list-col-wrap'),
@@ -40,8 +41,8 @@ class ListRow extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'li',
       classes: getClasses(),
       key: key,

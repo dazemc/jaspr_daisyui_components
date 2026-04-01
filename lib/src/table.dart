@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum TableModifier {
   zebra('table-zebra'),
@@ -58,8 +59,8 @@ class Table extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'table',
       classes: getClasses(),
       key: key,

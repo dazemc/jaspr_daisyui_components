@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum StepColor {
   neutral('step-neutral'),
@@ -45,8 +46,8 @@ class Step extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'li',
       classes: getClasses(),
       key: key,

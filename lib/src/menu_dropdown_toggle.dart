@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum MenuDropdownToggleModifier {
   menudropdownshow('menu-dropdown-show'),
@@ -39,8 +40,8 @@ class MenuDropdownToggle extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'span',
       classes: getClasses(),
       key: key,

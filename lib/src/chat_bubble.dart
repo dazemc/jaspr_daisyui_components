@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum ChatBubbleColor {
   neutral('chat-bubble-neutral'),
@@ -46,8 +47,8 @@ class ChatBubble extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'div',
       classes: getClasses(),
       key: key,

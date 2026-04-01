@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum ToggleColor {
   primary('toggle-primary'),
@@ -67,8 +68,8 @@ class Toggle extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'input',
       classes: getClasses(),
       key: key,

@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 class ThemeController extends StatelessComponent {
   final List<Component> children;
@@ -25,8 +26,8 @@ class ThemeController extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'input',
       classes: getClasses(),
       key: key,

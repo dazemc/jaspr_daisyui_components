@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 class FooterTitle extends StatelessComponent {
   final List<Component> children;
@@ -21,8 +22,8 @@ class FooterTitle extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'h6',
       classes: getClasses(),
       key: key,

@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 class ValidatorHint extends StatelessComponent {
   final List<Component> children;
@@ -21,8 +22,8 @@ class ValidatorHint extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'p',
       classes: getClasses(),
       key: key,

@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/dom.dart';
 
 enum MaskStyle {
   squircle('mask-squircle'),
@@ -67,8 +68,8 @@ class Mask extends StatelessComponent {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: 'img',
       classes: getClasses(),
       key: key,
