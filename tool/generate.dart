@@ -1,8 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
 
-import 'package:jaspr/jaspr.dart';
-
 import 'component_model.dart';
 
 List<String> types = [
@@ -33,7 +31,8 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     String name = c.label.replaceAll("-", "_");
     String header = c.importHeader ?? '';
     if (header.isEmpty) {
-      header = '''import 'package:jaspr/jaspr.dart';\n\n''';
+      header =
+          '''import 'package:jaspr/jaspr.dart';\nimport 'package:jaspr/dom.dart';\n\n''';
     }
     String enums = c.enumString ?? '';
     String? body = c.fieldString;
@@ -73,7 +72,8 @@ void buildFunctions(List<DaisyuiComponent> components) {
     for (String name in presentTypes) {
       output += mappedCalls[name]!;
     }
-    c.footerString = '''  
+    c.footerString =
+        '''  
   String getClasses() {
     List<String> output = [
       '${c.label}',
@@ -84,8 +84,8 @@ void buildFunctions(List<DaisyuiComponent> components) {
   }
 
   @override
-  Iterable<Component> build(BuildContext build) sync* {
-    yield DomComponent(
+  Component build(BuildContext build) {
+    return .element(
       tag: '${c.tag}',
       classes: getClasses(),
       key: key,
@@ -117,7 +117,7 @@ void buildFields(List<DaisyuiComponent> components) {
     String requiredAttributesConst = '';
     String partParameters = '';
     String partConst = '';
-    String header = '''import 'package:jaspr/jaspr.dart';''';
+    // String header = '''import 'package:jaspr/jaspr.dart';''';
     List<String>? additionalAttrs = c.additionalAttributes;
     if (additionalAttrs != null) {
       if (additionalAttrs.isNotEmpty) {
@@ -142,7 +142,8 @@ void buildFields(List<DaisyuiComponent> components) {
     };
     String parameters = '';
     String constructor = '';
-    String classInstanceHead = '''
+    String classInstanceHead =
+        '''
 class $name extends StatelessComponent {
   final List<Component> children;
   final String? classes;
@@ -151,7 +152,8 @@ class $name extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
 ''';
-    String classConstructorHead = '''
+    String classConstructorHead =
+        '''
   const $name(
     this.children, {
     this.classes,
@@ -185,17 +187,17 @@ class $name extends StatelessComponent {
         }
       }
     }
-    for (DaisyuiComponent k
-        in c.children
-            .where((e) => isComponent(e) && e.subParent == c.label)
-            .toList()) {
-      // String pascalName = pascalCaseFromLabel(k.label);
-      // partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
-      // partConst += '    this.$pascalName,\n';
-      // header += "\nimport '${k.label.replaceAll('-', '_')}.dart';";
-      // getChildrenFunctionBody +=
-      // 'if ($pascalName != null) {output.add($pascalName as Component);}\n';
-    }
+    // for (DaisyuiComponent k
+    //     in c.children
+    //         .where((e) => isComponent(e) && e.subParent == c.label)
+    //         .toList()) {
+    // String pascalName = pascalCaseFromLabel(k.label);
+    // partParameters += '    final ${capitalCase(k.label)}? $pascalName;\n';
+    // partConst += '    this.$pascalName,\n';
+    // header += "\nimport '${k.label.replaceAll('-', '_')}.dart';";
+    // getChildrenFunctionBody +=
+    // 'if ($pascalName != null) {output.add($pascalName as Component);}\n';
+    // }
     // String getChildrenFunction =
     // '$getChildrenFunctionHead$getChildrenFunctionBody$getChildrenFunctionFooter';
     // c.importHeader = '$header\n\n';
@@ -207,10 +209,9 @@ class $name extends StatelessComponent {
 void buildEnums(List<DaisyuiComponent> components) {
   for (DaisyuiComponent c in components.where((e) => isComponent(e)).toList()) {
     Map<String, String> enumBodiesType = {};
-    List<DaisyuiComponent> children =
-        c.children
-            .where((e) => !isComponent(e) && e.subParent == c.label)
-            .toList();
+    List<DaisyuiComponent> children = c.children
+        .where((e) => !isComponent(e) && e.subParent == c.label)
+        .toList();
     if (children.isNotEmpty) {
       String finalEnum = '';
       String enumBody = '';
@@ -226,8 +227,8 @@ void buildEnums(List<DaisyuiComponent> components) {
         enumBody = '';
       }
       enumBodiesType.forEach(
-        (k, v) =>
-            finalEnum += '''
+        (k, v) => finalEnum +=
+            '''
   ${v}none('');\n
   final String value;
   const ${formatName(c.label, capitalCase(k))}(this.value);
@@ -273,10 +274,9 @@ void appendRootChildren(
   List<DaisyuiComponent> components,
 ) {
   for (DaisyuiComponent c in rootStructure) {
-    c.children =
-        components
-            .where((e) => e.parent == c.label && e.label != c.label)
-            .toList();
+    c.children = components
+        .where((e) => e.parent == c.label && e.label != c.label)
+        .toList();
   }
 }
 
@@ -318,13 +318,12 @@ DaisyuiComponent convertToModel(Map<String, dynamic> value) {
     parent: value['parent'],
     subParent: value['sub_parent'] ?? value['parent'],
     tag: value['tag'],
-    additionalAttributes:
-        value['additional_attributes'] != null
-            ? (value['additional_attributes'] as List<dynamic>)
-                .whereType<String>()
-                .cast<String>()
-                .toList()
-            : null,
+    additionalAttributes: value['additional_attributes'] != null
+        ? (value['additional_attributes'] as List<dynamic>)
+              .whereType<String>()
+              .cast<String>()
+              .toList()
+        : null,
   );
 }
 

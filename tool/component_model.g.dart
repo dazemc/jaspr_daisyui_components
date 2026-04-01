@@ -13,10 +13,9 @@ DaisyuiComponent _$DaisyuiComponentFromJson(Map<String, dynamic> json) =>
       parent: json['parent'] as String,
       subParent: json['subParent'] as String,
       tag: json['tag'] as String?,
-      additionalAttributes:
-          (json['additionalAttributes'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList(),
+      additionalAttributes: (json['additionalAttributes'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       enumString: json['enumString'] as String?,
       fieldString: json['fieldString'] as String?,
       footerString: json['footerString'] as String?,
