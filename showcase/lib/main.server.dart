@@ -3,6 +3,7 @@ import 'package:jaspr/server.dart';
 import 'package:jaspr_daisyui_components/jaspr_daisyui_components.dart'
     as daisy;
 
+import 'catalog.dart';
 import 'main.server.options.dart';
 
 const _pubUrl = 'https://pub.dev/packages/jaspr_daisyui_components';
@@ -79,8 +80,8 @@ class Showcase extends StatelessComponent {
             daisy.NavbarCenter([
               nav(classes: 'hidden items-center gap-1 lg:flex', [
                 _navLink('#components', 'Components'),
+                _navLink('#themes', 'Themes'),
                 _navLink('#install', 'Install'),
-                _navLink('#package', 'Package'),
               ]),
             ]),
             daisy.NavbarEnd([
@@ -118,6 +119,8 @@ class Showcase extends StatelessComponent {
         [
           const _Hero(),
           const _ComponentsSection(),
+          const _AllComponentsSection(),
+          const _ThemesSection(),
           const _InstallSection(),
           const _PackageSection(),
         ],
@@ -470,6 +473,150 @@ class _ComponentsSection extends StatelessComponent {
               ]),
             ]),
           ]),
+        ]),
+      ],
+    );
+  }
+}
+
+class _AllComponentsSection extends StatelessComponent {
+  const _AllComponentsSection();
+
+  @override
+  Component build(BuildContext context) {
+    return section(
+      attributes: {'id': 'all-components'},
+      classes: 'mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24',
+      [
+        _Heading(
+          eyebrow: 'Everything included',
+          title: 'All ${allComponents.length} generated components.',
+          description:
+              'Every public class in the package, linked directly to its source file. The count includes component parts such as CardBody and ModalAction.',
+        ),
+        div(
+          classes:
+              'mt-10 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4',
+          [
+            for (final entry in allComponents)
+              a(
+                href: '$_repoUrl/blob/main/lib/src/${entry.file}',
+                target: Target.blank,
+                attributes: {'rel': 'noopener noreferrer'},
+                classes:
+                    'group flex items-center justify-between gap-2 rounded-xl border border-base-content/10 bg-base-100/55 px-3 py-2.5 font-mono text-xs text-base-content/65 transition duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-base-100 hover:text-primary',
+                [
+                  span(classes: 'truncate', [Component.text(entry.name)]),
+                  Component.text('↗'),
+                ],
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class _ThemesSection extends StatelessComponent {
+  const _ThemesSection();
+
+  static const List<String> _themes = [
+    'light',
+    'dark',
+    'cupcake',
+    'bumblebee',
+    'emerald',
+    'corporate',
+    'synthwave',
+    'retro',
+    'cyberpunk',
+    'valentine',
+    'halloween',
+    'garden',
+    'forest',
+    'aqua',
+    'lofi',
+    'pastel',
+    'fantasy',
+    'wireframe',
+    'black',
+    'luxury',
+    'dracula',
+    'cmyk',
+    'autumn',
+    'business',
+    'acid',
+    'lemonade',
+    'night',
+    'coffee',
+    'winter',
+    'dim',
+    'nord',
+    'sunset',
+    'caramellatte',
+    'abyss',
+    'silk',
+  ];
+
+  @override
+  Component build(BuildContext context) {
+    return section(
+      attributes: {'id': 'themes'},
+      classes: 'border-y border-base-content/10 bg-base-200/25 py-16 lg:py-24',
+      [
+        div(classes: 'mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8', [
+          _Heading(
+            eyebrow: '${_themes.length} themes',
+            title: 'Pick a daisyUI theme.',
+            description:
+                'These are daisyUI theme-controller radios. Switch the whole page without a line of client JavaScript.',
+          ),
+          div(
+            classes:
+                'mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5',
+            [
+              for (final theme in _themes)
+                label(
+                  classes:
+                      'group flex cursor-pointer items-center gap-3 rounded-xl border border-base-content/10 bg-base-100/55 px-3 py-3 transition duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-base-100',
+                  [
+                    daisy.ThemeController(
+                      classes: 'theme-controller radio radio-xs',
+                      attributes: {
+                        'type': 'radio',
+                        'name': 'showcase-theme',
+                        'value': theme,
+                        'aria-label': 'Use the $theme theme',
+                      },
+                      [],
+                    ),
+                    span(
+                      classes:
+                          'flex h-5 w-12 shrink-0 overflow-hidden rounded-full border border-base-content/10',
+                      [
+                        span(classes: 'h-full flex-1 bg-primary', []),
+                        span(classes: 'h-full flex-1 bg-secondary', []),
+                        span(classes: 'h-full flex-1 bg-accent', []),
+                      ],
+                    ),
+                    span(
+                      classes:
+                          'min-w-0 flex-1 truncate text-sm font-medium capitalize text-base-content/65 transition group-hover:text-base-content',
+                      [Component.text(theme)],
+                    ),
+                  ],
+                ),
+            ],
+          ),
+          p(
+            classes:
+                'mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-base-content/35',
+            [
+              Component.text(
+                'Theme switching is pure daisyUI CSS via theme-controller radios.',
+              ),
+            ],
+          ),
         ]),
       ],
     );
