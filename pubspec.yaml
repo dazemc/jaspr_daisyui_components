@@ -1,18 +1,25 @@
 name: jaspr_daisyui_components
-description: A starting point for Dart libraries or applications.
-version: 0.1.0
-# repository: https://github.com/my_org/my_repo
+description: Typed Jaspr components for every daisyUI component, generated from the daisyUI docs.
+version: 0.2.0
+homepage: https://dazemc.github.io/jaspr_daisyui_components/
+repository: https://github.com/dazemc/jaspr_daisyui_components
+issue_tracker: https://github.com/dazemc/jaspr_daisyui_components/issues
+
+topics:
+  - jaspr
+  - daisyui
+  - tailwind
+  - components
+  - web
 
 environment:
   sdk: ^3.11.4
 
-# Add regular dependencies here.
 dependencies:
   build_runner: ^2.4.15
-  jaspr: ^0.22.4
+  jaspr: ^0.23.5
   json_annotation: ^4.9.0
   json_serializable: ^6.9.5
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: any

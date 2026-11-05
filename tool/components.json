@@ -406,27 +406,6 @@
         "sub_parent": "btn"
     },
     {
-        "label": "cally",
-        "type": "component",
-        "parent": "cally",
-        "tag": "calendar-date",
-        "sub_parent": "cally"
-    },
-    {
-        "label": "pika-single",
-        "type": "component",
-        "parent": "cally",
-        "tag": "input",
-        "additional_attributes": [
-            "type"
-        ]
-    },
-    {
-        "label": "react-day-picker",
-        "type": "component",
-        "parent": "cally"
-    },
-    {
         "label": "card",
         "type": "component",
         "parent": "card",
@@ -948,6 +927,16 @@
         "sub_parent": "drawer-side"
     },
     {
+        "label": "drawer-button",
+        "type": "part",
+        "parent": "drawer",
+        "tag": "label",
+        "additional_attributes": [
+            "for"
+        ],
+        "sub_parent": "drawer-content"
+    },
+    {
         "label": "drawer-end",
         "type": "placement",
         "parent": "drawer",
@@ -955,16 +944,6 @@
     },
     {
         "label": "drawer-open",
-        "type": "modifier",
-        "parent": "drawer"
-    },
-    {
-        "label": "\"is-drawer-open:\"",
-        "type": "modifier",
-        "parent": "drawer"
-    },
-    {
-        "label": "\"is-drawer-close:\"",
         "type": "modifier",
         "parent": "drawer"
     },
@@ -1161,7 +1140,7 @@
         "label": "filter",
         "type": "component",
         "parent": "filter",
-        "tag": "div",
+        "tag": "form",
         "sub_parent": "filter"
     },
     {
@@ -1647,12 +1626,6 @@
         "sub_parent": "mask"
     },
     {
-        "label": "mask-square",
-        "type": "style",
-        "parent": "mask",
-        "sub_parent": "mask"
-    },
-    {
         "label": "mask-circle",
         "type": "style",
         "parent": "mask",
@@ -1751,6 +1724,12 @@
         "type": "modifier",
         "parent": "menu",
         "sub_parent": "menu-dropdown-toggle"
+    },
+    {
+        "label": "menu-paged",
+        "type": "modifier",
+        "parent": "menu",
+        "sub_parent": "menu"
     },
     {
         "label": "menu-xs",
@@ -2188,6 +2167,12 @@
     {
         "label": "range-xl",
         "type": "size",
+        "parent": "range",
+        "sub_parent": "range"
+    },
+    {
+        "label": "range-vertical",
+        "type": "direction",
         "parent": "range",
         "sub_parent": "range"
     },
@@ -3119,14 +3104,25 @@
         "sub_parent": "tooltip"
     },
     {
-        "label": "tooltip-open",
-        "type": "modifier",
+        "label": "tooltip-start",
+        "type": "placement",
         "parent": "tooltip",
         "sub_parent": "tooltip"
     },
     {
-        "label": "tooltip-neutral",
-        "type": "color",
+        "label": "tooltip-center",
+        "type": "placement",
+        "parent": "tooltip"
+    },
+    {
+        "label": "tooltip-end",
+        "type": "placement",
+        "parent": "tooltip",
+        "sub_parent": "tooltip"
+    },
+    {
+        "label": "tooltip-open",
+        "type": "modifier",
         "parent": "tooltip",
         "sub_parent": "tooltip"
     },
@@ -3238,5 +3234,229 @@
         "parent": "text-rotate",
         "tag": "span",
         "sub_parent": "text-rotate"
+    },
+    {
+        "label": "aura",
+        "type": "component",
+        "parent": "aura",
+        "tag": "div",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-dual",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-rainbow",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-holo",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-gold",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-silver",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-glow",
+        "type": "style",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-xs",
+        "type": "size",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-sm",
+        "type": "size",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-md",
+        "type": "size",
+        "parent": "aura"
+    },
+    {
+        "label": "aura-lg",
+        "type": "size",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "aura-xl",
+        "type": "size",
+        "parent": "aura",
+        "sub_parent": "aura"
+    },
+    {
+        "label": "megamenu",
+        "type": "component",
+        "parent": "megamenu",
+        "tag": "div",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-active",
+        "type": "part",
+        "parent": "megamenu",
+        "tag": "span",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-wide",
+        "type": "modifier",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-full",
+        "type": "modifier",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-vertical",
+        "type": "direction",
+        "parent": "megamenu"
+    },
+    {
+        "label": "megamenu-xs",
+        "type": "size",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-sm",
+        "type": "size",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-md",
+        "type": "size",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-lg",
+        "type": "size",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "megamenu-xl",
+        "type": "size",
+        "parent": "megamenu",
+        "sub_parent": "megamenu"
+    },
+    {
+        "label": "otp",
+        "type": "component",
+        "parent": "otp",
+        "tag": "label",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-joined",
+        "type": "modifier",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-xs",
+        "type": "size",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-sm",
+        "type": "size",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-md",
+        "type": "size",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-lg",
+        "type": "size",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-xl",
+        "type": "size",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-neutral",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-primary",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-secondary",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-accent",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-success",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-info",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-warning",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
+    },
+    {
+        "label": "otp-error",
+        "type": "color",
+        "parent": "otp",
+        "sub_parent": "otp"
     }
 ]

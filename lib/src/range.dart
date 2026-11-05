@@ -32,6 +32,16 @@ enum RangeSize {
   String toString() => value.toString();
 }
 
+enum RangeDirection {
+  vertical('range-vertical'),
+  none('');
+
+  final String value;
+  const RangeDirection(this.value);
+  @override
+  String toString() => value.toString();
+}
+
 class Range extends StatelessComponent {
   final List<Component> children;
   final String? classes;
@@ -45,6 +55,7 @@ class Range extends StatelessComponent {
   final String? value;
   final RangeColor? color;
   final RangeSize? size;
+  final RangeDirection? direction;
   const Range(
     this.children, {
     this.classes,
@@ -58,6 +69,7 @@ class Range extends StatelessComponent {
     this.value,
     this.color,
     this.size,
+    this.direction,
   });
   String getClasses() {
     List<String> output = [
@@ -65,6 +77,7 @@ class Range extends StatelessComponent {
 
       if (color != null) color.toString(),
       if (size != null) size.toString(),
+      if (direction != null) direction.toString(),
 
       classes ?? '',
     ];

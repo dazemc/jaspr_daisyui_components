@@ -5,6 +5,7 @@ enum MenuModifier {
   disabled('menu-disabled'),
   active('menu-active'),
   focus('menu-focus'),
+  paged('menu-paged'),
   none('');
 
   final String value;

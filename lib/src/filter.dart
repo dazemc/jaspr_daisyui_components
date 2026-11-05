@@ -24,7 +24,7 @@ class Filter extends StatelessComponent {
   @override
   Component build(BuildContext build) {
     return .element(
-      tag: 'div',
+      tag: 'form',
       classes: getClasses(),
       key: key,
       id: id,

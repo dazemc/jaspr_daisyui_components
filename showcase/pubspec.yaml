@@ -1,0 +1,22 @@
+name: jaspr_daisyui_showcase
+description: Showcase site for jaspr_daisyui_components.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  jaspr: ^0.23.5
+  jaspr_daisyui_components:
+    path: ..
+
+dev_dependencies:
+  build_runner: ^2.15.1
+  build_web_compilers: ^4.8.5
+  jaspr_builder: ^0.23.5
+  lints: any
+
+jaspr:
+  mode: static
+  port: 9010

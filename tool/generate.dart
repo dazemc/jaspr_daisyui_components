@@ -16,6 +16,12 @@ List<String> types = [
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
+
+  // daisyUI docs include a few JS-only examples in prose (Cally, VC, etc.).
+  // They are not HTML components and generate invalid Dart names.
+  final validLabel = RegExp(r'^[a-z0-9][a-z0-9_-]*$');
+  components.removeWhere((component) => !validLabel.hasMatch(component.label));
+
   List<DaisyuiComponent> componentTrees = buildRootStructure(components);
   appendRootChildren(componentTrees, components);
   appendSubChildren(componentTrees, components);
@@ -39,6 +45,9 @@ void writeComponentsToFile(List<DaisyuiComponent> components) async {
     String? footer = c.footerString;
     if (body != null && footer != null) {
       String output = '$header$enums$body$footer';
+      if (name == 'list') {
+        output = '// ignore_for_file: camel_case_types\n\n$output';
+      }
       final file = File('../lib/src/$name.dart');
       libraryList += "export 'src/$name.dart';\n";
       await file.writeAsString(output);

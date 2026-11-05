@@ -9,7 +9,6 @@ enum MaskStyle {
   decagon('mask-decagon'),
   pentagon('mask-pentagon'),
   diamond('mask-diamond'),
-  square('mask-square'),
   circle('mask-circle'),
   star('mask-star'),
   star2('mask-star-2'),

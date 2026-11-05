@@ -6,6 +6,9 @@ enum TooltipPlacement {
   bottom('tooltip-bottom'),
   left('tooltip-left'),
   right('tooltip-right'),
+  start('tooltip-start'),
+  center('tooltip-center'),
+  end('tooltip-end'),
   none('');
 
   final String value;
@@ -25,7 +28,6 @@ enum TooltipModifier {
 }
 
 enum TooltipColor {
-  neutral('tooltip-neutral'),
   primary('tooltip-primary'),
   secondary('tooltip-secondary'),
   accent('tooltip-accent'),

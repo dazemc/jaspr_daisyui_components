@@ -13,8 +13,6 @@ enum DrawerPlacement {
 
 enum DrawerModifier {
   open('drawer-open'),
-  isopen('"is-drawer-open:"'),
-  isclose('"is-drawer-close:"'),
   none('');
 
   final String value;

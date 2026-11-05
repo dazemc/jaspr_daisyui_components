@@ -1,14 +1,14 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/dom.dart';
 
-class Cally extends StatelessComponent {
+class MegamenuActive extends StatelessComponent {
   final List<Component> children;
   final String? classes;
   final Styles? styles;
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  const Cally(
+  const MegamenuActive(
     this.children, {
     this.classes,
     this.id,
@@ -17,14 +17,14 @@ class Cally extends StatelessComponent {
     this.styles,
   });
   String getClasses() {
-    List<String> output = ['cally', classes ?? ''];
+    List<String> output = ['megamenu-active', classes ?? ''];
     return output.join(' ');
   }
 
   @override
   Component build(BuildContext build) {
     return .element(
-      tag: 'calendar-date',
+      tag: 'span',
       classes: getClasses(),
       key: key,
       id: id,

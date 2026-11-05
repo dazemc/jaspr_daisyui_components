@@ -5,7 +5,7 @@ from typing import TypedDict, List, Optional, Dict, cast
 from bs4 import BeautifulSoup, Tag
 from io import TextIOWrapper
 from json import dump
-from re import finditer
+from re import finditer, fullmatch
 from os import listdir
 from os.path import isdir, isfile, join
 
@@ -335,6 +335,21 @@ def main() -> None:
     components = extract_documentation(component_contents)
     parse_html(components)
     unique_components(components)
+
+    # Some docs examples are JS libraries, not HTML components. Their names
+    # contain quotes or selectors and cannot become valid Dart identifiers.
+    skipped = [c for c in components if not fullmatch(r"[a-z0-9][a-z0-9_-]*", c["label"])]
+    components = [
+        c for c in components if fullmatch(r"[a-z0-9][a-z0-9_-]*", c["label"])
+    ]
+    if skipped:
+        print("Skipped JS-only examples:", ", ".join(c["label"] for c in skipped))
+
+    # The card docs lead with a clickable <label> example, but the generic
+    # component should stay a container. Keep the long-standing <div> default.
+    for component in components:
+        if component["label"] == "card":
+            component["tag"] = "div"
     # components = null_sub(components)
     # heir_components = build_heirarchy(components)
     # check_components(heir_components)
