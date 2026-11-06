@@ -7,7 +7,7 @@ Typed Jaspr components for daisyUI, generated from the daisyUI documentation.
 
 Current daisyUI source: **v5.7.50**.
 
-**Showcase:** [dazemc.github.io/jaspr_daisyui_components](https://dazemc.github.io/jaspr_daisyui_components/) — a `jaspr_content` docs site built from the official daisyUI markdown
+**Showcase:** [dazemc.github.io/jaspr_daisyui_components](https://dazemc.github.io/jaspr_daisyui_components/) — a `jaspr_content` docs site built from the official daisyUI markdown, with live previews and matching HTML/Dart tabs
 **Package:** [pub.dev/packages/jaspr_daisyui_components](https://pub.dev/packages/jaspr_daisyui_components)
 
 The portfolio site uses these components directly, alongside

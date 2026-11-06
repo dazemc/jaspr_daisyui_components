@@ -9,7 +9,7 @@ description: "Typed daisyUI components for Jaspr, generated from the official do
     Published on pub.dev · v0.2.0
   </div>
   <h2 class="mt-5 text-balance text-4xl font-black tracking-tight sm:text-5xl">daisyUI, typed for Jaspr.</h2>
-  <p class="mt-4 max-w-2xl text-base leading-relaxed text-base-content/65">Every daisyUI component, generated from the official docs as typed Jaspr components. The examples on this site are live HTML styled by the daisyUI plugin, rendered through <code>jaspr_content</code>.</p>
+  <p class="mt-4 max-w-2xl text-base leading-relaxed text-base-content/65">Every daisyUI component, generated from the official docs as typed Jaspr components. The examples on this site are live HTML styled by the daisyUI plugin, rendered through <code>jaspr_content</code>. Every preview includes a matching Dart/Jaspr implementation tab.</p>
   <div class="mt-7 flex flex-wrap gap-3">
     <a class="btn btn-primary rounded-xl" href="https://pub.dev/packages/jaspr_daisyui_components" target="_blank" rel="noopener noreferrer">Install from pub.dev ↗</a>
     <a class="btn btn-outline rounded-xl" href="/components/">Browse components</a>

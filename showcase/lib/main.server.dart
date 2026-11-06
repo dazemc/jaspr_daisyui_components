@@ -1,13 +1,12 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_content/components/callout.dart';
-import 'package:jaspr_content/components/sidebar.dart';
 import 'package:jaspr_content/components/sidebar_toggle_button.dart';
 import 'package:jaspr_content/jaspr_content.dart';
 import 'package:jaspr_content/theme.dart';
 
 import 'main.server.options.dart';
-import 'nav.dart';
+import 'sidebar.dart';
 import 'theme_picker.dart';
 
 const _pubUrl = 'https://pub.dev/packages/jaspr_daisyui_components';
@@ -29,10 +28,7 @@ void main() {
       head: [
         link(rel: 'stylesheet', href: 'styles.css'),
         link(rel: 'icon', href: 'favicon.svg', type: 'image/svg+xml'),
-        script(
-          src: 'https://unpkg.com/cally',
-          attributes: {'type': 'module'},
-        ),
+        script(src: 'https://unpkg.com/cally', attributes: {'type': 'module'}),
         link(rel: 'preconnect', href: 'https://fonts.googleapis.com'),
         link(
           rel: 'preconnect',
@@ -49,39 +45,12 @@ void main() {
         Document.html(attributes: {'data-theme': 'light'}),
         ContentApp(
           parsers: [MarkdownParser()],
-          extensions: [
-            HeadingAnchorsExtension(),
-            TableOfContentsExtension(),
-          ],
+          extensions: [HeadingAnchorsExtension(), TableOfContentsExtension()],
           components: [Callout()],
           layouts: [
             DocsLayout(
               header: const ShowcaseHeader(),
-              sidebar: Sidebar(
-                groups: [
-                  SidebarGroup(
-                    title: 'Start',
-                    links: [
-                      SidebarLink(text: 'Overview', href: _prefix),
-                      SidebarLink(
-                        text: 'Components',
-                        href: '${_prefix}components',
-                      ),
-                    ],
-                  ),
-                  for (final group in navGroups)
-                    SidebarGroup(
-                      title: group.title,
-                      links: [
-                        for (final entry in group.entries)
-                          SidebarLink(
-                            text: entry.title,
-                            href: '${_prefix}components/${entry.slug}',
-                          ),
-                      ],
-                    ),
-                ],
-              ),
+              sidebar: ShowcaseSidebar(prefix: _prefix),
             ),
           ],
           theme: ContentTheme.none(),
@@ -101,30 +70,26 @@ class ShowcaseHeader extends StatelessComponent {
           'flex h-16 w-full items-center gap-3 border-b border-base-content/10 bg-base-100/85 px-4 backdrop-blur-md sm:px-6 lg:px-8',
       [
         const SidebarToggleButton(),
-        a(
-          href: _prefix,
-          classes: 'group flex min-w-0 items-center gap-3',
-          [
-            img(
-              src: '${_prefix}favicon.svg',
-              alt: 'jaspr_daisyui_components',
-              classes: 'h-9 w-9 rounded-xl',
-              attributes: {'width': '36', 'height': '36'},
+        a(href: _prefix, classes: 'group flex min-w-0 items-center gap-3', [
+          img(
+            src: '${_prefix}favicon.svg',
+            alt: 'jaspr_daisyui_components',
+            classes: 'h-9 w-9 rounded-xl',
+            attributes: {'width': '36', 'height': '36'},
+          ),
+          div(classes: 'hidden min-w-0 sm:block', [
+            span(
+              classes:
+                  'block truncate text-sm font-bold leading-tight tracking-tight',
+              [Component.text('jaspr_daisyui_components')],
             ),
-            div(classes: 'hidden min-w-0 sm:block', [
-              span(
-                classes:
-                    'block truncate text-sm font-bold leading-tight tracking-tight',
-                [Component.text('jaspr_daisyui_components')],
-              ),
-              span(
-                classes:
-                    'block font-mono text-[10px] uppercase tracking-[0.18em] text-base-content/40',
-                [Component.text('daisyUI · Jaspr · Dart')],
-              ),
-            ]),
-          ],
-        ),
+            span(
+              classes:
+                  'block font-mono text-[10px] uppercase tracking-[0.18em] text-base-content/40',
+              [Component.text('daisyUI · Jaspr · Dart')],
+            ),
+          ]),
+        ]),
         div(classes: 'ml-auto flex items-center gap-2', [
           const ThemePicker(),
           a(

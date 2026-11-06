@@ -15,6 +15,18 @@ import urllib.parse
 
 import yaml
 
+import dart_codegen as dart_code
+
+try:
+    from pygments import highlight as _pygments_highlight
+    from pygments.formatters import HtmlFormatter
+    from pygments.lexers import DartLexer, HtmlLexer
+
+    _PYGMENTS = True
+    _CODE_FORMATTER = HtmlFormatter(nowrap=True, noclasses=True, style="monokai")
+except ImportError:  # Keep the build working without the optional highlighter.
+    _PYGMENTS = False
+
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = (
     ROOT.parent
@@ -362,7 +374,41 @@ def inline_html(text: str) -> str:
     return text
 
 
-def render_demo_sections(body: str, slug: str) -> str:
+COPY_ICON = (
+    '<svg class="size-4 fill-current" viewBox="0 0 32 32">'
+    '<path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/>'
+    "</svg>"
+)
+
+
+def highlight_code(code: str, language: str) -> str:
+    if not code:
+        return ""
+    if _PYGMENTS:
+        lexer = HtmlLexer() if language == "html" else DartLexer()
+        rendered = _pygments_highlight(code, lexer, _CODE_FORMATTER).rstrip("\n")
+    else:
+        rendered = html_lib.escape(code)
+    return rendered.replace("\n", "&#10;")
+
+
+def code_tab(tab: str, label: str, code: str, language: str) -> list[str]:
+    highlighted = highlight_code(code, language)
+    copy_value = urllib.parse.quote(code, safe="")
+    return [
+        f'<input type="radio" name="tab_{tab}" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="{label}"/>',
+        '<div class="tab-content">',
+        '<div class="relative">',
+        f'<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="{copy_value}" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy {label} to clipboard">',
+        COPY_ICON,
+        "</button>",
+        f'<pre class="component-code language-{language}"><code>{highlighted}</code></pre>',
+        "</div>",
+        "</div>",
+    ]
+
+
+def render_demo_sections(body: str, slug: str, wrappers) -> str:
     """Convert official `### ~Title` demo sections into daisyUI preview cards
     with a live preview and an HTML code tab, matching the official docs."""
     lines = body.splitlines()
@@ -446,7 +492,19 @@ def render_demo_sections(body: str, slug: str) -> str:
         group += 1
         tab = f"{anchor}-{group}"
         escaped_title = html_lib.escape(title)
-        escaped_code = html_lib.escape(html_code).replace("\n", "&#10;")
+        html_display = (
+            dart_code.format_html_document(dart_code.parse_html(html_code))
+            if html_code
+            else ""
+        )
+        try:
+            dart_source = (
+                dart_code.html_to_dart(html_code, wrappers)
+                if html_code
+                else "// No Dart example for this preview."
+            )
+        except Exception:
+            dart_source = "// Dart example unavailable for this preview."
         preview: list[str] = [
             f'<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="{anchor}">',
             '<div class="flex items-center gap-2 pb-3 text-sm font-bold">',
@@ -467,15 +525,8 @@ def render_demo_sections(body: str, slug: str) -> str:
                 live_html,
                 "</div>",
                 "</div>",
-                f'<input type="radio" name="tab_{tab}" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>',
-                '<div class="tab-content">',
-                '<div class="relative">',
-                f'<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="{urllib.parse.quote(html_code, safe="")}" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">',
-                '<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>',
-                "</button>",
-                f'<pre class="component-code"><code>{escaped_code}</code></pre>',
-                "</div>",
-                "</div>",
+                *code_tab(tab, "HTML", html_display, "html"),
+                *code_tab(tab, "Dart", dart_source, "dart"),
                 "</div>",
                 "</div>",
             ]
@@ -579,6 +630,7 @@ def navigation_groups() -> list[tuple[str, list[tuple[str, str]]]]:
 
 def main() -> None:
     COMPONENTS.mkdir(parents=True, exist_ok=True)
+    wrappers = dart_code.load_wrappers(ROOT.parent)
     data_dir = CONTENT / "_data"
     data_dir.mkdir(parents=True, exist_ok=True)
     base_path = os.environ.get("BASE_PATH", "/jaspr_daisyui_components/")
@@ -605,7 +657,7 @@ def main() -> None:
         body = strip_svelte_blocks(body)
         body = body.replace("$$", "")
         body = convert_callouts(body)
-        body = render_demo_sections(body, slug)
+        body = render_demo_sections(body, slug, wrappers)
         body = compact_html_examples(body)
         body = re.sub(r"\n{3,}", "\n\n", body).strip()
 
@@ -654,7 +706,7 @@ def main() -> None:
         "    Published on pub.dev · v0.2.0\n"
         "  </div>\n"
         '  <h2 class="mt-5 text-balance text-4xl font-black tracking-tight sm:text-5xl">daisyUI, typed for Jaspr.</h2>\n'
-        '  <p class="mt-4 max-w-2xl text-base leading-relaxed text-base-content/65">Every daisyUI component, generated from the official docs as typed Jaspr components. The examples on this site are live HTML styled by the daisyUI plugin, rendered through <code>jaspr_content</code>.</p>\n'
+        '  <p class="mt-4 max-w-2xl text-base leading-relaxed text-base-content/65">Every daisyUI component, generated from the official docs as typed Jaspr components. The examples on this site are live HTML styled by the daisyUI plugin, rendered through <code>jaspr_content</code>. Every preview includes a matching Dart/Jaspr implementation tab.</p>\n'
         '  <div class="mt-7 flex flex-wrap gap-3">\n'
         '    <a class="btn btn-primary rounded-xl" href="https://pub.dev/packages/jaspr_daisyui_components" target="_blank" rel="noopener noreferrer">Install from pub.dev ↗</a>\n'
         '    <a class="btn btn-outline rounded-xl" href="/components/">Browse components</a>\n'

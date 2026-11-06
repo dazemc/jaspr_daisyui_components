@@ -37,6 +37,7 @@ jobs:
         run: |
           dart pub get
           npm ci
+          python3 -m pip install --quiet --break-system-packages pygments || true
           dart pub global activate jaspr_cli 0.23.4
 
       - name: Build showcase

@@ -70,7 +70,9 @@ class _ThemePickerState extends State<ThemePicker> {
 
   void _random() {
     final choices = showcaseThemes.where((theme) => theme != _theme).toList();
-    _select(choices[(DateTime.now().millisecondsSinceEpoch ~/ 7) % choices.length]);
+    _select(
+      choices[(DateTime.now().millisecondsSinceEpoch ~/ 7) % choices.length],
+    );
   }
 
   @override
@@ -107,10 +109,7 @@ class _ThemePickerState extends State<ThemePicker> {
                   classes:
                       'flex w-full items-center gap-2 rounded-xl bg-primary/10 px-3 py-2 text-left text-xs font-semibold text-primary transition hover:bg-primary/20',
                   onClick: _random,
-                  [
-                    Component.text('✦'),
-                    Component.text('Surprise me'),
-                  ],
+                  [Component.text('✦'), Component.text('Surprise me')],
                 ),
               ]),
               li([div(classes: 'my-1.5 h-px bg-base-content/10', [])]),
@@ -124,15 +123,19 @@ class _ThemePickerState extends State<ThemePicker> {
                     [
                       span(
                         classes:
-                            'flex h-4 w-7 shrink-0 overflow-hidden rounded-full border border-base-content/10',
+                            'flex h-4 w-9 shrink-0 overflow-hidden rounded-full border border-base-content/10',
                         attributes: {'data-theme': theme},
                         [
+                          span(classes: 'h-full flex-1 bg-base-200', []),
                           span(classes: 'h-full flex-1 bg-primary', []),
                           span(classes: 'h-full flex-1 bg-secondary', []),
                           span(classes: 'h-full flex-1 bg-accent', []),
+                          span(classes: 'h-full flex-1 bg-neutral', []),
                         ],
                       ),
-                      span(classes: 'flex-1 capitalize', [Component.text(theme)]),
+                      span(classes: 'flex-1 capitalize', [
+                        Component.text(theme),
+                      ]),
                       if (theme == _theme)
                         span(classes: 'text-primary', [Component.text('✓')]),
                     ],
