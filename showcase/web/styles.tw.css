@@ -36,12 +36,17 @@ body,
 }
 
 .docs .header-container {
-  background-color: color-mix(in oklab, var(--color-base-100) 85%, transparent);
+  background-color: color-mix(in oklab, var(--color-base-100) 96%, transparent);
 }
 
-.docs .sidebar-container {
-  background-color: var(--color-base-100);
+.docs .main-container .sidebar-container {
+  background-color: var(--color-base-100) !important;
+  border-right-color: var(--color-base-300) !important;
   color: var(--color-base-content);
+}
+
+.docs .main-container .sidebar-barrier {
+  background-color: var(--color-neutral) !important;
 }
 
 .docs .sidebar {
@@ -55,14 +60,17 @@ body,
 
 .content {
   line-height: 1.7;
+  min-width: 0;
 }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+/* Prose styles are scoped to direct children so daisyUI components inside
+   live previews keep their own layout, colors, and typography. */
+.content > h1,
+.content > h2,
+.content > h3,
+.content > h4,
+.content > h5,
+.content > h6 {
   color: var(--color-base-content);
   font-weight: 800;
   line-height: 1.2;
@@ -70,50 +78,72 @@ body,
   margin-bottom: 0.75rem;
 }
 
-.content h1 {
+.content > h1 {
   font-size: 2rem;
 }
 
-.content h2 {
+.content > h2 {
   font-size: 1.55rem;
 }
 
-.content h3 {
+.content > h3 {
   font-size: 1.2rem;
 }
 
-.content h4 {
+.content > h4 {
   font-size: 1rem;
 }
 
-.content p {
+.content > h2 a,
+.content > h3 a,
+.content > h4 a {
+  color: inherit;
+  font-weight: inherit;
+  margin-left: 0.35rem;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.content > h2:hover a,
+.content > h3:hover a,
+.content > h4:hover a {
+  opacity: 0.4;
+}
+
+.content > p {
   margin: 0.75rem 0;
 }
 
-.content a {
+.content > p a,
+.content > ul a,
+.content > ol a,
+.content > blockquote a,
+.content > table a {
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.content ul {
+.content > ul {
   list-style: disc;
   margin: 0.75rem 0;
   padding-left: 1.5rem;
 }
 
-.content ol {
+.content > ol {
   list-style: decimal;
   margin: 0.75rem 0;
   padding-left: 1.5rem;
 }
 
-.content li {
+.content > ul > li,
+.content > ol > li {
   margin: 0.3rem 0;
 }
 
-.content blockquote {
+.content > blockquote {
   border-left: 3px solid var(--color-base-300);
   color: var(--color-base-content);
   margin: 1rem 0;
@@ -121,12 +151,12 @@ body,
   padding-left: 1rem;
 }
 
-.content hr {
+.content > hr {
   border-color: var(--color-base-300);
   margin: 2rem 0;
 }
 
-.content pre {
+.content > pre {
   background: color-mix(in oklab, var(--color-neutral) 90%, black);
   border-radius: 0.75rem;
   color: var(--color-neutral-content);
@@ -142,39 +172,108 @@ body,
   font-family: var(--font-mono);
 }
 
-.content :not(pre) > code {
+.content > p code,
+.content > li code,
+.content > blockquote code,
+.content > table code,
+.content > h1 code,
+.content > h2 code,
+.content > h3 code {
   background: var(--color-base-200);
   border-radius: 0.3rem;
   font-size: 0.85em;
   padding: 0.12rem 0.32rem;
 }
 
-.content table {
+.content > table {
   border-collapse: collapse;
   font-size: 0.9rem;
   margin: 1rem 0;
   width: 100%;
 }
 
-.content th,
-.content td {
+.content > table th,
+.content > table td {
   border: 1px solid var(--color-base-300);
   padding: 0.5rem 0.65rem;
   text-align: left;
 }
 
-.content th {
+.content > table th {
   background: var(--color-base-200);
 }
 
-.content img {
+.content > img {
   border-radius: 0.75rem;
   max-width: 100%;
 }
 
-.content kbd {
+.content > kbd {
   background: var(--color-base-200);
   border: 1px solid var(--color-base-300);
+}
+
+/* Official-docs style component previews. */
+.component-preview {
+  max-width: 56rem;
+}
+
+.component-preview a {
+  text-decoration: none;
+}
+
+.component-preview .preview {
+  background-color: var(--color-base-100);
+  width: 100%;
+}
+
+.component-preview .tab-content {
+  background-color: var(--color-base-100);
+}
+
+.component-preview pre.component-code {
+  background: color-mix(in oklab, var(--color-neutral) 90%, black);
+  border-radius: 0.75rem;
+  color: var(--color-neutral-content);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  margin: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem 3.25rem 1rem 1.1rem;
+  white-space: pre;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.callout a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.callout code {
+  background: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+  border-radius: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.12rem 0.32rem;
+}
+
+.classnames-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.component-preview pre.component-code code {
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
 }
 
 /* Markdown prose links shouldn't leak into daisyUI buttons or card links. */
@@ -193,10 +292,12 @@ body,
   text-decoration: none;
 }
 
-.content a.card h3 {
+.content .not-prose a {
   text-decoration: none;
 }
 
-.content .not-prose a {
-  text-decoration: none;
+/* Mobile: never let a wide component widen the whole document. */
+.main-container {
+  max-width: 100vw;
+  overflow-x: clip;
 }

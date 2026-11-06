@@ -3,8 +3,20 @@ title: "OTP"
 description: "OTP (One-Time Password) component for inputting verification codes. It's usually 4 to 6 digits long and is used for two-factor authentication (2FA) or passwordless login."
 ---
 
-### OTP
-#### Make sure the number of spans matches the maxlength and the pattern of the input field. In this example, we have 4 spans for a 4-digit OTP.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp</code></th><td class="whitespace-nowrap">Component</td><td>For the container label</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-joined</code></th><td class="whitespace-nowrap">Modifier</td><td>Connects the character boxes together</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-xs</code></th><td class="whitespace-nowrap">Size</td><td>Extra small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-sm</code></th><td class="whitespace-nowrap">Size</td><td>Small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-md</code></th><td class="whitespace-nowrap">Size</td><td>Medium size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-lg</code></th><td class="whitespace-nowrap">Size</td><td>Large size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-xl</code></th><td class="whitespace-nowrap">Size</td><td>Extra large size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-neutral</code></th><td class="whitespace-nowrap">Color</td><td>neutral color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-primary</code></th><td class="whitespace-nowrap">Color</td><td>primary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-secondary</code></th><td class="whitespace-nowrap">Color</td><td>secondary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-accent</code></th><td class="whitespace-nowrap">Color</td><td>accent color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-success</code></th><td class="whitespace-nowrap">Color</td><td>success color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-info</code></th><td class="whitespace-nowrap">Color</td><td>info color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-warning</code></th><td class="whitespace-nowrap">Color</td><td>warning color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">otp-error</code></th><td class="whitespace-nowrap">Color</td><td>error color</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Make sure the number of spans matches the maxlength and the pattern of the input field. In this example, we have 4 spans for a 4-digit OTP.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="otp">
   <span></span>
   <span></span>
@@ -12,19 +24,30 @@ description: "OTP (One-Time Password) component for inputting verification codes
   <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
 </label>
-
-```html
-<label class="otp">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-```
-
-### OTP with 6 digits
-
+</div>
+</div>
+<input type="radio" name="tab_otp-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp-with-6-digits">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp-with-6-digits" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP with 6 digits</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-with-6-digits-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="otp">
   <span></span>
   <span></span>
@@ -34,21 +57,31 @@ description: "OTP (One-Time Password) component for inputting verification codes
   <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="6" pattern="[0-9]&#123;6}" required />
 </label>
-
-```html
-<label class="otp">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" required />
-</label>
-```
-
-### OTP joined
-#### Connects the character boxes together
+</div>
+</div>
+<input type="radio" name="tab_otp-with-6-digits-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%226%22%20pattern%3D%22%5B0-9%5D%7B6%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;6&quot; pattern=&quot;[0-9]{6}&quot; required /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp-joined">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp-joined" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP joined</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Connects the character boxes together</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-joined-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="otp otp-joined">
   <span></span>
   <span></span>
@@ -56,19 +89,30 @@ description: "OTP (One-Time Password) component for inputting verification codes
   <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
 </label>
-
-```html
-<label class="otp otp-joined">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-```
-
-### OTP with different sizes
-
+</div>
+</div>
+<input type="radio" name="tab_otp-joined-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%20otp-joined%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp otp-joined&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp-with-different-sizes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp-with-different-sizes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP with different sizes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-with-different-sizes-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-4 items-center">
   <label class="otp otp-xs">
     <span></span>
@@ -106,51 +150,30 @@ description: "OTP (One-Time Password) component for inputting verification codes
     <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
 </div>
-
-```html
-<label class="otp otp-xs">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-sm">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-md">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-lg">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-xl">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-```
-
-### OTP with different colors
-
+</div>
+</div>
+<input type="radio" name="tab_otp-with-different-sizes-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%20otp-xs%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-sm%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-md%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-lg%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-xl%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp otp-xs&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-sm&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-md&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-lg&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-xl&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp-with-different-colors">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp-with-different-colors" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP with different colors</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-with-different-colors-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-4 items-center">
   <label class="otp otp-neutral">
     <span></span>
@@ -209,75 +232,30 @@ description: "OTP (One-Time Password) component for inputting verification codes
     <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
   </label>
 </div>
-
-```html
-<label class="otp otp-neutral">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-primary">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-secondary">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-accent">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-info">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-success">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-warning">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-
-<label class="otp otp-error">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required />
-</label>
-```
-
-### OTP disabled
-
+</div>
+</div>
+<input type="radio" name="tab_otp-with-different-colors-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%20otp-neutral%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-primary%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-secondary%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-accent%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-info%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-success%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-warning%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22otp%20otp-error%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp otp-neutral&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-primary&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-secondary&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-accent&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-info&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-success&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-warning&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;otp otp-error&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="otp-disabled">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/otp/#otp-disabled" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">OTP disabled</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_otp-disabled-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="otp">
   <span></span>
   <span></span>
@@ -285,13 +263,16 @@ description: "OTP (One-Time Password) component for inputting verification codes
   <span></span>
   <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required disabled />
 </label>
-
-```html
-<label class="otp">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" required disabled />
-</label>
-```
+</div>
+</div>
+<input type="radio" name="tab_otp-disabled-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22otp%22%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cspan%3E%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20autocomplete%3D%22one-time-code%22%20inputmode%3D%22numeric%22%20maxlength%3D%224%22%20pattern%3D%22%5B0-9%5D%7B4%7D%22%20required%20disabled%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;otp&quot;&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;span&gt;&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; autocomplete=&quot;one-time-code&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; pattern=&quot;[0-9]{4}&quot; required disabled /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

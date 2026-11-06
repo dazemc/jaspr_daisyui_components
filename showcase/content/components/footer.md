@@ -3,7 +3,19 @@ title: "Footer"
 description: "Footer can contain logo, copyright notice, and links to other pages."
 ---
 
-### Footer (vertical by default, horizontal for sm and up)
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">footer</code></th><td class="whitespace-nowrap">Component</td><td>Footer</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">footer-title</code></th><td class="whitespace-nowrap">Part</td><td>Title of a footer column</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">footer-center</code></th><td class="whitespace-nowrap">Placement</td><td>Aligns footer content to center</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">footer-horizontal</code></th><td class="whitespace-nowrap">Direction</td><td>Puts footer columns next to each other horizontally</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">footer-vertical</code></th><td class="whitespace-nowrap">Direction</td><td>Puts footer columns under each other vertically</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-vertical-by-default-horizontal-for-sm-and-up">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-vertical-by-default-horizontal-for-sm-and-up" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer (vertical by default, horizontal for sm and up)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-vertical-by-default-horizontal-for-sm-and-up-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer sm:footer-horizontal bg-neutral text-neutral-content rounded">
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -26,36 +38,33 @@ description: "Footer can contain logo, copyright notice, and links to other page
     <button class="link link-hover">Cookie policy</button>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
-```
-
-### Footer with a logo section
+</div>
+</div>
+<input type="radio" name="tab_footer-vertical-by-default-horizontal-for-sm-and-up-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-neutral%20text-neutral-content%20p-10%22%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ELegal%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETerms%20of%20use%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPrivacy%20policy%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ECookie%20policy%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-neutral text-neutral-content p-10&quot;&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Legal&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Terms of use&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Privacy policy&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Cookie policy&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-a-logo-section">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-a-logo-section" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with a logo section</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-a-logo-section-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer sm:footer-horizontal bg-base-200 text-base-content rounded">
   <aside>
-    
+    <svg width="50" height="50" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
     <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
   </aside>
   <nav>
@@ -79,51 +88,30 @@ description: "Footer can contain logo, copyright notice, and links to other page
     <button class="link link-hover">Cookie policy</button>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-  <aside>
-    <svg
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-  </aside>
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
-```
-
-### Footer with a form
+</div>
+</div>
+<input type="radio" name="tab_footer-with-a-logo-section-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-base-200%20text-base-content%20p-10%22%3E%0A%20%20%3Caside%3E%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20width%3D%2250%22%0A%20%20%20%20%20%20height%3D%2250%22%0A%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M22.672%2015.226l-2.432.811.841%202.515c.33%201.019-.209%202.127-1.23%202.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013%201.677.84%202.517c.391%201.203-.434%202.542-1.831%202.542-.88%200-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127%201.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839%200-.817.509-1.582%201.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129%201.232-2.458%201.02-.329%202.13.209%202.461%201.229l.842%202.515%205.011-1.677-.839-2.517c-.403-1.238.484-2.553%201.843-2.553.819%200%201.585.509%201.85%201.326l.841%202.517%202.431-.81c1.02-.33%202.131.211%202.461%201.229.332%201.018-.21%202.126-1.23%202.456l-2.433.809%201.622%204.823%202.433-.809c1.242-.401%202.557.484%202.557%201.838%200%20.819-.51%201.583-1.328%201.847m-8.992-6.428l-5.01%201.675%201.619%204.828%205.011-1.674-1.62-4.829z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20ACME%20Industries%20Ltd.%0A%20%20%20%20%20%20%3Cbr%20%2F%3E%0A%20%20%20%20%20%20Providing%20reliable%20tech%20since%201992%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ELegal%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETerms%20of%20use%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPrivacy%20policy%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ECookie%20policy%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-base-200 text-base-content p-10&quot;&gt;&#10;  &lt;aside&gt;&#10;    &lt;svg&#10;      width=&quot;50&quot;&#10;      height=&quot;50&quot;&#10;      viewBox=&quot;0 0 24 24&quot;&#10;      xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;      fill-rule=&quot;evenodd&quot;&#10;      clip-rule=&quot;evenodd&quot;&#10;      class=&quot;fill-current&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&quot;&gt;&lt;/path&gt;&#10;    &lt;/svg&gt;&#10;    &lt;p&gt;&#10;      ACME Industries Ltd.&#10;      &lt;br /&gt;&#10;      Providing reliable tech since 1992&#10;    &lt;/p&gt;&#10;  &lt;/aside&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Legal&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Terms of use&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Privacy policy&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Cookie policy&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-a-form">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-a-form" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with a form</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-a-form-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer sm:footer-horizontal bg-base-200 text-base-content rounded">
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -156,212 +144,133 @@ description: "Footer can contain logo, copyright notice, and links to other page
     </fieldset>
   </form>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
-  <form>
-    <h6 class="footer-title">Newsletter</h6>
-    <fieldset class="w-80">
-      <label>Enter your email address</label>
-      <div class="join">
-        <input
-          type="text"
-          placeholder="username@site.com"
-          class="input join-item" />
-        <button class="btn btn-primary join-item">Subscribe</button>
-      </div>
-    </fieldset>
-  </form>
-</footer>
-```
-
-### Footer with logo and social icons
+</div>
+</div>
+<input type="radio" name="tab_footer-with-a-form-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-base-200%20text-base-content%20p-10%22%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ELegal%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETerms%20of%20use%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPrivacy%20policy%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ECookie%20policy%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cform%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ENewsletter%3C%2Fh6%3E%0A%20%20%20%20%3Cfieldset%20class%3D%22w-80%22%3E%0A%20%20%20%20%20%20%3Clabel%3EEnter%20your%20email%20address%3C%2Flabel%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22join%22%3E%0A%20%20%20%20%20%20%20%20%3Cinput%0A%20%20%20%20%20%20%20%20%20%20type%3D%22text%22%0A%20%20%20%20%20%20%20%20%20%20placeholder%3D%22username%40site.com%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22input%20join-item%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-primary%20join-item%22%3ESubscribe%3C%2Fbutton%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Ffieldset%3E%0A%20%20%3C%2Fform%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-base-200 text-base-content p-10&quot;&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Legal&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Terms of use&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Privacy policy&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Cookie policy&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;form&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Newsletter&lt;/h6&gt;&#10;    &lt;fieldset class=&quot;w-80&quot;&gt;&#10;      &lt;label&gt;Enter your email address&lt;/label&gt;&#10;      &lt;div class=&quot;join&quot;&gt;&#10;        &lt;input&#10;          type=&quot;text&quot;&#10;          placeholder=&quot;username@site.com&quot;&#10;          class=&quot;input join-item&quot; /&gt;&#10;        &lt;button class=&quot;btn btn-primary join-item&quot;&gt;Subscribe&lt;/button&gt;&#10;      &lt;/div&gt;&#10;    &lt;/fieldset&gt;&#10;  &lt;/form&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-logo-and-social-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-logo-and-social-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with logo and social icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-logo-and-social-icons-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer sm:footer-horizontal bg-neutral text-neutral-content rounded">
   <aside>
-    
+    <svg width="50" height="50" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
     <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
   </aside>
   <nav>
     <h6 class="footer-title">Social</h6>
     <div class="grid grid-flow-col gap-4">
-      <button></button>
-      <button></button>
-      <button></button>
+      <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></button>
+      <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+      <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
     </div>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-  <aside>
-    <svg
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-  </aside>
-  <nav>
-    <h6 class="footer-title">Social</h6>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          aria-label="Twitter"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="YouTube"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="Facebook"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</footer>
-```
-
-### Footer with copyright text
+</div>
+</div>
+<input type="radio" name="tab_footer-with-logo-and-social-icons-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-neutral%20text-neutral-content%20p-10%22%3E%0A%20%20%3Caside%3E%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20width%3D%2250%22%0A%20%20%20%20%20%20height%3D%2250%22%0A%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M22.672%2015.226l-2.432.811.841%202.515c.33%201.019-.209%202.127-1.23%202.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013%201.677.84%202.517c.391%201.203-.434%202.542-1.831%202.542-.88%200-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127%201.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839%200-.817.509-1.582%201.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129%201.232-2.458%201.02-.329%202.13.209%202.461%201.229l.842%202.515%205.011-1.677-.839-2.517c-.403-1.238.484-2.553%201.843-2.553.819%200%201.585.509%201.85%201.326l.841%202.517%202.431-.81c1.02-.33%202.131.211%202.461%201.229.332%201.018-.21%202.126-1.23%202.456l-2.433.809%201.622%204.823%202.433-.809c1.242-.401%202.557.484%202.557%201.838%200%20.819-.51%201.583-1.328%201.847m-8.992-6.428l-5.01%201.675%201.619%204.828%205.011-1.674-1.62-4.829z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20ACME%20Industries%20Ltd.%0A%20%20%20%20%20%20%3Cbr%20%2F%3E%0A%20%20%20%20%20%20Providing%20reliable%20tech%20since%201992%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ESocial%3C%2Fh6%3E%0A%20%20%20%20%3Cdiv%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-neutral text-neutral-content p-10&quot;&gt;&#10;  &lt;aside&gt;&#10;    &lt;svg&#10;      width=&quot;50&quot;&#10;      height=&quot;50&quot;&#10;      viewBox=&quot;0 0 24 24&quot;&#10;      xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;      fill-rule=&quot;evenodd&quot;&#10;      clip-rule=&quot;evenodd&quot;&#10;      class=&quot;fill-current&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&quot;&gt;&lt;/path&gt;&#10;    &lt;/svg&gt;&#10;    &lt;p&gt;&#10;      ACME Industries Ltd.&#10;      &lt;br /&gt;&#10;      Providing reliable tech since 1992&#10;    &lt;/p&gt;&#10;  &lt;/aside&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Social&lt;/h6&gt;&#10;    &lt;div class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Twitter&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;YouTube&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Facebook&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-copyright-text">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-copyright-text" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with copyright text</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-copyright-text-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-4 footer sm:footer-horizontal bg-base-300 text-base-content footer-center rounded">
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © 2026 - All right reserved by ACME Industries Ltd</p>
   </aside>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
-  <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-  </aside>
-</footer>
-```
-
-### Footer with copyright text and social icons
+</div>
+</div>
+<input type="radio" name="tab_footer-with-copyright-text-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20footer-center%20bg-base-300%20text-base-content%20p-4%22%3E%0A%20%20%3Caside%3E%0A%20%20%20%20%3Cp%3ECopyright%20%C2%A9%20%7Bnew%20Date%28%29.getFullYear%28%29%7D%20-%20All%20right%20reserved%20by%20ACME%20Industries%20Ltd%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4&quot;&gt;&#10;  &lt;aside&gt;&#10;    &lt;p&gt;Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd&lt;/p&gt;&#10;  &lt;/aside&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-copyright-text-and-social-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-copyright-text-and-social-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with copyright text and social icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-copyright-text-and-social-icons-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="items-center p-4 footer sm:footer-horizontal bg-neutral text-neutral-content rounded">
   <aside class="items-center grid-flow-col">
-    
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <svg width="36" height="36" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+    <p>Copyright © 2026 - All right reserved</p>
   </aside>
   <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <button>
+    <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
     </button>
-    <button></button>
-    <button></button>
+    <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+    <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-  <aside class="grid-flow-col items-center">
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-  </aside>
-  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a>
-      <svg
-        aria-label="Twitter"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        class="fill-current">
-        <path
-          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-      </svg>
-    </a>
-    <a>
-      <svg
-        aria-label="YouTube"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        class="fill-current">
-        <path
-          d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-      </svg>
-    </a>
-    <a>
-      <svg
-        aria-label="Facebook"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        class="fill-current">
-        <path
-          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-      </svg>
-    </a>
-  </nav>
-</footer>
-```
-
-### Footer with links and social icons
+</div>
+</div>
+<input type="radio" name="tab_footer-with-copyright-text-and-social-icons-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-neutral%20text-neutral-content%20items-center%20p-4%22%3E%0A%20%20%3Caside%20class%3D%22grid-flow-col%20items-center%22%3E%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20width%3D%2236%22%0A%20%20%20%20%20%20height%3D%2236%22%0A%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M22.672%2015.226l-2.432.811.841%202.515c.33%201.019-.209%202.127-1.23%202.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013%201.677.84%202.517c.391%201.203-.434%202.542-1.831%202.542-.88%200-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127%201.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839%200-.817.509-1.582%201.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129%201.232-2.458%201.02-.329%202.13.209%202.461%201.229l.842%202.515%205.011-1.677-.839-2.517c-.403-1.238.484-2.553%201.843-2.553.819%200%201.585.509%201.85%201.326l.841%202.517%202.431-.81c1.02-.33%202.131.211%202.461%201.229.332%201.018-.21%202.126-1.23%202.456l-2.433.809%201.622%204.823%202.433-.809c1.242-.401%202.557.484%202.557%201.838%200%20.819-.51%201.583-1.328%201.847m-8.992-6.428l-5.01%201.675%201.619%204.828%205.011-1.674-1.62-4.829z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3Cp%3ECopyright%20%C2%A9%20%7Bnew%20Date%28%29.getFullYear%28%29%7D%20-%20All%20right%20reserved%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%20%20%3Cnav%20class%3D%22grid-flow-col%20gap-4%20md%3Aplace-self-center%20md%3Ajustify-self-end%22%3E%0A%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4&quot;&gt;&#10;  &lt;aside class=&quot;grid-flow-col items-center&quot;&gt;&#10;    &lt;svg&#10;      width=&quot;36&quot;&#10;      height=&quot;36&quot;&#10;      viewBox=&quot;0 0 24 24&quot;&#10;      xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;      fill-rule=&quot;evenodd&quot;&#10;      clip-rule=&quot;evenodd&quot;&#10;      class=&quot;fill-current&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&quot;&gt;&lt;/path&gt;&#10;    &lt;/svg&gt;&#10;    &lt;p&gt;Copyright © {new Date().getFullYear()} - All right reserved&lt;/p&gt;&#10;  &lt;/aside&gt;&#10;  &lt;nav class=&quot;grid-flow-col gap-4 md:place-self-center md:justify-self-end&quot;&gt;&#10;    &lt;a&gt;&#10;      &lt;svg&#10;        aria-label=&quot;Twitter&quot;&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        width=&quot;24&quot;&#10;        height=&quot;24&quot;&#10;        viewBox=&quot;0 0 24 24&quot;&#10;        class=&quot;fill-current&quot;&gt;&#10;        &lt;path&#10;          d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/a&gt;&#10;    &lt;a&gt;&#10;      &lt;svg&#10;        aria-label=&quot;YouTube&quot;&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        width=&quot;24&quot;&#10;        height=&quot;24&quot;&#10;        viewBox=&quot;0 0 24 24&quot;&#10;        class=&quot;fill-current&quot;&gt;&#10;        &lt;path&#10;          d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/a&gt;&#10;    &lt;a&gt;&#10;      &lt;svg&#10;        aria-label=&quot;Facebook&quot;&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        width=&quot;24&quot;&#10;        height=&quot;24&quot;&#10;        viewBox=&quot;0 0 24 24&quot;&#10;        class=&quot;fill-current&quot;&gt;&#10;        &lt;path&#10;          d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/a&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-links-and-social-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-links-and-social-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with links and social icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-links-and-social-icons-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer sm:footer-horizontal bg-base-300 text-base-content rounded">
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -380,74 +289,36 @@ description: "Footer can contain logo, copyright notice, and links to other page
   <nav>
     <h6 class="footer-title">Social</h6>
     <div class="grid grid-flow-col gap-4">
-      <button></button>
-      <button></button>
-      <button></button>
+      <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></button>
+      <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+      <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
     </div>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Social</h6>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          aria-label="Twitter"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="YouTube"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="Facebook"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</footer>
-```
-
-### Footer with 2 rows
+</div>
+</div>
+<input type="radio" name="tab_footer-with-links-and-social-icons-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-base-300%20text-base-content%20p-10%22%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ESocial%3C%2Fh6%3E%0A%20%20%20%20%3Cdiv%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-base-300 text-base-content p-10&quot;&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Social&lt;/h6&gt;&#10;    &lt;div class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Twitter&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;YouTube&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Facebook&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="footer-with-2-rows">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#footer-with-2-rows" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Footer with 2 rows</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_footer-with-2-rows-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="grid-rows-2 p-10 footer sm:footer-horizontal bg-neutral text-neutral-content rounded">
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -475,7 +346,7 @@ description: "Footer can contain logo, copyright notice, and links to other page
     <button class="link link-hover">Instagram</button>
     <button class="link link-hover">Facebook</button>
     <button class="link link-hover">GitHub</button>
-  </nav> 
+  </nav>
   <nav>
     <h6 class="footer-title">Explore</h6>
     <button class="link link-hover">Features</button>
@@ -491,136 +362,70 @@ description: "Footer can contain logo, copyright notice, and links to other page
     <button class="link link-hover">Android</button>
   </nav>
 </footer>
-
-```html
-<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content grid-rows-2 p-10">
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Social</h6>
-    <a class="link link-hover">Twitter</a>
-    <a class="link link-hover">Instagram</a>
-    <a class="link link-hover">Facebook</a>
-    <a class="link link-hover">GitHub</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Explore</h6>
-    <a class="link link-hover">Features</a>
-    <a class="link link-hover">Enterprise</a>
-    <a class="link link-hover">Security</a>
-    <a class="link link-hover">Pricing</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Apps</h6>
-    <a class="link link-hover">Mac</a>
-    <a class="link link-hover">Windows</a>
-    <a class="link link-hover">iPhone</a>
-    <a class="link link-hover">Android</a>
-  </nav>
-</footer>
-```
-
-### Centered footer with logo and social icons
+</div>
+</div>
+<input type="radio" name="tab_footer-with-2-rows-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-neutral%20text-neutral-content%20grid-rows-2%20p-10%22%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ELegal%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETerms%20of%20use%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPrivacy%20policy%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ECookie%20policy%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ESocial%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETwitter%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EInstagram%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EFacebook%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EGitHub%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EExplore%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EFeatures%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EEnterprise%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ESecurity%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPricing%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EApps%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMac%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EWindows%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EiPhone%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAndroid%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-neutral text-neutral-content grid-rows-2 p-10&quot;&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Legal&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Terms of use&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Privacy policy&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Cookie policy&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Social&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Twitter&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Instagram&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Facebook&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;GitHub&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Explore&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Features&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Enterprise&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Security&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Pricing&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Apps&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Mac&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Windows&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;iPhone&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Android&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="centered-footer-with-logo-and-social-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#centered-footer-with-logo-and-social-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Centered footer with logo and social icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_centered-footer-with-logo-and-social-icons-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer footer-horizontal bg-primary text-primary-content footer-center rounded">
   <aside>
-    
+    <svg width="50" height="50" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="inline-block fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
     <p class="font-bold">
       ACME Industries Ltd. <br>Providing reliable tech since 1992
     </p>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <p>Copyright © 2026 - All right reserved</p>
   </aside>
   <nav>
     <div class="grid grid-flow-col gap-4">
-      <button></button>
-      <button></button>
-      <button></button>
+      <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></button>
+      <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+      <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
     </div>
   </nav>
 </footer>
-
-```html
-<footer class="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
-  <aside>
-    <svg
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="inline-block fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p class="font-bold">
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-  </aside>
-  <nav>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          aria-label="Twitter"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="YouTube"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="Facebook"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</footer>
-```
-
-### Centered footer with social icons
+</div>
+</div>
+<input type="radio" name="tab_centered-footer-with-logo-and-social-icons-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20footer-horizontal%20footer-center%20bg-primary%20text-primary-content%20p-10%22%3E%0A%20%20%3Caside%3E%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20width%3D%2250%22%0A%20%20%20%20%20%20height%3D%2250%22%0A%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20class%3D%22inline-block%20fill-current%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M22.672%2015.226l-2.432.811.841%202.515c.33%201.019-.209%202.127-1.23%202.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013%201.677.84%202.517c.391%201.203-.434%202.542-1.831%202.542-.88%200-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127%201.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839%200-.817.509-1.582%201.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129%201.232-2.458%201.02-.329%202.13.209%202.461%201.229l.842%202.515%205.011-1.677-.839-2.517c-.403-1.238.484-2.553%201.843-2.553.819%200%201.585.509%201.85%201.326l.841%202.517%202.431-.81c1.02-.33%202.131.211%202.461%201.229.332%201.018-.21%202.126-1.23%202.456l-2.433.809%201.622%204.823%202.433-.809c1.242-.401%202.557.484%202.557%201.838%200%20.819-.51%201.583-1.328%201.847m-8.992-6.428l-5.01%201.675%201.619%204.828%205.011-1.674-1.62-4.829z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3Cp%20class%3D%22font-bold%22%3E%0A%20%20%20%20%20%20ACME%20Industries%20Ltd.%0A%20%20%20%20%20%20%3Cbr%20%2F%3E%0A%20%20%20%20%20%20Providing%20reliable%20tech%20since%201992%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cp%3ECopyright%20%C2%A9%20%7Bnew%20Date%28%29.getFullYear%28%29%7D%20-%20All%20right%20reserved%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Cdiv%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer footer-horizontal footer-center bg-primary text-primary-content p-10&quot;&gt;&#10;  &lt;aside&gt;&#10;    &lt;svg&#10;      width=&quot;50&quot;&#10;      height=&quot;50&quot;&#10;      viewBox=&quot;0 0 24 24&quot;&#10;      xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;      fill-rule=&quot;evenodd&quot;&#10;      clip-rule=&quot;evenodd&quot;&#10;      class=&quot;inline-block fill-current&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&quot;&gt;&lt;/path&gt;&#10;    &lt;/svg&gt;&#10;    &lt;p class=&quot;font-bold&quot;&gt;&#10;      ACME Industries Ltd.&#10;      &lt;br /&gt;&#10;      Providing reliable tech since 1992&#10;    &lt;/p&gt;&#10;    &lt;p&gt;Copyright © {new Date().getFullYear()} - All right reserved&lt;/p&gt;&#10;  &lt;/aside&gt;&#10;  &lt;nav&gt;&#10;    &lt;div class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Twitter&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;YouTube&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Facebook&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="centered-footer-with-social-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#centered-footer-with-social-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Centered footer with social icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_centered-footer-with-social-icons-10" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <footer class="p-10 footer footer-horizontal bg-base-200 text-base-content footer-center rounded">
   <nav class="grid grid-flow-col gap-4">
     <button class="link link-hover">About us</button>
@@ -630,71 +435,39 @@ description: "Footer can contain logo, copyright notice, and links to other page
   </nav>
   <nav>
     <div class="grid grid-flow-col gap-4">
-      <button></button>
-      <button></button>
-      <button></button>
+      <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></button>
+      <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+      <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © 2026 - All right reserved by ACME Industries Ltd</p>
   </aside>
 </footer>
-
-```html
-<footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-  <nav class="grid grid-flow-col gap-4">
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          aria-label="Twitter"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="YouTube"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="Facebook"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-  <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-  </aside>
-</footer>
-```
-
-### Two footer
+</div>
+</div>
+<input type="radio" name="tab_centered-footer-with-social-icons-10" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20footer-horizontal%20footer-center%20bg-base-200%20text-base-content%20rounded%20p-10%22%3E%0A%20%20%3Cnav%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Cdiv%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Caside%3E%0A%20%20%20%20%3Cp%3ECopyright%20%C2%A9%20%7Bnew%20Date%28%29.getFullYear%28%29%7D%20-%20All%20right%20reserved%20by%20ACME%20Industries%20Ltd%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10&quot;&gt;&#10;  &lt;nav class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;div class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Twitter&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;YouTube&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Facebook&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/nav&gt;&#10;  &lt;aside&gt;&#10;    &lt;p&gt;Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd&lt;/p&gt;&#10;  &lt;/aside&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="two-footer">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/footer/#two-footer" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Two footer</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_two-footer-11" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full">
   <footer class="p-10 footer sm:footer-horizontal bg-base-200 text-base-content">
     <nav>
@@ -720,100 +493,28 @@ description: "Footer can contain logo, copyright notice, and links to other page
   </footer>
   <footer class="px-10 py-4 border-t footer bg-base-200 text-base-content border-base-300">
     <aside class="items-center grid-flow-col">
-      
+      <svg width="24" height="24" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
       <p>ACME Industries Ltd. <br>Providing reliable tech since 1992</p>
     </aside>
     <nav class="md:place-self-center md:justify-self-end">
       <div class="grid grid-flow-col gap-4">
-        <button></button>
-        <button></button>
-        <button></button>
+        <button><svg aria-label="Twitter" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></button>
+        <button><svg aria-label="YouTube" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></button>
+        <button><svg aria-label="Facebook" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></button>
       </div>
     </nav>
   </footer>
 </div>
-
-```html
-<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
-  <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
-<footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
-  <aside class="grid-flow-col items-center">
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>
-      ACME Industries Ltd.
-      <br />
-      Providing reliable tech since 1992
-    </p>
-  </aside>
-  <nav class="md:place-self-center md:justify-self-end">
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <svg
-          aria-label="Twitter"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="YouTube"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-        </svg>
-      </a>
-      <a>
-        <svg
-          aria-label="Facebook"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          class="fill-current">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
-</footer>
-```
+</div>
+</div>
+<input type="radio" name="tab_two-footer-11" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfooter%20class%3D%22footer%20sm%3Afooter-horizontal%20bg-base-200%20text-base-content%20p-10%22%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3EServices%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EBranding%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EDesign%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EMarketing%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAdvertisement%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ECompany%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EAbout%20us%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EContact%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EJobs%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPress%20kit%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%20%20%3Cnav%3E%0A%20%20%20%20%3Ch6%20class%3D%22footer-title%22%3ELegal%3C%2Fh6%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ETerms%20of%20use%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3EPrivacy%20policy%3C%2Fa%3E%0A%20%20%20%20%3Ca%20class%3D%22link%20link-hover%22%3ECookie%20policy%3C%2Fa%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E%0A%3Cfooter%20class%3D%22footer%20bg-base-200%20text-base-content%20border-base-300%20border-t%20px-10%20py-4%22%3E%0A%20%20%3Caside%20class%3D%22grid-flow-col%20items-center%22%3E%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M22.672%2015.226l-2.432.811.841%202.515c.33%201.019-.209%202.127-1.23%202.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013%201.677.84%202.517c.391%201.203-.434%202.542-1.831%202.542-.88%200-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127%201.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839%200-.817.509-1.582%201.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129%201.232-2.458%201.02-.329%202.13.209%202.461%201.229l.842%202.515%205.011-1.677-.839-2.517c-.403-1.238.484-2.553%201.843-2.553.819%200%201.585.509%201.85%201.326l.841%202.517%202.431-.81c1.02-.33%202.131.211%202.461%201.229.332%201.018-.21%202.126-1.23%202.456l-2.433.809%201.622%204.823%202.433-.809c1.242-.401%202.557.484%202.557%201.838%200%20.819-.51%201.583-1.328%201.847m-8.992-6.428l-5.01%201.675%201.619%204.828%205.011-1.674-1.62-4.829z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20ACME%20Industries%20Ltd.%0A%20%20%20%20%20%20%3Cbr%20%2F%3E%0A%20%20%20%20%20%20Providing%20reliable%20tech%20since%201992%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%3C%2Faside%3E%0A%20%20%3Cnav%20class%3D%22md%3Aplace-self-center%20md%3Ajustify-self-end%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22grid%20grid-flow-col%20gap-4%22%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Twitter%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22YouTube%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M19.615%203.184c-3.604-.246-11.631-.245-15.23%200-3.897.266-4.356%202.62-4.385%208.816.029%206.185.484%208.549%204.385%208.816%203.6.245%2011.626.246%2015.23%200%203.897-.266%204.356-2.62%204.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615%2012.816v-8l8%203.993-8%204.007z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Facebook%22%0A%20%20%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20%20%20width%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20height%3D%2224%22%0A%20%20%20%20%20%20%20%20%20%20viewBox%3D%220%200%2024%2024%22%0A%20%20%20%20%20%20%20%20%20%20class%3D%22fill-current%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20%20%20d%3D%22M9%208h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333%201.115-1.333h2.885v-5h-3.808c-3.596%200-5.192%201.583-5.192%204.615v3.385z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fnav%3E%0A%3C%2Ffooter%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;footer class=&quot;footer sm:footer-horizontal bg-base-200 text-base-content p-10&quot;&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Services&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Branding&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Design&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Marketing&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Advertisement&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Company&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;About us&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Contact&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Jobs&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Press kit&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;  &lt;nav&gt;&#10;    &lt;h6 class=&quot;footer-title&quot;&gt;Legal&lt;/h6&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Terms of use&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Privacy policy&lt;/a&gt;&#10;    &lt;a class=&quot;link link-hover&quot;&gt;Cookie policy&lt;/a&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;&#10;&lt;footer class=&quot;footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4&quot;&gt;&#10;  &lt;aside class=&quot;grid-flow-col items-center&quot;&gt;&#10;    &lt;svg&#10;      width=&quot;24&quot;&#10;      height=&quot;24&quot;&#10;      viewBox=&quot;0 0 24 24&quot;&#10;      xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;      fill-rule=&quot;evenodd&quot;&#10;      clip-rule=&quot;evenodd&quot;&#10;      class=&quot;fill-current&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&quot;&gt;&lt;/path&gt;&#10;    &lt;/svg&gt;&#10;    &lt;p&gt;&#10;      ACME Industries Ltd.&#10;      &lt;br /&gt;&#10;      Providing reliable tech since 1992&#10;    &lt;/p&gt;&#10;  &lt;/aside&gt;&#10;  &lt;nav class=&quot;md:place-self-center md:justify-self-end&quot;&gt;&#10;    &lt;div class=&quot;grid grid-flow-col gap-4&quot;&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Twitter&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;YouTube&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;      &lt;a&gt;&#10;        &lt;svg&#10;          aria-label=&quot;Facebook&quot;&#10;          xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;          width=&quot;24&quot;&#10;          height=&quot;24&quot;&#10;          viewBox=&quot;0 0 24 24&quot;&#10;          class=&quot;fill-current&quot;&gt;&#10;          &lt;path&#10;            d=&quot;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&quot;&gt;&lt;/path&gt;&#10;        &lt;/svg&gt;&#10;      &lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/nav&gt;&#10;&lt;/footer&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

@@ -3,27 +3,54 @@ title: "Text Input"
 description: "Text Input is a simple input field."
 ---
 
-### Text input
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input</code></th><td class="whitespace-nowrap">Component</td><td>For &lt;input type=&quot;text&quot;&gt; tag or a wrapper of &lt;input type=&quot;text&quot;&gt; tag</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-ghost</code></th><td class="whitespace-nowrap">Style</td><td>ghost style</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-neutral</code></th><td class="whitespace-nowrap">Color</td><td>neutral color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-primary</code></th><td class="whitespace-nowrap">Color</td><td>primary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-secondary</code></th><td class="whitespace-nowrap">Color</td><td>secondary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-accent</code></th><td class="whitespace-nowrap">Color</td><td>accent color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-info</code></th><td class="whitespace-nowrap">Color</td><td>info color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-success</code></th><td class="whitespace-nowrap">Color</td><td>success color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-warning</code></th><td class="whitespace-nowrap">Color</td><td>warning color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-error</code></th><td class="whitespace-nowrap">Color</td><td>error color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-xs</code></th><td class="whitespace-nowrap">Size</td><td>Extra small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-sm</code></th><td class="whitespace-nowrap">Size</td><td>Small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-md</code></th><td class="whitespace-nowrap">Size</td><td>Medium size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-lg</code></th><td class="whitespace-nowrap">Size</td><td>Large size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">input-xl</code></th><td class="whitespace-nowrap">Size</td><td>Extra large size</td></tr></tbody></table></div>
 
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="text-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#text-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Text input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_text-input-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="text" placeholder="Type here" class="input" />
-
-```html
-<input type="text" placeholder="Type here" class="input" />
-```
-
-### Text input with text label inside
-
-#### We can use input class for the parent and put anything inside it
-
+</div>
+</div>
+<input type="radio" name="tab_text-input-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20placeholder%3D%22Type%20here%22%20class%3D%22input%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; placeholder=&quot;Type here&quot; class=&quot;input&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="text-input-with-text-label-inside">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#text-input-with-text-label-inside" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Text input with text label inside</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">We can use input class for the parent and put anything inside it</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_text-input-with-text-label-inside-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid gap-4 w-xs">
   <label class="input">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
     <input type="search" class="grow" placeholder="Search" />
     <kbd class="kbd kbd-sm">⌘</kbd>
     <kbd class="kbd kbd-sm">K</kbd>
   </label>
   <label class="input">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></g></svg>
     <input type="text" class="grow" placeholder="index.php" />
   </label>
   <label class="input">
@@ -32,87 +59,112 @@ description: "Text Input is a simple input field."
     <span class="badge badge-neutral badge-xs">Optional</span>
   </label>
 </div>
-
-```html
-<label class="input">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <circle cx="11" cy="11" r="8"></circle>
-      <path d="m21 21-4.3-4.3"></path>
-    </g>
-  </svg>
-  <input type="search" class="grow" placeholder="Search" />
-  <kbd class="kbd kbd-sm">⌘</kbd>
-  <kbd class="kbd kbd-sm">K</kbd>
-</label>
-<label class="input">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-      <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-    </g>
-  </svg>
-  <input type="text" class="grow" placeholder="index.php" />
-</label>
-<label class="input">
-  Path
-  <input type="text" class="grow" placeholder="src/app/" />
-  <span class="badge badge-neutral badge-xs">Optional</span>
-</label>
-```
-
-### Ghost style
-
+</div>
+</div>
+<input type="radio" name="tab_text-input-with-text-label-inside-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%228%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22m21%2021-4.3-4.3%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%20type%3D%22search%22%20class%3D%22grow%22%20placeholder%3D%22Search%22%20%2F%3E%0A%20%20%3Ckbd%20class%3D%22kbd%20kbd-sm%22%3E%E2%8C%98%3C%2Fkbd%3E%0A%20%20%3Ckbd%20class%3D%22kbd%20kbd-sm%22%3EK%3C%2Fkbd%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M15%202H6a2%202%200%200%200-2%202v16a2%202%200%200%200%202%202h12a2%202%200%200%200%202-2V7Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M14%202v4a2%202%200%200%200%202%202h4%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22grow%22%20placeholder%3D%22index.php%22%20%2F%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22input%22%3E%0A%20%20Path%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22grow%22%20placeholder%3D%22src%2Fapp%2F%22%20%2F%3E%0A%20%20%3Cspan%20class%3D%22badge%20badge-neutral%20badge-xs%22%3EOptional%3C%2Fspan%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;&gt;&lt;/circle&gt;&#10;      &lt;path d=&quot;m21 21-4.3-4.3&quot;&gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input type=&quot;search&quot; class=&quot;grow&quot; placeholder=&quot;Search&quot; /&gt;&#10;  &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;⌘&lt;/kbd&gt;&#10;  &lt;kbd class=&quot;kbd kbd-sm&quot;&gt;K&lt;/kbd&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;input&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;path d=&quot;M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z&quot;&gt;&lt;/path&gt;&#10;      &lt;path d=&quot;M14 2v4a2 2 0 0 0 2 2h4&quot;&gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;grow&quot; placeholder=&quot;index.php&quot; /&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;input&quot;&gt;&#10;  Path&#10;  &lt;input type=&quot;text&quot; class=&quot;grow&quot; placeholder=&quot;src/app/&quot; /&gt;&#10;  &lt;span class=&quot;badge badge-neutral badge-xs&quot;&gt;Optional&lt;/span&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="ghost-style">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#ghost-style" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Ghost style</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_ghost-style-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="text" placeholder="Type here" class="input input-ghost" />
-
-```html
-<input type="text" placeholder="Type here" class="input input-ghost" />
-```
-
-### With fieldset and fieldset-legend
-
+</div>
+</div>
+<input type="radio" name="tab_ghost-style-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20placeholder%3D%22Type%20here%22%20class%3D%22input%20input-ghost%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; placeholder=&quot;Type here&quot; class=&quot;input input-ghost&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="with-fieldset-and-fieldset-legend">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#with-fieldset-and-fieldset-legend" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">With fieldset and fieldset-legend</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_with-fieldset-and-fieldset-legend-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">What is your name?</legend>
   <input type="text" class="input" placeholder="Type here" />
   <p class="label">Optional</p>
 </fieldset>
-
-```html
-<fieldset class="fieldset">
-  <legend class="fieldset-legend">What is your name?</legend>
-  <input type="text" class="input" placeholder="Type here" />
-  <p class="label">Optional</p>
-</fieldset>
-```
-
-### With fieldset and label
-
+</div>
+</div>
+<input type="radio" name="tab_with-fieldset-and-fieldset-legend-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3EWhat%20is%20your%20name%3F%3C%2Flegend%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22Type%20here%22%20%2F%3E%0A%20%20%3Cp%20class%3D%22label%22%3EOptional%3C%2Fp%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;What is your name?&lt;/legend&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;Type here&quot; /&gt;&#10;  &lt;p class=&quot;label&quot;&gt;Optional&lt;/p&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="with-fieldset-and-label">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#with-fieldset-and-label" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">With fieldset and label</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_with-fieldset-and-label-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs">
   <label class="label" for="name">Name</label>
   <input type="text" id="name" class="input" placeholder="Name" />
 </fieldset>
-
-```html
-<fieldset class="fieldset">
-  <label class="label" for="name">Name</label>
-  <input type="text" id="name" class="input" placeholder="Name" />
-</fieldset>
-```
-
-### Input colors
-
+</div>
+</div>
+<input type="radio" name="tab_with-fieldset-and-label-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%22%3E%0A%20%20%3Clabel%20class%3D%22label%22%20for%3D%22name%22%3EName%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22text%22%20id%3D%22name%22%20class%3D%22input%22%20placeholder%3D%22Name%22%20%2F%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset&quot;&gt;&#10;  &lt;label class=&quot;label&quot; for=&quot;name&quot;&gt;Name&lt;/label&gt;&#10;  &lt;input type=&quot;text&quot; id=&quot;name&quot; class=&quot;input&quot; placeholder=&quot;Name&quot; /&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="input-colors">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#input-colors" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Input colors</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_input-colors-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid gap-4 w-xs">
   <input type="text" placeholder="neutral" class="input input-neutral" />
   <input type="text" placeholder="Primary" class="input input-primary" />
@@ -123,21 +175,30 @@ description: "Text Input is a simple input field."
   <input type="text" placeholder="Warning" class="input input-warning" />
   <input type="text" placeholder="Error" class="input input-error" />
 </div>
-
-```html
-<input type="text" placeholder="neutral" class="input input-neutral" />
-<input type="text" placeholder="Primary" class="input input-primary" />
-<input type="text" placeholder="Secondary" class="input input-secondary" />
-<input type="text" placeholder="Accent" class="input input-accent" />
-
-<input type="text" placeholder="Info" class="input input-info" />
-<input type="text" placeholder="Success" class="input input-success" />
-<input type="text" placeholder="Warning" class="input input-warning" />
-<input type="text" placeholder="Error" class="input input-error" />
-```
-
-### Sizes
-
+</div>
+</div>
+<input type="radio" name="tab_input-colors-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20placeholder%3D%22neutral%22%20class%3D%22input%20input-neutral%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Primary%22%20class%3D%22input%20input-primary%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Secondary%22%20class%3D%22input%20input-secondary%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Accent%22%20class%3D%22input%20input-accent%22%20%2F%3E%0A%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Info%22%20class%3D%22input%20input-info%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Success%22%20class%3D%22input%20input-success%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Warning%22%20class%3D%22input%20input-warning%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Error%22%20class%3D%22input%20input-error%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; placeholder=&quot;neutral&quot; class=&quot;input input-neutral&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Primary&quot; class=&quot;input input-primary&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Secondary&quot; class=&quot;input input-secondary&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Accent&quot; class=&quot;input input-accent&quot; /&gt;&#10;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Info&quot; class=&quot;input input-info&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Success&quot; class=&quot;input input-success&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Warning&quot; class=&quot;input input-warning&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Error&quot; class=&quot;input input-error&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="sizes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#sizes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Sizes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_sizes-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid gap-4 w-xs">
   <input type="text" placeholder="Xsmall" class="input input-xs" />
   <input type="text" placeholder="Small" class="input input-sm" />
@@ -145,22 +206,44 @@ description: "Text Input is a simple input field."
   <input type="text" placeholder="Large" class="input input-lg" />
   <input type="text" placeholder="Xlarge" class="input input-xl" />
 </div>
-
-```html
-<input type="text" placeholder="Xsmall" class="input input-xs" />
-<input type="text" placeholder="Small" class="input input-sm" />
-<input type="text" placeholder="Medium" class="input input-md" />
-<input type="text" placeholder="Large" class="input input-lg" />
-<input type="text" placeholder="Xlarge" class="input input-xl" />
-```
-
-### Disabled
-
+</div>
+</div>
+<input type="radio" name="tab_sizes-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20placeholder%3D%22Xsmall%22%20class%3D%22input%20input-xs%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Small%22%20class%3D%22input%20input-sm%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Medium%22%20class%3D%22input%20input-md%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Large%22%20class%3D%22input%20input-lg%22%20%2F%3E%0A%3Cinput%20type%3D%22text%22%20placeholder%3D%22Xlarge%22%20class%3D%22input%20input-xl%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; placeholder=&quot;Xsmall&quot; class=&quot;input input-xs&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Small&quot; class=&quot;input input-sm&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Medium&quot; class=&quot;input input-md&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Large&quot; class=&quot;input input-lg&quot; /&gt;&#10;&lt;input type=&quot;text&quot; placeholder=&quot;Xlarge&quot; class=&quot;input input-xl&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="disabled">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#disabled" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Disabled</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_disabled-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="text" placeholder="You can't touch this" class="input" disabled />
-
-```html
-<input type="text" placeholder="You can't touch this" class="input" disabled />
-```
+</div>
+</div>
+<input type="radio" name="tab_disabled-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20placeholder%3D%22You%20can%27t%20touch%20this%22%20class%3D%22input%22%20disabled%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; placeholder=&quot;You can&#x27;t touch this&quot; class=&quot;input&quot; disabled /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
 
 ## Input types
 
@@ -168,10 +251,19 @@ description: "Text Input is a simple input field."
 
 For `checkbox`, `radio`, `file`, `range` use their own class names, as they are not visually input fields.
 
-Inputs can be used with `validator` class to have validation styles. [See Validator component](../validator//) for more details.
+Inputs can be used with `validator` class to have validation styles. [See Validator component](/components/validator/) for more details.
 
-### Text input with data list suggestion
-
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="text-input-with-data-list-suggestion">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#text-input-with-data-list-suggestion" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Text input with data list suggestion</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_text-input-with-data-list-suggestion-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="text" class="input" placeholder="Which browser do you use" list="browsers"/>
 <datalist id="browsers">
   <option value="Chrome"></option>
@@ -180,47 +272,108 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
   <option value="Opera"></option>
   <option value="Edge"></option>
 </datalist>
-
-```html
-<input type="text" class="input" placeholder="Which browser do you use" list="browsers" />
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Safari"></option>
-  <option value="Opera"></option>
-  <option value="Edge"></option>
-</datalist>
-```
-
-### Date input
-
+</div>
+</div>
+<input type="radio" name="tab_text-input-with-data-list-suggestion-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22Which%20browser%20do%20you%20use%22%20list%3D%22browsers%22%20%2F%3E%0A%3Cdatalist%20id%3D%22browsers%22%3E%0A%20%20%3Coption%20value%3D%22Chrome%22%3E%3C%2Foption%3E%0A%20%20%3Coption%20value%3D%22Firefox%22%3E%3C%2Foption%3E%0A%20%20%3Coption%20value%3D%22Safari%22%3E%3C%2Foption%3E%0A%20%20%3Coption%20value%3D%22Opera%22%3E%3C%2Foption%3E%0A%20%20%3Coption%20value%3D%22Edge%22%3E%3C%2Foption%3E%0A%3C%2Fdatalist%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;Which browser do you use&quot; list=&quot;browsers&quot; /&gt;&#10;&lt;datalist id=&quot;browsers&quot;&gt;&#10;  &lt;option value=&quot;Chrome&quot;&gt;&lt;/option&gt;&#10;  &lt;option value=&quot;Firefox&quot;&gt;&lt;/option&gt;&#10;  &lt;option value=&quot;Safari&quot;&gt;&lt;/option&gt;&#10;  &lt;option value=&quot;Opera&quot;&gt;&lt;/option&gt;&#10;  &lt;option value=&quot;Edge&quot;&gt;&lt;/option&gt;&#10;&lt;/datalist&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="date-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#date-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Date input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_date-input-10" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="date" class="input"/>
-
-```html
-<input type="date" class="input" />
-```
-
-### Time input
-
+</div>
+</div>
+<input type="radio" name="tab_date-input-10" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22date%22%20class%3D%22input%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;date&quot; class=&quot;input&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="time-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#time-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Time input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_time-input-11" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="time" class="input"/>
-
-```html
-<input type="time" class="input" />
-```
-
-### datetime-local input
-
+</div>
+</div>
+<input type="radio" name="tab_time-input-11" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22time%22%20class%3D%22input%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;time&quot; class=&quot;input&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="datetime-local-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#datetime-local-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">datetime-local input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_datetime-local-input-12" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <input type="datetime-local" class="input"/>
-
-```html
-<input type="datetime-local" class="input" />
-```
-
-### Username text input with icon and validator
-
+</div>
+</div>
+<input type="radio" name="tab_datetime-local-input-12" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%20type%3D%22datetime-local%22%20class%3D%22input%22%20%2F%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input type=&quot;datetime-local&quot; class=&quot;input&quot; /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="username-text-input-with-icon-and-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#username-text-input-with-icon-and-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Username text input with icon and validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_username-text-input-with-icon-and-validator-13" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input validator">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></g></svg>
     <input type="text" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
   </label>
   <p class="validator-hint">
@@ -228,100 +381,96 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
     <br/>containing only letters, numbers or dash
   </p>
 </form>
-
-```html
-<label class="input validator">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-      <circle cx="12" cy="7" r="4"></circle>
-    </g>
-  </svg>
-  <input
-    type="text"
-    required
-    placeholder="Username"
-    pattern="[A-Za-z][A-Za-z0-9\\-]*"
-    minlength="3"
-    maxlength="30"
-    title="Only letters, numbers or dash"
-  />
-</label>
-<p class="validator-hint">
-  Must be 3 to 30 characters
-  <br />containing only letters, numbers or dash
-</p>
-```
-
-### Search input with icon
-
+</div>
+</div>
+<input type="radio" name="tab_username-text-input-with-icon-and-validator-13" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%20validator%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M19%2021v-2a4%204%200%200%200-4-4H9a4%204%200%200%200-4%204v2%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%227%22%20r%3D%224%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%0A%20%20%20%20type%3D%22text%22%0A%20%20%20%20required%0A%20%20%20%20placeholder%3D%22Username%22%0A%20%20%20%20pattern%3D%22%5BA-Za-z%5D%5BA-Za-z0-9%5C%5C-%5D%2A%22%0A%20%20%20%20minlength%3D%223%22%0A%20%20%20%20maxlength%3D%2230%22%0A%20%20%20%20title%3D%22Only%20letters%2C%20numbers%20or%20dash%22%0A%20%20%2F%3E%0A%3C%2Flabel%3E%0A%3Cp%20class%3D%22validator-hint%22%3E%0A%20%20Must%20be%203%20to%2030%20characters%0A%20%20%3Cbr%20%2F%3Econtaining%20only%20letters%2C%20numbers%20or%20dash%0A%3C%2Fp%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input validator&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;path d=&quot;M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&#10;      &lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input&#10;    type=&quot;text&quot;&#10;    required&#10;    placeholder=&quot;Username&quot;&#10;    pattern=&quot;[A-Za-z][A-Za-z0-9\\-]*&quot;&#10;    minlength=&quot;3&quot;&#10;    maxlength=&quot;30&quot;&#10;    title=&quot;Only letters, numbers or dash&quot;&#10;  /&gt;&#10;&lt;/label&gt;&#10;&lt;p class=&quot;validator-hint&quot;&gt;&#10;  Must be 3 to 30 characters&#10;  &lt;br /&gt;containing only letters, numbers or dash&#10;&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="search-input-with-icon">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#search-input-with-icon" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Search input with icon</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_search-input-with-icon-14" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
     <input type="search" required placeholder="Search"/>
   </label>
 </form>
-
-```html
-<label class="input">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <circle cx="11" cy="11" r="8"></circle>
-      <path d="m21 21-4.3-4.3"></path>
-    </g>
-  </svg>
-  <input type="search" required placeholder="Search" />
-</label>
-```
-
-### Email input with icon and validator
-
+</div>
+</div>
+<input type="radio" name="tab_search-input-with-icon-14" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2211%22%20cy%3D%2211%22%20r%3D%228%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22m21%2021-4.3-4.3%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%20type%3D%22search%22%20required%20placeholder%3D%22Search%22%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;&gt;&lt;/circle&gt;&#10;      &lt;path d=&quot;m21 21-4.3-4.3&quot;&gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input type=&quot;search&quot; required placeholder=&quot;Search&quot; /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="email-input-with-icon-and-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#email-input-with-icon-and-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Email input with icon and validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_email-input-with-icon-and-validator-15" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input validator">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g></svg>
     <input type="email" placeholder="mail@site.com" required/>
   </label>
   <div class="validator-hint hidden">Enter valid email address</div>
 </form>
-
-```html
-<label class="input validator">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-    </g>
-  </svg>
-  <input type="email" placeholder="mail@site.com" required />
-</label>
-<div class="validator-hint hidden">Enter valid email address</div>
-```
-
-### Email input with icon, validator, button, join
-
+</div>
+</div>
+<input type="radio" name="tab_email-input-with-icon-and-validator-15" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%20validator%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2216%22%20x%3D%222%22%20y%3D%224%22%20rx%3D%222%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22m22%207-8.97%205.7a1.94%201.94%200%200%201-2.06%200L2%207%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%20type%3D%22email%22%20placeholder%3D%22mail%40site.com%22%20required%20%2F%3E%0A%3C%2Flabel%3E%0A%3Cdiv%20class%3D%22validator-hint%20hidden%22%3EEnter%20valid%20email%20address%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input validator&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;rect width=&quot;20&quot; height=&quot;16&quot; x=&quot;2&quot; y=&quot;4&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&#10;      &lt;path d=&quot;m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7&quot;&gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input type=&quot;email&quot; placeholder=&quot;mail@site.com&quot; required /&gt;&#10;&lt;/label&gt;&#10;&lt;div class=&quot;validator-hint hidden&quot;&gt;Enter valid email address&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="email-input-with-icon-validator-button-join">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#email-input-with-icon-validator-button-join" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Email input with icon, validator, button, join</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_email-input-with-icon-validator-button-join-16" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form>
   <div class="join">
     <div>
       <label class="input validator join-item">
-        
+        <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g></svg>
         <input type="email" placeholder="mail@site.com" required/>
       </label>
       <div class="validator-hint hidden">Enter valid email address</div>
@@ -329,36 +478,33 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
     <button class="btn btn-neutral join-item">Join</button>
   </div>
 </form>
-
-```html
-<div class="join">
-  <div>
-    <label class="input validator join-item">
-      <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <g
-          stroke-linejoin="round"
-          stroke-linecap="round"
-          stroke-width="2.5"
-          fill="none"
-          stroke="currentColor"
-        >
-          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-        </g>
-      </svg>
-      <input type="email" placeholder="mail@site.com" required />
-    </label>
-    <div class="validator-hint hidden">Enter valid email address</div>
-  </div>
-  <button class="btn btn-neutral join-item">Join</button>
 </div>
-```
-
-### Password input with icon and validator
-
+</div>
+<input type="radio" name="tab_email-input-with-icon-validator-button-join-16" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%22%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Clabel%20class%3D%22input%20validator%20join-item%22%3E%0A%20%20%20%20%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%2220%22%20height%3D%2216%22%20x%3D%222%22%20y%3D%224%22%20rx%3D%222%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22m22%207-8.97%205.7a1.94%201.94%200%200%201-2.06%200L2%207%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22email%22%20placeholder%3D%22mail%40site.com%22%20required%20%2F%3E%0A%20%20%20%20%3C%2Flabel%3E%0A%20%20%20%20%3Cdiv%20class%3D%22validator-hint%20hidden%22%3EEnter%20valid%20email%20address%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cbutton%20class%3D%22btn%20btn-neutral%20join-item%22%3EJoin%3C%2Fbutton%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join&quot;&gt;&#10;  &lt;div&gt;&#10;    &lt;label class=&quot;input validator join-item&quot;&gt;&#10;      &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;        &lt;g&#10;          stroke-linejoin=&quot;round&quot;&#10;          stroke-linecap=&quot;round&quot;&#10;          stroke-width=&quot;2.5&quot;&#10;          fill=&quot;none&quot;&#10;          stroke=&quot;currentColor&quot;&#10;        &gt;&#10;          &lt;rect width=&quot;20&quot; height=&quot;16&quot; x=&quot;2&quot; y=&quot;4&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&#10;          &lt;path d=&quot;m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7&quot;&gt;&lt;/path&gt;&#10;        &lt;/g&gt;&#10;      &lt;/svg&gt;&#10;      &lt;input type=&quot;email&quot; placeholder=&quot;mail@site.com&quot; required /&gt;&#10;    &lt;/label&gt;&#10;    &lt;div class=&quot;validator-hint hidden&quot;&gt;Enter valid email address&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;button class=&quot;btn btn-neutral join-item&quot;&gt;Join&lt;/button&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="password-input-with-icon-and-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#password-input-with-icon-and-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Password input with icon and validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_password-input-with-icon-and-validator-17" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input validator">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></g></svg>
     <input type="password" required placeholder="Password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,}" title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
   </label>
   <p class="validator-hint hidden">
@@ -368,131 +514,107 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
     <br/>At least one uppercase letter
   </p>
 </form>
-
-```html
-<label class="input validator">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path
-        d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
-      ></path>
-      <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
-    </g>
-  </svg>
-  <input
-    type="password"
-    required
-    placeholder="Password"
-    minlength="8"
-    pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-    title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
-  />
-</label>
-<p class="validator-hint hidden">
-  Must be more than 8 characters, including
-  <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
-</p>
-```
-
-### Number input with validator
-
+</div>
+</div>
+<input type="radio" name="tab_password-input-with-icon-and-validator-17" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%20validator%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M2.586%2017.414A2%202%200%200%200%202%2018.828V21a1%201%200%200%200%201%201h3a1%201%200%200%200%201-1v-1a1%201%200%200%201%201-1h1a1%201%200%200%200%201-1v-1a1%201%200%200%201%201-1h.172a2%202%200%200%200%201.414-.586l.814-.814a6.5%206.5%200%201%200-4-4z%22%0A%20%20%20%20%20%20%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2216.5%22%20cy%3D%227.5%22%20r%3D%22.5%22%20fill%3D%22currentColor%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%0A%20%20%20%20type%3D%22password%22%0A%20%20%20%20required%0A%20%20%20%20placeholder%3D%22Password%22%0A%20%20%20%20minlength%3D%228%22%0A%20%20%20%20pattern%3D%22%28%3F%3D.%2A%5C%5Cd%29%28%3F%3D.%2A%5Ba-z%5D%29%28%3F%3D.%2A%5BA-Z%5D%29.%7B8%2C%7D%22%0A%20%20%20%20title%3D%22Must%20be%20more%20than%208%20characters%2C%20including%20number%2C%20lowercase%20letter%2C%20uppercase%20letter%22%0A%20%20%2F%3E%0A%3C%2Flabel%3E%0A%3Cp%20class%3D%22validator-hint%20hidden%22%3E%0A%20%20Must%20be%20more%20than%208%20characters%2C%20including%0A%20%20%3Cbr%20%2F%3EAt%20least%20one%20number%20%3Cbr%20%2F%3EAt%20least%20one%20lowercase%20letter%20%3Cbr%20%2F%3EAt%20least%20one%20uppercase%20letter%0A%3C%2Fp%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input validator&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;path&#10;        d=&quot;M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z&quot;&#10;      &gt;&lt;/path&gt;&#10;      &lt;circle cx=&quot;16.5&quot; cy=&quot;7.5&quot; r=&quot;.5&quot; fill=&quot;currentColor&quot;&gt;&lt;/circle&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input&#10;    type=&quot;password&quot;&#10;    required&#10;    placeholder=&quot;Password&quot;&#10;    minlength=&quot;8&quot;&#10;    pattern=&quot;(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}&quot;&#10;    title=&quot;Must be more than 8 characters, including number, lowercase letter, uppercase letter&quot;&#10;  /&gt;&#10;&lt;/label&gt;&#10;&lt;p class=&quot;validator-hint hidden&quot;&gt;&#10;  Must be more than 8 characters, including&#10;  &lt;br /&gt;At least one number &lt;br /&gt;At least one lowercase letter &lt;br /&gt;At least one uppercase letter&#10;&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="number-input-with-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#number-input-with-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Number input with validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_number-input-with-validator-18" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
-  <input type="number" class="input validator" required placeholder="Type a number between 1 to 10" 
+  <input type="number" class="input validator" required placeholder="Type a number between 1 to 10"
   min="1" max="10" title="Must be between be 1 to 10" />
   <p class="validator-hint">Must be between be 1 to 10</p>
 </form>
-
-```html
-<input
-  type="number"
-  class="input validator"
-  required
-  placeholder="Type a number between 1 to 10"
-  min="1"
-  max="10"
-  title="Must be between be 1 to 10"
-/>
-<p class="validator-hint">Must be between be 1 to 10</p>
-```
-
-### Telephone number input with icon and validator
-
+</div>
+</div>
+<input type="radio" name="tab_number-input-with-validator-18" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cinput%0A%20%20type%3D%22number%22%0A%20%20class%3D%22input%20validator%22%0A%20%20required%0A%20%20placeholder%3D%22Type%20a%20number%20between%201%20to%2010%22%0A%20%20min%3D%221%22%0A%20%20max%3D%2210%22%0A%20%20title%3D%22Must%20be%20between%20be%201%20to%2010%22%0A%2F%3E%0A%3Cp%20class%3D%22validator-hint%22%3EMust%20be%20between%20be%201%20to%2010%3C%2Fp%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;input&#10;  type=&quot;number&quot;&#10;  class=&quot;input validator&quot;&#10;  required&#10;  placeholder=&quot;Type a number between 1 to 10&quot;&#10;  min=&quot;1&quot;&#10;  max=&quot;10&quot;&#10;  title=&quot;Must be between be 1 to 10&quot;&#10;/&gt;&#10;&lt;p class=&quot;validator-hint&quot;&gt;Must be between be 1 to 10&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="telephone-number-input-with-icon-and-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#telephone-number-input-with-icon-and-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Telephone number input with icon and validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_telephone-number-input-with-icon-and-validator-19" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input validator">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 16 16"><g fill="none"><path d="M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z" fill="currentColor"></path></g></svg>
     <input type="tel" class="tabular-nums" required placeholder="Phone" pattern="[0-9]*" minlength="10" maxlength="10" title="Must be 10 digits" />
   </label>
   <p class="validator-hint">Must be 10 digits</p>
 </form>
-
-```html
-<label class="input validator">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <g fill="none">
-      <path
-        d="M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z"
-        fill="currentColor"
-      ></path>
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z"
-        fill="currentColor"
-      ></path>
-    </g>
-  </svg>
-  <input
-    type="tel"
-    class="tabular-nums"
-    required
-    placeholder="Phone"
-    pattern="[0-9]*"
-    minlength="10"
-    maxlength="10"
-    title="Must be 10 digits"
-  />
-</label>
-<p class="validator-hint">Must be 10 digits</p>
-```
-
-### URL with icon and validator
-
+</div>
+</div>
+<input type="radio" name="tab_telephone-number-input-with-icon-and-validator-19" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%20validator%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20d%3D%22M7.25%2011.5C6.83579%2011.5%206.5%2011.8358%206.5%2012.25C6.5%2012.6642%206.83579%2013%207.25%2013H8.75C9.16421%2013%209.5%2012.6642%209.5%2012.25C9.5%2011.8358%209.16421%2011.5%208.75%2011.5H7.25Z%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20d%3D%22M6%201C4.61929%201%203.5%202.11929%203.5%203.5V12.5C3.5%2013.8807%204.61929%2015%206%2015H10C11.3807%2015%2012.5%2013.8807%2012.5%2012.5V3.5C12.5%202.11929%2011.3807%201%2010%201H6ZM10%202.5H9.5V3C9.5%203.27614%209.27614%203.5%209%203.5H7C6.72386%203.5%206.5%203.27614%206.5%203V2.5H6C5.44771%202.5%205%202.94772%205%203.5V12.5C5%2013.0523%205.44772%2013.5%206%2013.5H10C10.5523%2013.5%2011%2013.0523%2011%2012.5V3.5C11%202.94772%2010.5523%202.5%2010%202.5Z%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%0A%20%20%20%20type%3D%22tel%22%0A%20%20%20%20class%3D%22tabular-nums%22%0A%20%20%20%20required%0A%20%20%20%20placeholder%3D%22Phone%22%0A%20%20%20%20pattern%3D%22%5B0-9%5D%2A%22%0A%20%20%20%20minlength%3D%2210%22%0A%20%20%20%20maxlength%3D%2210%22%0A%20%20%20%20title%3D%22Must%20be%2010%20digits%22%0A%20%20%2F%3E%0A%3C%2Flabel%3E%0A%3Cp%20class%3D%22validator-hint%22%3EMust%20be%2010%20digits%3C%2Fp%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input validator&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot;&gt;&#10;    &lt;g fill=&quot;none&quot;&gt;&#10;      &lt;path&#10;        d=&quot;M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z&quot;&#10;        fill=&quot;currentColor&quot;&#10;      &gt;&lt;/path&gt;&#10;      &lt;path&#10;        fill-rule=&quot;evenodd&quot;&#10;        clip-rule=&quot;evenodd&quot;&#10;        d=&quot;M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z&quot;&#10;        fill=&quot;currentColor&quot;&#10;      &gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input&#10;    type=&quot;tel&quot;&#10;    class=&quot;tabular-nums&quot;&#10;    required&#10;    placeholder=&quot;Phone&quot;&#10;    pattern=&quot;[0-9]*&quot;&#10;    minlength=&quot;10&quot;&#10;    maxlength=&quot;10&quot;&#10;    title=&quot;Must be 10 digits&quot;&#10;  /&gt;&#10;&lt;/label&gt;&#10;&lt;p class=&quot;validator-hint&quot;&gt;Must be 10 digits&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="url-with-icon-and-validator">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/input/#url-with-icon-and-validator" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">URL with icon and validator</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_url-with-icon-and-validator-20" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <form class="w-full max-w-xs">
   <label class="input validator">
-    
+    <svg class="h-[1em] opacity-50" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></g></svg>
     <input type="url" required placeholder="https://" value="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$" title="Must be valid URL" />
   </label>
   <p class="validator-hint">Must be valid URL</p>
 </form>
-
-```html
-<label class="input validator">
-  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      stroke-width="2.5"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-    </g>
-  </svg>
-  <input
-    type="url"
-    required
-    placeholder="https://"
-    value="https://"
-    pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\\-].*[a-zA-Z0-9])?\\.)+[a-zA-Z].*$"
-    title="Must be valid URL"
-  />
-</label>
-<p class="validator-hint">Must be valid URL</p>
-```
+</div>
+</div>
+<input type="radio" name="tab_url-with-icon-and-validator-20" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%20validator%22%3E%0A%20%20%3Csvg%20class%3D%22h-%5B1em%5D%20opacity-50%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20stroke-linejoin%3D%22round%22%0A%20%20%20%20%20%20stroke-linecap%3D%22round%22%0A%20%20%20%20%20%20stroke-width%3D%222.5%22%0A%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20stroke%3D%22currentColor%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M10%2013a5%205%200%200%200%207.54.54l3-3a5%205%200%200%200-7.07-7.07l-1.72%201.71%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M14%2011a5%205%200%200%200-7.54-.54l-3%203a5%205%200%200%200%207.07%207.07l1.71-1.71%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E%0A%20%20%3Cinput%0A%20%20%20%20type%3D%22url%22%0A%20%20%20%20required%0A%20%20%20%20placeholder%3D%22https%3A%2F%2F%22%0A%20%20%20%20value%3D%22https%3A%2F%2F%22%0A%20%20%20%20pattern%3D%22%5E%28https%3F%3A%2F%2F%29%3F%28%5Ba-zA-Z0-9%5D%28%5Ba-zA-Z0-9%5C%5C-%5D.%2A%5Ba-zA-Z0-9%5D%29%3F%5C%5C.%29%2B%5Ba-zA-Z%5D.%2A%24%22%0A%20%20%20%20title%3D%22Must%20be%20valid%20URL%22%0A%20%20%2F%3E%0A%3C%2Flabel%3E%0A%3Cp%20class%3D%22validator-hint%22%3EMust%20be%20valid%20URL%3C%2Fp%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input validator&quot;&gt;&#10;  &lt;svg class=&quot;h-[1em] opacity-50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&#10;    &lt;g&#10;      stroke-linejoin=&quot;round&quot;&#10;      stroke-linecap=&quot;round&quot;&#10;      stroke-width=&quot;2.5&quot;&#10;      fill=&quot;none&quot;&#10;      stroke=&quot;currentColor&quot;&#10;    &gt;&#10;      &lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&#10;      &lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&#10;    &lt;/g&gt;&#10;  &lt;/svg&gt;&#10;  &lt;input&#10;    type=&quot;url&quot;&#10;    required&#10;    placeholder=&quot;https://&quot;&#10;    value=&quot;https://&quot;&#10;    pattern=&quot;^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\\-].*[a-zA-Z0-9])?\\.)+[a-zA-Z].*$&quot;&#10;    title=&quot;Must be valid URL&quot;&#10;  /&gt;&#10;&lt;/label&gt;&#10;&lt;p class=&quot;validator-hint&quot;&gt;Must be valid URL&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

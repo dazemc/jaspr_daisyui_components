@@ -3,12 +3,24 @@ title: "Hover 3D Card"
 description: "Hover 3D is a wrapper component that adds a 3D hover effect to its content. When we hover over the component, it tilts and rotates based on the mouse position, creating an interactive 3D effect."
 ---
 
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">hover-3d</code></th><td class="whitespace-nowrap">Component</td><td>Hover 3D wrapper component</td></tr></tbody></table></div>
+
 `hover-3d` works by placing 8 hover zones on top of the content. Each zone detects mouse movement and applies a slight rotation to the content based on the mouse position within that zone. The combined effect of all 8 zones creates a smooth and responsive 3D tilt effect as the user moves their mouse over the component.
 
 Only use non-interactive content inside the `hover-3d` wrapper. If you want to make the entire card clickable, use a link for the whole `hover-3d` component instead of putting interactive elements like buttons or links inside it.
 
-### 3D image hover effect
-#### Hover to see the 3D effect
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="3d-image-hover-effect">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hover-3d/#3d-image-hover-effect" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">3D image hover effect</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Hover to see the 3D effect</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_3d-image-hover-effect-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hover-3d my-12 mx-2">
   <figure class="max-w-100 rounded-2xl">
     <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="Tailwind CSS 3D card" />
@@ -22,27 +34,31 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
   <div></div>
   <div></div>
 </div>
-
-```html
-<div class="hover-3d">
-  <!-- content -->
-  <figure class="max-w-100 rounded-2xl">
-    <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
-  </figure>
-  <!-- 8 empty divs needed for the 3D effect -->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
 </div>
-```
-
-### 3D card hover effect
-#### The whole card can be a link
+</div>
+<input type="radio" name="tab_3d-image-hover-effect-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hover-3d%22%3E%0A%20%20%3C%21--%20content%20--%3E%0A%20%20%3Cfigure%20class%3D%22max-w-100%20rounded-2xl%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fcreditcard.webp%22%20alt%3D%223D%20card%22%20%2F%3E%0A%20%20%3C%2Ffigure%3E%0A%20%20%3C%21--%208%20empty%20divs%20needed%20for%20the%203D%20effect%20--%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hover-3d&quot;&gt;&#10;  &lt;!-- content --&gt;&#10;  &lt;figure class=&quot;max-w-100 rounded-2xl&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/creditcard.webp&quot; alt=&quot;3D card&quot; /&gt;&#10;  &lt;/figure&gt;&#10;  &lt;!-- 8 empty divs needed for the 3D effect --&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="3d-card-hover-effect">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hover-3d/#3d-card-hover-effect" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">3D card hover effect</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">The whole card can be a link</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_3d-card-hover-effect-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hover-3d my-12 mx-2 cursor-pointer">
   <div class="card w-96 bg-black text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
     <div class="card-body font-mono">
@@ -72,45 +88,31 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
   <div></div>
   <div></div>
 </div>
-
-```html
-<a href="#" class="hover-3d my-12 mx-2 cursor-pointer">
-  
-  <!-- content -->
-  <div class="card w-96 bg-black text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
-    <div class="card-body">
-      <div class="flex justify-between mb-10">
-        <div class="font-bold">BANK OF LATVERIA</div>
-        <div class="text-5xl opacity-10">❁</div>
-      </div>
-      <div class="text-lg mb-4 opacity-40">0210 8820 1150 0222</div>
-      <div class="flex justify-between">
-        <div>
-          <div class="text-xs opacity-20">CARD HOLDER</div>
-          <div>VICTOR VON D.</div>
-        </div>
-        <div>
-          <div class="text-xs opacity-20">EXPIRES</div>
-          <div>29/08</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- 8 empty divs needed for the 3D effect -->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+</div>
+</div>
+<input type="radio" name="tab_3d-card-hover-effect-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Ca%20href%3D%22%23%22%20class%3D%22hover-3d%20my-12%20mx-2%20cursor-pointer%22%3E%0A%20%20%0A%20%20%3C%21--%20content%20--%3E%0A%20%20%3Cdiv%20class%3D%22card%20w-96%20bg-black%20text-white%20bg-%5Bradial-gradient%28circle_at_bottom_left%2C%23ffffff04_35%25%2Ctransparent_36%25%29%2Cradial-gradient%28circle_at_top_right%2C%23ffffff04_35%25%2Ctransparent_36%25%29%5D%20bg-size-%5B4.95em_4.95em%5D%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22flex%20justify-between%20mb-10%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22font-bold%22%3EBANK%20OF%20LATVERIA%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22text-5xl%20opacity-10%22%3E%E2%9D%81%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20mb-4%20opacity-40%22%3E0210%208820%201150%200222%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22flex%20justify-between%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20opacity-20%22%3ECARD%20HOLDER%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%3EVICTOR%20VON%20D.%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20opacity-20%22%3EEXPIRES%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%3E29%2F08%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%0A%20%20%3C%21--%208%20empty%20divs%20needed%20for%20the%203D%20effect%20--%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%3C%2Fa%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;a href=&quot;#&quot; class=&quot;hover-3d my-12 mx-2 cursor-pointer&quot;&gt;&#10;  &#10;  &lt;!-- content --&gt;&#10;  &lt;div class=&quot;card w-96 bg-black text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;&#10;      &lt;div class=&quot;flex justify-between mb-10&quot;&gt;&#10;        &lt;div class=&quot;font-bold&quot;&gt;BANK OF LATVERIA&lt;/div&gt;&#10;        &lt;div class=&quot;text-5xl opacity-10&quot;&gt;❁&lt;/div&gt;&#10;      &lt;/div&gt;&#10;      &lt;div class=&quot;text-lg mb-4 opacity-40&quot;&gt;0210 8820 1150 0222&lt;/div&gt;&#10;      &lt;div class=&quot;flex justify-between&quot;&gt;&#10;        &lt;div&gt;&#10;          &lt;div class=&quot;text-xs opacity-20&quot;&gt;CARD HOLDER&lt;/div&gt;&#10;          &lt;div&gt;VICTOR VON D.&lt;/div&gt;&#10;        &lt;/div&gt;&#10;        &lt;div&gt;&#10;          &lt;div class=&quot;text-xs opacity-20&quot;&gt;EXPIRES&lt;/div&gt;&#10;          &lt;div&gt;29/08&lt;/div&gt;&#10;        &lt;/div&gt;&#10;      &lt;/div&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &#10;  &lt;!-- 8 empty divs needed for the 3D effect --&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;&lt;/a&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="3d-hover-effect-for-image-gallery">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hover-3d/#3d-hover-effect-for-image-gallery" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
 </a>
-```
-
-### 3D hover effect for image gallery
-#### Hover to see the 3D effect
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">3D hover effect for image gallery</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Hover to see the 3D effect</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_3d-hover-effect-for-image-gallery-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex max-sm:flex-col gap-10 p-10 max-sm:w-70">
   <div class="hover-3d">
     <figure class="rounded-xl">
@@ -152,53 +154,16 @@ Only use non-interactive content inside the `hover-3d` wrapper. If you want to m
     <div></div>
   </div>
 </div>
-
-```html
-<div class="hover-3d">
-  <!-- content -->
-  <figure class="w-60 rounded-2xl">
-    <img src="https://img.daisyui.com/images/stock/card-1.webp?x" alt="Tailwind CSS 3D card" />
-  </figure>
-  <!-- 8 empty divs needed for the 3D effect -->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
 </div>
-
-<div class="hover-3d">
-  <!-- content -->
-  <figure class="w-60 rounded-2xl">
-    <img src="https://img.daisyui.com/images/stock/card-2.webp?x" alt="Tailwind CSS 3D hover" />
-  </figure>
-  <!-- 8 empty divs needed for the 3D effect -->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
 </div>
-
-<div class="hover-3d">
-  <!-- content -->
-  <figure class="w-60 rounded-2xl">
-    <img src="https://img.daisyui.com/images/stock/card-3.webp?x" alt="Tailwind CSS 3D hover" />
-  </figure>
-  <!-- 8 empty divs needed for the 3D effect -->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+<input type="radio" name="tab_3d-hover-effect-for-image-gallery-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hover-3d%22%3E%0A%20%20%3C%21--%20content%20--%3E%0A%20%20%3Cfigure%20class%3D%22w-60%20rounded-2xl%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fcard-1.webp%3Fx%22%20alt%3D%22Tailwind%20CSS%203D%20card%22%20%2F%3E%0A%20%20%3C%2Ffigure%3E%0A%20%20%3C%21--%208%20empty%20divs%20needed%20for%20the%203D%20effect%20--%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20class%3D%22hover-3d%22%3E%0A%20%20%3C%21--%20content%20--%3E%0A%20%20%3Cfigure%20class%3D%22w-60%20rounded-2xl%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fcard-2.webp%3Fx%22%20alt%3D%22Tailwind%20CSS%203D%20hover%22%20%2F%3E%0A%20%20%3C%2Ffigure%3E%0A%20%20%3C%21--%208%20empty%20divs%20needed%20for%20the%203D%20effect%20--%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20class%3D%22hover-3d%22%3E%0A%20%20%3C%21--%20content%20--%3E%0A%20%20%3Cfigure%20class%3D%22w-60%20rounded-2xl%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fcard-3.webp%3Fx%22%20alt%3D%22Tailwind%20CSS%203D%20hover%22%20%2F%3E%0A%20%20%3C%2Ffigure%3E%0A%20%20%3C%21--%208%20empty%20divs%20needed%20for%20the%203D%20effect%20--%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hover-3d&quot;&gt;&#10;  &lt;!-- content --&gt;&#10;  &lt;figure class=&quot;w-60 rounded-2xl&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/card-1.webp?x&quot; alt=&quot;Tailwind CSS 3D card&quot; /&gt;&#10;  &lt;/figure&gt;&#10;  &lt;!-- 8 empty divs needed for the 3D effect --&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hover-3d&quot;&gt;&#10;  &lt;!-- content --&gt;&#10;  &lt;figure class=&quot;w-60 rounded-2xl&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/card-2.webp?x&quot; alt=&quot;Tailwind CSS 3D hover&quot; /&gt;&#10;  &lt;/figure&gt;&#10;  &lt;!-- 8 empty divs needed for the 3D effect --&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hover-3d&quot;&gt;&#10;  &lt;!-- content --&gt;&#10;  &lt;figure class=&quot;w-60 rounded-2xl&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/card-3.webp?x&quot; alt=&quot;Tailwind CSS 3D hover&quot; /&gt;&#10;  &lt;/figure&gt;&#10;  &lt;!-- 8 empty divs needed for the 3D effect --&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;  &lt;div&gt;&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
 </div>
-```
+</div>
+</div>
+</div>

@@ -3,43 +3,78 @@ title: "Stack"
 description: "Stack visually puts elements on top of each other."
 ---
 
-> :INFO:
->
-> You can use `w-*` and `h-*` classes to set the width and height of the stack, making all items the same size.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">stack</code></th><td class="whitespace-nowrap">Component</td><td>Puts the children elements on top of each other</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">stack-top</code></th><td class="whitespace-nowrap">Modifier</td><td>Aligns the children elements to the top</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">stack-bottom</code></th><td class="whitespace-nowrap">Modifier</td><td>Aligns the children elements to the bottom</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">stack-start</code></th><td class="whitespace-nowrap">Modifier</td><td>Aligns the children elements to the start (horizontally)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">stack-end</code></th><td class="whitespace-nowrap">Modifier</td><td>Aligns the children elements to the end (horizontally)</td></tr></tbody></table></div>
 
-### 3 divs in a stack
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">You can use <code>w-*</code> and <code>h-*</code> classes to set the width and height of the stack, making all items the same size.</p></div></div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="3-divs-in-a-stack">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#3-divs-in-a-stack" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">3 divs in a stack</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_3-divs-in-a-stack-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack h-20 w-32">
   <div class="grid rounded-box bg-primary text-primary-content place-content-center">1</div>
   <div class="grid rounded-box bg-accent text-accent-content place-content-center">2</div>
   <div class="grid rounded-box bg-secondary text-secondary-content place-content-center">3</div>
 </div>
-
-```html
-<div class="stack h-20 w-32">
-  <div class="bg-primary text-primary-content grid place-content-center rounded-box">1</div>
-  <div class="bg-accent text-accent-content grid place-content-center rounded-box">2</div>
-  <div class="bg-secondary text-secondary-content grid place-content-center rounded-box">
-    3
-  </div>
 </div>
-```
-
-### stacked images
+</div>
+<input type="radio" name="tab_3-divs-in-a-stack-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20h-20%20w-32%22%3E%0A%20%20%3Cdiv%20class%3D%22bg-primary%20text-primary-content%20grid%20place-content-center%20rounded-box%22%3E1%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22bg-accent%20text-accent-content%20grid%20place-content-center%20rounded-box%22%3E2%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22bg-secondary%20text-secondary-content%20grid%20place-content-center%20rounded-box%22%3E%0A%20%20%20%203%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack h-20 w-32&quot;&gt;&#10;  &lt;div class=&quot;bg-primary text-primary-content grid place-content-center rounded-box&quot;&gt;1&lt;/div&gt;&#10;  &lt;div class=&quot;bg-accent text-accent-content grid place-content-center rounded-box&quot;&gt;2&lt;/div&gt;&#10;  &lt;div class=&quot;bg-secondary text-secondary-content grid place-content-center rounded-box&quot;&gt;&#10;    3&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-images">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-images" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked images</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-images-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack mb-4 w-48">
   <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Tailwind CSS example 1" class="rounded-box" />
   <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Tailwind CSS example 2" class="rounded-box" />
   <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS example 3" class="rounded-box" />
 </div>
-
-```html
-<div class="stack w-48">
-  <img alt="Tailwind CSS example 1" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="rounded-box" />
-  <img alt="Tailwind CSS example 2" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" class="rounded-box" />
-  <img alt="Tailwind CSS example 3" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="rounded-box" />
 </div>
-```
-
-### stacked cards
+</div>
+<input type="radio" name="tab_stacked-images-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20w-48%22%3E%0A%20%20%3Cimg%20alt%3D%22Tailwind%20CSS%20example%201%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3Cimg%20alt%3D%22Tailwind%20CSS%20example%202%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3Cimg%20alt%3D%22Tailwind%20CSS%20example%203%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%20class%3D%22rounded-box%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack w-48&quot;&gt;&#10;  &lt;img alt=&quot;Tailwind CSS example 1&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot; class=&quot;rounded-box&quot; /&gt;&#10;  &lt;img alt=&quot;Tailwind CSS example 2&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot; class=&quot;rounded-box&quot; /&gt;&#10;  &lt;img alt=&quot;Tailwind CSS example 3&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot; class=&quot;rounded-box&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack mb-4 size-28">
   <div class="text-center border border-base-content card bg-base-100">
     <div class="card-body">A</div>
@@ -51,22 +86,30 @@ description: "Stack visually puts elements on top of each other."
     <div class="card-body">C</div>
   </div>
 </div>
-
-```html
-<div class="stack size-28">
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">A</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">B</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">C</div>
-  </div>
 </div>
-```
-
-### stacked cards (top direction)
+</div>
+<input type="radio" name="tab_stacked-cards-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20size-28%22%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EA%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EB%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EC%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack size-28&quot;&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;A&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;B&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;C&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards-top-direction">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards-top-direction" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards (top direction)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-top-direction-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack stack-top mb-4 size-28">
   <div class="text-center border border-base-content card bg-base-100">
     <div class="card-body">A</div>
@@ -78,22 +121,30 @@ description: "Stack visually puts elements on top of each other."
     <div class="card-body">C</div>
   </div>
 </div>
-
-```html
-<div class="stack stack-top size-28">
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">A</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">B</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">C</div>
-  </div>
 </div>
-```
-
-### stacked cards (start direction)
+</div>
+<input type="radio" name="tab_stacked-cards-top-direction-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20stack-top%20size-28%22%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EA%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EB%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EC%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack stack-top size-28&quot;&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;A&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;B&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;C&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards-start-direction">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards-start-direction" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards (start direction)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-start-direction-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack stack-start mb-4 size-28">
   <div class="text-center border border-base-content card bg-base-100">
     <div class="card-body">A</div>
@@ -105,22 +156,30 @@ description: "Stack visually puts elements on top of each other."
     <div class="card-body">C</div>
   </div>
 </div>
-
-```html
-<div class="stack stack-start size-28">
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">A</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">B</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">C</div>
-  </div>
 </div>
-```
-
-### stacked cards (end direction)
+</div>
+<input type="radio" name="tab_stacked-cards-start-direction-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20stack-start%20size-28%22%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EA%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EB%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EC%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack stack-start size-28&quot;&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;A&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;B&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;C&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards-end-direction">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards-end-direction" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards (end direction)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-end-direction-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack stack-end mb-4 size-28">
   <div class="text-center border border-base-content card bg-base-100">
     <div class="card-body">A</div>
@@ -132,22 +191,30 @@ description: "Stack visually puts elements on top of each other."
     <div class="card-body">C</div>
   </div>
 </div>
-
-```html
-<div class="stack stack-end size-28">
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">A</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">B</div>
-  </div>
-  <div class="border-base-content card bg-base-100 border text-center">
-    <div class="card-body">C</div>
-  </div>
 </div>
-```
-
-### stacked cards with shadow
+</div>
+<input type="radio" name="tab_stacked-cards-end-direction-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%20stack-end%20size-28%22%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EA%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EB%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22border-base-content%20card%20bg-base-100%20border%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EC%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack stack-end size-28&quot;&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;A&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;B&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;border-base-content card bg-base-100 border text-center&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;C&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards-with-shadow">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards-with-shadow" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards with shadow</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-with-shadow-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack mb-4">
   <div class="text-center shadow-md card bg-base-200">
     <div class="card-body">A</div>
@@ -159,22 +226,30 @@ description: "Stack visually puts elements on top of each other."
     <div class="card-body">C</div>
   </div>
 </div>
-
-```html
-<div class="stack">
-  <div class="card bg-base-200 text-center shadow-md">
-    <div class="card-body">A</div>
-  </div>
-  <div class="card bg-base-200 text-center shadow">
-    <div class="card-body">B</div>
-  </div>
-  <div class="card bg-base-200 text-center shadow-sm">
-    <div class="card-body">C</div>
-  </div>
 </div>
-```
-
-### stacked cards
+</div>
+<input type="radio" name="tab_stacked-cards-with-shadow-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%22%3E%0A%20%20%3Cdiv%20class%3D%22card%20bg-base-200%20text-center%20shadow-md%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EA%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22card%20bg-base-200%20text-center%20shadow%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EB%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22card%20bg-base-200%20text-center%20shadow-sm%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3EC%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack&quot;&gt;&#10;  &lt;div class=&quot;card bg-base-200 text-center shadow-md&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;A&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;card bg-base-200 text-center shadow&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;B&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;card bg-base-200 text-center shadow-sm&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;C&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="stacked-cards-2">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/stack/#stacked-cards-2" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">stacked cards</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_stacked-cards-2-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="stack mb-4">
   <div class="shadow-md bg-base-100 card">
     <div class="card-body">
@@ -195,26 +270,16 @@ description: "Stack visually puts elements on top of each other."
     </div>
   </div>
 </div>
-
-```html
-<div class="stack">
-  <div class="card shadow-md bg-base-100">
-    <div class="card-body">
-      <h2 class="card-title">Notification 1</h2>
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div>
-  <div class="card shadow-md bg-base-100">
-    <div class="card-body">
-      <h2 class="card-title">Notification 2</h2>
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div>
-  <div class="card shadow-md bg-base-100">
-    <div class="card-body">
-      <h2 class="card-title">Notification 3</h2>
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div>
 </div>
-```
+</div>
+<input type="radio" name="tab_stacked-cards-2-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22stack%22%3E%0A%20%20%3Cdiv%20class%3D%22card%20shadow-md%20bg-base-100%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3E%0A%20%20%20%20%20%20%3Ch2%20class%3D%22card-title%22%3ENotification%201%3C%2Fh2%3E%0A%20%20%20%20%20%20%3Cp%3EYou%20have%203%20unread%20messages.%20Tap%20here%20to%20see.%3C%2Fp%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22card%20shadow-md%20bg-base-100%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3E%0A%20%20%20%20%20%20%3Ch2%20class%3D%22card-title%22%3ENotification%202%3C%2Fh2%3E%0A%20%20%20%20%20%20%3Cp%3EYou%20have%203%20unread%20messages.%20Tap%20here%20to%20see.%3C%2Fp%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22card%20shadow-md%20bg-base-100%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3E%0A%20%20%20%20%20%20%3Ch2%20class%3D%22card-title%22%3ENotification%203%3C%2Fh2%3E%0A%20%20%20%20%20%20%3Cp%3EYou%20have%203%20unread%20messages.%20Tap%20here%20to%20see.%3C%2Fp%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;stack&quot;&gt;&#10;  &lt;div class=&quot;card shadow-md bg-base-100&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;&#10;      &lt;h2 class=&quot;card-title&quot;&gt;Notification 1&lt;/h2&gt;&#10;      &lt;p&gt;You have 3 unread messages. Tap here to see.&lt;/p&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;card shadow-md bg-base-100&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;&#10;      &lt;h2 class=&quot;card-title&quot;&gt;Notification 2&lt;/h2&gt;&#10;      &lt;p&gt;You have 3 unread messages. Tap here to see.&lt;/p&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;card shadow-md bg-base-100&quot;&gt;&#10;    &lt;div class=&quot;card-body&quot;&gt;&#10;      &lt;h2 class=&quot;card-title&quot;&gt;Notification 3&lt;/h2&gt;&#10;      &lt;p&gt;You have 3 unread messages. Tap here to see.&lt;/p&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

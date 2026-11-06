@@ -3,17 +3,25 @@ title: "Timeline"
 description: "Timeline component shows a list of events in chronological order."
 ---
 
-> :INFO:
->
-> The `hr` tag at the beginning or end of each item, displays a line to connect items.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline</code></th><td class="whitespace-nowrap">Component</td><td>Timeline container</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-start</code></th><td class="whitespace-nowrap">Part</td><td>The content inside &lt;li&gt; that will be at the start direction</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-middle</code></th><td class="whitespace-nowrap">Part</td><td>The content inside &lt;li&gt; that will be at the middle</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-end</code></th><td class="whitespace-nowrap">Part</td><td>The content inside &lt;li&gt; that will be at the end direction</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-snap-icon</code></th><td class="whitespace-nowrap">Modifier</td><td>snaps the icon to the start instead of middle</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-box</code></th><td class="whitespace-nowrap">Modifier</td><td>Applies a box style to timeline-start or timeline-end</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-compact</code></th><td class="whitespace-nowrap">Modifier</td><td>forces all items on one side</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-horizontal</code></th><td class="whitespace-nowrap">Direction</td><td>horizontal layout (default)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">timeline-vertical</code></th><td class="whitespace-nowrap">Direction</td><td>vertical layout</td></tr></tbody></table></div>
 
-### Timeline with text on both sides and icon
-
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">The <code>hr</code> tag at the beginning or end of each item, displays a line to connect items.</p></div></div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-text-on-both-sides-and-icon">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-text-on-both-sides-and-icon" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with text on both sides and icon</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-text-on-both-sides-and-icon-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-start">1984</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">First Macintosh computer</div>
     <hr/>
@@ -22,7 +30,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">1998</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -31,7 +39,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2001</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPod</div>
     <hr/>
@@ -40,7 +48,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2007</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -49,121 +57,39 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2015</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline">
-  <li>
-    <div class="timeline-start">1984</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">1998</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2001</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2007</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2015</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Timeline with bottom side only
-
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-text-on-both-sides-and-icon-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1984%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1998%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2001%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2007%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2015%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1984&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1998&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2001&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2007&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2015&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-bottom-side-only">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-bottom-side-only" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with bottom side only</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-bottom-side-only-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">First Macintosh computer</div>
     <hr/>
@@ -171,7 +97,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -179,7 +105,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPod</div>
     <hr/>
@@ -187,7 +113,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -195,117 +121,40 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline">
-  <li>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Timeline with top side only
-
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-bottom-side-only-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-top-side-only">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-top-side-only" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with top side only</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-top-side-only-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -313,7 +162,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iMac</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -321,7 +170,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -329,7 +178,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPhone</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -337,123 +186,46 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-top-side-only-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-different-sides">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-different-sides" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with different sides</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-different-sides-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iMac</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPhone</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Timeline with different sides
-
-<ul class="timeline">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -462,14 +234,14 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -478,123 +250,46 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-different-sides-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-colorful-lines">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-colorful-lines" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with colorful lines</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-colorful-lines-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Timeline with colorful lines
-
-<ul class="timeline">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr class="bg-primary"/>
   </li>
   <li>
   <hr class="bg-primary"/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr class="bg-primary"/>
@@ -603,14 +298,14 @@ description: "Timeline component shows a list of events in chronological order."
     <hr class="bg-primary"/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -619,111 +314,34 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
-<ul class="timeline">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr class="bg-primary" />
-  </li>
-  <li>
-    <hr class="bg-primary" />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr class="bg-primary" />
-  </li>
-  <li>
-    <hr class="bg-primary" />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Timeline without icons
-
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-colorful-lines-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-without-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-without-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline without icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-without-icons-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -749,42 +367,35 @@ description: "Timeline component shows a list of events in chronological order."
     <div class="timeline-start timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Vertical timeline with text on both sides and icon
-
+</div>
+</div>
+<input type="radio" name="tab_timeline-without-icons-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-with-text-on-both-sides-and-icon">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-with-text-on-both-sides-and-icon" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline with text on both sides and icon</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-with-text-on-both-sides-and-icon-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start">1984</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">First Macintosh computer</div>
     <hr/>
@@ -793,7 +404,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">1998</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -802,7 +413,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2001</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPod</div>
     <hr/>
@@ -811,7 +422,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2007</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -820,121 +431,39 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2015</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-start">1984</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">1998</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2001</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2007</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2015</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Vertical timeline with right side only
-
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-with-text-on-both-sides-and-icon-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1984%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1998%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2001%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2007%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2015%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1984&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1998&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2001&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2007&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2015&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-with-right-side-only">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-with-right-side-only" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline with right side only</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-with-right-side-only-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">First Macintosh computer</div>
     <hr/>
@@ -942,7 +471,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -950,7 +479,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPod</div>
     <hr/>
@@ -958,7 +487,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -966,117 +495,40 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Vertical timeline with left side only
-
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-with-right-side-only-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-with-left-side-only">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-with-left-side-only" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline with left side only</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-with-left-side-only-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -1084,7 +536,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iMac</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -1092,7 +544,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -1100,7 +552,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPhone</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
@@ -1108,123 +560,46 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-with-left-side-only-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-with-different-sides">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-with-different-sides" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline with different sides</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-with-different-sides-10" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iMac</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPhone</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Vertical timeline with different sides
-
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -1233,14 +608,14 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -1249,123 +624,46 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-with-different-sides-10" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-with-colorful-lines">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-with-colorful-lines" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline with colorful lines</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-with-colorful-lines-11" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
     <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Vertical timeline with colorful lines
-
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr class="bg-primary"/>
   </li>
   <li>
   <hr class="bg-primary"/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr class="bg-primary"/>
@@ -1374,14 +672,14 @@ description: "Timeline component shows a list of events in chronological order."
     <hr class="bg-primary"/>
     <div class="timeline-start timeline-box">iPod</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <hr/>
   </li>
   <li>
     <hr/>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -1390,111 +688,34 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start timeline-box">Apple Watch</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr class="bg-primary" />
-  </li>
-  <li>
-    <hr class="bg-primary" />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr class="bg-primary" />
-  </li>
-  <li>
-    <hr class="bg-primary" />
-    <div class="timeline-start timeline-box">iPod</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="text-primary h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </li>
-</ul>
-```
-
-### Vertical timeline without icons
-
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-with-colorful-lines-11" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20class%3D%22bg-primary%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22text-primary%20h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr class=&quot;bg-primary&quot; /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;text-primary h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-timeline-without-icons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#vertical-timeline-without-icons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical timeline without icons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-timeline-without-icons-12" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1520,42 +741,35 @@ description: "Timeline component shows a list of events in chronological order."
     <div class="timeline-start timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-vertical">
-  <li>
-    <div class="timeline-start timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Responsive: vertical by default, horizontal on large screen
-
+</div>
+</div>
+<input type="radio" name="tab_vertical-timeline-without-icons-12" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="responsive-vertical-by-default-horizontal-on-large-screen">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#responsive-vertical-by-default-horizontal-on-large-screen" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Responsive: vertical by default, horizontal on large screen</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_responsive-vertical-by-default-horizontal-on-large-screen-13" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-vertical lg:timeline-horizontal">
   <li>
     <div class="timeline-start">1984</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">First Macintosh computer</div>
     <hr/>
@@ -1564,7 +778,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">1998</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iMac</div>
     <hr/>
@@ -1573,7 +787,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2001</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPod</div>
     <hr/>
@@ -1582,7 +796,7 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2007</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">iPhone</div>
     <hr/>
@@ -1591,121 +805,39 @@ description: "Timeline component shows a list of events in chronological order."
     <hr/>
     <div class="timeline-start">2015</div>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-vertical lg:timeline-horizontal">
-  <li>
-    <div class="timeline-start">1984</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">First Macintosh computer</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">1998</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iMac</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2001</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPod</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2007</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">iPhone</div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-start">2015</div>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box">Apple Watch</div>
-  </li>
-</ul>
-```
-
-### Timeline with icon snapped to the start
-
+</div>
+</div>
+<input type="radio" name="tab_responsive-vertical-by-default-horizontal-on-large-screen-13" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-vertical%20lg%3Atimeline-horizontal%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1984%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E1998%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2001%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2007%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%22%3E2015%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20timeline-box%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-vertical lg:timeline-horizontal&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1984&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;1998&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iMac&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2001&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPod&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2007&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;iPhone&lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-start&quot;&gt;2015&lt;/div&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end timeline-box&quot;&gt;Apple Watch&lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="timeline-with-icon-snapped-to-the-start">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/timeline/#timeline-with-icon-snapped-to-the-start" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Timeline with icon snapped to the start</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_timeline-with-icon-snapped-to-the-start-14" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-start md:text-end mb-10">
       <time class="font-mono italic">1984</time>
@@ -1717,7 +849,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr />
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end mb-10">
       <time class="font-mono italic">1998</time>
@@ -1729,7 +861,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr />
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-start md:text-end mb-10">
       <time class="font-mono italic">2001</time>
@@ -1741,7 +873,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr />
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-end mb-10">
       <time class="font-mono italic">2007</time>
@@ -1753,7 +885,7 @@ description: "Timeline component shows a list of events in chronological order."
   <li>
     <hr />
     <div class="timeline-middle">
-      
+      <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-start md:text-end mb-10">
       <time class="font-mono italic">2015</time>
@@ -1762,137 +894,16 @@ description: "Timeline component shows a list of events in chronological order."
     </div>
   </li>
 </ul>
-
-```html
-<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-  <li>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">1984</time>
-      <div class="text-lg font-black">First Macintosh computer</div>
-      The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh
-      personal computer. It played a pivotal role in establishing desktop publishing as a general
-      office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed
-      in a beige case with integrated carrying handle; it came with a keyboard and single-button
-      mouse.
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end md:mb-10">
-      <time class="font-mono italic">1998</time>
-      <div class="text-lg font-black">iMac</div>
-      iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
-      been the primary part of Apple's consumer desktop offerings since its debut in August 1998,
-      and has evolved through seven distinct forms
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">2001</time>
-      <div class="text-lg font-black">iPod</div>
-      The iPod is a discontinued series of portable media players and multi-purpose mobile devices
-      designed and marketed by Apple Inc. The first version was released on October 23, 2001, about
-      8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450
-      million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At
-      over 20 years, the iPod brand is the oldest to be discontinued by Apple
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end md:mb-10">
-      <time class="font-mono italic">2007</time>
-      <div class="text-lg font-black">iPhone</div>
-      iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile
-      operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on
-      January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As
-      of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone
-      accounts for 15.6% of global smartphone market share
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">2015</time>
-      <div class="text-lg font-black">Apple Watch</div>
-      The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness
-      tracking, health-oriented capabilities, and wireless telecommunication, and integrates with
-      iOS and other Apple products and services
-    </div>
-  </li>
-</ul>
-```
+</div>
+</div>
+<input type="radio" name="tab_timeline-with-icon-snapped-to-the-start-14" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22timeline%20timeline-snap-icon%20max-md%3Atimeline-compact%20timeline-vertical%22%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20mb-10%20md%3Atext-end%22%3E%0A%20%20%20%20%20%20%3Ctime%20class%3D%22font-mono%20italic%22%3E1984%3C%2Ftime%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20font-black%22%3EFirst%20Macintosh%20computer%3C%2Fdiv%3E%0A%20%20%20%20%20%20The%20Apple%20Macintosh%E2%80%94later%20rebranded%20as%20the%20Macintosh%20128K%E2%80%94is%20the%20original%20Apple%20Macintosh%0A%20%20%20%20%20%20personal%20computer.%20It%20played%20a%20pivotal%20role%20in%20establishing%20desktop%20publishing%20as%20a%20general%0A%20%20%20%20%20%20office%20function.%20The%20motherboard%2C%20a%209%20in%20%2823%20cm%29%20CRT%20monitor%2C%20and%20a%20floppy%20drive%20were%20housed%0A%20%20%20%20%20%20in%20a%20beige%20case%20with%20integrated%20carrying%20handle%3B%20it%20came%20with%20a%20keyboard%20and%20single-button%0A%20%20%20%20%20%20mouse.%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20md%3Amb-10%22%3E%0A%20%20%20%20%20%20%3Ctime%20class%3D%22font-mono%20italic%22%3E1998%3C%2Ftime%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20font-black%22%3EiMac%3C%2Fdiv%3E%0A%20%20%20%20%20%20iMac%20is%20a%20family%20of%20all-in-one%20Mac%20desktop%20computers%20designed%20and%20built%20by%20Apple%20Inc.%20It%20has%0A%20%20%20%20%20%20been%20the%20primary%20part%20of%20Apple%27s%20consumer%20desktop%20offerings%20since%20its%20debut%20in%20August%201998%2C%0A%20%20%20%20%20%20and%20has%20evolved%20through%20seven%20distinct%20forms%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20mb-10%20md%3Atext-end%22%3E%0A%20%20%20%20%20%20%3Ctime%20class%3D%22font-mono%20italic%22%3E2001%3C%2Ftime%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20font-black%22%3EiPod%3C%2Fdiv%3E%0A%20%20%20%20%20%20The%20iPod%20is%20a%20discontinued%20series%20of%20portable%20media%20players%20and%20multi-purpose%20mobile%20devices%0A%20%20%20%20%20%20designed%20and%20marketed%20by%20Apple%20Inc.%20The%20first%20version%20was%20released%20on%20October%2023%2C%202001%2C%20about%0A%20%20%20%20%20%208%2B1%E2%81%842%20months%20after%20the%20Macintosh%20version%20of%20iTunes%20was%20released.%20Apple%20sold%20an%20estimated%20450%0A%20%20%20%20%20%20million%20iPod%20products%20as%20of%202022.%20Apple%20discontinued%20the%20iPod%20product%20line%20on%20May%2010%2C%202022.%20At%0A%20%20%20%20%20%20over%2020%20years%2C%20the%20iPod%20brand%20is%20the%20oldest%20to%20be%20discontinued%20by%20Apple%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-end%20md%3Amb-10%22%3E%0A%20%20%20%20%20%20%3Ctime%20class%3D%22font-mono%20italic%22%3E2007%3C%2Ftime%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20font-black%22%3EiPhone%3C%2Fdiv%3E%0A%20%20%20%20%20%20iPhone%20is%20a%20line%20of%20smartphones%20produced%20by%20Apple%20Inc.%20that%20use%20Apple%27s%20own%20iOS%20mobile%0A%20%20%20%20%20%20operating%20system.%20The%20first-generation%20iPhone%20was%20announced%20by%20then-Apple%20CEO%20Steve%20Jobs%20on%0A%20%20%20%20%20%20January%209%2C%202007.%20Since%20then%2C%20Apple%20has%20annually%20released%20new%20iPhone%20models%20and%20iOS%20updates.%20As%0A%20%20%20%20%20%20of%20November%201%2C%202018%2C%20more%20than%202.2%20billion%20iPhones%20had%20been%20sold.%20As%20of%202022%2C%20the%20iPhone%0A%20%20%20%20%20%20accounts%20for%2015.6%25%20of%20global%20smartphone%20market%20share%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%3C%2Fli%3E%0A%20%20%3Cli%3E%0A%20%20%20%20%3Chr%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-middle%22%3E%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%2020%2020%22%0A%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%0A%20%20%20%20%20%20%20%20class%3D%22h-5%20w-5%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20fill-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M10%2018a8%208%200%20100-16%208%208%200%20000%2016zm3.857-9.809a.75.75%200%2000-1.214-.882l-3.483%204.79-1.88-1.88a.75.75%200%2010-1.06%201.061l2.5%202.5a.75.75%200%20001.137-.089l4-5.5z%22%0A%20%20%20%20%20%20%20%20%20%20clip-rule%3D%22evenodd%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22timeline-start%20mb-10%20md%3Atext-end%22%3E%0A%20%20%20%20%20%20%3Ctime%20class%3D%22font-mono%20italic%22%3E2015%3C%2Ftime%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-lg%20font-black%22%3EApple%20Watch%3C%2Fdiv%3E%0A%20%20%20%20%20%20The%20Apple%20Watch%20is%20a%20line%20of%20smartwatches%20produced%20by%20Apple%20Inc.%20It%20incorporates%20fitness%0A%20%20%20%20%20%20tracking%2C%20health-oriented%20capabilities%2C%20and%20wireless%20telecommunication%2C%20and%20integrates%20with%0A%20%20%20%20%20%20iOS%20and%20other%20Apple%20products%20and%20services%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fli%3E%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;timeline timeline-snap-icon max-md:timeline-compact timeline-vertical&quot;&gt;&#10;  &lt;li&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-start mb-10 md:text-end&quot;&gt;&#10;      &lt;time class=&quot;font-mono italic&quot;&gt;1984&lt;/time&gt;&#10;      &lt;div class=&quot;text-lg font-black&quot;&gt;First Macintosh computer&lt;/div&gt;&#10;      The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh&#10;      personal computer. It played a pivotal role in establishing desktop publishing as a general&#10;      office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed&#10;      in a beige case with integrated carrying handle; it came with a keyboard and single-button&#10;      mouse.&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end md:mb-10&quot;&gt;&#10;      &lt;time class=&quot;font-mono italic&quot;&gt;1998&lt;/time&gt;&#10;      &lt;div class=&quot;text-lg font-black&quot;&gt;iMac&lt;/div&gt;&#10;      iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has&#10;      been the primary part of Apple&#x27;s consumer desktop offerings since its debut in August 1998,&#10;      and has evolved through seven distinct forms&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-start mb-10 md:text-end&quot;&gt;&#10;      &lt;time class=&quot;font-mono italic&quot;&gt;2001&lt;/time&gt;&#10;      &lt;div class=&quot;text-lg font-black&quot;&gt;iPod&lt;/div&gt;&#10;      The iPod is a discontinued series of portable media players and multi-purpose mobile devices&#10;      designed and marketed by Apple Inc. The first version was released on October 23, 2001, about&#10;      8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450&#10;      million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At&#10;      over 20 years, the iPod brand is the oldest to be discontinued by Apple&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-end md:mb-10&quot;&gt;&#10;      &lt;time class=&quot;font-mono italic&quot;&gt;2007&lt;/time&gt;&#10;      &lt;div class=&quot;text-lg font-black&quot;&gt;iPhone&lt;/div&gt;&#10;      iPhone is a line of smartphones produced by Apple Inc. that use Apple&#x27;s own iOS mobile&#10;      operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on&#10;      January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As&#10;      of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone&#10;      accounts for 15.6% of global smartphone market share&#10;    &lt;/div&gt;&#10;    &lt;hr /&gt;&#10;  &lt;/li&gt;&#10;  &lt;li&gt;&#10;    &lt;hr /&gt;&#10;    &lt;div class=&quot;timeline-middle&quot;&gt;&#10;      &lt;svg&#10;        xmlns=&quot;http://www.w3.org/2000/svg&quot;&#10;        viewBox=&quot;0 0 20 20&quot;&#10;        fill=&quot;currentColor&quot;&#10;        class=&quot;h-5 w-5&quot;&#10;      &gt;&#10;        &lt;path&#10;          fill-rule=&quot;evenodd&quot;&#10;          d=&quot;M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z&quot;&#10;          clip-rule=&quot;evenodd&quot;&#10;        /&gt;&#10;      &lt;/svg&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;timeline-start mb-10 md:text-end&quot;&gt;&#10;      &lt;time class=&quot;font-mono italic&quot;&gt;2015&lt;/time&gt;&#10;      &lt;div class=&quot;text-lg font-black&quot;&gt;Apple Watch&lt;/div&gt;&#10;      The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness&#10;      tracking, health-oriented capabilities, and wireless telecommunication, and integrates with&#10;      iOS and other Apple products and services&#10;    &lt;/div&gt;&#10;  &lt;/li&gt;&#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

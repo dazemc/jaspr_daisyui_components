@@ -3,7 +3,19 @@ title: "Progress"
 description: "Progress bar can be used to show the progress of a task or to show the passing of time."
 ---
 
-### Progress
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress</code></th><td class="whitespace-nowrap">Component</td><td>For &lt;progress&gt; tag</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-neutral</code></th><td class="whitespace-nowrap">Color</td><td>neutral color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-primary</code></th><td class="whitespace-nowrap">Color</td><td>primary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-secondary</code></th><td class="whitespace-nowrap">Color</td><td>secondary color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-accent</code></th><td class="whitespace-nowrap">Color</td><td>accent color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-info</code></th><td class="whitespace-nowrap">Color</td><td>info color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-success</code></th><td class="whitespace-nowrap">Color</td><td>success color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-warning</code></th><td class="whitespace-nowrap">Color</td><td>warning color</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">progress-error</code></th><td class="whitespace-nowrap">Color</td><td>error color</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="progress">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#progress" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Progress</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_progress-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress w-56" value="0" max="100"></progress>
   <progress class="progress w-56" value="10" max="100"></progress>
@@ -11,16 +23,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress w-56" value="70" max="100"></progress>
   <progress class="progress w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress w-56" value="0" max="100"></progress>
-<progress class="progress w-56" value="10" max="100"></progress>
-<progress class="progress w-56" value="40" max="100"></progress>
-<progress class="progress w-56" value="70" max="100"></progress>
-<progress class="progress w-56" value="100" max="100"></progress>
-```
-
-### Primary color
+</div>
+</div>
+<input type="radio" name="tab_progress-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="primary-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#primary-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Primary color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_primary-color-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-primary w-56" value="0" max="100"></progress>
   <progress class="progress progress-primary w-56" value="10" max="100"></progress>
@@ -28,16 +54,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-primary w-56" value="70" max="100"></progress>
   <progress class="progress progress-primary w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-primary w-56" value="0" max="100"></progress>
-<progress class="progress progress-primary w-56" value="10" max="100"></progress>
-<progress class="progress progress-primary w-56" value="40" max="100"></progress>
-<progress class="progress progress-primary w-56" value="70" max="100"></progress>
-<progress class="progress progress-primary w-56" value="100" max="100"></progress>
-```
-
-### Secondary color
+</div>
+</div>
+<input type="radio" name="tab_primary-color-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-primary%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-primary%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-primary%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-primary%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-primary%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-primary w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-primary w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-primary w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-primary w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-primary w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="secondary-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#secondary-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Secondary color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_secondary-color-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-secondary w-56" value="0" max="100"></progress>
   <progress class="progress progress-secondary w-56" value="10" max="100"></progress>
@@ -45,16 +85,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-secondary w-56" value="70" max="100"></progress>
   <progress class="progress progress-secondary w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-secondary w-56" value="0" max="100"></progress>
-<progress class="progress progress-secondary w-56" value="10" max="100"></progress>
-<progress class="progress progress-secondary w-56" value="40" max="100"></progress>
-<progress class="progress progress-secondary w-56" value="70" max="100"></progress>
-<progress class="progress progress-secondary w-56" value="100" max="100"></progress>
-```
-
-### Accent color
+</div>
+</div>
+<input type="radio" name="tab_secondary-color-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-secondary%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-secondary%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-secondary%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-secondary%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-secondary%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-secondary w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-secondary w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-secondary w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-secondary w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-secondary w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="accent-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#accent-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Accent color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_accent-color-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-accent w-56" value="0" max="100"></progress>
   <progress class="progress progress-accent w-56" value="10" max="100"></progress>
@@ -62,16 +116,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-accent w-56" value="70" max="100"></progress>
   <progress class="progress progress-accent w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-accent w-56" value="0" max="100"></progress>
-<progress class="progress progress-accent w-56" value="10" max="100"></progress>
-<progress class="progress progress-accent w-56" value="40" max="100"></progress>
-<progress class="progress progress-accent w-56" value="70" max="100"></progress>
-<progress class="progress progress-accent w-56" value="100" max="100"></progress>
-```
-
-### Neutral color
+</div>
+</div>
+<input type="radio" name="tab_accent-color-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-accent%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-accent%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-accent%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-accent%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-accent%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-accent w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-accent w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-accent w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-accent w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-accent w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="neutral-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#neutral-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Neutral color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_neutral-color-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-neutral w-56" value="0" max="100"></progress>
   <progress class="progress progress-neutral w-56" value="10" max="100"></progress>
@@ -79,16 +147,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-neutral w-56" value="70" max="100"></progress>
   <progress class="progress progress-neutral w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-neutral w-56" value="0" max="100"></progress>
-<progress class="progress progress-neutral w-56" value="10" max="100"></progress>
-<progress class="progress progress-neutral w-56" value="40" max="100"></progress>
-<progress class="progress progress-neutral w-56" value="70" max="100"></progress>
-<progress class="progress progress-neutral w-56" value="100" max="100"></progress>
-```
-
-### Info color
+</div>
+</div>
+<input type="radio" name="tab_neutral-color-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-neutral%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-neutral%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-neutral%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-neutral%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-neutral%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-neutral w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-neutral w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-neutral w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-neutral w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-neutral w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="info-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#info-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Info color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_info-color-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-info w-56" value="0" max="100"></progress>
   <progress class="progress progress-info w-56" value="10" max="100"></progress>
@@ -96,16 +178,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-info w-56" value="70" max="100"></progress>
   <progress class="progress progress-info w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-info w-56" value="0" max="100"></progress>
-<progress class="progress progress-info w-56" value="10" max="100"></progress>
-<progress class="progress progress-info w-56" value="40" max="100"></progress>
-<progress class="progress progress-info w-56" value="70" max="100"></progress>
-<progress class="progress progress-info w-56" value="100" max="100"></progress>
-```
-
-### Success color
+</div>
+</div>
+<input type="radio" name="tab_info-color-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-info%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-info%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-info%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-info%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-info%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-info w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-info w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-info w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-info w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-info w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="success-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#success-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Success color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_success-color-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-success w-56" value="0" max="100"></progress>
   <progress class="progress progress-success w-56" value="10" max="100"></progress>
@@ -113,16 +209,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-success w-56" value="70" max="100"></progress>
   <progress class="progress progress-success w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-success w-56" value="0" max="100"></progress>
-<progress class="progress progress-success w-56" value="10" max="100"></progress>
-<progress class="progress progress-success w-56" value="40" max="100"></progress>
-<progress class="progress progress-success w-56" value="70" max="100"></progress>
-<progress class="progress progress-success w-56" value="100" max="100"></progress>
-```
-
-### Warning color
+</div>
+</div>
+<input type="radio" name="tab_success-color-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-success%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-success%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-success%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-success%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-success%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-success w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-success w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-success w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-success w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-success w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="warning-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#warning-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Warning color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_warning-color-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-warning w-56" value="0" max="100"></progress>
   <progress class="progress progress-warning w-56" value="10" max="100"></progress>
@@ -130,16 +240,30 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-warning w-56" value="70" max="100"></progress>
   <progress class="progress progress-warning w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-warning w-56" value="0" max="100"></progress>
-<progress class="progress progress-warning w-56" value="10" max="100"></progress>
-<progress class="progress progress-warning w-56" value="40" max="100"></progress>
-<progress class="progress progress-warning w-56" value="70" max="100"></progress>
-<progress class="progress progress-warning w-56" value="100" max="100"></progress>
-```
-
-### Error color
+</div>
+</div>
+<input type="radio" name="tab_warning-color-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-warning%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-warning%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-warning%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-warning%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-warning%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-warning w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-warning w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-warning w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-warning w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-warning w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="error-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#error-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Error color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_error-color-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <progress class="progress progress-error w-56" value="0" max="100"></progress>
   <progress class="progress progress-error w-56" value="10" max="100"></progress>
@@ -147,18 +271,41 @@ description: "Progress bar can be used to show the progress of a task or to show
   <progress class="progress progress-error w-56" value="70" max="100"></progress>
   <progress class="progress progress-error w-56" value="100" max="100"></progress>
 </div>
-
-```html
-<progress class="progress progress-error w-56" value="0" max="100"></progress>
-<progress class="progress progress-error w-56" value="10" max="100"></progress>
-<progress class="progress progress-error w-56" value="40" max="100"></progress>
-<progress class="progress progress-error w-56" value="70" max="100"></progress>
-<progress class="progress progress-error w-56" value="100" max="100"></progress>
-```
-
-### Indeterminate (without value)
+</div>
+</div>
+<input type="radio" name="tab_error-color-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20progress-error%20w-56%22%20value%3D%220%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-error%20w-56%22%20value%3D%2210%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-error%20w-56%22%20value%3D%2240%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-error%20w-56%22%20value%3D%2270%22%20max%3D%22100%22%3E%3C%2Fprogress%3E%0A%3Cprogress%20class%3D%22progress%20progress-error%20w-56%22%20value%3D%22100%22%20max%3D%22100%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress progress-error w-56&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-error w-56&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-error w-56&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-error w-56&quot; value=&quot;70&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#10;&lt;progress class=&quot;progress progress-error w-56&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="indeterminate-without-value">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/progress/#indeterminate-without-value" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Indeterminate (without value)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_indeterminate-without-value-10" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <progress class="progress w-56"></progress>
-
-```html
-<progress class="progress w-56"></progress>
-```
+</div>
+</div>
+<input type="radio" name="tab_indeterminate-without-value-10" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cprogress%20class%3D%22progress%20w-56%22%3E%3C%2Fprogress%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;progress class=&quot;progress w-56&quot;&gt;&lt;/progress&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

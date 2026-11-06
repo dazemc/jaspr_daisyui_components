@@ -21,7 +21,6 @@ void main() {
   runApp(
     Document(
       lang: 'en',
-      base: _prefix,
       meta: {
         'description':
             'Typed Jaspr components for every daisyUI component, generated from the official docs.',
@@ -70,16 +69,17 @@ void main() {
                       ),
                     ],
                   ),
-                  SidebarGroup(
-                    title: 'Components',
-                    links: [
-                      for (final entry in navEntries)
-                        SidebarLink(
-                          text: entry.title,
-                          href: '${_prefix}components/${entry.slug}',
-                        ),
-                    ],
-                  ),
+                  for (final group in navGroups)
+                    SidebarGroup(
+                      title: group.title,
+                      links: [
+                        for (final entry in group.entries)
+                          SidebarLink(
+                            text: entry.title,
+                            href: '${_prefix}components/${entry.slug}',
+                          ),
+                      ],
+                    ),
                 ],
               ),
             ),

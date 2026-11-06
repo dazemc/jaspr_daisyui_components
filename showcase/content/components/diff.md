@@ -3,7 +3,19 @@ title: "Diff"
 description: "Diff component shows a side-by-side comparison of two items."
 ---
 
-### Diff
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">diff</code></th><td class="whitespace-nowrap">Component</td><td>Container element</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">diff-item-1</code></th><td class="whitespace-nowrap">Part</td><td>First item</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">diff-item-2</code></th><td class="whitespace-nowrap">Part</td><td>Second item</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">diff-resizer</code></th><td class="whitespace-nowrap">Part</td><td>The resizer control</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="diff">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/diff/#diff" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Diff</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_diff-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
@@ -13,22 +25,30 @@ description: "Diff component shows a side-by-side comparison of two items."
   </div>
   <div class="diff-resizer"></div>
 </figure>
-
-```html
-<figure class="diff aspect-16/9" tabindex="0">
-  <div class="diff-item-1" role="img" tabindex="0">
-    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
-  </div>
-  <div class="diff-item-2" role="img">
-    <img
-      alt="daisy"
-      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
-  </div>
-  <div class="diff-resizer"></div>
-</figure>
-```
-
-### Diff text
+</div>
+</div>
+<input type="radio" name="tab_diff-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfigure%20class%3D%22diff%20aspect-16%2F9%22%20tabindex%3D%220%22%3E%0A%20%20%3Cdiv%20class%3D%22diff-item-1%22%20role%3D%22img%22%20tabindex%3D%220%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22daisy%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1560717789-0ac7c58ac90a.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22diff-item-2%22%20role%3D%22img%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22daisy%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1560717789-0ac7c58ac90a-blur.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22diff-resizer%22%3E%3C%2Fdiv%3E%0A%3C%2Ffigure%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;figure class=&quot;diff aspect-16/9&quot; tabindex=&quot;0&quot;&gt;&#10;  &lt;div class=&quot;diff-item-1&quot; role=&quot;img&quot; tabindex=&quot;0&quot;&gt;&#10;    &lt;img alt=&quot;daisy&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;diff-item-2&quot; role=&quot;img&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;daisy&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;diff-resizer&quot;&gt;&lt;/div&gt;&#10;&lt;/figure&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="diff-text">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/diff/#diff-text" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Diff text</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_diff-text-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
     <div class="bg-primary text-primary-content text-4xl lg:text-9xl font-black grid place-content-center">DAISY</div>
@@ -38,17 +58,16 @@ description: "Diff component shows a side-by-side comparison of two items."
   </div>
   <div class="diff-resizer"></div>
 </figure>
-
-```html
-<figure class="diff aspect-16/9" tabindex="0">
-  <div class="diff-item-1" role="img" tabindex="0">
-    <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
-      DAISY
-    </div>
-  </div>
-  <div class="diff-item-2" role="img">
-    <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
-  </div>
-  <div class="diff-resizer"></div>
-</figure>
-```
+</div>
+</div>
+<input type="radio" name="tab_diff-text-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfigure%20class%3D%22diff%20aspect-16%2F9%22%20tabindex%3D%220%22%3E%0A%20%20%3Cdiv%20class%3D%22diff-item-1%22%20role%3D%22img%22%20tabindex%3D%220%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22bg-primary%20text-primary-content%20grid%20place-content-center%20text-9xl%20font-black%22%3E%0A%20%20%20%20%20%20DAISY%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22diff-item-2%22%20role%3D%22img%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22bg-base-200%20grid%20place-content-center%20text-9xl%20font-black%22%3EDAISY%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22diff-resizer%22%3E%3C%2Fdiv%3E%0A%3C%2Ffigure%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;figure class=&quot;diff aspect-16/9&quot; tabindex=&quot;0&quot;&gt;&#10;  &lt;div class=&quot;diff-item-1&quot; role=&quot;img&quot; tabindex=&quot;0&quot;&gt;&#10;    &lt;div class=&quot;bg-primary text-primary-content grid place-content-center text-9xl font-black&quot;&gt;&#10;      DAISY&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;diff-item-2&quot; role=&quot;img&quot;&gt;&#10;    &lt;div class=&quot;bg-base-200 grid place-content-center text-9xl font-black&quot;&gt;DAISY&lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;diff-resizer&quot;&gt;&lt;/div&gt;&#10;&lt;/figure&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

@@ -3,32 +3,75 @@ title: "Label"
 description: "Label is used to provide a name or title for an input field. Label can be placed before or after the field."
 ---
 
-### Label for input
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">label</code></th><td class="whitespace-nowrap">Component</td><td>For styling the text next to an input field (or select)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">floating-label</code></th><td class="whitespace-nowrap">Component</td><td>For the parent of an input field (or select) and a span that floats above the input field when the field is focused</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="label-for-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#label-for-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Label for input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_label-for-input-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="input">
   <span class="label">https://</span>
   <input type="text" placeholder="URL" />
 </label>
-
-```html
-<label class="input">
-  <span class="label">https://</span>
-  <input type="text" placeholder="URL" />
-</label>
-```
-### Label for input at the end
+</div>
+</div>
+<input type="radio" name="tab_label-for-input-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Cspan%20class%3D%22label%22%3Ehttps%3A%2F%2F%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22URL%22%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input&quot;&gt;&#10;  &lt;span class=&quot;label&quot;&gt;https://&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;URL&quot; /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="label-for-input-at-the-end">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#label-for-input-at-the-end" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Label for input at the end</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_label-for-input-at-the-end-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="input">
   <input type="text" placeholder="domain name" />
   <span class="label">.com</span>
 </label>
-
-```html
-<label class="input">
-  <input type="text" placeholder="domain name" />
-  <span class="label">.com</span>
-</label>
-```
-
-### Label for select
+</div>
+</div>
+<input type="radio" name="tab_label-for-input-at-the-end-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22domain%20name%22%20%2F%3E%0A%20%20%3Cspan%20class%3D%22label%22%3E.com%3C%2Fspan%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;domain name&quot; /&gt;&#10;  &lt;span class=&quot;label&quot;&gt;.com&lt;/span&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="label-for-select">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#label-for-select" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Label for select</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_label-for-select-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="select">
   <span class="label">Type</span>
   <select>
@@ -36,44 +79,86 @@ description: "Label is used to provide a name or title for an input field. Label
     <option>Business</option>
   </select>
 </label>
-
-```html
-<label class="select">
-  <span class="label">Type</span>
-  <select>
-    <option>Personal</option>
-    <option>Business</option>
-  </select>
-</label>
-```
-
-### Label for date input
+</div>
+</div>
+<input type="radio" name="tab_label-for-select-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22select%22%3E%0A%20%20%3Cspan%20class%3D%22label%22%3EType%3C%2Fspan%3E%0A%20%20%3Cselect%3E%0A%20%20%20%20%3Coption%3EPersonal%3C%2Foption%3E%0A%20%20%20%20%3Coption%3EBusiness%3C%2Foption%3E%0A%20%20%3C%2Fselect%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;select&quot;&gt;&#10;  &lt;span class=&quot;label&quot;&gt;Type&lt;/span&gt;&#10;  &lt;select&gt;&#10;    &lt;option&gt;Personal&lt;/option&gt;&#10;    &lt;option&gt;Business&lt;/option&gt;&#10;  &lt;/select&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="label-for-date-input">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#label-for-date-input" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Label for date input</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_label-for-date-input-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="input">
   <span class="label">Publish date</span>
   <input type="date" />
 </label>
-
-```html
-<label class="input">
-  <span class="label">Publish date</span>
-  <input type="date" />
-</label>
-```
-
-### Floating Label
+</div>
+</div>
+<input type="radio" name="tab_label-for-date-input-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22input%22%3E%0A%20%20%3Cspan%20class%3D%22label%22%3EPublish%20date%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22date%22%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;input&quot;&gt;&#10;  &lt;span class=&quot;label&quot;&gt;Publish date&lt;/span&gt;&#10;  &lt;input type=&quot;date&quot; /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="floating-label">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#floating-label" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Floating Label</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_floating-label-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <label class="floating-label w-full max-w-xs">
   <span>Your Email</span>
   <input type="email" placeholder="mail@site.com" class="input input-md" />
 </label>
-
-```html
-<label class="floating-label">
-  <span>Your Email</span>
-  <input type="text" placeholder="mail@site.com" class="input input-md" />
-</label>
-```
-
-### Floating Label with Different Sizes
+</div>
+</div>
+<input type="radio" name="tab_floating-label-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cspan%3EYour%20Email%3C%2Fspan%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22mail%40site.com%22%20class%3D%22input%20input-md%22%20%2F%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;span&gt;Your Email&lt;/span&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;mail@site.com&quot; class=&quot;input input-md&quot; /&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="floating-label-with-different-sizes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#floating-label-with-different-sizes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Floating Label with Different Sizes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_floating-label-with-different-sizes-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid gap-4 w-xs">
   <label class="floating-label">
     <input type="text" placeholder="Extra Small" class="input input-xs" />
@@ -96,42 +181,39 @@ description: "Label is used to provide a name or title for an input field. Label
     <span>Extra Large</span>
   </label>
 </div>
-
-```html
-<label class="floating-label">
-  <input type="text" placeholder="Extra Small" class="input input-xs" />
-  <span>Extra Small</span>
-</label>
-<label class="floating-label">
-  <input type="text" placeholder="Small" class="input input-sm" />
-  <span>Small</span>
-</label>
-<label class="floating-label">
-  <input type="text" placeholder="Medium" class="input input-md" />
-  <span>Medium</span>
-</label>
-<label class="floating-label">
-  <input type="text" placeholder="Large" class="input input-lg" />
-  <span>Large</span>
-</label>
-<label class="floating-label">
-  <input type="text" placeholder="Extra Large" class="input input-xl" />
-  <span>Extra Large</span>
-</label>
-```
-
-### Responsive Size Floating Label
+</div>
+</div>
+<input type="radio" name="tab_floating-label-with-different-sizes-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Extra%20Small%22%20class%3D%22input%20input-xs%22%20%2F%3E%0A%20%20%3Cspan%3EExtra%20Small%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Small%22%20class%3D%22input%20input-sm%22%20%2F%3E%0A%20%20%3Cspan%3ESmall%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Medium%22%20class%3D%22input%20input-md%22%20%2F%3E%0A%20%20%3Cspan%3EMedium%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Large%22%20class%3D%22input%20input-lg%22%20%2F%3E%0A%20%20%3Cspan%3ELarge%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Extra%20Large%22%20class%3D%22input%20input-xl%22%20%2F%3E%0A%20%20%3Cspan%3EExtra%20Large%3C%2Fspan%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Extra Small&quot; class=&quot;input input-xs&quot; /&gt;&#10;  &lt;span&gt;Extra Small&lt;/span&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Small&quot; class=&quot;input input-sm&quot; /&gt;&#10;  &lt;span&gt;Small&lt;/span&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Medium&quot; class=&quot;input input-md&quot; /&gt;&#10;  &lt;span&gt;Medium&lt;/span&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Large&quot; class=&quot;input input-lg&quot; /&gt;&#10;  &lt;span&gt;Large&lt;/span&gt;&#10;&lt;/label&gt;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Extra Large&quot; class=&quot;input input-xl&quot; /&gt;&#10;  &lt;span&gt;Extra Large&lt;/span&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="responsive-size-floating-label">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/label/#responsive-size-floating-label" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Responsive Size Floating Label</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_responsive-size-floating-label-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid gap-4 w-xs">
   <label class="floating-label">
     <input type="text" placeholder="Input" class="input input-xs sm:input-sm md:input-md lg:input-lg xl:input-xl" value="Placeholder" />
     <span>Input</span>
   </label>
-
   <label class="floating-label">
     <textarea placeholder="Textarea" class="textarea textarea-xs sm:textarea-sm md:textarea-md lg:textarea-lg xl:textarea-xl">Placeholder</textarea>
     <span>Textarea</span>
   </label>
-
   <label class="floating-label">
     <select class="select select-xs sm:select-sm md:select-md lg:select-lg xl:select-xl">
       <option disabled selected>Placeholder</option>
@@ -140,23 +222,16 @@ description: "Label is used to provide a name or title for an input field. Label
     <span>Select</span>
   </label>
 </div>
-
-```html
-<label class="floating-label">
-  <input type="text" placeholder="Input" class="input input-xs sm:input-sm md:input-md lg:input-lg xl:input-xl" value="Placeholder" />
-  <span>Input</span>
-</label>
-
-<label class="floating-label">
-  <textarea placeholder="Textarea" class="textarea textarea-xs sm:textarea-sm md:textarea-md lg:textarea-lg xl:textarea-xl">Placeholder</textarea>
-  <span>Textarea</span>
-</label>
-
-<label class="floating-label">
-  <select class="select select-xs sm:select-sm md:select-md lg:select-lg xl:select-xl">
-    <option disabled selected>Placeholder</option>
-    <option>Option</option>
-  </select>
-  <span>Select</span>
-</label>
-```
+</div>
+</div>
+<input type="radio" name="tab_responsive-size-floating-label-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Input%22%20class%3D%22input%20input-xs%20sm%3Ainput-sm%20md%3Ainput-md%20lg%3Ainput-lg%20xl%3Ainput-xl%22%20value%3D%22Placeholder%22%20%2F%3E%0A%20%20%3Cspan%3EInput%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Ctextarea%20placeholder%3D%22Textarea%22%20class%3D%22textarea%20textarea-xs%20sm%3Atextarea-sm%20md%3Atextarea-md%20lg%3Atextarea-lg%20xl%3Atextarea-xl%22%3EPlaceholder%3C%2Ftextarea%3E%0A%20%20%3Cspan%3ETextarea%3C%2Fspan%3E%0A%3C%2Flabel%3E%0A%0A%3Clabel%20class%3D%22floating-label%22%3E%0A%20%20%3Cselect%20class%3D%22select%20select-xs%20sm%3Aselect-sm%20md%3Aselect-md%20lg%3Aselect-lg%20xl%3Aselect-xl%22%3E%0A%20%20%20%20%3Coption%20disabled%20selected%3EPlaceholder%3C%2Foption%3E%0A%20%20%20%20%3Coption%3EOption%3C%2Foption%3E%0A%20%20%3C%2Fselect%3E%0A%20%20%3Cspan%3ESelect%3C%2Fspan%3E%0A%3C%2Flabel%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;input type=&quot;text&quot; placeholder=&quot;Input&quot; class=&quot;input input-xs sm:input-sm md:input-md lg:input-lg xl:input-xl&quot; value=&quot;Placeholder&quot; /&gt;&#10;  &lt;span&gt;Input&lt;/span&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;textarea placeholder=&quot;Textarea&quot; class=&quot;textarea textarea-xs sm:textarea-sm md:textarea-md lg:textarea-lg xl:textarea-xl&quot;&gt;Placeholder&lt;/textarea&gt;&#10;  &lt;span&gt;Textarea&lt;/span&gt;&#10;&lt;/label&gt;&#10;&#10;&lt;label class=&quot;floating-label&quot;&gt;&#10;  &lt;select class=&quot;select select-xs sm:select-sm md:select-md lg:select-lg xl:select-xl&quot;&gt;&#10;    &lt;option disabled selected&gt;Placeholder&lt;/option&gt;&#10;    &lt;option&gt;Option&lt;/option&gt;&#10;  &lt;/select&gt;&#10;  &lt;span&gt;Select&lt;/span&gt;&#10;&lt;/label&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

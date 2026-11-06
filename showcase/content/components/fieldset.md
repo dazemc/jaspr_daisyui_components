@@ -3,41 +3,78 @@ title: "Fieldset"
 description: "Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description."
 ---
 
-### Fieldset fieldset-legend and label
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">fieldset</code></th><td class="whitespace-nowrap">Component</td><td>for the fieldset container</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">label</code></th><td class="whitespace-nowrap">Component</td><td>label for inputs</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">fieldset-legend</code></th><td class="whitespace-nowrap">Part</td><td>for the title of the fieldset</td></tr></tbody></table></div>
 
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="fieldset-fieldset-legend-and-label">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/fieldset/#fieldset-fieldset-legend-and-label" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Fieldset fieldset-legend and label</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_fieldset-fieldset-legend-and-label-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">Page title</legend>
   <input type="text" class="input" placeholder="My awesome page" />
   <p class="label">You can edit page title later on from settings</p>
 </fieldset>
-
-```html
-<fieldset class="fieldset">
-  <legend class="fieldset-legend">Page title</legend>
-  <input type="text" class="input" placeholder="My awesome page" />
-  <p class="label">You can edit page title later on from settings</p>
-</fieldset>
-```
-
-### Fieldset with background and border
-
+</div>
+</div>
+<input type="radio" name="tab_fieldset-fieldset-legend-and-label-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3EPage%20title%3C%2Flegend%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22My%20awesome%20page%22%20%2F%3E%0A%20%20%3Cp%20class%3D%22label%22%3EYou%20can%20edit%20page%20title%20later%20on%20from%20settings%3C%2Fp%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;Page title&lt;/legend&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;My awesome page&quot; /&gt;&#10;  &lt;p class=&quot;label&quot;&gt;You can edit page title later on from settings&lt;/p&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="fieldset-with-background-and-border">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/fieldset/#fieldset-with-background-and-border" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Fieldset with background and border</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_fieldset-with-background-and-border-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Page title</legend>
   <input type="text" class="input" placeholder="My awesome page" />
   <p class="label">You can edit page title later on from settings</p>
 </fieldset>
-
-```html
-<fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-  <legend class="fieldset-legend">Page title</legend>
-  <input type="text" class="input" placeholder="My awesome page" />
-  <p class="label">You can edit page title later on from settings</p>
-</fieldset>
-```
-
-### Fieldset with multiple inputs
-#### Add proper id and for attributes for accessibility. The id must be unique and depends on your context.
-
+</div>
+</div>
+<input type="radio" name="tab_fieldset-with-background-and-border-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%20bg-base-200%20border-base-300%20rounded-box%20w-xs%20border%20p-4%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3EPage%20title%3C%2Flegend%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22My%20awesome%20page%22%20%2F%3E%0A%20%20%3Cp%20class%3D%22label%22%3EYou%20can%20edit%20page%20title%20later%20on%20from%20settings%3C%2Fp%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;Page title&lt;/legend&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;My awesome page&quot; /&gt;&#10;  &lt;p class=&quot;label&quot;&gt;You can edit page title later on from settings&lt;/p&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="fieldset-with-multiple-inputs">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/fieldset/#fieldset-with-multiple-inputs" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Fieldset with multiple inputs</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Add proper id and for attributes for accessibility. The id must be unique and depends on your context.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_fieldset-with-multiple-inputs-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Page details</legend>
   <label class="label">Title</label>
@@ -47,24 +84,30 @@ description: "Fieldset is a container for grouping related form elements. It inc
   <label class="label">Author</label>
   <input type="text" class="input" placeholder="Name" />
 </fieldset>
-
-```html
-<fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-  <legend class="fieldset-legend">Page details</legend>
-
-  <label class="label">Title</label>
-  <input type="text" class="input" placeholder="My awesome page" />
-
-  <label class="label">Slug</label>
-  <input type="text" class="input" placeholder="my-awesome-page" />
-
-  <label class="label">Author</label>
-  <input type="text" class="input" placeholder="Name" />
-</fieldset>
-```
-
-### Fieldset with multiple join items
-
+</div>
+</div>
+<input type="radio" name="tab_fieldset-with-multiple-inputs-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%20bg-base-200%20border-base-300%20rounded-box%20w-xs%20border%20p-4%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3EPage%20details%3C%2Flegend%3E%0A%0A%20%20%3Clabel%20class%3D%22label%22%3ETitle%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22My%20awesome%20page%22%20%2F%3E%0A%0A%20%20%3Clabel%20class%3D%22label%22%3ESlug%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22my-awesome-page%22%20%2F%3E%0A%0A%20%20%3Clabel%20class%3D%22label%22%3EAuthor%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%22%20placeholder%3D%22Name%22%20%2F%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;Page details&lt;/legend&gt;&#10;&#10;  &lt;label class=&quot;label&quot;&gt;Title&lt;/label&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;My awesome page&quot; /&gt;&#10;&#10;  &lt;label class=&quot;label&quot;&gt;Slug&lt;/label&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;my-awesome-page&quot; /&gt;&#10;&#10;  &lt;label class=&quot;label&quot;&gt;Author&lt;/label&gt;&#10;  &lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;Name&quot; /&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="fieldset-with-multiple-join-items">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/fieldset/#fieldset-with-multiple-join-items" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Fieldset with multiple join items</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_fieldset-with-multiple-join-items-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Settings</legend>
   <div class="join">
@@ -72,20 +115,31 @@ description: "Fieldset is a container for grouping related form elements. It inc
     <button class="btn join-item">save</button>
   </div>
 </fieldset>
-
-```html
-<fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-  <legend class="fieldset-legend">Settings</legend>
-  <div class="join">
-    <input type="text" class="input join-item" placeholder="Product name" />
-    <button class="btn join-item">save</button>
-  </div>
-</fieldset>
-```
-
-### Login form with fieldset
-#### Add proper id and for attributes for accessibility. The id must be unique and depends on your context.
-
+</div>
+</div>
+<input type="radio" name="tab_fieldset-with-multiple-join-items-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%20bg-base-200%20border-base-300%20rounded-box%20w-xs%20border%20p-4%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3ESettings%3C%2Flegend%3E%0A%20%20%3Cdiv%20class%3D%22join%22%3E%0A%20%20%20%20%3Cinput%20type%3D%22text%22%20class%3D%22input%20join-item%22%20placeholder%3D%22Product%20name%22%20%2F%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3Esave%3C%2Fbutton%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;Settings&lt;/legend&gt;&#10;  &lt;div class=&quot;join&quot;&gt;&#10;    &lt;input type=&quot;text&quot; class=&quot;input join-item&quot; placeholder=&quot;Product name&quot; /&gt;&#10;    &lt;button class=&quot;btn join-item&quot;&gt;save&lt;/button&gt;&#10;  &lt;/div&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="login-form-with-fieldset">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/fieldset/#login-form-with-fieldset" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Login form with fieldset</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Add proper id and for attributes for accessibility. The id must be unique and depends on your context.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_login-form-with-fieldset-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Login</legend>
   <label class="label">Email</label>
@@ -94,17 +148,16 @@ description: "Fieldset is a container for grouping related form elements. It inc
   <input type="password" class="input" placeholder="Password" />
   <button class="btn btn-neutral mt-4">Login</button>
 </fieldset>
-
-```html
-<fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-  <legend class="fieldset-legend">Login</legend>
-
-  <label class="label">Email</label>
-  <input type="email" class="input" placeholder="Email" />
-
-  <label class="label">Password</label>
-  <input type="password" class="input" placeholder="Password" />
-
-  <button class="btn btn-neutral mt-4">Login</button>
-</fieldset>
-```
+</div>
+</div>
+<input type="radio" name="tab_login-form-with-fieldset-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cfieldset%20class%3D%22fieldset%20bg-base-200%20border-base-300%20rounded-box%20w-xs%20border%20p-4%22%3E%0A%20%20%3Clegend%20class%3D%22fieldset-legend%22%3ELogin%3C%2Flegend%3E%0A%0A%20%20%3Clabel%20class%3D%22label%22%3EEmail%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22email%22%20class%3D%22input%22%20placeholder%3D%22Email%22%20%2F%3E%0A%0A%20%20%3Clabel%20class%3D%22label%22%3EPassword%3C%2Flabel%3E%0A%20%20%3Cinput%20type%3D%22password%22%20class%3D%22input%22%20placeholder%3D%22Password%22%20%2F%3E%0A%0A%20%20%3Cbutton%20class%3D%22btn%20btn-neutral%20mt-4%22%3ELogin%3C%2Fbutton%3E%0A%3C%2Ffieldset%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;fieldset class=&quot;fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4&quot;&gt;&#10;  &lt;legend class=&quot;fieldset-legend&quot;&gt;Login&lt;/legend&gt;&#10;&#10;  &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;&#10;  &lt;input type=&quot;email&quot; class=&quot;input&quot; placeholder=&quot;Email&quot; /&gt;&#10;&#10;  &lt;label class=&quot;label&quot;&gt;Password&lt;/label&gt;&#10;  &lt;input type=&quot;password&quot; class=&quot;input&quot; placeholder=&quot;Password&quot; /&gt;&#10;&#10;  &lt;button class=&quot;btn btn-neutral mt-4&quot;&gt;Login&lt;/button&gt;&#10;&lt;/fieldset&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

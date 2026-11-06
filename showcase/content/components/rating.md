@@ -3,11 +3,20 @@ title: "Rating"
 description: "Rating is a set of radio buttons that allow the user to rate something."
 ---
 
-> :INFO:
->
-> Items in each rating should have unique `name` attributes to avoid conflicts with other ratings on the same page.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating</code></th><td class="whitespace-nowrap">Component</td><td>For a div containing radio inputs</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-half</code></th><td class="whitespace-nowrap">Modifier</td><td>To shows half of the shapes. Useful for half star ratings</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-hidden</code></th><td class="whitespace-nowrap">Modifier</td><td>For the first radio to make it hidden so user can clear the rating</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-xs</code></th><td class="whitespace-nowrap">Size</td><td>Extra small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-sm</code></th><td class="whitespace-nowrap">Size</td><td>Small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-md</code></th><td class="whitespace-nowrap">Size</td><td>Medium size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-lg</code></th><td class="whitespace-nowrap">Size</td><td>Large size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">rating-xl</code></th><td class="whitespace-nowrap">Size</td><td>Extra large size</td></tr></tbody></table></div>
 
-### Rating
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">Items in each rating should have unique <code>name</code> attributes to avoid conflicts with other ratings on the same page.</p></div></div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="rating">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#rating" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Rating</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_rating-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating">
   <input type="radio" name="rating-1" class="mask mask-star" aria-label="1 star" />
   <input type="radio" name="rating-1" class="mask mask-star" aria-label="2 star" checked="checked" />
@@ -15,18 +24,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-1" class="mask mask-star" aria-label="4 star" />
   <input type="radio" name="rating-1" class="mask mask-star" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating">
-  <input type="radio" name="rating-1" class="mask mask-star" aria-label="1 star" />
-  <input type="radio" name="rating-1" class="mask mask-star" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-1" class="mask mask-star" aria-label="3 star" />
-  <input type="radio" name="rating-1" class="mask mask-star" aria-label="4 star" />
-  <input type="radio" name="rating-1" class="mask mask-star" aria-label="5 star" />
 </div>
-```
-
-### Read-only Rating
+</div>
+<input type="radio" name="tab_rating-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-1%22%20class%3D%22mask%20mask-star%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-1%22%20class%3D%22mask%20mask-star%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-1%22%20class%3D%22mask%20mask-star%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-1%22%20class%3D%22mask%20mask-star%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-1%22%20class%3D%22mask%20mask-star%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-1&quot; class=&quot;mask mask-star&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-1&quot; class=&quot;mask mask-star&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-1&quot; class=&quot;mask mask-star&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-1&quot; class=&quot;mask mask-star&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-1&quot; class=&quot;mask mask-star&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="read-only-rating">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#read-only-rating" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Read-only Rating</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_read-only-rating-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating">
   <div class="mask mask-star" aria-label="1 star"></div>
   <div class="mask mask-star" aria-label="2 star"></div>
@@ -34,18 +55,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <div class="mask mask-star" aria-label="4 star"></div>
   <div class="mask mask-star" aria-label="5 star"></div>
 </div>
-
-```html
-<div class="rating">
-  <div class="mask mask-star" aria-label="1 star"></div>
-  <div class="mask mask-star" aria-label="2 star"></div>
-  <div class="mask mask-star" aria-label="3 star" aria-current="true"></div>
-  <div class="mask mask-star" aria-label="4 star"></div>
-  <div class="mask mask-star" aria-label="5 star"></div>
 </div>
-```
-
-### mask-star-2 with warning color
+</div>
+<input type="radio" name="tab_read-only-rating-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%22%3E%0A%20%20%3Cdiv%20class%3D%22mask%20mask-star%22%20aria-label%3D%221%20star%22%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22mask%20mask-star%22%20aria-label%3D%222%20star%22%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22mask%20mask-star%22%20aria-label%3D%223%20star%22%20aria-current%3D%22true%22%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22mask%20mask-star%22%20aria-label%3D%224%20star%22%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22mask%20mask-star%22%20aria-label%3D%225%20star%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating&quot;&gt;&#10;  &lt;div class=&quot;mask mask-star&quot; aria-label=&quot;1 star&quot;&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;mask mask-star&quot; aria-label=&quot;2 star&quot;&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;mask mask-star&quot; aria-label=&quot;3 star&quot; aria-current=&quot;true&quot;&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;mask mask-star&quot; aria-label=&quot;4 star&quot;&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;mask mask-star&quot; aria-label=&quot;5 star&quot;&gt;&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="mask-star-2-with-warning-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#mask-star-2-with-warning-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">mask-star-2 with warning color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_mask-star-2-with-warning-color-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating">
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
@@ -53,18 +86,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating">
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-```
-
-### mask-heart with multiple colors
+</div>
+<input type="radio" name="tab_mask-star-2-with-warning-color-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-2%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-2%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-2%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-2%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-2%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-2&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-2&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-2&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-2&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-2&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="mask-heart-with-multiple-colors">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#mask-heart-with-multiple-colors" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">mask-heart with multiple colors</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_mask-heart-with-multiple-colors-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="gap-1 rating">
   <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" aria-label="1 star" />
   <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" aria-label="2 star" checked="checked" />
@@ -72,18 +117,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" aria-label="4 star" />
   <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating gap-1">
-  <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" aria-label="1 star" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400" aria-label="3 star" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" aria-label="4 star" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" aria-label="5 star" />
 </div>
-```
-
-### mask-star-2 with green-500 color
+</div>
+<input type="radio" name="tab_mask-heart-with-multiple-colors-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%20gap-1%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-3%22%20class%3D%22mask%20mask-heart%20bg-red-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-3%22%20class%3D%22mask%20mask-heart%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-3%22%20class%3D%22mask%20mask-heart%20bg-yellow-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-3%22%20class%3D%22mask%20mask-heart%20bg-lime-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-3%22%20class%3D%22mask%20mask-heart%20bg-green-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating gap-1&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-3&quot; class=&quot;mask mask-heart bg-red-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-3&quot; class=&quot;mask mask-heart bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-3&quot; class=&quot;mask mask-heart bg-yellow-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-3&quot; class=&quot;mask mask-heart bg-lime-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-3&quot; class=&quot;mask mask-heart bg-green-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="mask-star-2-with-green-500-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#mask-star-2-with-green-500-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">mask-star-2 with green-500 color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_mask-star-2-with-green-500-color-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating">
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="1 star" />
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="2 star" checked="checked" />
@@ -91,18 +148,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="4 star" />
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating">
-  <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" aria-label="1 star" />
-  <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" aria-label="3 star" />
-  <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" aria-label="4 star" />
-  <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" aria-label="5 star" />
 </div>
-```
-
-### Sizes
+</div>
+<input type="radio" name="tab_mask-star-2-with-green-500-color-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-4%22%20class%3D%22mask%20mask-star-2%20bg-green-500%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-4%22%20class%3D%22mask%20mask-star-2%20bg-green-500%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-4%22%20class%3D%22mask%20mask-star-2%20bg-green-500%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-4%22%20class%3D%22mask%20mask-star-2%20bg-green-500%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-4%22%20class%3D%22mask%20mask-star-2%20bg-green-500%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-4&quot; class=&quot;mask mask-star-2 bg-green-500&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-4&quot; class=&quot;mask mask-star-2 bg-green-500&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-4&quot; class=&quot;mask mask-star-2 bg-green-500&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-4&quot; class=&quot;mask mask-star-2 bg-green-500&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-4&quot; class=&quot;mask mask-star-2 bg-green-500&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="sizes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#sizes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Sizes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_sizes-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col gap-2 items-center">
   <div class="rating rating-xs">
     <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
@@ -140,53 +209,31 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
     <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
   </div>
 </div>
-
-```html
-<!-- xs -->
-<div class="rating rating-xs">
-  <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-<!-- sm -->
-<div class="rating rating-sm">
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-<!-- md -->
-<div class="rating rating-md">
-  <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+<input type="radio" name="tab_sizes-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20xs%20--%3E%0A%3Cdiv%20class%3D%22rating%20rating-xs%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-5%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-5%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-5%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-5%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-5%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E%0A%3C%21--%20sm%20--%3E%0A%3Cdiv%20class%3D%22rating%20rating-sm%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-6%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-6%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-6%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-6%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-6%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E%0A%3C%21--%20md%20--%3E%0A%3Cdiv%20class%3D%22rating%20rating-md%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-7%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-7%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-7%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-7%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-7%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E%0A%3C%21--%20lg%20--%3E%0A%3Cdiv%20class%3D%22rating%20rating-lg%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-8%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-8%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-8%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-8%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-8%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E%0A%3C%21--%20xl%20--%3E%0A%3Cdiv%20class%3D%22rating%20rating-xl%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-9%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-9%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-9%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-9%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-9%22%20class%3D%22mask%20mask-star-2%20bg-orange-400%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- xs --&gt;&#10;&lt;div class=&quot;rating rating-xs&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-5&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-5&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-5&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-5&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-5&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;&#10;&lt;!-- sm --&gt;&#10;&lt;div class=&quot;rating rating-sm&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-6&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-6&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-6&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-6&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-6&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;&#10;&lt;!-- md --&gt;&#10;&lt;div class=&quot;rating rating-md&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-7&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-7&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-7&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-7&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-7&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;&#10;&lt;!-- lg --&gt;&#10;&lt;div class=&quot;rating rating-lg&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-8&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-8&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-8&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-8&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-8&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;&#10;&lt;!-- xl --&gt;&#10;&lt;div class=&quot;rating rating-xl&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-9&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-9&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-9&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-9&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-9&quot; class=&quot;mask mask-star-2 bg-orange-400&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
 </div>
-<!-- lg -->
-<div class="rating rating-lg">
-  <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-<!-- xl -->
-<div class="rating rating-xl">
-  <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
-```
-
-### with `rating-hidden`
-#### `rating-hidden` is a hidden radio at the start to allow users to remove their rating.
-
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="with-rating-hidden">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#with-rating-hidden" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">with `rating-hidden`</h3>
+</div>
+<div class="pb-4 text-xs opacity-70"><code>rating-hidden</code> is a hidden radio at the start to allow users to remove their rating.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_with-rating-hidden-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating rating-lg">
   <input type="radio" name="rating-10" class="rating-hidden" aria-label="clear" />
   <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="1 star" />
@@ -195,19 +242,30 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="4 star" />
   <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating rating-lg">
-  <input type="radio" name="rating-10" class="rating-hidden" aria-label="clear" />
-  <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="1 star" />
-  <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="2 star" checked="checked" />
-  <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="3 star" />
-  <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="4 star" />
-  <input type="radio" name="rating-10" class="mask mask-star-2" aria-label="5 star" />
 </div>
-```
-
-### half stars
+</div>
+<input type="radio" name="tab_with-rating-hidden-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%20rating-lg%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22rating-hidden%22%20aria-label%3D%22clear%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22mask%20mask-star-2%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22mask%20mask-star-2%22%20aria-label%3D%222%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22mask%20mask-star-2%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22mask%20mask-star-2%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-10%22%20class%3D%22mask%20mask-star-2%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating rating-lg&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;rating-hidden&quot; aria-label=&quot;clear&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;mask mask-star-2&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;mask mask-star-2&quot; aria-label=&quot;2 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;mask mask-star-2&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;mask mask-star-2&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-10&quot; class=&quot;mask mask-star-2&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="half-stars">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/rating/#half-stars" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">half stars</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_half-stars-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="rating rating-lg rating-half">
   <input type="radio" name="rating-11" class="rating-hidden" aria-label="clear" />
   <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="0.5 star" />
@@ -221,19 +279,16 @@ description: "Rating is a set of radio buttons that allow the user to rate somet
   <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="4.5 star" />
   <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="5 star" />
 </div>
-
-```html
-<div class="rating rating-lg rating-half">
-  <input type="radio" name="rating-11" class="rating-hidden" aria-label="clear" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-1 bg-green-500" aria-label="0.5 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-2 bg-green-500" aria-label="1 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-1 bg-green-500" aria-label="1.5 star" checked="checked" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-2 bg-green-500" aria-label="2 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-1 bg-green-500" aria-label="2.5 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-2 bg-green-500" aria-label="3 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-1 bg-green-500" aria-label="3.5 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-2 bg-green-500" aria-label="4 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-1 bg-green-500" aria-label="4.5 star" />
-  <input type="radio" name="rating-11" class="mask mask-star-2 mask-half-2 bg-green-500" aria-label="5 star" />
 </div>
-```
+</div>
+<input type="radio" name="tab_half-stars-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22rating%20rating-lg%20rating-half%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22rating-hidden%22%20aria-label%3D%22clear%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-1%20bg-green-500%22%20aria-label%3D%220.5%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-2%20bg-green-500%22%20aria-label%3D%221%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-1%20bg-green-500%22%20aria-label%3D%221.5%20star%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-2%20bg-green-500%22%20aria-label%3D%222%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-1%20bg-green-500%22%20aria-label%3D%222.5%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-2%20bg-green-500%22%20aria-label%3D%223%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-1%20bg-green-500%22%20aria-label%3D%223.5%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-2%20bg-green-500%22%20aria-label%3D%224%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-1%20bg-green-500%22%20aria-label%3D%224.5%20star%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22rating-11%22%20class%3D%22mask%20mask-star-2%20mask-half-2%20bg-green-500%22%20aria-label%3D%225%20star%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;rating rating-lg rating-half&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;rating-hidden&quot; aria-label=&quot;clear&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-1 bg-green-500&quot; aria-label=&quot;0.5 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-2 bg-green-500&quot; aria-label=&quot;1 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-1 bg-green-500&quot; aria-label=&quot;1.5 star&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-2 bg-green-500&quot; aria-label=&quot;2 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-1 bg-green-500&quot; aria-label=&quot;2.5 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-2 bg-green-500&quot; aria-label=&quot;3 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-1 bg-green-500&quot; aria-label=&quot;3.5 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-2 bg-green-500&quot; aria-label=&quot;4 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-1 bg-green-500&quot; aria-label=&quot;4.5 star&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;rating-11&quot; class=&quot;mask mask-star-2 mask-half-2 bg-green-500&quot; aria-label=&quot;5 star&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

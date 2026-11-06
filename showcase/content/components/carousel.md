@@ -3,7 +3,19 @@ title: "Carousel"
 description: "Carousel show images or content in a scrollable area."
 ---
 
-### Snap to start (default)
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel</code></th><td class="whitespace-nowrap">Component</td><td>Carousel container</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-item</code></th><td class="whitespace-nowrap">Part</td><td>Carousel item</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-start</code></th><td class="whitespace-nowrap">Modifier</td><td>Snap elements to start</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-center</code></th><td class="whitespace-nowrap">Modifier</td><td>Snap elements to center</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-end</code></th><td class="whitespace-nowrap">Modifier</td><td>Snap elements to end</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-horizontal</code></th><td class="whitespace-nowrap">Direction</td><td>Horizontal layout (default)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">carousel-vertical</code></th><td class="whitespace-nowrap">Direction</td><td>Vertical layout</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="snap-to-start-default">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#snap-to-start-default" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Snap to start (default)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_snap-to-start-default-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="carousel rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Carousel slider" />
@@ -27,48 +39,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Carousel slider" />
   </div>
 </div>
-
-```html
-<div class="carousel rounded-box">
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-      alt="Burger" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      alt="Burger" />
-  </div>
 </div>
-```
-
-### Snap to center
+</div>
+<input type="radio" name="tab_snap-to-start-default-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20rounded-box%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20alt%3D%22Burger%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel rounded-box&quot;&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      alt=&quot;Burger&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="snap-to-center">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#snap-to-center" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Snap to center</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_snap-to-center-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="carousel carousel-center rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS slider" />
@@ -92,42 +86,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Tailwind CSS slider" />
   </div>
 </div>
-
-```html
-<div class="carousel carousel-center rounded-box">
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Pizza" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      alt="Pizza" />
-  </div>
 </div>
-```
-
-### Snap to end
+</div>
+<input type="radio" name="tab_snap-to-center-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20carousel-center%20rounded-box%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20alt%3D%22Pizza%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel carousel-center rounded-box&quot;&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot; alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot; alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot; alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      alt=&quot;Pizza&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="snap-to-end">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#snap-to-end" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Snap to end</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_snap-to-end-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="carousel carousel-end rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS slide component" />
@@ -151,42 +133,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Tailwind CSS slide component" />
   </div>
 </div>
-
-```html
-<div class="carousel carousel-end rounded-box">
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Drink" />
-  </div>
-  <div class="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      alt="Drink" />
-  </div>
 </div>
-```
-
-### Carousel with full width items
+</div>
+<input type="radio" name="tab_snap-to-end-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20carousel-end%20rounded-box%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20alt%3D%22Drink%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel carousel-end rounded-box&quot;&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot; alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot; alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot; alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      alt=&quot;Drink&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="carousel-with-full-width-items">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#carousel-with-full-width-items" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Carousel with full width items</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_carousel-with-full-width-items-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-64 carousel rounded-box">
   <div class="w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="w-full" alt="Tailwind CSS carousel component" />
@@ -210,55 +180,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="w-full" alt="Tailwind CSS carousel component" />
   </div>
 </div>
-
-```html
-<div class="carousel rounded-box w-64">
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
-  <div class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      class="w-full"
-      alt="Tailwind CSS Carousel component" />
-  </div>
 </div>
-```
-
-### Vertical carousel
+</div>
+<input type="radio" name="tab_carousel-with-full-width-items-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20rounded-box%20w-64%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20Carousel%20component%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel rounded-box w-64&quot;&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      class=&quot;w-full&quot;&#10;      alt=&quot;Tailwind CSS Carousel component&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="vertical-carousel">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#vertical-carousel" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Vertical carousel</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_vertical-carousel-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="h-96 carousel carousel-vertical rounded-box">
   <div class="carousel-item h-full">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Free Tailwind CSS Slider" />
@@ -282,34 +227,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Free Tailwind CSS Slider" />
   </div>
 </div>
-
-```html
-<div class="carousel carousel-vertical rounded-box h-96">
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" />
-  </div>
-  <div class="carousel-item h-full">
-    <img alt="Free Tailwind CSS Slider" src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" />
-  </div>
 </div>
-```
-
-### Carousel with half width items
+</div>
+<input type="radio" name="tab_vertical-carousel-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20carousel-vertical%20rounded-box%20h-96%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20h-full%22%3E%0A%20%20%20%20%3Cimg%20alt%3D%22Free%20Tailwind%20CSS%20Slider%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel carousel-vertical rounded-box h-96&quot;&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item h-full&quot;&gt;&#10;    &lt;img alt=&quot;Free Tailwind CSS Slider&quot; src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="carousel-with-half-width-items">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#carousel-with-half-width-items" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Carousel with half width items</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_carousel-with-half-width-items-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-96 carousel rounded-box">
   <div class="w-1/2 carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="w-full" alt="Tailwind CSS slide plugin" />
@@ -333,55 +274,30 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="w-full" alt="Tailwind CSS slide plugin" />
   </div>
 </div>
-
-```html
-<div class="carousel rounded-box w-96">
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-      class="w-full" />
-  </div>
-  <div class="carousel-item w-1/2">
-    <img
-      alt="Tailwind CSS slide plugin"
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      class="w-full" />
-  </div>
 </div>
-```
-
-### Full-bleed carousel
+</div>
+<input type="radio" name="tab_carousel-with-half-width-items-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20rounded-box%20w-96%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%20w-1%2F2%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20plugin%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel rounded-box w-96&quot;&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item w-1/2&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide plugin&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="full-bleed-carousel">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#full-bleed-carousel" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Full-bleed carousel</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_full-bleed-carousel-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="rounded-box" alt="Tailwind CSS component" />
@@ -405,57 +321,31 @@ description: "Carousel show images or content in a scrollable area."
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="rounded-box" alt="Tailwind CSS component" />
   </div>
 </div>
-
-```html
-<div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-      class="rounded-box" />
-  </div>
-  <div class="carousel-item">
-    <img
-      alt="Tailwind CSS component"
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      class="rounded-box" />
-  </div>
 </div>
-```
-
-### Carousel with indicator buttons
-#### This slider works with anchor links so the browser will snap vertically to the image when you click buttons.
-
+</div>
+<input type="radio" name="tab_full-bleed-carousel-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20carousel-center%20bg-neutral%20rounded-box%20max-w-md%20space-x-4%20p-4%22%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559703248-dcaaec9fab78.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1565098772267-60af42b81ef2.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1572635148818-ef6fd45eb394.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1494253109108-2e30c049369b.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1550258987-190a2d41a8ba.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1559181567-c3190ca9959b.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22carousel-item%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1601004890684-d8cbf643f5f2.webp%22%0A%20%20%20%20%20%20class%3D%22rounded-box%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4&quot;&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;carousel-item&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp&quot;&#10;      class=&quot;rounded-box&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="carousel-with-indicator-buttons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#carousel-with-indicator-buttons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Carousel with indicator buttons</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">This slider works with anchor links so the browser will snap vertically to the image when you click buttons.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_carousel-with-indicator-buttons-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full carousel">
   <div id="item1" class="w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" alt="Tailwind CSS gallery" />
@@ -476,45 +366,31 @@ description: "Carousel show images or content in a scrollable area."
   <a href="#item3" class="btn btn-xs">3</a>
   <a href="#item4" class="btn btn-xs">4</a>
 </div>
-
-```html
-<div class="carousel w-full">
-  <div id="item1" class="carousel-item w-full">
-    <img
-      alt="Tailwind CSS gallery"
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-  </div>
-  <div id="item2" class="carousel-item w-full">
-    <img
-      alt="Tailwind CSS gallery"
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full" />
-  </div>
-  <div id="item3" class="carousel-item w-full">
-    <img
-      alt="Tailwind CSS gallery"
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full" />
-  </div>
-  <div id="item4" class="carousel-item w-full">
-    <img
-      alt="Tailwind CSS gallery"
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full" />
-  </div>
 </div>
-<div class="flex w-full justify-center gap-2 py-2">
-  <a href="#item1" class="btn btn-xs">1</a>
-  <a href="#item2" class="btn btn-xs">2</a>
-  <a href="#item3" class="btn btn-xs">3</a>
-  <a href="#item4" class="btn btn-xs">4</a>
 </div>
-```
-
-### Carousel with next/prev buttons
-#### This slider works with anchor links so the browser will snap vertically to the image when you click buttons.
-
+<input type="radio" name="tab_carousel-with-indicator-buttons-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20w-full%22%3E%0A%20%20%3Cdiv%20id%3D%22item1%22%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20gallery%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1625726411847-8cbb60cc71e6.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22item2%22%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20gallery%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1609621838510-5ad474b7d25d.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22item3%22%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20gallery%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1414694762283-acccc27bca85.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22item4%22%20class%3D%22carousel-item%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20gallery%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1665553365602-b2fb8e5d1707.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20class%3D%22flex%20w-full%20justify-center%20gap-2%20py-2%22%3E%0A%20%20%3Ca%20href%3D%22%23item1%22%20class%3D%22btn%20btn-xs%22%3E1%3C%2Fa%3E%0A%20%20%3Ca%20href%3D%22%23item2%22%20class%3D%22btn%20btn-xs%22%3E2%3C%2Fa%3E%0A%20%20%3Ca%20href%3D%22%23item3%22%20class%3D%22btn%20btn-xs%22%3E3%3C%2Fa%3E%0A%20%20%3Ca%20href%3D%22%23item4%22%20class%3D%22btn%20btn-xs%22%3E4%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel w-full&quot;&gt;&#10;  &lt;div id=&quot;item1&quot; class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS gallery&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;item2&quot; class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS gallery&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;item3&quot; class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS gallery&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;item4&quot; class=&quot;carousel-item w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS gallery&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;&#10;&lt;div class=&quot;flex w-full justify-center gap-2 py-2&quot;&gt;&#10;  &lt;a href=&quot;#item1&quot; class=&quot;btn btn-xs&quot;&gt;1&lt;/a&gt;&#10;  &lt;a href=&quot;#item2&quot; class=&quot;btn btn-xs&quot;&gt;2&lt;/a&gt;&#10;  &lt;a href=&quot;#item3&quot; class=&quot;btn btn-xs&quot;&gt;3&lt;/a&gt;&#10;  &lt;a href=&quot;#item4&quot; class=&quot;btn btn-xs&quot;&gt;4&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="carousel-with-nextprev-buttons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/carousel/#carousel-with-nextprev-buttons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Carousel with next/prev buttons</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">This slider works with anchor links so the browser will snap vertically to the image when you click buttons.</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_carousel-with-nextprev-buttons-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full carousel">
   <div id="slide1" class="relative w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" alt="Tailwind CSS slide example" />
@@ -545,48 +421,16 @@ description: "Carousel show images or content in a scrollable area."
     </div>
   </div>
 </div>
-
-```html
-<div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img
-      alt="Tailwind CSS slide example"
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" class="btn btn-circle">❮</a>
-      <a href="#slide2" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide2" class="carousel-item relative w-full">
-    <img
-      alt="Tailwind CSS slide example"
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" class="btn btn-circle">❮</a>
-      <a href="#slide3" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide3" class="carousel-item relative w-full">
-    <img
-      alt="Tailwind CSS slide example"
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" class="btn btn-circle">❮</a>
-      <a href="#slide4" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide4" class="carousel-item relative w-full">
-    <img
-      alt="Tailwind CSS slide example"
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" class="btn btn-circle">❮</a>
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
-  </div>
 </div>
-```
+</div>
+<input type="radio" name="tab_carousel-with-nextprev-buttons-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22carousel%20w-full%22%3E%0A%20%20%3Cdiv%20id%3D%22slide1%22%20class%3D%22carousel-item%20relative%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20example%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1625726411847-8cbb60cc71e6.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22absolute%20left-5%20right-5%20top-1%2F2%20flex%20-translate-y-1%2F2%20transform%20justify-between%22%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide4%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AE%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide2%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AF%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22slide2%22%20class%3D%22carousel-item%20relative%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20example%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1609621838510-5ad474b7d25d.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22absolute%20left-5%20right-5%20top-1%2F2%20flex%20-translate-y-1%2F2%20transform%20justify-between%22%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide1%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AE%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide3%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AF%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22slide3%22%20class%3D%22carousel-item%20relative%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20example%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1414694762283-acccc27bca85.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22absolute%20left-5%20right-5%20top-1%2F2%20flex%20-translate-y-1%2F2%20transform%20justify-between%22%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide2%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AE%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide4%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AF%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20id%3D%22slide4%22%20class%3D%22carousel-item%20relative%20w-full%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20slide%20example%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1665553365602-b2fb8e5d1707.webp%22%0A%20%20%20%20%20%20class%3D%22w-full%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22absolute%20left-5%20right-5%20top-1%2F2%20flex%20-translate-y-1%2F2%20transform%20justify-between%22%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide3%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AE%3C%2Fa%3E%0A%20%20%20%20%20%20%3Ca%20href%3D%22%23slide1%22%20class%3D%22btn%20btn-circle%22%3E%E2%9D%AF%3C%2Fa%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;carousel w-full&quot;&gt;&#10;  &lt;div id=&quot;slide1&quot; class=&quot;carousel-item relative w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide example&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;    &lt;div class=&quot;absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between&quot;&gt;&#10;      &lt;a href=&quot;#slide4&quot; class=&quot;btn btn-circle&quot;&gt;❮&lt;/a&gt;&#10;      &lt;a href=&quot;#slide2&quot; class=&quot;btn btn-circle&quot;&gt;❯&lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;slide2&quot; class=&quot;carousel-item relative w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide example&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;    &lt;div class=&quot;absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between&quot;&gt;&#10;      &lt;a href=&quot;#slide1&quot; class=&quot;btn btn-circle&quot;&gt;❮&lt;/a&gt;&#10;      &lt;a href=&quot;#slide3&quot; class=&quot;btn btn-circle&quot;&gt;❯&lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;slide3&quot; class=&quot;carousel-item relative w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide example&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;    &lt;div class=&quot;absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between&quot;&gt;&#10;      &lt;a href=&quot;#slide2&quot; class=&quot;btn btn-circle&quot;&gt;❮&lt;/a&gt;&#10;      &lt;a href=&quot;#slide4&quot; class=&quot;btn btn-circle&quot;&gt;❯&lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;div id=&quot;slide4&quot; class=&quot;carousel-item relative w-full&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS slide example&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp&quot;&#10;      class=&quot;w-full&quot; /&gt;&#10;    &lt;div class=&quot;absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between&quot;&gt;&#10;      &lt;a href=&quot;#slide3&quot; class=&quot;btn btn-circle&quot;&gt;❮&lt;/a&gt;&#10;      &lt;a href=&quot;#slide1&quot; class=&quot;btn btn-circle&quot;&gt;❯&lt;/a&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

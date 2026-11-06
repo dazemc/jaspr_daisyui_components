@@ -3,100 +3,133 @@ title: "Countdown"
 description: "Countdown gives you a transition effect when you change a number between 0 to 999."
 ---
 
-> :INFO:
->
-> you need to change the span text and the `--value` CSS variable using JS. Value must be a number between 0 and 999.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">countdown</code></th><td class="whitespace-nowrap">Component</td><td>Countdown wrapper</td></tr></tbody></table></div>
 
-> :INFO:
->
-> you can set the minimum number of digits to display to 2 or 3 with `--digits: 2` or `--digits: 3` CSS variable.
-
-### Countdown
-<span class="countdown">
-  <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
-</span>
-
-```html
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">you need to change the span text and the <code>--value</code> CSS variable using JS. Value must be a number between 0 and 999.</p></div></div>
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">you can set the minimum number of digits to display to 2 or 3 with <code>--digits: 2</code> or <code>--digits: 3</code> CSS variable.</p></div></div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="countdown">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#countdown" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Countdown</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_countdown-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="countdown">
   <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
 </span>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<span class="countdown">
-  <span style={{"--value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-</span>
-```
-
-### Large text with 2 digits
-<span class="countdown font-mono text-6xl">
-  <span style="--value:{counter}; --digits: 2;" aria-live="polite" aria-label="{counter}">{counter}</span>
-</span>
-
-```html
+</div>
+</div>
+<input type="radio" name="tab_countdown-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cspan%20class%3D%22countdown%22%3E%0A%20%20%3Cspan%20style%3D%22--value%3A59%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%3C%2Fspan%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;span class=&quot;countdown&quot;&gt;&#10;  &lt;span style=&quot;--value:59;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;&lt;/span&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="large-text-with-2-digits">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#large-text-with-2-digits" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Large text with 2 digits</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_large-text-with-2-digits-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="countdown font-mono text-6xl">
   <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<span class="countdown font-mono text-6xl">
-  <span style={{"--value":59, "--digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-</span>
-```
-
-### Clock countdown
+</div>
+</div>
+<input type="radio" name="tab_large-text-with-2-digits-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cspan%20class%3D%22countdown%20font-mono%20text-6xl%22%3E%0A%20%20%3Cspan%20style%3D%22--value%3A59%3B%20--digits%3A%202%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%3C%2Fspan%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;span class=&quot;countdown font-mono text-6xl&quot;&gt;&#10;  &lt;span style=&quot;--value:59; --digits: 2;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;&lt;/span&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="clock-countdown">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#clock-countdown" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Clock countdown</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_clock-countdown-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;" aria-live="polite" aria-label="10">10</span>h
   <span style="--value:24;" aria-live="polite" aria-label="24">24</span>m
-  <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>s
+  <span style="--value:59;" aria-live="polite" aria-label="59">59</span>s
 </span>
-
-```html
-<span class="countdown font-mono text-2xl">
-  <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
-  h
-  <span style="--value:24;" aria-live="polite" aria-label="24">24</span>
-  m
-  <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
-  s
-</span>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<span class="countdown font-mono text-2xl">
-  <span style={{"--value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>h
-  <span style={{"--value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>m
-  <span style={{"--value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>s
-</span>
-```
-
-### Clock countdown with colons
+</div>
+</div>
+<input type="radio" name="tab_clock-countdown-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cspan%20class%3D%22countdown%20font-mono%20text-2xl%22%3E%0A%20%20%3Cspan%20style%3D%22--value%3A10%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2210%22%3E10%3C%2Fspan%3E%0A%20%20h%0A%20%20%3Cspan%20style%3D%22--value%3A24%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2224%22%3E24%3C%2Fspan%3E%0A%20%20m%0A%20%20%3Cspan%20style%3D%22--value%3A59%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%20%20s%0A%3C%2Fspan%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;span class=&quot;countdown font-mono text-2xl&quot;&gt;&#10;  &lt;span style=&quot;--value:10;&quot; aria-live=&quot;polite&quot; aria-label=&quot;10&quot;&gt;10&lt;/span&gt;&#10;  h&#10;  &lt;span style=&quot;--value:24;&quot; aria-live=&quot;polite&quot; aria-label=&quot;24&quot;&gt;24&lt;/span&gt;&#10;  m&#10;  &lt;span style=&quot;--value:59;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;  s&#10;&lt;/span&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="clock-countdown-with-colons">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#clock-countdown-with-colons" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Clock countdown with colons</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_clock-countdown-with-colons-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;" aria-live="polite" aria-label="10">10</span>:
   <span style="--value:24; --digits: 2;" aria-live="polite" aria-label="24">24</span>:
-  <span style="--value:{counter}; --digits: 2;" aria-live="polite" aria-label="{counter}">{counter}</span>
-</span>
-
-```html
-<span class="countdown font-mono text-2xl">
-  <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
-  :
-  <span style="--value:24; --digits: 2;" aria-live="polite" aria-label="24">24</span>
-  :
   <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<span class="countdown font-mono text-2xl">
-  <span style={{"--value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>:
-  <span style={{"--value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>:
-  <span style={{"--value":59, "--digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-</span>
-```
-
-### Large text with labels
+</div>
+</div>
+<input type="radio" name="tab_clock-countdown-with-colons-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cspan%20class%3D%22countdown%20font-mono%20text-2xl%22%3E%0A%20%20%3Cspan%20style%3D%22--value%3A10%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2210%22%3E10%3C%2Fspan%3E%0A%20%20%3A%0A%20%20%3Cspan%20style%3D%22--value%3A24%3B%20--digits%3A%202%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2224%22%3E24%3C%2Fspan%3E%0A%20%20%3A%0A%20%20%3Cspan%20style%3D%22--value%3A59%3B%20--digits%3A%202%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%3C%2Fspan%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;span class=&quot;countdown font-mono text-2xl&quot;&gt;&#10;  &lt;span style=&quot;--value:10;&quot; aria-live=&quot;polite&quot; aria-label=&quot;10&quot;&gt;10&lt;/span&gt;&#10;  :&#10;  &lt;span style=&quot;--value:24; --digits: 2;&quot; aria-live=&quot;polite&quot; aria-label=&quot;24&quot;&gt;24&lt;/span&gt;&#10;  :&#10;  &lt;span style=&quot;--value:59; --digits: 2;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;&lt;/span&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="large-text-with-labels">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#large-text-with-labels" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Large text with labels</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_large-text-with-labels-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
@@ -118,71 +151,35 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
-    </span>
-    sec
-  </div>
-</div>
-
-```html
-<div class="flex gap-5">
-  <div>
-    <span class="countdown font-mono text-4xl">
-      <span style="--value:15;" aria-live="polite" aria-label="15">15</span>
-    </span>
-    days
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
-      <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
-    </span>
-    hours
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
-      <span style="--value:24;" aria-live="polite" aria-label="24">24</span>
-    </span>
-    min
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
       <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
     </span>
     sec
   </div>
 </div>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<div class="flex gap-5">
-  <div>
-    <span class="countdown font-mono text-4xl">
-        <span style={{"--value":15} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>15</span>
-    </span>
-    days
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
-        <span style={{"--value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>
-    </span>
-    hours
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
-      <span style={{"--value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>
-    </span>
-    min
-  </div>
-  <div>
-    <span class="countdown font-mono text-4xl">
-      <span style={{"--value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-    </span>
-    sec
-  </div>
 </div>
-```
-
-### Large text with labels under
+</div>
+<input type="radio" name="tab_large-text-with-labels-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22flex%20gap-5%22%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-4xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A15%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2215%22%3E15%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20days%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-4xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A10%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2210%22%3E10%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20hours%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-4xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A24%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2224%22%3E24%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20min%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-4xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A59%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20sec%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;flex gap-5&quot;&gt;&#10;  &lt;div&gt;&#10;    &lt;span class=&quot;countdown font-mono text-4xl&quot;&gt;&#10;      &lt;span style=&quot;--value:15;&quot; aria-live=&quot;polite&quot; aria-label=&quot;15&quot;&gt;15&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    days&#10;  &lt;/div&gt;&#10;  &lt;div&gt;&#10;    &lt;span class=&quot;countdown font-mono text-4xl&quot;&gt;&#10;      &lt;span style=&quot;--value:10;&quot; aria-live=&quot;polite&quot; aria-label=&quot;10&quot;&gt;10&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    hours&#10;  &lt;/div&gt;&#10;  &lt;div&gt;&#10;    &lt;span class=&quot;countdown font-mono text-4xl&quot;&gt;&#10;      &lt;span style=&quot;--value:24;&quot; aria-live=&quot;polite&quot; aria-label=&quot;24&quot;&gt;24&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    min&#10;  &lt;/div&gt;&#10;  &lt;div&gt;&#10;    &lt;span class=&quot;countdown font-mono text-4xl&quot;&gt;&#10;      &lt;span style=&quot;--value:59;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    sec&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="large-text-with-labels-under">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#large-text-with-labels-under" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Large text with labels under</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_large-text-with-labels-under-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
@@ -204,71 +201,35 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
-    </span>
-    sec
-  </div>
-</div>
-
-```html
-<div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:15;" aria-live="polite" aria-label="15">15</span>
-    </span>
-    days
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
-    </span>
-    hours
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:24;" aria-live="polite" aria-label="24">24</span>
-    </span>
-    min
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
       <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
     </span>
     sec
   </div>
 </div>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":15} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>15</span>
-    </span>
-    days
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>
-    </span>
-    hours
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>
-    </span>
-    min
-  </div>
-  <div class="flex flex-col">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-    </span>
-    sec
-  </div>
 </div>
-```
-
-### In boxes
+</div>
+<input type="radio" name="tab_large-text-with-labels-under-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22grid%20auto-cols-max%20grid-flow-col%20gap-5%20text-center%22%3E%0A%20%20%3Cdiv%20class%3D%22flex%20flex-col%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A15%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2215%22%3E15%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20days%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22flex%20flex-col%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A10%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2210%22%3E10%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20hours%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22flex%20flex-col%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A24%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2224%22%3E24%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20min%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22flex%20flex-col%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A59%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20sec%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;grid auto-cols-max grid-flow-col gap-5 text-center&quot;&gt;&#10;  &lt;div class=&quot;flex flex-col&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:15;&quot; aria-live=&quot;polite&quot; aria-label=&quot;15&quot;&gt;15&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    days&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;flex flex-col&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:10;&quot; aria-live=&quot;polite&quot; aria-label=&quot;10&quot;&gt;10&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    hours&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;flex flex-col&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:24;&quot; aria-live=&quot;polite&quot; aria-label=&quot;24&quot;&gt;24&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    min&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;flex flex-col&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:59;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    sec&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="in-boxes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/countdown/#in-boxes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">In boxes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_in-boxes-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
@@ -290,66 +251,21 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:{counter};" aria-live="polite" aria-label="{counter}">{counter}</span>
-    </span>
-    sec
-  </div>
-</div>
-
-```html
-<div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-  <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:15;" aria-live="polite" aria-label="15">15</span>
-    </span>
-    days
-  </div>
-  <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
-    </span>
-    hours
-  </div>
-  <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-    <span class="countdown font-mono text-5xl">
-      <span style="--value:24;" aria-live="polite" aria-label="24">24</span>
-    </span>
-    min
-  </div>
-  <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-    <span class="countdown font-mono text-5xl">
       <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
     </span>
     sec
   </div>
 </div>
-```
-```jsx
-{/* For TSX uncomment the commented types below */}
-<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":15} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>15</span>
-    </span>
-    days
-  </div>
-  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>
-    </span>
-    hours
-  </div>
-  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>
-    </span>
-    min
-  </div>
-  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="countdown font-mono text-5xl">
-      <span style={{"--value":59} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
-    </span>
-    sec
-  </div>
 </div>
-```
+</div>
+<input type="radio" name="tab_in-boxes-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22grid%20auto-cols-max%20grid-flow-col%20gap-5%20text-center%22%3E%0A%20%20%3Cdiv%20class%3D%22bg-neutral%20rounded-box%20text-neutral-content%20flex%20flex-col%20p-2%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A15%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2215%22%3E15%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20days%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22bg-neutral%20rounded-box%20text-neutral-content%20flex%20flex-col%20p-2%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A10%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2210%22%3E10%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20hours%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22bg-neutral%20rounded-box%20text-neutral-content%20flex%20flex-col%20p-2%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A24%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2224%22%3E24%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20min%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22bg-neutral%20rounded-box%20text-neutral-content%20flex%20flex-col%20p-2%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22countdown%20font-mono%20text-5xl%22%3E%0A%20%20%20%20%20%20%3Cspan%20style%3D%22--value%3A59%3B%22%20aria-live%3D%22polite%22%20aria-label%3D%2259%22%3E59%3C%2Fspan%3E%0A%20%20%20%20%3C%2Fspan%3E%0A%20%20%20%20sec%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;grid auto-cols-max grid-flow-col gap-5 text-center&quot;&gt;&#10;  &lt;div class=&quot;bg-neutral rounded-box text-neutral-content flex flex-col p-2&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:15;&quot; aria-live=&quot;polite&quot; aria-label=&quot;15&quot;&gt;15&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    days&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;bg-neutral rounded-box text-neutral-content flex flex-col p-2&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:10;&quot; aria-live=&quot;polite&quot; aria-label=&quot;10&quot;&gt;10&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    hours&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;bg-neutral rounded-box text-neutral-content flex flex-col p-2&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:24;&quot; aria-live=&quot;polite&quot; aria-label=&quot;24&quot;&gt;24&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    min&#10;  &lt;/div&gt;&#10;  &lt;div class=&quot;bg-neutral rounded-box text-neutral-content flex flex-col p-2&quot;&gt;&#10;    &lt;span class=&quot;countdown font-mono text-5xl&quot;&gt;&#10;      &lt;span style=&quot;--value:59;&quot; aria-live=&quot;polite&quot; aria-label=&quot;59&quot;&gt;59&lt;/span&gt;&#10;    &lt;/span&gt;&#10;    sec&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

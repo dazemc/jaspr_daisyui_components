@@ -3,8 +3,19 @@ title: "Hero"
 description: "Hero is a component for displaying a large box or image with a title and description."
 ---
 
-### Centered hero
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">hero</code></th><td class="whitespace-nowrap">Component</td><td>Hero container</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">hero-content</code></th><td class="whitespace-nowrap">Part</td><td>content part</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">hero-overlay</code></th><td class="whitespace-nowrap">Part</td><td>Overlay that covers the background image</td></tr></tbody></table></div>
 
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="centered-hero">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hero/#centered-hero" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Centered hero</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_centered-hero-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="text-center hero-content">
     <div class="max-w-md">
@@ -14,24 +25,30 @@ description: "Hero is a component for displaying a large box or image with a tit
     </div>
   </div>
 </div>
-
-```html
-<div class="hero bg-base-200 min-h-screen">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-bold">Hello there</h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
 </div>
-```
-
-### Hero with figure
-
+</div>
+<input type="radio" name="tab_centered-hero-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hero%20bg-base-200%20min-h-screen%22%3E%0A%20%20%3Cdiv%20class%3D%22hero-content%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22max-w-md%22%3E%0A%20%20%20%20%20%20%3Ch1%20class%3D%22text-5xl%20font-bold%22%3EHello%20there%3C%2Fh1%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22py-6%22%3E%0A%20%20%20%20%20%20%20%20Provident%20cupiditate%20voluptatem%20et%20in.%20Quaerat%20fugiat%20ut%20assumenda%20excepturi%20exercitationem%0A%20%20%20%20%20%20%20%20quasi.%20In%20deleniti%20eaque%20aut%20repudiandae%20et%20a%20id%20nisi.%0A%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-primary%22%3EGet%20Started%3C%2Fbutton%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hero bg-base-200 min-h-screen&quot;&gt;&#10;  &lt;div class=&quot;hero-content text-center&quot;&gt;&#10;    &lt;div class=&quot;max-w-md&quot;&gt;&#10;      &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;Hello there&lt;/h1&gt;&#10;      &lt;p class=&quot;py-6&quot;&gt;&#10;        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem&#10;        quasi. In deleniti eaque aut repudiandae et a id nisi.&#10;      &lt;/p&gt;&#10;      &lt;button class=&quot;btn btn-primary&quot;&gt;Get Started&lt;/button&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="hero-with-figure">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hero/#hero-with-figure" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Hero with figure</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_hero-with-figure-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
     <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
@@ -42,29 +59,30 @@ description: "Hero is a component for displaying a large box or image with a tit
     </div>
   </div>
 </div>
-
-```html
-<div class="hero bg-base-200 min-h-screen">
-  <div class="hero-content flex-col lg:flex-row">
-    <img
-      alt="Tailwind CSS hero component"
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-      class="max-w-sm rounded-lg shadow-2xl"
-    />
-    <div>
-      <h1 class="text-5xl font-bold">Box Office News!</h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
 </div>
-```
-
-### Hero with figure but reverse order
-
+</div>
+<input type="radio" name="tab_hero-with-figure-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hero%20bg-base-200%20min-h-screen%22%3E%0A%20%20%3Cdiv%20class%3D%22hero-content%20flex-col%20lg%3Aflex-row%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20hero%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1635805737707-575885ab0820.webp%22%0A%20%20%20%20%20%20class%3D%22max-w-sm%20rounded-lg%20shadow-2xl%22%0A%20%20%20%20%2F%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Ch1%20class%3D%22text-5xl%20font-bold%22%3EBox%20Office%20News%21%3C%2Fh1%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22py-6%22%3E%0A%20%20%20%20%20%20%20%20Provident%20cupiditate%20voluptatem%20et%20in.%20Quaerat%20fugiat%20ut%20assumenda%20excepturi%20exercitationem%0A%20%20%20%20%20%20%20%20quasi.%20In%20deleniti%20eaque%20aut%20repudiandae%20et%20a%20id%20nisi.%0A%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-primary%22%3EGet%20Started%3C%2Fbutton%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hero bg-base-200 min-h-screen&quot;&gt;&#10;  &lt;div class=&quot;hero-content flex-col lg:flex-row&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS hero component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp&quot;&#10;      class=&quot;max-w-sm rounded-lg shadow-2xl&quot;&#10;    /&gt;&#10;    &lt;div&gt;&#10;      &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;Box Office News!&lt;/h1&gt;&#10;      &lt;p class=&quot;py-6&quot;&gt;&#10;        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem&#10;        quasi. In deleniti eaque aut repudiandae et a id nisi.&#10;      &lt;/p&gt;&#10;      &lt;button class=&quot;btn btn-primary&quot;&gt;Get Started&lt;/button&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="hero-with-figure-but-reverse-order">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hero/#hero-with-figure-but-reverse-order" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Hero with figure but reverse order</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_hero-with-figure-but-reverse-order-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
@@ -75,29 +93,30 @@ description: "Hero is a component for displaying a large box or image with a tit
     </div>
   </div>
 </div>
-
-```html
-<div class="hero bg-base-200 min-h-screen">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <img
-      alt="Tailwind CSS hero component"
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-      class="max-w-sm rounded-lg shadow-2xl"
-    />
-    <div>
-      <h1 class="text-5xl font-bold">Box Office News!</h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
 </div>
-```
-
-### Hero with form
-
+</div>
+<input type="radio" name="tab_hero-with-figure-but-reverse-order-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hero%20bg-base-200%20min-h-screen%22%3E%0A%20%20%3Cdiv%20class%3D%22hero-content%20flex-col%20lg%3Aflex-row-reverse%22%3E%0A%20%20%20%20%3Cimg%0A%20%20%20%20%20%20alt%3D%22Tailwind%20CSS%20hero%20component%22%0A%20%20%20%20%20%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1635805737707-575885ab0820.webp%22%0A%20%20%20%20%20%20class%3D%22max-w-sm%20rounded-lg%20shadow-2xl%22%0A%20%20%20%20%2F%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Ch1%20class%3D%22text-5xl%20font-bold%22%3EBox%20Office%20News%21%3C%2Fh1%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22py-6%22%3E%0A%20%20%20%20%20%20%20%20Provident%20cupiditate%20voluptatem%20et%20in.%20Quaerat%20fugiat%20ut%20assumenda%20excepturi%20exercitationem%0A%20%20%20%20%20%20%20%20quasi.%20In%20deleniti%20eaque%20aut%20repudiandae%20et%20a%20id%20nisi.%0A%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-primary%22%3EGet%20Started%3C%2Fbutton%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hero bg-base-200 min-h-screen&quot;&gt;&#10;  &lt;div class=&quot;hero-content flex-col lg:flex-row-reverse&quot;&gt;&#10;    &lt;img&#10;      alt=&quot;Tailwind CSS hero component&quot;&#10;      src=&quot;https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp&quot;&#10;      class=&quot;max-w-sm rounded-lg shadow-2xl&quot;&#10;    /&gt;&#10;    &lt;div&gt;&#10;      &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;Box Office News!&lt;/h1&gt;&#10;      &lt;p class=&quot;py-6&quot;&gt;&#10;        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem&#10;        quasi. In deleniti eaque aut repudiandae et a id nisi.&#10;      &lt;/p&gt;&#10;      &lt;button class=&quot;btn btn-primary&quot;&gt;Get Started&lt;/button&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="hero-with-form">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hero/#hero-with-form" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Hero with form</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_hero-with-form-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <div class="text-center lg:text-left">
@@ -118,35 +137,30 @@ description: "Hero is a component for displaying a large box or image with a tit
     </div>
   </div>
 </div>
-
-```html
-<div class="hero bg-base-200 min-h-screen">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <div class="text-center lg:text-left">
-      <h1 class="text-5xl font-bold">Login now!</h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-    </div>
-    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div class="card-body">
-        <fieldset class="fieldset">
-          <label class="label">Email</label>
-          <input type="email" class="input" placeholder="Email" />
-          <label class="label">Password</label>
-          <input type="password" class="input" placeholder="Password" />
-          <div><a class="link link-hover">Forgot password?</a></div>
-          <button class="btn btn-neutral mt-4">Login</button>
-        </fieldset>
-      </div>
-    </div>
-  </div>
 </div>
-```
-
-### Hero with overlay image
-
+</div>
+<input type="radio" name="tab_hero-with-form-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22hero%20bg-base-200%20min-h-screen%22%3E%0A%20%20%3Cdiv%20class%3D%22hero-content%20flex-col%20lg%3Aflex-row-reverse%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-center%20lg%3Atext-left%22%3E%0A%20%20%20%20%20%20%3Ch1%20class%3D%22text-5xl%20font-bold%22%3ELogin%20now%21%3C%2Fh1%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22py-6%22%3E%0A%20%20%20%20%20%20%20%20Provident%20cupiditate%20voluptatem%20et%20in.%20Quaerat%20fugiat%20ut%20assumenda%20excepturi%20exercitationem%0A%20%20%20%20%20%20%20%20quasi.%20In%20deleniti%20eaque%20aut%20repudiandae%20et%20a%20id%20nisi.%0A%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22card%20bg-base-100%20w-full%20max-w-sm%20shrink-0%20shadow-2xl%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22card-body%22%3E%0A%20%20%20%20%20%20%20%20%3Cfieldset%20class%3D%22fieldset%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Clabel%20class%3D%22label%22%3EEmail%3C%2Flabel%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22email%22%20class%3D%22input%22%20placeholder%3D%22Email%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Clabel%20class%3D%22label%22%3EPassword%3C%2Flabel%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22password%22%20class%3D%22input%22%20placeholder%3D%22Password%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%3E%3Ca%20class%3D%22link%20link-hover%22%3EForgot%20password%3F%3C%2Fa%3E%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-neutral%20mt-4%22%3ELogin%3C%2Fbutton%3E%0A%20%20%20%20%20%20%20%20%3C%2Ffieldset%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;hero bg-base-200 min-h-screen&quot;&gt;&#10;  &lt;div class=&quot;hero-content flex-col lg:flex-row-reverse&quot;&gt;&#10;    &lt;div class=&quot;text-center lg:text-left&quot;&gt;&#10;      &lt;h1 class=&quot;text-5xl font-bold&quot;&gt;Login now!&lt;/h1&gt;&#10;      &lt;p class=&quot;py-6&quot;&gt;&#10;        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem&#10;        quasi. In deleniti eaque aut repudiandae et a id nisi.&#10;      &lt;/p&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl&quot;&gt;&#10;      &lt;div class=&quot;card-body&quot;&gt;&#10;        &lt;fieldset class=&quot;fieldset&quot;&gt;&#10;          &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;&#10;          &lt;input type=&quot;email&quot; class=&quot;input&quot; placeholder=&quot;Email&quot; /&gt;&#10;          &lt;label class=&quot;label&quot;&gt;Password&lt;/label&gt;&#10;          &lt;input type=&quot;password&quot; class=&quot;input&quot; placeholder=&quot;Password&quot; /&gt;&#10;          &lt;div&gt;&lt;a class=&quot;link link-hover&quot;&gt;Forgot password?&lt;/a&gt;&lt;/div&gt;&#10;          &lt;button class=&quot;btn btn-neutral mt-4&quot;&gt;Login&lt;/button&gt;&#10;        &lt;/fieldset&gt;&#10;      &lt;/div&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="hero-with-overlay-image">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/hero/#hero-with-overlay-image" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Hero with overlay image</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_hero-with-overlay-image-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="hero min-h-[30rem] rounded" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
   <div class="hero-overlay rounded"></div>
   <div class="text-center hero-content text-neutral-content">
@@ -157,44 +171,16 @@ description: "Hero is a component for displaying a large box or image with a tit
     </div>
   </div>
 </div>
-
-```html
-<div
-  class="hero min-h-screen"
-  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);"
->
-  <div class="hero-overlay"></div>
-  <div class="hero-content text-neutral-content text-center">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-      <p class="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
 </div>
-```
-
-```jsx
-<div
-  class="hero min-h-screen"
-  style={{
-    backgroundImage:
-      "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-  }}
->
-  <div class="hero-overlay"></div>
-  <div class="hero-content text-neutral-content text-center">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-      <p class="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
 </div>
-```
+<input type="radio" name="tab_hero-with-overlay-image-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%0A%20%20class%3D%22hero%20min-h-screen%22%0A%20%20style%3D%22background-image%3A%20url%28https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fstock%2Fphoto-1507358522600-9f71e620c44e.webp%29%3B%22%0A%3E%0A%20%20%3Cdiv%20class%3D%22hero-overlay%22%3E%3C%2Fdiv%3E%0A%20%20%3Cdiv%20class%3D%22hero-content%20text-neutral-content%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22max-w-md%22%3E%0A%20%20%20%20%20%20%3Ch1%20class%3D%22mb-5%20text-5xl%20font-bold%22%3EHello%20there%3C%2Fh1%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22mb-5%22%3E%0A%20%20%20%20%20%20%20%20Provident%20cupiditate%20voluptatem%20et%20in.%20Quaerat%20fugiat%20ut%20assumenda%20excepturi%20exercitationem%0A%20%20%20%20%20%20%20%20quasi.%20In%20deleniti%20eaque%20aut%20repudiandae%20et%20a%20id%20nisi.%0A%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-primary%22%3EGet%20Started%3C%2Fbutton%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div&#10;  class=&quot;hero min-h-screen&quot;&#10;  style=&quot;background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);&quot;&#10;&gt;&#10;  &lt;div class=&quot;hero-overlay&quot;&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;hero-content text-neutral-content text-center&quot;&gt;&#10;    &lt;div class=&quot;max-w-md&quot;&gt;&#10;      &lt;h1 class=&quot;mb-5 text-5xl font-bold&quot;&gt;Hello there&lt;/h1&gt;&#10;      &lt;p class=&quot;mb-5&quot;&gt;&#10;        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem&#10;        quasi. In deleniti eaque aut repudiandae et a id nisi.&#10;      &lt;/p&gt;&#10;      &lt;button class=&quot;btn btn-primary&quot;&gt;Get Started&lt;/button&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

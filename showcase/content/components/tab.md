@@ -3,83 +3,164 @@ title: "Tabs"
 description: "Tabs can be used to show a list of links in a tabbed format."
 ---
 
-### tabs
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs</code></th><td class="whitespace-nowrap">Component</td><td>Container of multiple tab items</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tab</code></th><td class="whitespace-nowrap">Part</td><td>A single tab button (can be button, link, div, radio input, etc)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tab-content</code></th><td class="whitespace-nowrap">Part</td><td>Tab content that comes immediately after a tab</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-box</code></th><td class="whitespace-nowrap">Style</td><td>box style</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-border</code></th><td class="whitespace-nowrap">Style</td><td>bottom border style</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-lift</code></th><td class="whitespace-nowrap">Style</td><td>lift style</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tab-active</code></th><td class="whitespace-nowrap">Modifier</td><td>Makes a single tab look active</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tab-disabled</code></th><td class="whitespace-nowrap">Modifier</td><td>Makes a single tab look disabled</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-top</code></th><td class="whitespace-nowrap">Placement</td><td>Puts tab buttons on top of the tab-content (default)</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-bottom</code></th><td class="whitespace-nowrap">Placement</td><td>Puts tabs on under the tab-content</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-xs</code></th><td class="whitespace-nowrap">Size</td><td>Extra small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-sm</code></th><td class="whitespace-nowrap">Size</td><td>Small size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-md</code></th><td class="whitespace-nowrap">Size</td><td>Medium size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-lg</code></th><td class="whitespace-nowrap">Size</td><td>Large size</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">tabs-xl</code></th><td class="whitespace-nowrap">Size</td><td>Extra large size</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-
-```html
-<div role="tablist" class="tabs">
-  <a role="tab" class="tab">Tab 1</a>
-  <a role="tab" class="tab tab-active">Tab 2</a>
-  <a role="tab" class="tab">Tab 3</a>
 </div>
-```
-
-### tabs-border
+</div>
+<input type="radio" name="tab_tabs-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%201%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ETab%202%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%203%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div role=&quot;tablist&quot; class=&quot;tabs&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 1&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Tab 2&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 3&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-border">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-border" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs-border</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-border-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs tabs-border">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-
-```html
-<div role="tablist" class="tabs tabs-border">
-  <a role="tab" class="tab">Tab 1</a>
-  <a role="tab" class="tab tab-active">Tab 2</a>
-  <a role="tab" class="tab">Tab 3</a>
 </div>
-```
-
-### tabs-lift
+</div>
+<input type="radio" name="tab_tabs-border-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-border%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%201%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ETab%202%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%203%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-border&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 1&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Tab 2&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 3&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-lift">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-lift" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs-lift</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-lift-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs tabs-lift">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-
-```html
-<div role="tablist" class="tabs tabs-lift">
-  <a role="tab" class="tab">Tab 1</a>
-  <a role="tab" class="tab tab-active">Tab 2</a>
-  <a role="tab" class="tab">Tab 3</a>
 </div>
-```
-
-### tabs-box
+</div>
+<input type="radio" name="tab_tabs-lift-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%201%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ETab%202%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%203%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 1&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Tab 2&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 3&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-box">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-box" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs-box</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-box-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs tabs-box">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-
-```html
-<div role="tablist" class="tabs tabs-box">
-  <a role="tab" class="tab">Tab 1</a>
-  <a role="tab" class="tab tab-active">Tab 2</a>
-  <a role="tab" class="tab">Tab 3</a>
 </div>
-```
-
-### tabs-box using radio inputs
+</div>
+<input type="radio" name="tab_tabs-box-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-box%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%201%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ETab%202%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%203%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-box&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 1&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Tab 2&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 3&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-box-using-radio-inputs">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-box-using-radio-inputs" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs-box using radio inputs</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-box-using-radio-inputs-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs tabs-box">
   <input type="radio" name="my_tabs_1" autocomplete="off" class="tab" aria-label="Tab 1" />
   <input type="radio" name="my_tabs_1" autocomplete="off" class="tab" aria-label="Tab 2" checked="checked" />
   <input type="radio" name="my_tabs_1" autocomplete="off" class="tab" aria-label="Tab 3" />
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
-<div class="tabs tabs-box">
-  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 1" />
-  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 2" checked="checked" />
-  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 3" />
 </div>
-```
-
-### Sizes
+</div>
+<input type="radio" name="tab_tabs-box-using-radio-inputs-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-box%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_1%22%20class%3D%22tab%22%20aria-label%3D%22Tab%201%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_1%22%20class%3D%22tab%22%20aria-label%3D%22Tab%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_1%22%20class%3D%22tab%22%20aria-label%3D%22Tab%203%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-box&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_1&quot; class=&quot;tab&quot; aria-label=&quot;Tab 1&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_1&quot; class=&quot;tab&quot; aria-label=&quot;Tab 2&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_1&quot; class=&quot;tab&quot; aria-label=&quot;Tab 3&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="sizes">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#sizes" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Sizes</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_sizes-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="flex flex-col items-center gap-6">
   <div role="tablist" class="tabs tabs-lift tabs-xs">
     <button role="tab" class="tab">Xsmall</button>
@@ -107,41 +188,30 @@ description: "Tabs can be used to show a list of links in a tabbed format."
     <button role="tab" class="tab">Xlarge</button>
   </div>
 </div>
-
-```html
-
-<div role="tablist" class="tabs tabs-lift tabs-xs">
-  <a role="tab" class="tab">Xsmall</a>
-  <a role="tab" class="tab tab-active">Xsmall</a>
-  <a role="tab" class="tab">Xsmall</a>
 </div>
-
-<div role="tablist" class="tabs tabs-lift tabs-sm">
-  <a role="tab" class="tab">Small</a>
-  <a role="tab" class="tab tab-active">Small</a>
-  <a role="tab" class="tab">Small</a>
 </div>
-
-<div role="tablist" class="tabs tabs-lift">
-  <a role="tab" class="tab">Medium</a>
-  <a role="tab" class="tab tab-active">Medium</a>
-  <a role="tab" class="tab">Medium</a>
+<input type="radio" name="tab_sizes-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%0A%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%20tabs-xs%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EXsmall%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3EXsmall%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EXsmall%3C%2Fa%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%20tabs-sm%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ESmall%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ESmall%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ESmall%3C%2Fa%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EMedium%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3EMedium%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EMedium%3C%2Fa%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%20tabs-lg%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ELarge%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3ELarge%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ELarge%3C%2Fa%3E%0A%3C%2Fdiv%3E%0A%0A%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%20tabs-xl%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EXlarge%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%22%3EXlarge%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3EXlarge%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&#10;&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift tabs-xs&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Xsmall&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Xsmall&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Xsmall&lt;/a&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift tabs-sm&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Small&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Small&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Small&lt;/a&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Medium&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Medium&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Medium&lt;/a&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift tabs-lg&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Large&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Large&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Large&lt;/a&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift tabs-xl&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Xlarge&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active&quot;&gt;Xlarge&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Xlarge&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
 </div>
-
-<div role="tablist" class="tabs tabs-lift tabs-lg">
-  <a role="tab" class="tab">Large</a>
-  <a role="tab" class="tab tab-active">Large</a>
-  <a role="tab" class="tab">Large</a>
 </div>
-
-<div role="tablist" class="tabs tabs-lift tabs-xl">
-  <a role="tab" class="tab">Xlarge</a>
-  <a role="tab" class="tab tab-active">Xlarge</a>
-  <a role="tab" class="tab">Xlarge</a>
 </div>
-```
-
-### radio tabs-border + tab content
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="radio-tabs-border--tab-content">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#radio-tabs-border--tab-content" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">radio tabs-border + tab content</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_radio-tabs-border--tab-content-7" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="tabs tabs-border w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_2" autocomplete="off" class="tab" aria-label="Tab 1" />
   <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
@@ -150,22 +220,30 @@ description: "Tabs can be used to show a list of links in a tabbed format."
   <input type="radio" name="my_tabs_2" autocomplete="off" class="tab" aria-label="Tab 3" />
   <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
-<div class="tabs tabs-border">
-  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 1" />
-  <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 2" checked="checked" />
-  <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 3" />
-  <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
 </div>
-```
-
-### radio tabs-lift + tab content
+</div>
+<input type="radio" name="tab_radio-tabs-border--tab-content-7" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-border%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_2%22%20class%3D%22tab%22%20aria-label%3D%22Tab%201%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20border-base-300%20bg-base-100%20p-10%22%3ETab%20content%201%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_2%22%20class%3D%22tab%22%20aria-label%3D%22Tab%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20border-base-300%20bg-base-100%20p-10%22%3ETab%20content%202%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_2%22%20class%3D%22tab%22%20aria-label%3D%22Tab%203%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20border-base-300%20bg-base-100%20p-10%22%3ETab%20content%203%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-border&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_2&quot; class=&quot;tab&quot; aria-label=&quot;Tab 1&quot; /&gt;&#10;  &lt;div class=&quot;tab-content border-base-300 bg-base-100 p-10&quot;&gt;Tab content 1&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_2&quot; class=&quot;tab&quot; aria-label=&quot;Tab 2&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;div class=&quot;tab-content border-base-300 bg-base-100 p-10&quot;&gt;Tab content 2&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_2&quot; class=&quot;tab&quot; aria-label=&quot;Tab 3&quot; /&gt;&#10;  &lt;div class=&quot;tab-content border-base-300 bg-base-100 p-10&quot;&gt;Tab content 3&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="radio-tabs-lift--tab-content">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#radio-tabs-lift--tab-content" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">radio tabs-lift + tab content</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_radio-tabs-lift--tab-content-8" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="tabs tabs-lift w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_3" autocomplete="off" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
@@ -174,70 +252,74 @@ description: "Tabs can be used to show a list of links in a tabbed format."
   <input type="radio" name="my_tabs_3" autocomplete="off" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
-<div class="tabs tabs-lift">
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 1" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 2" checked="checked" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 3" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-```
-
-### radio tabs-lift with icons + tab content
+</div>
+<input type="radio" name="tab_radio-tabs-lift--tab-content-8" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-lift%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_3%22%20class%3D%22tab%22%20aria-label%3D%22Tab%201%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%201%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_3%22%20class%3D%22tab%22%20aria-label%3D%22Tab%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%202%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_3%22%20class%3D%22tab%22%20aria-label%3D%22Tab%203%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%203%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-lift&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_3&quot; class=&quot;tab&quot; aria-label=&quot;Tab 1&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 1&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_3&quot; class=&quot;tab&quot; aria-label=&quot;Tab 2&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 2&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_3&quot; class=&quot;tab&quot; aria-label=&quot;Tab 3&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 3&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="radio-tabs-lift-with-icons--tab-content">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#radio-tabs-lift-with-icons--tab-content" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">radio tabs-lift with icons + tab content</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_radio-tabs-lift-with-icons--tab-content-9" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="tabs tabs-lift w-full my-10 lg:mx-10">
   <label class="tab">
     <input type="radio" name="my_tabs_4" autocomplete="off" />
-    
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg>
     Live
   </label>
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
   <label class="tab">
     <input type="radio" name="my_tabs_4" autocomplete="off" checked="checked" />
-    
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" /></svg>
     Laugh
   </label>
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
   <label class="tab">
     <input type="radio" name="my_tabs_4" autocomplete="off" />
-    
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
     Love
   </label>
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
+</div>
+</div>
+<input type="radio" name="tab_radio-tabs-lift-with-icons--tab-content-9" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-lift%22%3E%0A%20%20%3Clabel%20class%3D%22tab%22%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_4%22%20%2F%3E%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%20class%3D%22size-4%20me-2%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M5.25%205.653c0-.856.917-1.398%201.667-.986l11.54%206.347a1.125%201.125%200%200%201%200%201.972l-11.54%206.347a1.125%201.125%200%200%201-1.667-.986V5.653Z%22%20%2F%3E%3C%2Fsvg%3E%0A%20%20%20%20Live%0A%20%20%3C%2Flabel%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%201%3C%2Fdiv%3E%0A%0A%20%20%3Clabel%20class%3D%22tab%22%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_4%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%20class%3D%22size-4%20me-2%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M15.182%2015.182a4.5%204.5%200%200%201-6.364%200M21%2012a9%209%200%201%201-18%200%209%209%200%200%201%2018%200ZM9.75%209.75c0%20.414-.168.75-.375.75S9%2010.164%209%209.75%209.168%209%209.375%209s.375.336.375.75Zm-.375%200h.008v.015h-.008V9.75Zm5.625%200c0%20.414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375%200h.008v.015h-.008V9.75Z%22%20%2F%3E%3C%2Fsvg%3E%0A%20%20%20%20Laugh%0A%20%20%3C%2Flabel%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%202%3C%2Fdiv%3E%0A%0A%20%20%3Clabel%20class%3D%22tab%22%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_4%22%20%2F%3E%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20stroke%3D%22currentColor%22%20class%3D%22size-4%20me-2%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M21%208.25c0-2.485-2.099-4.5-4.688-4.5-1.935%200-3.597%201.126-4.312%202.733-.715-1.607-2.377-2.733-4.313-2.733C5.1%203.75%203%205.765%203%208.25c0%207.22%209%2012%209%2012s9-4.78%209-12Z%22%20%2F%3E%3C%2Fsvg%3E%0A%20%20%20%20Love%0A%20%20%3C%2Flabel%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%203%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-lift&quot;&gt;&#10;  &lt;label class=&quot;tab&quot;&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_4&quot; /&gt;&#10;    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;size-4 me-2&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z&quot; /&gt;&lt;/svg&gt;&#10;    Live&#10;  &lt;/label&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 1&lt;/div&gt;&#10;&#10;  &lt;label class=&quot;tab&quot;&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_4&quot; checked=&quot;checked&quot; /&gt;&#10;    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;size-4 me-2&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z&quot; /&gt;&lt;/svg&gt;&#10;    Laugh&#10;  &lt;/label&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 2&lt;/div&gt;&#10;&#10;  &lt;label class=&quot;tab&quot;&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_4&quot; /&gt;&#10;    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;size-4 me-2&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z&quot; /&gt;&lt;/svg&gt;&#10;    Love&#10;  &lt;/label&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 3&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="radio-tabs-lift--tab-content-on-bottom">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#radio-tabs-lift--tab-content-on-bottom" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">radio tabs-lift + tab content on bottom</h3>
+</div>
 <div class="tabs tabs-lift">
-  <label class="tab">
-    <input type="radio" name="my_tabs_4" />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" /></svg>
-    Live
-  </label>
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-
-  <label class="tab">
-    <input type="radio" name="my_tabs_4" checked="checked" />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" /></svg>
-    Laugh
-  </label>
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-
-  <label class="tab">
-    <input type="radio" name="my_tabs_4" />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-    Love
-  </label>
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
-</div>
-```
-
-### radio tabs-lift + tab content on bottom
+<input type="radio" name="tab_radio-tabs-lift--tab-content-on-bottom-10" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="tabs tabs-bottom tabs-lift w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_5" autocomplete="off" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
@@ -246,22 +328,30 @@ description: "Tabs can be used to show a list of links in a tabbed format."
   <input type="radio" name="my_tabs_5" autocomplete="off" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
-<div class="tabs tabs-lift tabs-bottom">
-  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 1" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 2" checked="checked" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 3" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-```
-
-### radio tabs-box + tab content
+</div>
+<input type="radio" name="tab_radio-tabs-lift--tab-content-on-bottom-10" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-lift%20tabs-bottom%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_5%22%20class%3D%22tab%22%20aria-label%3D%22Tab%201%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%201%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_5%22%20class%3D%22tab%22%20aria-label%3D%22Tab%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%202%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_5%22%20class%3D%22tab%22%20aria-label%3D%22Tab%203%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%203%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-lift tabs-bottom&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_5&quot; class=&quot;tab&quot; aria-label=&quot;Tab 1&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 1&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_5&quot; class=&quot;tab&quot; aria-label=&quot;Tab 2&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 2&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_5&quot; class=&quot;tab&quot; aria-label=&quot;Tab 3&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 3&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="radio-tabs-box--tab-content">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#radio-tabs-box--tab-content" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">radio tabs-box + tab content</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_radio-tabs-box--tab-content-11" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="tabs tabs-box w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_6" autocomplete="off" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
@@ -270,22 +360,30 @@ description: "Tabs can be used to show a list of links in a tabbed format."
   <input type="radio" name="my_tabs_6" autocomplete="off" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-
-```html
-<!-- name of each tab group should be unique -->
-<div class="tabs tabs-box">
-  <input type="radio" name="my_tabs_6" class="tab" aria-label="Tab 1" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_6" class="tab" aria-label="Tab 2" checked="checked" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_6" class="tab" aria-label="Tab 3" />
-  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
-```
-
-### tabs-box with a horizontal scroll when there's no space
+</div>
+<input type="radio" name="tab_radio-tabs-box--tab-content-11" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3C%21--%20name%20of%20each%20tab%20group%20should%20be%20unique%20--%3E%0A%3Cdiv%20class%3D%22tabs%20tabs-box%22%3E%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_6%22%20class%3D%22tab%22%20aria-label%3D%22Tab%201%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%201%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_6%22%20class%3D%22tab%22%20aria-label%3D%22Tab%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%202%3C%2Fdiv%3E%0A%0A%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_6%22%20class%3D%22tab%22%20aria-label%3D%22Tab%203%22%20%2F%3E%0A%20%20%3Cdiv%20class%3D%22tab-content%20bg-base-100%20border-base-300%20p-6%22%3ETab%20content%203%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;!-- name of each tab group should be unique --&gt;&#10;&lt;div class=&quot;tabs tabs-box&quot;&gt;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_6&quot; class=&quot;tab&quot; aria-label=&quot;Tab 1&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 1&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_6&quot; class=&quot;tab&quot; aria-label=&quot;Tab 2&quot; checked=&quot;checked&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 2&lt;/div&gt;&#10;&#10;  &lt;input type=&quot;radio&quot; name=&quot;my_tabs_6&quot; class=&quot;tab&quot; aria-label=&quot;Tab 3&quot; /&gt;&#10;  &lt;div class=&quot;tab-content bg-base-100 border-base-300 p-6&quot;&gt;Tab content 3&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-box-with-a-horizontal-scroll-when-theres-no-space">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-box-with-a-horizontal-scroll-when-theres-no-space" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">tabs-box with a horizontal scroll when there&#x27;s no space</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-box-with-a-horizontal-scroll-when-theres-no-space-12" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="overflow-x-auto max-w-60">
   <div class="tabs-lift tabs min-w-max">
     <input type="radio" name="my_tabs_7" autocomplete="off" class="tab z-1" aria-label="Tab title 1" />
@@ -298,33 +396,45 @@ description: "Tabs can be used to show a list of links in a tabbed format."
     <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 4</div>
   </div>
 </div>
-
-```html
-<div class="overflow-x-auto max-w-60">
-  <div class="tabs-lift tabs min-w-max">
-    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 1" />
-    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 1</div>
-    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 2" checked="checked" />
-    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 2</div>
-    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 3" />
-    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 3</div>
-    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 4" />
-    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 4</div>
-  </div>
 </div>
-```
-
-### Tabs with custom color
+</div>
+<input type="radio" name="tab_tabs-box-with-a-horizontal-scroll-when-theres-no-space-12" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22overflow-x-auto%20max-w-60%22%3E%0A%20%20%3Cdiv%20class%3D%22tabs-lift%20tabs%20min-w-max%22%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_7%22%20class%3D%22tab%20z-1%22%20aria-label%3D%22Tab%20title%201%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sticky%20start-0%20tab-content%20max-w-60%20border-base-300%20bg-base-100%20p-6%22%3ETab%20content%201%3C%2Fdiv%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_7%22%20class%3D%22tab%20z-1%22%20aria-label%3D%22Tab%20title%202%22%20checked%3D%22checked%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sticky%20start-0%20tab-content%20max-w-60%20border-base-300%20bg-base-100%20p-6%22%3ETab%20content%202%3C%2Fdiv%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_7%22%20class%3D%22tab%20z-1%22%20aria-label%3D%22Tab%20title%203%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sticky%20start-0%20tab-content%20max-w-60%20border-base-300%20bg-base-100%20p-6%22%3ETab%20content%203%3C%2Fdiv%3E%0A%20%20%20%20%3Cinput%20type%3D%22radio%22%20name%3D%22my_tabs_7%22%20class%3D%22tab%20z-1%22%20aria-label%3D%22Tab%20title%204%22%20%2F%3E%0A%20%20%20%20%3Cdiv%20class%3D%22sticky%20start-0%20tab-content%20max-w-60%20border-base-300%20bg-base-100%20p-6%22%3ETab%20content%204%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;overflow-x-auto max-w-60&quot;&gt;&#10;  &lt;div class=&quot;tabs-lift tabs min-w-max&quot;&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_7&quot; class=&quot;tab z-1&quot; aria-label=&quot;Tab title 1&quot; /&gt;&#10;    &lt;div class=&quot;sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6&quot;&gt;Tab content 1&lt;/div&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_7&quot; class=&quot;tab z-1&quot; aria-label=&quot;Tab title 2&quot; checked=&quot;checked&quot; /&gt;&#10;    &lt;div class=&quot;sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6&quot;&gt;Tab content 2&lt;/div&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_7&quot; class=&quot;tab z-1&quot; aria-label=&quot;Tab title 3&quot; /&gt;&#10;    &lt;div class=&quot;sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6&quot;&gt;Tab content 3&lt;/div&gt;&#10;    &lt;input type=&quot;radio&quot; name=&quot;my_tabs_7&quot; class=&quot;tab z-1&quot; aria-label=&quot;Tab title 4&quot; /&gt;&#10;    &lt;div class=&quot;sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6&quot;&gt;Tab content 4&lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="tabs-with-custom-color">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/tab/#tabs-with-custom-color" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Tabs with custom color</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_tabs-with-custom-color-13" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div role="tablist" class="tabs tabs-lift">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active [--tab-bg:orange] [--tab-border-color:red] text-primary">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-
-```html
-<div role="tablist" class="tabs tabs-lift">
-  <a role="tab" class="tab">Tab 1</a>
-  <a role="tab" class="tab tab-active text-primary [--tab-bg:orange] [--tab-border-color:red]"> Tab 2</a>
-  <a role="tab" class="tab">Tab 3</a>
 </div>
-```
+</div>
+<input type="radio" name="tab_tabs-with-custom-color-13" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20role%3D%22tablist%22%20class%3D%22tabs%20tabs-lift%22%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%201%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%20tab-active%20text-primary%20%5B--tab-bg%3Aorange%5D%20%5B--tab-border-color%3Ared%5D%22%3E%20Tab%202%3C%2Fa%3E%0A%20%20%3Ca%20role%3D%22tab%22%20class%3D%22tab%22%3ETab%203%3C%2Fa%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div role=&quot;tablist&quot; class=&quot;tabs tabs-lift&quot;&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 1&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab tab-active text-primary [--tab-bg:orange] [--tab-border-color:red]&quot;&gt; Tab 2&lt;/a&gt;&#10;  &lt;a role=&quot;tab&quot; class=&quot;tab&quot;&gt;Tab 3&lt;/a&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

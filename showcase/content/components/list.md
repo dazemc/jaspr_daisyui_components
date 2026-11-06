@@ -3,11 +3,20 @@ title: "List"
 description: "List is a vertical layout to display information in rows."
 ---
 
-> :INFO:
->
-> By default, the second child of the `list-row` will fill the remaining space. You can use `list-col-grow` on another child to make it fill the remaining space instead.
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">list</code></th><td class="whitespace-nowrap">Component</td><td>A vertical flex layout to include list rows</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">list-row</code></th><td class="whitespace-nowrap">Component</td><td>The item inside list. A horizontal grid layout to include data</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">list-col-wrap</code></th><td class="whitespace-nowrap">Modifier</td><td>For one of direct children of list-row to push it to the next line</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">list-col-grow</code></th><td class="whitespace-nowrap">Modifier</td><td>For one of direct children of list-row to make it fill the remaining space</td></tr></tbody></table></div>
 
-### List (second column grows - default)
+<div class="callout alert alert-soft my-4 items-start gap-3 text-sm"><svg class="size-4 shrink-0 text-info" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7.25" r="1.25"/></g></svg><div class="flex-1 space-y-2"><p class="m-0">By default, the second child of the <code>list-row</code> will fill the remaining space. You can use <code>list-col-grow</code> on another child to make it fill the remaining space instead.</p></div></div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="list-second-column-grows---default">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/list/#list-second-column-grows---default" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">List (second column grows - default)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_list-second-column-grows---default-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full max-w-lg">
   <ul class="list bg-base-100 rounded-box shadow-md">
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
@@ -18,10 +27,10 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -31,10 +40,10 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -44,66 +53,38 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
   </ul>
 </div>
-
-```html
-<ul class="list bg-base-100 rounded-box shadow-md">
-  
-  <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-    <div>
-      <div>Dio Lupa</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
-    <div>
-      <div>Ellie Beilish</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
-    <div>
-      <div>Sabrino Gardener</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-</ul>
-```
-
-### List (third column grows)
+</div>
+</div>
+<input type="radio" name="tab_list-second-column-grows---default-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22list%20bg-base-100%20rounded-box%20shadow-md%22%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22p-4%20pb-2%20text-xs%20opacity-60%20tracking-wide%22%3EMost%20played%20songs%20this%20week%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F1%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3EDio%20Lupa%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ERemaining%20Reason%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F4%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3EEllie%20Beilish%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3EBears%20of%20a%20fever%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F3%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3ESabrino%20Gardener%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ECappuccino%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;list bg-base-100 rounded-box shadow-md&quot;&gt;&#10;  &#10;  &lt;li class=&quot;p-4 pb-2 text-xs opacity-60 tracking-wide&quot;&gt;Most played songs this week&lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/1@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Dio Lupa&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Remaining Reason&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/4@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Ellie Beilish&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Bears of a fever&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/3@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Sabrino Gardener&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Cappuccino&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="list-third-column-grows">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/list/#list-third-column-grows" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">List (third column grows)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_list-third-column-grows-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full max-w-lg">
   <ul class="list bg-base-100 rounded-box shadow-md">
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
@@ -115,7 +96,7 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -126,7 +107,7 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -137,57 +118,35 @@ description: "List is a vertical layout to display information in rows."
         <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
       </div>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
     </li>
   </ul>
 </div>
-
-```html
-<ul class="list bg-base-100 rounded-box shadow-md">
-  
-  <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
-  
-  <li class="list-row">
-    <div class="text-4xl font-thin opacity-30 tabular-nums">01</div>
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-    <div class="list-col-grow">
-      <div>Dio Lupa</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div class="text-4xl font-thin opacity-30 tabular-nums">02</div>
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
-    <div class="list-col-grow">
-      <div>Ellie Beilish</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div class="text-4xl font-thin opacity-30 tabular-nums">03</div>
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
-    <div class="list-col-grow">
-      <div>Sabrino Gardener</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
-    </div>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-  </li>
-  
-</ul>
-```
-
-### List (third column wraps to next row)
+</div>
+</div>
+<input type="radio" name="tab_list-third-column-grows-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22list%20bg-base-100%20rounded-box%20shadow-md%22%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22p-4%20pb-2%20text-xs%20opacity-60%20tracking-wide%22%3EMost%20played%20songs%20this%20week%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-4xl%20font-thin%20opacity-30%20tabular-nums%22%3E01%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F1%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22list-col-grow%22%3E%0A%20%20%20%20%20%20%3Cdiv%3EDio%20Lupa%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ERemaining%20Reason%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-4xl%20font-thin%20opacity-30%20tabular-nums%22%3E02%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F4%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22list-col-grow%22%3E%0A%20%20%20%20%20%20%3Cdiv%3EEllie%20Beilish%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3EBears%20of%20a%20fever%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-4xl%20font-thin%20opacity-30%20tabular-nums%22%3E03%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F3%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20class%3D%22list-col-grow%22%3E%0A%20%20%20%20%20%20%3Cdiv%3ESabrino%20Gardener%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ECappuccino%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;list bg-base-100 rounded-box shadow-md&quot;&gt;&#10;  &#10;  &lt;li class=&quot;p-4 pb-2 text-xs opacity-60 tracking-wide&quot;&gt;Most played songs this week&lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div class=&quot;text-4xl font-thin opacity-30 tabular-nums&quot;&gt;01&lt;/div&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/1@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div class=&quot;list-col-grow&quot;&gt;&#10;      &lt;div&gt;Dio Lupa&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Remaining Reason&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div class=&quot;text-4xl font-thin opacity-30 tabular-nums&quot;&gt;02&lt;/div&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/4@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div class=&quot;list-col-grow&quot;&gt;&#10;      &lt;div&gt;Ellie Beilish&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Bears of a fever&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div class=&quot;text-4xl font-thin opacity-30 tabular-nums&quot;&gt;03&lt;/div&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/3@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div class=&quot;list-col-grow&quot;&gt;&#10;      &lt;div&gt;Sabrino Gardener&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Cappuccino&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="list-third-column-wraps-to-next-row">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/list/#list-third-column-wraps-to-next-row" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">List (third column wraps to next row)</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_list-third-column-wraps-to-next-row-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="w-full max-w-lg">
   <ul class="list bg-base-100 rounded-box shadow-md">
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
@@ -201,10 +160,10 @@ description: "List is a vertical layout to display information in rows."
       "Remaining Reason" became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.
       </p>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -217,10 +176,10 @@ description: "List is a vertical layout to display information in rows."
       "Bears of a Fever" captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim.
       </p>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
     <li class="list-row">
@@ -233,70 +192,24 @@ description: "List is a vertical layout to display information in rows."
       "Cappuccino" quickly gained attention for its smooth melody and relatable themes. The song’s success propelled Sabrino into the spotlight, solidifying their status as a rising star.
       </p>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Play" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
       </button>
       <button class="btn btn-square btn-ghost">
-        
+        <svg aria-label="Favorite" class="size-[1.2em]" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
       </button>
     </li>
   </ul>
 </div>
-
-```html
-<ul class="list bg-base-100 rounded-box shadow-md">
-  
-  <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-    <div>
-      <div>Dio Lupa</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
-    </div>
-    <p class="list-col-wrap text-xs">
-      "Remaining Reason" became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.
-    </p>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
-    <div>
-      <div>Ellie Beilish</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
-    </div>
-    <p class="list-col-wrap text-xs">
-      "Bears of a Fever" captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim.
-    </p>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-  <li class="list-row">
-    <div><img class="size-10 rounded-box" alt="Tailwind CSS list item" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
-    <div>
-      <div>Sabrino Gardener</div>
-      <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
-    </div>
-    <p class="list-col-wrap text-xs">
-      "Cappuccino" quickly gained attention for its smooth melody and relatable themes. The song’s success propelled Sabrino into the spotlight, solidifying their status as a rising star.
-    </p>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M6 3L20 12 6 21 6 3z"></path></g></svg>
-    </button>
-    <button class="btn btn-square btn-ghost">
-      <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
-    </button>
-  </li>
-  
-</ul>
-```
+</div>
+</div>
+<input type="radio" name="tab_list-third-column-wraps-to-next-row-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cul%20class%3D%22list%20bg-base-100%20rounded-box%20shadow-md%22%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22p-4%20pb-2%20text-xs%20opacity-60%20tracking-wide%22%3EMost%20played%20songs%20this%20week%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F1%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3EDio%20Lupa%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ERemaining%20Reason%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cp%20class%3D%22list-col-wrap%20text-xs%22%3E%0A%20%20%20%20%20%20%22Remaining%20Reason%22%20became%20an%20instant%20hit%2C%20praised%20for%20its%20haunting%20sound%20and%20emotional%20depth.%20A%20viral%20performance%20brought%20it%20widespread%20recognition%2C%20making%20it%20one%20of%20Dio%20Lupa%E2%80%99s%20most%20iconic%20tracks.%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F4%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3EEllie%20Beilish%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3EBears%20of%20a%20fever%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cp%20class%3D%22list-col-wrap%20text-xs%22%3E%0A%20%20%20%20%20%20%22Bears%20of%20a%20Fever%22%20captivated%20audiences%20with%20its%20intense%20energy%20and%20mysterious%20lyrics.%20Its%20popularity%20skyrocketed%20after%20fans%20shared%20it%20widely%20online%2C%20earning%20Ellie%20critical%20acclaim.%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%20%20%3Cli%20class%3D%22list-row%22%3E%0A%20%20%20%20%3Cdiv%3E%3Cimg%20class%3D%22size-10%20rounded-box%22%20alt%3D%22Tailwind%20CSS%20list%20item%22%20src%3D%22https%3A%2F%2Fimg.daisyui.com%2Fimages%2Fprofile%2Fdemo%2F3%4094.webp%22%2F%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%3ESabrino%20Gardener%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22text-xs%20uppercase%20font-semibold%20opacity-60%22%3ECappuccino%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cp%20class%3D%22list-col-wrap%20text-xs%22%3E%0A%20%20%20%20%20%20%22Cappuccino%22%20quickly%20gained%20attention%20for%20its%20smooth%20melody%20and%20relatable%20themes.%20The%20song%E2%80%99s%20success%20propelled%20Sabrino%20into%20the%20spotlight%2C%20solidifying%20their%20status%20as%20a%20rising%20star.%0A%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Play%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M6%203L20%2012%206%2021%206%203z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20btn-square%20btn-ghost%22%3E%0A%20%20%20%20%20%20%3Csvg%20aria-label%3D%22Favorite%22%20class%3D%22size-%5B1.2em%5D%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%202%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A%20%20%20%20%3C%2Fbutton%3E%0A%20%20%3C%2Fli%3E%0A%20%20%0A%3C%2Ful%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;ul class=&quot;list bg-base-100 rounded-box shadow-md&quot;&gt;&#10;  &#10;  &lt;li class=&quot;p-4 pb-2 text-xs opacity-60 tracking-wide&quot;&gt;Most played songs this week&lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/1@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Dio Lupa&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Remaining Reason&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;p class=&quot;list-col-wrap text-xs&quot;&gt;&#10;      &quot;Remaining Reason&quot; became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.&#10;    &lt;/p&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/4@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Ellie Beilish&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Bears of a fever&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;p class=&quot;list-col-wrap text-xs&quot;&gt;&#10;      &quot;Bears of a Fever&quot; captivated audiences with its intense energy and mysterious lyrics. Its popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim.&#10;    &lt;/p&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;  &lt;li class=&quot;list-row&quot;&gt;&#10;    &lt;div&gt;&lt;img class=&quot;size-10 rounded-box&quot; alt=&quot;Tailwind CSS list item&quot; src=&quot;https://img.daisyui.com/images/profile/demo/3@94.webp&quot;/&gt;&lt;/div&gt;&#10;    &lt;div&gt;&#10;      &lt;div&gt;Sabrino Gardener&lt;/div&gt;&#10;      &lt;div class=&quot;text-xs uppercase font-semibold opacity-60&quot;&gt;Cappuccino&lt;/div&gt;&#10;    &lt;/div&gt;&#10;    &lt;p class=&quot;list-col-wrap text-xs&quot;&gt;&#10;      &quot;Cappuccino&quot; quickly gained attention for its smooth melody and relatable themes. The song’s success propelled Sabrino into the spotlight, solidifying their status as a rising star.&#10;    &lt;/p&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Play&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M6 3L20 12 6 21 6 3z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;    &lt;button class=&quot;btn btn-square btn-ghost&quot;&gt;&#10;      &lt;svg aria-label=&quot;Favorite&quot; class=&quot;size-[1.2em]&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;g stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;&gt;&lt;path d=&quot;M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&#10;    &lt;/button&gt;&#10;  &lt;/li&gt;&#10;  &#10;&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>

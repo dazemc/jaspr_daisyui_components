@@ -3,54 +3,107 @@ title: "Join (group items)"
 description: "Join is a container for grouping multiple items, it can be used to group buttons, inputs, etc. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items."
 ---
 
-### Join
+<div class="not-prose classnames-table my-8 max-h-[25rem] overflow-auto rounded-box border border-base-content/10"><table class="table table-sm w-full"><thead><tr><th class="bg-base-200">Class name</th><th class="bg-base-200">Type</th><th class="bg-base-200">Description</th></tr></thead><tbody><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">join</code></th><td class="whitespace-nowrap">Component</td><td>For grouping multiple items</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">join-item</code></th><td class="whitespace-nowrap">Component</td><td>Item inside join. Can be a button, input, etc.</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">join-vertical</code></th><td class="whitespace-nowrap">Direction</td><td>Show items vertically</td></tr><tr><th class="bg-base-100 font-normal"><code class="whitespace-nowrap">join-horizontal</code></th><td class="whitespace-nowrap">Direction</td><td>Show items horizontally</td></tr></tbody></table></div>
+
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="join">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#join" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Join</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_join-1" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-
-```html
-<div class="join">
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
 </div>
-```
-
-### Group items vertically
+</div>
+<input type="radio" name="tab_join-1" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%22%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join&quot;&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="group-items-vertically">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#group-items-vertically" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Group items vertically</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_group-items-vertically-2" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join join-vertical">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-
-```html
-<div class="join join-vertical">
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
 </div>
-```
-
-### Responsive: it's vertical on small screen and horizontal on large screen
+</div>
+<input type="radio" name="tab_group-items-vertically-2" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%20join-vertical%22%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join join-vertical&quot;&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Responsive: it&#x27;s vertical on small screen and horizontal on large screen</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen-3" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join join-vertical lg:join-horizontal">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-
-```html
-<div class="join join-vertical lg:join-horizontal">
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
-  <button class="btn join-item">Button</button>
 </div>
-```
-
-### With extra elements in the group
-#### Even if join-item is not a direct child of the group, it still gets the style
-
+</div>
+<input type="radio" name="tab_responsive-its-vertical-on-small-screen-and-horizontal-on-large-screen-3" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%20join-vertical%20lg%3Ajoin-horizontal%22%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3EButton%3C%2Fbutton%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join join-vertical lg:join-horizontal&quot;&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;  &lt;button class=&quot;btn join-item&quot;&gt;Button&lt;/button&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="with-extra-elements-in-the-group">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#with-extra-elements-in-the-group" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">With extra elements in the group</h3>
+</div>
+<div class="pb-4 text-xs opacity-70">Even if join-item is not a direct child of the group, it still gets the style</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_with-extra-elements-in-the-group-4" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join">
   <div>
     <div>
@@ -68,51 +121,73 @@ description: "Join is a container for grouping multiple items, it can be used to
     <button class="btn join-item">Search</button>
   </div>
 </div>
-
-```html
-<div class="join">
-  <div>
-    <div>
-      <input class="input join-item" placeholder="Search" />
-    </div>
-  </div>
-  <select class="select join-item">
-    <option disabled selected>Filter</option>
-    <option>Sci-fi</option>
-    <option>Drama</option>
-    <option>Action</option>
-  </select>
-  <div class="indicator">
-    <span class="indicator-item badge badge-secondary">new</span>
-    <button class="btn join-item">Search</button>
-  </div>
 </div>
-```
-
-### Custom border radius
+</div>
+<input type="radio" name="tab_with-extra-elements-in-the-group-4" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%22%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cinput%20class%3D%22input%20join-item%22%20placeholder%3D%22Search%22%20%2F%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3Cselect%20class%3D%22select%20join-item%22%3E%0A%20%20%20%20%3Coption%20disabled%20selected%3EFilter%3C%2Foption%3E%0A%20%20%20%20%3Coption%3ESci-fi%3C%2Foption%3E%0A%20%20%20%20%3Coption%3EDrama%3C%2Foption%3E%0A%20%20%20%20%3Coption%3EAction%3C%2Foption%3E%0A%20%20%3C%2Fselect%3E%0A%20%20%3Cdiv%20class%3D%22indicator%22%3E%0A%20%20%20%20%3Cspan%20class%3D%22indicator-item%20badge%20badge-secondary%22%3Enew%3C%2Fspan%3E%0A%20%20%20%20%3Cbutton%20class%3D%22btn%20join-item%22%3ESearch%3C%2Fbutton%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join&quot;&gt;&#10;  &lt;div&gt;&#10;    &lt;div&gt;&#10;      &lt;input class=&quot;input join-item&quot; placeholder=&quot;Search&quot; /&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;  &lt;select class=&quot;select join-item&quot;&gt;&#10;    &lt;option disabled selected&gt;Filter&lt;/option&gt;&#10;    &lt;option&gt;Sci-fi&lt;/option&gt;&#10;    &lt;option&gt;Drama&lt;/option&gt;&#10;    &lt;option&gt;Action&lt;/option&gt;&#10;  &lt;/select&gt;&#10;  &lt;div class=&quot;indicator&quot;&gt;&#10;    &lt;span class=&quot;indicator-item badge badge-secondary&quot;&gt;new&lt;/span&gt;&#10;    &lt;button class=&quot;btn join-item&quot;&gt;Search&lt;/button&gt;&#10;  &lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="custom-border-radius">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#custom-border-radius" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Custom border radius</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_custom-border-radius-5" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join">
   <input class="input join-item w-36 lg:w-52" placeholder="Email"/>
   <button class="btn join-item rounded-e-full">Subscribe</button>
 </div>
-
-```html
-<div class="join">
-  <input class="input join-item" placeholder="Email" />
-  <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
-```
-
-### Join radio inputs with btn style
+</div>
+<input type="radio" name="tab_custom-border-radius-5" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%22%3E%0A%20%20%3Cinput%20class%3D%22input%20join-item%22%20placeholder%3D%22Email%22%20%2F%3E%0A%20%20%3Cbutton%20class%3D%22btn%20join-item%20rounded-r-full%22%3ESubscribe%3C%2Fbutton%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join&quot;&gt;&#10;  &lt;input class=&quot;input join-item&quot; placeholder=&quot;Email&quot; /&gt;&#10;  &lt;button class=&quot;btn join-item rounded-r-full&quot;&gt;Subscribe&lt;/button&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="component-preview not-prose text-base-content my-6 lg:my-12" id="join-radio-inputs-with-btn-style">
+<div class="flex items-center gap-2 pb-3 text-sm font-bold">
+<a class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm" href="/components/join/#join-radio-inputs-with-btn-style" aria-label="Link to heading">
+<svg class="size-3" fill="currentColor" width="12" height="12" viewBox="0 0 256 256"><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>
+</a>
+<h3 class="component-preview-title mt-2 mb-1 text-lg font-semibold">Join radio inputs with btn style</h3>
+</div>
+<div class="tabs tabs-lift">
+<input type="radio" name="tab_join-radio-inputs-with-btn-style-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
+<div class="tab-content border-base-300 overflow-x-auto">
+<div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <div class="join">
   <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 1" />
   <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 2" />
   <input class="join-item btn" type="radio" name="options" autocomplete="off" aria-label="Radio 3" />
 </div>
-
-```html
-<div class="join">
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 1" />
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 2" />
-  <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
 </div>
-```
+</div>
+<input type="radio" name="tab_join-radio-inputs-with-btn-style-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
+<div class="tab-content">
+<div class="relative">
+<button class="btn btn-square btn-xs btn-neutral absolute right-3 top-3 z-10" data-copy-code="%3Cdiv%20class%3D%22join%22%3E%0A%20%20%3Cinput%20class%3D%22join-item%20btn%22%20type%3D%22radio%22%20name%3D%22options%22%20aria-label%3D%22Radio%201%22%20%2F%3E%0A%20%20%3Cinput%20class%3D%22join-item%20btn%22%20type%3D%22radio%22%20name%3D%22options%22%20aria-label%3D%22Radio%202%22%20%2F%3E%0A%20%20%3Cinput%20class%3D%22join-item%20btn%22%20type%3D%22radio%22%20name%3D%22options%22%20aria-label%3D%22Radio%203%22%20%2F%3E%0A%3C%2Fdiv%3E" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyCode));this.classList.add(&#39;btn-success&#39;);setTimeout(()=&gt;this.classList.remove(&#39;btn-success&#39;),1000)" aria-label="Copy to clipboard">
+<svg class="size-4 fill-current" viewBox="0 0 32 32"><path d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 4.445313 15.445313 4 16 4 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"/></svg>
+</button>
+<pre class="component-code"><code>&lt;div class=&quot;join&quot;&gt;&#10;  &lt;input class=&quot;join-item btn&quot; type=&quot;radio&quot; name=&quot;options&quot; aria-label=&quot;Radio 1&quot; /&gt;&#10;  &lt;input class=&quot;join-item btn&quot; type=&quot;radio&quot; name=&quot;options&quot; aria-label=&quot;Radio 2&quot; /&gt;&#10;  &lt;input class=&quot;join-item btn&quot; type=&quot;radio&quot; name=&quot;options&quot; aria-label=&quot;Radio 3&quot; /&gt;&#10;&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
