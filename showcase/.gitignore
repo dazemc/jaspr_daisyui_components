@@ -3,3 +3,6 @@ build/
 .dart_tool/
 pubspec.lock
 web/styles.css
+
+__pycache__/
+*.pyc
