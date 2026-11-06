@@ -59,6 +59,11 @@ body,
   .docs .main-container .sidebar-container {
     z-index: 30 !important;
   }
+
+  .docs:has(.sidebar-container.open) .header-container {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .docs .sidebar {
