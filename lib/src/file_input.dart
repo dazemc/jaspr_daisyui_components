@@ -87,7 +87,7 @@ class FileInput extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'type': type ?? 'file'},
       events: events,
     );
   }

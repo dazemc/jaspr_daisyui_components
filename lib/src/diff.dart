@@ -32,7 +32,7 @@ class Diff extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'tabindex': ?tabindex},
       events: events,
     );
   }

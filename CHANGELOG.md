@@ -1,3 +1,9 @@
+## 0.3.0
+
+- Generated components now apply their typed convenience fields (`type`, `placeholder`, `checked`, `role`, `for_`, `min`, `max`, `value`) instead of silently dropping them.
+- Input-based components now imply their native input type (`checkbox`, `radio`, `range`, `file`).
+- Changed `checked` fields from `String?` to `bool?`.
+
 ## 0.2.0
 
 - Updated the daisyUI submodule to v5.7.50.

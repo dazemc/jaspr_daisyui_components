@@ -39,7 +39,7 @@ class Radio extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final String? checked;
+  final bool? checked;
   final String? type;
   final RadioColor? color;
   final RadioSize? size;
@@ -76,7 +76,11 @@ class Radio extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {
+        ...?attributes,
+        if (checked == true) 'checked': '',
+        'type': type ?? 'radio',
+      },
       events: events,
     );
   }

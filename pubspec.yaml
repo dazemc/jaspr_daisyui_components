@@ -1,6 +1,6 @@
 name: jaspr_daisyui_components
 description: Typed Jaspr components for every daisyUI component, generated from the daisyUI docs.
-version: 0.2.0
+version: 0.3.0
 homepage: https://dazemc.github.io/jaspr_daisyui_components/
 repository: https://github.com/dazemc/jaspr_daisyui_components
 issue_tracker: https://github.com/dazemc/jaspr_daisyui_components/issues

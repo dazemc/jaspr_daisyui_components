@@ -32,7 +32,7 @@ class FilterReset extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'type': type ?? 'reset'},
       events: events,
     );
   }

@@ -155,6 +155,42 @@ BLOCK_TAGS = {
     "ul",
 }
 
+STRUCTURAL_FIELDS = {"children", "classes", "styles", "id", "attributes", "events"}
+IMPLIED_INPUT_TYPES = {
+    "Checkbox": "checkbox",
+    "Toggle": "checkbox",
+    "Radio": "radio",
+    "Range": "range",
+    "FileInput": "file",
+    "DrawerToggle": "checkbox",
+    "ModalToggle": "checkbox",
+    "FilterReset": "reset",
+}
+INPUT_TYPE_NAMES = {
+    "text": "text",
+    "button": "button",
+    "checkbox": "checkbox",
+    "color": "color",
+    "date": "date",
+    "datetime-local": "dateTimeLocal",
+    "email": "email",
+    "file": "file",
+    "hidden": "hidden",
+    "image": "image",
+    "month": "month",
+    "number": "number",
+    "password": "password",
+    "radio": "radio",
+    "range": "range",
+    "reset": "reset",
+    "search": "search",
+    "submit": "submit",
+    "tel": "tel",
+    "time": "time",
+    "url": "url",
+    "week": "week",
+}
+
 ENUM_RE = re.compile(r"enum\s+(\w+)\s*\{(.*?)\n\}", re.S)
 ENUM_VALUE_RE = re.compile(r"(\w+)\('([^']*)'\)")
 CLASS_RE = re.compile(r"class\s+(\w+)\s+extends\s+StatelessComponent")
@@ -182,11 +218,19 @@ class EnumField:
 
 
 @dataclass(frozen=True)
+class PropertyField:
+    name: str
+    type_name: str
+    is_bool: bool
+
+
+@dataclass(frozen=True)
 class Wrapper:
     class_name: str
     base_class: str
     tag: str
     enum_fields: tuple[EnumField, ...]
+    property_fields: tuple[PropertyField, ...]
 
 
 @dataclass
@@ -276,24 +320,34 @@ def load_wrappers(package_root: Path) -> dict[str, Wrapper]:
                 enums[enum_match.group(1)] = EnumInfo(enum_match.group(1), values)
 
         fields: list[EnumField] = []
+        properties: list[PropertyField] = []
         for field_match in FIELD_RE.finditer(source):
             type_name = field_match.group("inner") or field_match.group("scalar") or ""
-            if type_name not in enums:
-                continue
-            fields.append(
-                EnumField(
-                    name=field_match.group("name"),
-                    type_name=type_name,
-                    is_list=field_match.group("inner") is not None,
-                    enum=enums[type_name],
+            name = field_match.group("name")
+            if type_name in enums:
+                fields.append(
+                    EnumField(
+                        name=name,
+                        type_name=type_name,
+                        is_list=field_match.group("inner") is not None,
+                        enum=enums[type_name],
+                    )
                 )
-            )
+            elif name not in STRUCTURAL_FIELDS and type_name in {"String", "bool"}:
+                properties.append(
+                    PropertyField(
+                        name=name,
+                        type_name=type_name,
+                        is_bool=type_name == "bool",
+                    )
+                )
 
         wrappers[base_match.group(1)] = Wrapper(
             class_name=class_name,
             base_class=base_match.group(1),
             tag=tag_match.group(1),
             enum_fields=tuple(fields),
+            property_fields=tuple(properties),
         )
     return wrappers
 
@@ -415,10 +469,9 @@ def child_nodes(node: Element) -> list[Node]:
     return result
 
 
-def render_attributes(node: Element, indent: int) -> list[list[str]]:
+def render_attributes(attrs: dict[str, str], indent: int) -> list[list[str]]:
     args: list[list[str]] = []
-    attrs = dict(node.attrs)
-    attrs.pop("class", None)
+    attrs = dict(attrs)
     element_id = attrs.pop("id", None)
     if element_id:
         args.append([f"id: {dart_string(element_id)}"])
@@ -503,7 +556,7 @@ def render_node(
     if isinstance(node, Comment):
         return []
 
-    if node.tag == "svg" or "-" in node.tag or node.tag not in DOM_FACTORIES:
+    if node.tag in {"svg", "script", "style"} or "-" in node.tag or node.tag not in DOM_FACTORIES:
         return [
             f"{INDENT * indent}RawText({dart_raw_string(serialize_html(node))})"
         ]
@@ -516,6 +569,8 @@ def render_node(
     wrapper_match = find_wrapper(node, wrappers)
     if wrapper_match is not None:
         wrapper, remainder = wrapper_match
+        attrs = dict(node.attrs)
+        attrs.pop("class", None)
         enum_args: list[list[str]] = []
         for field in wrapper.enum_fields:
             reverse = field.enum.reverse
@@ -530,11 +585,34 @@ def render_node(
             else:
                 enum_args.append([f"{field.name}: {field.enum.name}.{reverse[matched[0]]}"])
             remainder = [class_name for class_name in remainder if class_name not in matched]
+
+        property_args: list[list[str]] = []
+        implied_type = IMPLIED_INPUT_TYPES.get(wrapper.class_name)
+        for field in wrapper.property_fields:
+            attr_name = "for" if field.name == "for_" else field.name
+            if attr_name not in attrs:
+                continue
+            raw = attrs[attr_name]
+            if field.name == "type":
+                if implied_type == raw:
+                    attrs.pop(attr_name)
+                    continue
+                if wrapper.class_name == "Input" and raw == "text":
+                    attrs.pop(attr_name)
+                    continue
+            attrs.pop(attr_name)
+            if field.is_bool:
+                if raw not in {"false", "0"}:
+                    property_args.append([f"{field.name}: true"])
+            else:
+                property_args.append([f"{field.name}: {dart_string(raw)}"])
+
         args = []
         if remainder:
             args.append([f"classes: {dart_string(' '.join(remainder))}"])
         args.extend(enum_args)
-        args.extend(render_attributes(node, indent + 1))
+        args.extend(property_args)
+        args.extend(render_attributes(attrs, indent + 1))
         return render_call(
             wrapper.class_name,
             child_exprs,
@@ -544,11 +622,38 @@ def render_node(
         )
 
     factory = "main_" if node.tag == "main" else node.tag
+    attrs = dict(node.attrs)
+    attrs.pop("class", None)
+    typed_args: list[list[str]] = []
+    if node.tag == "input":
+        input_type = attrs.pop("type", None)
+        if input_type is not None and input_type in INPUT_TYPE_NAMES:
+            typed_args.append([f"type: InputType.{INPUT_TYPE_NAMES[input_type]}"])
+        elif input_type is not None:
+            attrs["type"] = input_type
+        for attr_name, arg_name in (("name", "name"), ("value", "value")):
+            if attr_name in attrs:
+                typed_args.append([f"{arg_name}: {dart_string(attrs.pop(attr_name))}"])
+        for attr_name, arg_name in (("checked", "checked"), ("disabled", "disabled")):
+            if attr_name in attrs:
+                raw = attrs.pop(attr_name)
+                if raw not in {"false", "0"}:
+                    typed_args.append([f"{arg_name}: true"])
+    elif node.tag == "a":
+        typed_args.append([f"href: {dart_string(attrs.pop('href', '#'))}"])
+    elif node.tag == "img":
+        if "src" in attrs:
+            typed_args.append([f"src: {dart_string(attrs.pop('src'))}"])
+        if "alt" in attrs:
+            typed_args.append([f"alt: {dart_string(attrs.pop('alt'))}"])
+    elif node.tag in {"iframe", "source"} and "src" in attrs:
+        typed_args.append([f"src: {dart_string(attrs.pop('src'))}"])
     args = []
     classes = node_classes(node)
     if classes:
         args.append([f"classes: {dart_string(' '.join(classes))}"])
-    args.extend(render_attributes(node, indent + 1))
+    args.extend(typed_args)
+    args.extend(render_attributes(attrs, indent + 1))
     children_expr = child_exprs if node.tag not in VOID_TAGS else None
     return render_call(factory, children_expr, args, indent, wrapper=False)
 

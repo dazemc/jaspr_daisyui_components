@@ -87,7 +87,7 @@ class Textarea extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'placeholder': ?placeholder},
       events: events,
     );
   }

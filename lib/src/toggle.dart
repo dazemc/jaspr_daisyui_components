@@ -39,7 +39,7 @@ class Toggle extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
-  final String? checked;
+  final bool? checked;
   final String? type;
   final ToggleColor? color;
   final ToggleSize? size;
@@ -76,7 +76,11 @@ class Toggle extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {
+        ...?attributes,
+        if (checked == true) 'checked': '',
+        'type': type ?? 'checkbox',
+      },
       events: events,
     );
   }

@@ -32,7 +32,7 @@ class ModalToggle extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'type': type ?? 'checkbox'},
       events: events,
     );
   }

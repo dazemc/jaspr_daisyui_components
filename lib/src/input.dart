@@ -89,7 +89,7 @@ class Input extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'placeholder': ?placeholder, 'type': ?type},
       events: events,
     );
   }

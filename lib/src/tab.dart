@@ -50,7 +50,7 @@ class Tab extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'role': ?role},
       events: events,
     );
   }

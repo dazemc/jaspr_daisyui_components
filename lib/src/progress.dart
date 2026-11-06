@@ -59,7 +59,7 @@ class Progress extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'max': ?max, 'value': ?value},
       events: events,
     );
   }

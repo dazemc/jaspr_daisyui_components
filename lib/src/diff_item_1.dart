@@ -34,7 +34,7 @@ class DiffItem1 extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'role': ?role, 'tabindex': ?tabindex},
       events: events,
     );
   }

@@ -32,7 +32,7 @@ class DrawerButton extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'for': ?for_},
       events: events,
     );
   }

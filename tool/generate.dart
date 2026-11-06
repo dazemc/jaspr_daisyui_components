@@ -81,6 +81,38 @@ void buildFunctions(List<DaisyuiComponent> components) {
     for (String name in presentTypes) {
       output += mappedCalls[name]!;
     }
+    final impliedType = c.tag == 'input'
+        ? switch (c.label) {
+            'checkbox' || 'toggle' => 'checkbox',
+            'radio' => 'radio',
+            'range' => 'range',
+            'file-input' => 'file',
+            'drawer-toggle' || 'modal-toggle' => 'checkbox',
+            'filter-reset' => 'reset',
+            _ => null,
+          }
+        : null;
+
+    String fieldAttributes = '';
+    if (c.additionalAttributes case final attributes?) {
+      for (final attribute in attributes) {
+        if (attribute == 'type' && impliedType != null) {
+          continue;
+        }
+        final name = attribute == "for" ? "for_" : attribute;
+        if (name == "checked" || name == "required") {
+          fieldAttributes += "      if ($name == true) '$attribute': '',\n";
+        } else {
+          fieldAttributes += "      '$attribute': ?$name,\n";
+        }
+      }
+    }
+
+    // Input-based components imply their native input type.
+    if (impliedType != null) {
+      fieldAttributes += "      'type': type ?? '$impliedType',\n";
+    }
+
     c.footerString =
         '''  
   String getClasses() {
@@ -101,7 +133,9 @@ void buildFunctions(List<DaisyuiComponent> components) {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {
+        ...?attributes,
+$fieldAttributes      },
       events: events,
     );
   }
@@ -134,7 +168,11 @@ void buildFields(List<DaisyuiComponent> components) {
           if (name == "for") {
             name = "for_";
           }
-          requiredAttributesPara += 'final String? $name;';
+          if (name == "checked" || name == "required") {
+            requiredAttributesPara += 'final bool? $name;';
+          } else {
+            requiredAttributesPara += 'final String? $name;';
+          }
           requiredAttributesConst += 'this.$name,';
         }
       }

@@ -34,7 +34,7 @@ class ThemeController extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes, 'type': ?type, 'value': ?value},
       events: events,
     );
   }

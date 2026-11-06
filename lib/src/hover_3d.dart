@@ -21,17 +21,8 @@ class Hover3d extends StatelessComponent {
     return output.join(' ');
   }
 
-  void getRequiredChildren() {
-    List<Component> requiredChildren = [];
-    for (int i = 0; i < 8; i++) {
-      requiredChildren.add(div([]));
-    }
-    children.addAll(requiredChildren);
-  }
-
   @override
   Component build(BuildContext build) {
-    getRequiredChildren();
     return .element(
       tag: 'div',
       classes: getClasses(),
@@ -39,7 +30,7 @@ class Hover3d extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes},
       events: events,
     );
   }

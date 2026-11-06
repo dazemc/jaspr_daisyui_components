@@ -9,7 +9,7 @@ class Validator extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final String? placeholder;
-  final String? required;
+  final bool? required;
   final String? type;
   const Validator(
     this.children, {
@@ -36,7 +36,12 @@ class Validator extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {
+        ...?attributes,
+        'placeholder': ?placeholder,
+        if (required == true) 'required': '',
+        'type': ?type,
+      },
       events: events,
     );
   }

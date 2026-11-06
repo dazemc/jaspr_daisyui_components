@@ -30,7 +30,7 @@ class ModalBox extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {...?attributes},
       events: events,
     );
   }

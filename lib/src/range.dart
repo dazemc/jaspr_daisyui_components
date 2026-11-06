@@ -93,7 +93,13 @@ class Range extends StatelessComponent {
       id: id,
       styles: styles,
       children: children,
-      attributes: attributes,
+      attributes: {
+        ...?attributes,
+        'max': ?max,
+        'min': ?min,
+        'value': ?value,
+        'type': type ?? 'range',
+      },
       events: events,
     );
   }
