@@ -366,6 +366,10 @@ body,
   background-color: var(--color-base-100);
 }
 
+.component-preview .preview {
+  overflow-x: auto;
+}
+
 .component-preview pre.component-code {
   background: color-mix(in oklab, var(--color-neutral) 90%, black);
   border-radius: 0.75rem;

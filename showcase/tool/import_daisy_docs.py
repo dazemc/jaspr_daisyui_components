@@ -146,6 +146,32 @@ def translate_svelte(part: str) -> str:
     for pattern, replacement in replacements:
         part = pattern.sub(replacement, part)
 
+    # Preserve the initial indeterminate state of docs examples.
+    part = part.replace("bind:indeterminate", "data-indeterminate")
+
+    # Mark the animated countdown value before replacing the Svelte expression.
+    def mark_countdown(match: re.Match[str]) -> str:
+        tag = match.group(0)
+        if "data-countdown" in tag:
+            return tag
+        if tag.rstrip().endswith("/>"):
+            return tag.rstrip()[:-2] + " data-countdown/>"
+        return tag.rstrip()[:-1] + " data-countdown>"
+
+    part = re.sub(r"<span\b[^>]*\{counter\}[^>]*>", mark_countdown, part)
+
+    # Svelte binds the theme-controller radio group to the "default" theme.
+    def bind_group(match: re.Match[str]) -> str:
+        tag = match.group(0).replace("bind:group={radio}", "")
+        if 'value="default"' in tag and "checked" not in tag:
+            if tag.rstrip().endswith("/>"):
+                tag = tag.rstrip()[:-2] + " checked/>"
+            elif tag.rstrip().endswith(">"):
+                tag = tag.rstrip()[:-1] + " checked>"
+        return tag
+
+    part = re.sub(r"<input\b[^>]*bind:group=\{radio\}[^>]*>", bind_group, part)
+
     # Svelte directives that have no static HTML equivalent.
     part = re.sub(
         r"\s+(?:bind|on|use|class):[-\w]+(?:=\{(?:[^{}]|\{[^{}]*\})*\})?", "", part

@@ -19,7 +19,7 @@ description: "Countdown gives you a transition effect when you change a number b
 <div class="tab-content border-base-300 overflow-x-auto">
 <div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="countdown">
-  <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
+  <span style="--value:59;" aria-live="polite" aria-label="59" data-countdown>59</span>
 </span>
 </div>
 </div>
@@ -55,7 +55,7 @@ description: "Countdown gives you a transition effect when you change a number b
 <div class="tab-content border-base-300 overflow-x-auto">
 <div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
 <span class="countdown font-mono text-6xl">
-  <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59">59</span>
+  <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59" data-countdown>59</span>
 </span>
 </div>
 </div>
@@ -93,7 +93,7 @@ description: "Countdown gives you a transition effect when you change a number b
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;" aria-live="polite" aria-label="10">10</span>h
   <span style="--value:24;" aria-live="polite" aria-label="24">24</span>m
-  <span style="--value:59;" aria-live="polite" aria-label="59">59</span>s
+  <span style="--value:59;" aria-live="polite" aria-label="59" data-countdown>59</span>s
 </span>
 </div>
 </div>
@@ -131,7 +131,7 @@ description: "Countdown gives you a transition effect when you change a number b
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;" aria-live="polite" aria-label="10">10</span>:
   <span style="--value:24; --digits: 2;" aria-live="polite" aria-label="24">24</span>:
-  <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59">59</span>
+  <span style="--value:59; --digits: 2;" aria-live="polite" aria-label="59" data-countdown>59</span>
 </span>
 </div>
 </div>
@@ -187,7 +187,7 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
+      <span style="--value:59;" aria-live="polite" aria-label="59" data-countdown>59</span>
     </span>
     sec
   </div>
@@ -246,7 +246,7 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
+      <span style="--value:59;" aria-live="polite" aria-label="59" data-countdown>59</span>
     </span>
     sec
   </div>
@@ -305,7 +305,7 @@ description: "Countdown gives you a transition effect when you change a number b
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
+      <span style="--value:59;" aria-live="polite" aria-label="59" data-countdown>59</span>
     </span>
     sec
   </div>

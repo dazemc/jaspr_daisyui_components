@@ -29,6 +29,7 @@ void main() {
         link(rel: 'stylesheet', href: 'styles.css'),
         link(rel: 'icon', href: 'favicon.svg', type: 'image/svg+xml'),
         script(src: 'https://unpkg.com/cally', attributes: {'type': 'module'}),
+        script(src: 'showcase.js', attributes: {'defer': ''}),
         link(rel: 'preconnect', href: 'https://fonts.googleapis.com'),
         link(
           rel: 'preconnect',

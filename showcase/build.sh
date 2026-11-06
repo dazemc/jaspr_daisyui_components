@@ -11,5 +11,6 @@ jaspr build --dart-define=BASE_PATH="$BASE_PATH"
 python3 tool/fix_base_paths.py "$BASE_PATH"
 python3 tool/version_css.py
 cp web/favicon.svg build/jaspr/favicon.svg
+cp web/showcase.js build/jaspr/showcase.js
 
 echo "Showcase built at showcase/build/jaspr"

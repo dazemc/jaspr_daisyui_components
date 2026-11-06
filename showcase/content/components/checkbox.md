@@ -204,7 +204,7 @@ description: "Checkboxes are used to select or deselect a value."
 <input type="radio" name="tab_indeterminate-6" class="tab [--tab-p:.75rem]" aria-label="Preview" checked="checked"/>
 <div class="tab-content border-base-300 overflow-x-auto">
 <div class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
-<input type="checkbox" class="checkbox" onclick="event.preventDefault()" />
+<input type="checkbox" class="checkbox" data-indeterminate onclick="event.preventDefault()" />
 </div>
 </div>
 <input type="radio" name="tab_indeterminate-6" class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]" aria-label="HTML"/>
