@@ -125,6 +125,7 @@ class _ThemePickerState extends State<ThemePicker> {
                       span(
                         classes:
                             'flex h-4 w-7 shrink-0 overflow-hidden rounded-full border border-base-content/10',
+                        attributes: {'data-theme': theme},
                         [
                           span(classes: 'h-full flex-1 bg-primary', []),
                           span(classes: 'h-full flex-1 bg-secondary', []),
