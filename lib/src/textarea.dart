@@ -50,6 +50,8 @@ class Textarea extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final String? placeholder;
+  final String? name;
+  final bool? disabled;
   final List<TextareaStyle>? style;
   final TextareaColor? color;
   final TextareaSize? size;
@@ -61,6 +63,8 @@ class Textarea extends StatelessComponent {
     this.events,
     this.styles,
     this.placeholder,
+    this.name,
+    this.disabled,
     this.style,
     this.color,
     this.size,

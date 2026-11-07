@@ -78,6 +78,7 @@ class Btn extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final String? role;
+  final String? type;
   final BtnColor? color;
   final List<BtnStyle>? style;
   final BtnBehavior? behavior;
@@ -91,6 +92,7 @@ class Btn extends StatelessComponent {
     this.events,
     this.styles,
     this.role,
+    this.type,
     this.color,
     this.style,
     this.behavior,

@@ -53,6 +53,8 @@ class Range extends StatelessComponent {
   final String? min;
   final String? type;
   final String? value;
+  final String? name;
+  final bool? disabled;
   final RangeColor? color;
   final RangeSize? size;
   final RangeDirection? direction;
@@ -67,6 +69,8 @@ class Range extends StatelessComponent {
     this.min,
     this.type,
     this.value,
+    this.name,
+    this.disabled,
     this.color,
     this.size,
     this.direction,

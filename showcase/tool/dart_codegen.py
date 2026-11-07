@@ -648,6 +648,49 @@ def render_node(
             typed_args.append([f"alt: {dart_string(attrs.pop('alt'))}"])
     elif node.tag in {"iframe", "source"} and "src" in attrs:
         typed_args.append([f"src: {dart_string(attrs.pop('src'))}"])
+    elif node.tag == "details" and "open" in attrs:
+        attrs.pop("open")
+        typed_args.append(["open: true"])
+    elif node.tag == "option":
+        for attr_name, arg_name in (("value", "value"), ("label", "label")):
+            if attr_name in attrs:
+                typed_args.append([f"{arg_name}: {dart_string(attrs.pop(attr_name))}"])
+        for attr_name, arg_name in (("selected", "selected"), ("disabled", "disabled")):
+            if attr_name in attrs:
+                raw = attrs.pop(attr_name)
+                if raw not in {"false", "0"}:
+                    typed_args.append([f"{arg_name}: true"])
+    elif node.tag == "label" and "for" in attrs:
+        typed_args.append([f"htmlFor: {dart_string(attrs.pop('for'))}"])
+    elif node.tag == "button":
+        button_type = attrs.pop("type", None)
+        if button_type in {"submit", "reset", "button"}:
+            typed_args.append([f"type: ButtonType.{button_type}"])
+        elif button_type is not None:
+            attrs["type"] = button_type
+        if "disabled" in attrs:
+            raw = attrs.pop("disabled")
+            if raw not in {"false", "0"}:
+                typed_args.append(["disabled: true"])
+    elif node.tag == "textarea":
+        if "placeholder" in attrs:
+            typed_args.append([f"placeholder: {dart_string(attrs.pop('placeholder'))}"])
+        if "name" in attrs:
+            typed_args.append([f"name: {dart_string(attrs.pop('name'))}"])
+        for attr_name in ("required", "disabled"):
+            if attr_name in attrs:
+                raw = attrs.pop(attr_name)
+                if raw not in {"false", "0"}:
+                    typed_args.append([f"{attr_name}: true"])
+    elif node.tag == "select":
+        for attr_name in ("name", "value"):
+            if attr_name in attrs:
+                typed_args.append([f"{attr_name}: {dart_string(attrs.pop(attr_name))}"])
+        for attr_name in ("multiple", "required", "disabled"):
+            if attr_name in attrs:
+                raw = attrs.pop(attr_name)
+                if raw not in {"false", "0"}:
+                    typed_args.append([f"{attr_name}: true"])
     args = []
     classes = node_classes(node)
     if classes:

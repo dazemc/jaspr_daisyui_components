@@ -50,6 +50,9 @@ class FileInput extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final String? type;
+  final String? name;
+  final String? placeholder;
+  final bool? disabled;
   final List<FileInputStyle>? style;
   final FileInputColor? color;
   final FileInputSize? size;
@@ -61,6 +64,9 @@ class FileInput extends StatelessComponent {
     this.events,
     this.styles,
     this.type,
+    this.name,
+    this.placeholder,
+    this.disabled,
     this.style,
     this.color,
     this.size,

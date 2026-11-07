@@ -13,6 +13,28 @@ List<String> types = [
   "direction",
 ];
 
+const Map<String, List<String>> extraAttributes = {
+  "input": ["name", "value", "disabled"],
+  "checkbox": ["name", "value", "disabled"],
+  "radio": ["name", "value", "disabled"],
+  "toggle": ["name", "value", "disabled"],
+  "range": ["name", "disabled"],
+  "select": ["name", "disabled"],
+  "textarea": ["name", "disabled"],
+  "file-input": ["name", "placeholder", "disabled"],
+  "theme-controller": ["name"],
+  "btn": ["type"],
+  "mask": ["src", "alt"],
+  "filter-reset": ["name"],
+};
+
+List<String> attributesFor(DaisyuiComponent component) {
+  return {
+    ...?component.additionalAttributes,
+    ...?extraAttributes[component.label],
+  }.toList();
+}
+
 void main() async {
   List<dynamic> data = await readFromJsonFile();
   List<DaisyuiComponent> components = getDaisyuiComponents(data);
@@ -161,21 +183,17 @@ void buildFields(List<DaisyuiComponent> components) {
     String partParameters = '';
     String partConst = '';
     // String header = '''import 'package:jaspr/jaspr.dart';''';
-    List<String>? additionalAttrs = c.additionalAttributes;
-    if (additionalAttrs != null) {
-      if (additionalAttrs.isNotEmpty) {
-        for (String name in additionalAttrs) {
-          if (name == "for") {
-            name = "for_";
-          }
-          if (name == "checked" || name == "required") {
-            requiredAttributesPara += 'final bool? $name;';
-          } else {
-            requiredAttributesPara += 'final String? $name;';
-          }
-          requiredAttributesConst += 'this.$name,';
-        }
+    final additionalAttrs = attributesFor(c);
+    for (String name in additionalAttrs) {
+      if (name == "for") {
+        name = "for_";
       }
+      if (name == "checked" || name == "required" || name == "disabled") {
+        requiredAttributesPara += 'final bool? $name;';
+      } else {
+        requiredAttributesPara += 'final String? $name;';
+      }
+      requiredAttributesConst += 'this.$name,';
     }
     if (name == 'List') name = 'List_';
     Map<String, String> mappedTypes = {

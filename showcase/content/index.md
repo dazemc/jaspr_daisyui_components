@@ -6,7 +6,7 @@ description: "Typed daisyUI components for Jaspr, generated from the official do
 <div class="not-prose rounded-3xl border border-base-content/10 bg-base-200/40 p-6 sm:p-9">
   <div class="inline-flex items-center gap-2 rounded-full border border-base-content/10 bg-base-100/70 px-3 py-1.5 text-[11px] font-medium text-base-content/60">
     <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success"></span>
-    Published on pub.dev · v0.3.0
+    Published on pub.dev · v0.3.1
   </div>
   <h2 class="mt-5 text-balance text-4xl font-black tracking-tight sm:text-5xl">daisyUI, typed for Jaspr.</h2>
   <p class="mt-4 max-w-2xl text-base leading-relaxed text-base-content/65">Every daisyUI component, generated from the official docs as typed Jaspr components. The examples on this site are live HTML styled by the daisyUI plugin, rendered through <code>jaspr_content</code>. Every preview includes a matching Dart/Jaspr implementation tab.</p>

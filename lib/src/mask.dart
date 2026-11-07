@@ -42,6 +42,8 @@ class Mask extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? src;
+  final String? alt;
   final List<MaskStyle>? style;
   final MaskModifier? modifier;
   const Mask(
@@ -51,6 +53,8 @@ class Mask extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.src,
+    this.alt,
     this.style,
     this.modifier,
   });

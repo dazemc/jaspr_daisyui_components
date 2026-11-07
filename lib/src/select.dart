@@ -49,6 +49,8 @@ class Select extends StatelessComponent {
   final String? id;
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
+  final String? name;
+  final bool? disabled;
   final List<SelectStyle>? style;
   final SelectColor? color;
   final SelectSize? size;
@@ -59,6 +61,8 @@ class Select extends StatelessComponent {
     this.attributes,
     this.events,
     this.styles,
+    this.name,
+    this.disabled,
     this.style,
     this.color,
     this.size,

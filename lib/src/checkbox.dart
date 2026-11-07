@@ -41,6 +41,9 @@ class Checkbox extends StatelessComponent {
   final Map<String, EventCallback>? events;
   final bool? checked;
   final String? type;
+  final String? name;
+  final String? value;
+  final bool? disabled;
   final CheckboxColor? color;
   final CheckboxSize? size;
   const Checkbox(
@@ -52,6 +55,9 @@ class Checkbox extends StatelessComponent {
     this.styles,
     this.checked,
     this.type,
+    this.name,
+    this.value,
+    this.disabled,
     this.color,
     this.size,
   });

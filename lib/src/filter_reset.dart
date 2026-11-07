@@ -9,6 +9,7 @@ class FilterReset extends StatelessComponent {
   final Map<String, String>? attributes;
   final Map<String, EventCallback>? events;
   final String? type;
+  final String? name;
   const FilterReset(
     this.children, {
     this.classes,
@@ -17,6 +18,7 @@ class FilterReset extends StatelessComponent {
     this.events,
     this.styles,
     this.type,
+    this.name,
   });
   String getClasses() {
     List<String> output = ['filter-reset', classes ?? ''];

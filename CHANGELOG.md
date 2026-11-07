@@ -1,3 +1,9 @@
+## 0.3.1
+
+- Added common form fields (`name`, `value`, `disabled`) to input, checkbox, radio, toggle, range, select, textarea, and file input components.
+- Added `src`/`alt` to `Mask`, `type` to `Btn`, and `name` to `FilterReset`.
+- Dart examples now use typed DOM fields for `a`, `img`, `details`, `option`, `label`, `button`, `textarea`, and `select` where available.
+
 ## 0.3.0
 
 - Generated components now apply their typed convenience fields (`type`, `placeholder`, `checked`, `role`, `for_`, `min`, `max`, `value`) instead of silently dropping them.
